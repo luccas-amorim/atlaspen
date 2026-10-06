@@ -42,8 +42,17 @@ const LETRA: Record<string, string> = {cabivel: 'C', condicional: 'K', incabivel
 
 const todos: Crime[] = JSON.parse(fs.readFileSync(CRIMES, 'utf-8'));
 const crimes = crimesComPenaPrivativa(todos).sort((a, b) => a.id - b.id);
+// A trilha de auditoria (types.ts) fica fora da impressão digital: o carimbo
+// semanal do conferidor a reescreve em todo registro, entra na main com
+// [skip ci] e o motor não a lê. Com ela dentro, a rodada de 05/10/2026 travou
+// a CI de todo PR seguinte sem que um só veredito pudesse ter mudado.
+// Só no nível do registro: `fonte` também é campo do aviso da norma, e esse conta.
+const TRILHA_DE_AUDITORIA = new Set(['fonte', 'conferido_em', 'conferido_resultado']);
+const semTrilha = todos.map((c) =>
+  Object.fromEntries(Object.entries(c).filter(([k]) => !TRILHA_DE_AUDITORIA.has(k))),
+);
 // JSON canônico, e não o arquivo cru: o fim de linha muda entre Windows e a CI.
-const crimesSha256 = createHash('sha256').update(JSON.stringify(todos)).digest('hex');
+const crimesSha256 = createHash('sha256').update(JSON.stringify(semTrilha)).digest('hex');
 const rev = cenarioReversoPadrao();
 
 const CENARIOS: [string, (c: TipoDoMotor) => Cenario][] = [
