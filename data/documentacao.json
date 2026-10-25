@@ -210,7 +210,7 @@
     {
       "arquivo": "AUDITORIA.md",
       "sobre": "O metodo da auditoria por amostra, registrado ANTES do sorteio: estratos, tamanho, semente, dupla conferencia e o que conta como erro. E pre-registro, e por isso e publico e datado -- o valor dele esta em ter sido escrito antes de olhar o resultado. Muda so se o desenho da amostra mudar, e a mudanca tem de ser datada. Nao depende de data/conferencia.json: o documento cita o estado dele NUMA DATA (pre-registro), e o carimbo semanal do robo o altera toda segunda -- a dependencia fazia o aviso disparar para sempre (retirada em 28/09/2026).",
-      "conferido_em": "2026-09-28",
+      "conferido_em": "2026-10-25",
       "depende_de": [
         "data/crimes.json"
       ]

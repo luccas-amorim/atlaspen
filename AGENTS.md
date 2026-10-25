@@ -86,10 +86,15 @@ python scripts/validar_atributos.py
 python scripts/robos/arquivista/verificar_documentacao.py
 python -m pytest scripts/robos/tests
 node scripts/validar-changelog.mjs
-npm run atributos && npm run typecheck && npm run mortos && npm run verificar && npm run build
+npm run atributos && npm run typecheck && npm run mortos && npm run verificar && npm run equivalencia && npm run build
 ```
 
-A CI trava em `--max-contradicoes=0` e exige o derivado sincronizado com a fonte. Extraia
+A CI trava em `--max-contradicoes=0` e exige o derivado sincronizado com a fonte. Trava
+também no **congelamento dos vereditos** (`npm run equivalencia`), cuja impressão digital
+cobre o catálogo inteiro — inclusive o `obs`, que o motor não lê: mudou dado em
+`data/crimes.json`, e nenhum veredito mudou, regrave com `npm run equivalencia -- --gravar`
+e confira que o diff de `scripts/equivalencia/atributos.json` é só o `crimes_sha256`. Em
+25/10/2026 um `obs` mudado sem isso deixou a `main` vermelha. Extraia
 PDFs de leis com `pdftotext -layout -enc UTF-8` (o poppler não renderiza página aqui).
 
 Mexeu no conferidor ou nos dados que ele lê? Rode também
