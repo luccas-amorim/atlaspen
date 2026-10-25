@@ -65,6 +65,19 @@ de 2008 acompanha toda citação do AtlasPen, e a
 está publicada junto com esta base. A história está contada em
 [História do projeto](./).
 
+## As fontes que os robôs leem
+
+O texto que vale é o compilado do Planalto (`planalto.gov.br`). Desde outubro de
+2026, os robôs de conferência leem também, só para perguntar, a
+[API de Dados Abertos do Senado Federal](https://legis.senado.leg.br/dadosabertos/api-docs/swagger-ui/index.html)
+e o portal [normas.leg.br](https://normas.leg.br), do Congresso Nacional, cujo
+conteúdo está sob a licença CC BY 4.0. Nada que vem dessas duas fontes escreve no
+catálogo; o critério está em [Os robôs](os-robos).
+
+Parte do código de rede dos robôs foi adaptada do repositório
+[ctresb/leis](https://github.com/ctresb/leis), de João Davi, sob a licença MIT. O
+aviso da licença acompanha o código, em `scripts/robos/fontes/`.
+
 ## Como citar
 
 A forma de citar o AtlasPen, e a de citar a pesquisa de 2008, estão em

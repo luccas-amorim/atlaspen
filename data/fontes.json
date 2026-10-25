@@ -4,6 +4,7 @@
     "regras": [
       "rotulos: TODOS os valores do campo `lei` de data/crimes.json que apontam para este diploma — inclusive rótulos pela lei criadora (ex.: 'Lei 14.811/24' são artigos do CP). Todo rótulo distinto do catálogo deve constar de exatamente um diploma.",
       "sentinela: string que DEVE existir na página baixada. Nos diplomas com reforma recente conferida, é a emenda mais nova incorporada (prova de frescor); nos demais, uma string distintiva do texto (prova de conteúdo/não truncamento). Atualizar a cada reforma incorporada ao catálogo.",
+      "urn: a URN LexML do diploma (`urn:lex:br:federal:<espécie>:<data>;<número>`), conferida em 25/10/2026 contra a ficha do Senado (nome e ementa). É a chave que liga o diploma à API de Dados Abertos do Senado e ao normas.leg.br, que o Cotejador lê (scripts/robos/cotejador/). Errada, ela não quebra: aponta para outra norma — por isso o construtor reprova URN ausente, malformada ou repetida.",
       "Fetch: HTTP simples com User-Agent de navegador (sem UA o Planalto recusa). O acervo mistura codificações — windows-1252 sem meta charset e, em alguns casos, UTF-16 LE com BOM; a detecção fica em scripts/robos/nucleo/baixar.py. Ver crawler/DECISOES-F0.md."
     ]
   },
@@ -17,6 +18,7 @@
         "Lei 14.811/24"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "urn": "urn:lex:br:federal:decreto.lei:1940-12-07;2848",
       "sentinela": "15.517",
       "obs": "Os rótulos 14.478 (171-A) e 14.811 (146-A) são artigos do CP rotulados pela lei criadora. O rótulo 14.133 saiu na v1.9.0: os arts. 337-E a 337-L estavam sob ele e os arts. 337-M a 337-O sob `CP`, partindo em dois o mesmo Capítulo II-B."
     },
@@ -26,6 +28,7 @@
         "CPM (DL 1.001/69)"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del1001compilado.htm",
+      "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1001",
       "sentinela": "14.688"
     },
     {
@@ -34,6 +37,7 @@
         "LCP (DL 3.688/41)"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "urn": "urn:lex:br:federal:decreto.lei:1941-10-03;3688",
       "sentinela": "vias de fato"
     },
     {
@@ -42,6 +46,7 @@
         "CTB"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "urn": "urn:lex:br:federal:lei:1997-09-23;9503",
       "sentinela": "15.503"
     },
     {
@@ -51,6 +56,7 @@
         "Lei 14.192/21"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm",
+      "urn": "urn:lex:br:federal:lei:1965-07-15;4737",
       "sentinela": "326-B",
       "obs": "O rótulo 14.192/21 (art. 326-B) é artigo do Código Eleitoral."
     },
@@ -60,6 +66,7 @@
         "ECA"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069compilado.htm",
+      "urn": "urn:lex:br:federal:lei:1990-07-13;8069",
       "sentinela": "15.512"
     },
     {
@@ -68,6 +75,7 @@
         "CDC (Lei 8.078/90)"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+      "urn": "urn:lex:br:federal:lei:1990-09-11;8078",
       "sentinela": "14.181"
     },
     {
@@ -76,6 +84,7 @@
         "Lei 7.716/89"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "urn": "urn:lex:br:federal:lei:1989-01-05;7716",
       "sentinela": "14.532"
     },
     {
@@ -84,6 +93,7 @@
         "Lei 11.343/06"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "urn": "urn:lex:br:federal:lei:2006-08-23;11343",
       "sentinela": "40-A"
     },
     {
@@ -92,6 +102,7 @@
         "Lei 10.826/03"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "urn": "urn:lex:br:federal:lei:2003-12-22;10826",
       "sentinela": "21-A"
     },
     {
@@ -100,6 +111,7 @@
         "Lei 10.741/03"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+      "urn": "urn:lex:br:federal:lei:2003-10-01;10741",
       "sentinela": "15.163"
     },
     {
@@ -108,6 +120,7 @@
         "Lei 13.146/15"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "urn": "urn:lex:br:federal:lei:2015-07-06;13146",
       "sentinela": "15.249"
     },
     {
@@ -117,6 +130,7 @@
         "Lei 9.605/98 (atualiz.)"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "urn": "urn:lex:br:federal:lei:1998-02-12;9605",
       "sentinela": "15.355"
     },
     {
@@ -125,6 +139,7 @@
         "Lei 13.869/19"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm",
+      "urn": "urn:lex:br:federal:lei:2019-09-05;13869",
       "sentinela": "15-A"
     },
     {
@@ -133,6 +148,7 @@
         "Lei 7.492/86"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l7492.htm",
+      "urn": "urn:lex:br:federal:lei:1986-06-16;7492",
       "sentinela": "14.478"
     },
     {
@@ -141,6 +157,7 @@
         "Lei 8.137/90"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+      "urn": "urn:lex:br:federal:lei:1990-12-27;8137",
       "sentinela": "Complementar nº 224"
     },
     {
@@ -149,6 +166,7 @@
         "Lei 11.101/05"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+      "urn": "urn:lex:br:federal:lei:2005-02-09;11101",
       "sentinela": "14.112"
     },
     {
@@ -157,6 +175,7 @@
         "Lei 11.340/06"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "urn": "urn:lex:br:federal:lei:2006-08-07;11340",
       "sentinela": "15.455",
       "obs": "Esta página vem em UTF-16 LE com BOM (F0): a detecção de charset por BOM é obrigatória no fetcher."
     },
@@ -166,6 +185,7 @@
         "Lei 14.344/22"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "urn": "urn:lex:br:federal:lei:2022-05-24;14344",
       "sentinela": "14.826"
     },
     {
@@ -174,6 +194,7 @@
         "Lei 14.597/23"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14597.htm",
+      "urn": "urn:lex:br:federal:lei:2023-06-14;14597",
       "sentinela": "15.522"
     },
     {
@@ -182,6 +203,7 @@
         "Lei 12.850/13"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+      "urn": "urn:lex:br:federal:lei:2013-08-02;12850",
       "sentinela": "21-B"
     },
     {
@@ -190,6 +212,7 @@
         "Lei 15.358/26"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/L15358.htm",
+      "urn": "urn:lex:br:federal:lei:2026-03-24;15358",
       "sentinela": "domínio social estruturado",
       "obs": "Marco Legal do Combate ao Crime Organizado (Lei Raul Jungmann). Diploma sem alterações posteriores: a sentinela é de CONTEÚDO, não de frescor — o nomen juris dos dois tipos que ela cria. Os dispositivos que esta lei inseriu no CP, na Lei 11.343 e na Lei 10.826 pertencem àqueles diplomas e são conferidos por lá."
     },
@@ -199,6 +222,7 @@
         "Lei 9.455/97"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "urn": "urn:lex:br:federal:lei:1997-04-07;9455",
       "sentinela": "15.410"
     },
     {
@@ -207,6 +231,7 @@
         "Lei 14.785/23"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14785.htm",
+      "urn": "urn:lex:br:federal:lei:2023-12-27;14785",
       "sentinela": "Art. 56"
     },
     {
@@ -215,6 +240,7 @@
         "Lei 8.176/91"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8176.htm",
+      "urn": "urn:lex:br:federal:lei:1991-02-08;8176",
       "sentinela": "15.517"
     },
     {
@@ -223,6 +249,7 @@
         "Lei 9.504/97"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9504.htm",
+      "urn": "urn:lex:br:federal:lei:1997-09-30;9504",
       "sentinela": "15.230"
     },
     {
@@ -231,6 +258,7 @@
         "Lei 9.434/97"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9434.htm",
+      "urn": "urn:lex:br:federal:lei:1997-02-04;9434",
       "sentinela": "14.858"
     },
     {
@@ -239,6 +267,7 @@
         "Lei 11.105/05"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11105.htm",
+      "urn": "urn:lex:br:federal:lei:2005-03-24;11105",
       "sentinela": "Biossegurança"
     },
     {
@@ -247,6 +276,7 @@
         "Lei 13.260/16"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "urn": "urn:lex:br:federal:lei:2016-03-16;13260",
       "sentinela": "terrorismo"
     },
     {
@@ -255,6 +285,7 @@
         "Lei 13.445/17"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+      "urn": "urn:lex:br:federal:lei:2017-05-24;13445",
       "sentinela": "migrante"
     },
     {
@@ -264,6 +295,7 @@
         "Lei 9.613/98 (atualiz.)"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "urn": "urn:lex:br:federal:lei:1998-03-03;9613",
       "sentinela": "15.358"
     },
     {
@@ -272,6 +304,7 @@
         "Lei 8.906/94"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8906.htm",
+      "urn": "urn:lex:br:federal:lei:1994-07-04;8906",
       "sentinela": "15.511"
     },
     {
@@ -280,6 +313,7 @@
         "Lei 9.472/97"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9472.htm",
+      "urn": "urn:lex:br:federal:lei:1997-07-16;9472",
       "sentinela": "15.324"
     },
     {
@@ -288,6 +322,7 @@
         "Lei 12.984/14"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12984.htm",
+      "urn": "urn:lex:br:federal:lei:2014-06-02;12984",
       "sentinela": "HIV"
     },
     {
@@ -296,6 +331,7 @@
         "Lei 2.889/56"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l2889.htm",
+      "urn": "urn:lex:br:federal:lei:1956-10-01;2889",
       "sentinela": "grupo nacional"
     },
     {
@@ -304,6 +340,7 @@
         "Lei 1.521/51"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l1521.htm",
+      "urn": "urn:lex:br:federal:lei:1951-12-26;1521",
       "sentinela": "economia popular"
     },
     {
@@ -312,6 +349,7 @@
         "Lei 6.001/73"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6001.htm",
+      "urn": "urn:lex:br:federal:lei:1973-12-19;6001",
       "sentinela": "14.701"
     },
     {
@@ -320,6 +358,7 @@
         "Lei 9.029/95"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9029.htm",
+      "urn": "urn:lex:br:federal:lei:1995-04-13;9029",
       "sentinela": "gravidez"
     },
     {
@@ -328,6 +367,7 @@
         "Lei 6.766/79"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm",
+      "urn": "urn:lex:br:federal:lei:1979-12-19;6766",
       "sentinela": "14.711"
     },
     {
@@ -336,6 +376,7 @@
         "Lei 9.263/96"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9263.htm",
+      "urn": "urn:lex:br:federal:lei:1996-01-12;9263",
       "sentinela": "esterilização"
     },
     {
@@ -344,6 +385,7 @@
         "Lei 6.385/76"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6385.htm",
+      "urn": "urn:lex:br:federal:lei:1976-12-07;6385",
       "sentinela": "15.042"
     },
     {
@@ -352,6 +394,7 @@
         "Lei 9.609/98"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9609.htm",
+      "urn": "urn:lex:br:federal:lei:1998-02-19;9609",
       "sentinela": "programa de computador"
     },
     {
@@ -360,6 +403,7 @@
         "Lei 6.538/78"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6538.htm",
+      "urn": "urn:lex:br:federal:lei:1978-06-22;6538",
       "sentinela": "serviço postal"
     },
     {
@@ -368,6 +412,7 @@
         "Lei 6.453/77"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6453.htm",
+      "urn": "urn:lex:br:federal:lei:1977-10-17;6453",
       "sentinela": "nuclear"
     },
     {
@@ -376,6 +421,7 @@
         "Lei 7.437/85"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l7437.htm",
+      "urn": "urn:lex:br:federal:lei:1985-12-20;7437",
       "sentinela": "preconceito"
     },
     {
@@ -384,6 +430,7 @@
         "Lei 6.091/74"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6091.htm",
+      "urn": "urn:lex:br:federal:lei:1974-08-15;6091",
       "sentinela": "eleitores"
     },
     {
@@ -392,6 +439,7 @@
         "DL 6.259/44"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del6259.htm",
+      "urn": "urn:lex:br:federal:decreto.lei:1944-02-10;6259",
       "sentinela": "loteria"
     },
     {
@@ -400,6 +448,7 @@
         "DL 201/67"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0201.htm",
+      "urn": "urn:lex:br:federal:decreto.lei:1967-02-27;201",
       "sentinela": "Prefeito"
     },
     {
@@ -408,6 +457,7 @@
         "Lei 9.296/96"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "urn": "urn:lex:br:federal:lei:1996-07-24;9296",
       "sentinela": "interceptação"
     },
     {
@@ -416,6 +466,7 @@
         "Lei 7.347/85"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l7347orig.htm",
+      "urn": "urn:lex:br:federal:lei:1985-07-24;7347",
       "sentinela": "ação civil",
       "obs": "A URL l7347.htm responde erro; a compilada é a l7347orig.htm."
     },
@@ -425,6 +476,7 @@
         "Lei 9.279/96"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9279.htm",
+      "urn": "urn:lex:br:federal:lei:1996-05-14;9279",
       "sentinela": "patente"
     },
     {
@@ -433,6 +485,7 @@
         "Lei 8.245/91"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8245.htm",
+      "urn": "urn:lex:br:federal:lei:1991-10-18;8245",
       "sentinela": "locação"
     },
     {
@@ -441,6 +494,7 @@
         "Lei 1.579/52"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l1579.htm",
+      "urn": "urn:lex:br:federal:lei:1952-03-18;1579",
       "sentinela": "Comissões Parlamentares de Inquérito"
     },
     {
@@ -449,6 +503,7 @@
         "LC 64/90"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp64.htm",
+      "urn": "urn:lex:br:federal:lei.complementar:1990-05-18;64",
       "sentinela": "inelegibilidade"
     },
     {
@@ -457,6 +512,7 @@
         "Lei 4.947/66"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l4947.htm",
+      "urn": "urn:lex:br:federal:lei:1966-04-06;4947",
       "sentinela": "terras públicas"
     },
     {
@@ -465,6 +521,7 @@
         "Lei 4.729/65"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4729.htm",
+      "urn": "urn:lex:br:federal:lei:1965-07-14;4729",
       "sentinela": "sonegação"
     },
     {
@@ -473,6 +530,7 @@
         "Lei 4.591/64"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l4591.htm",
+      "urn": "urn:lex:br:federal:lei:1964-12-16;4591",
       "sentinela": "incorporador"
     },
     {
@@ -481,6 +539,7 @@
         "Lei 4.117/62"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l4117.htm",
+      "urn": "urn:lex:br:federal:lei:1962-08-27;4117",
       "sentinela": "telecomunicações"
     },
     {
@@ -489,6 +548,7 @@
         "Lei 4.595/64"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l4595.htm",
+      "urn": "urn:lex:br:federal:lei:1964-12-31;4595",
       "sentinela": "Banco Central"
     },
     {
@@ -497,6 +557,7 @@
         "Lei 5.553/68"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l5553.htm",
+      "urn": "urn:lex:br:federal:lei:1968-12-06;5553",
       "sentinela": "documento"
     },
     {
@@ -505,6 +566,7 @@
         "Lei 7.643/87"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l7643.htm",
+      "urn": "urn:lex:br:federal:lei:1987-12-18;7643",
       "sentinela": "cetáceo"
     },
     {
@@ -513,6 +575,7 @@
         "Lei 5.741/71"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l5741.htm",
+      "urn": "urn:lex:br:federal:lei:1971-12-01;5741",
       "sentinela": "hipoteca"
     },
     {
@@ -521,6 +584,7 @@
         "Lei 5.478/68"
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l5478.htm",
+      "urn": "urn:lex:br:federal:lei:1968-07-25;5478",
       "sentinela": "alimentos"
     },
     {
@@ -528,6 +592,7 @@
       "rotulos": [],
       "referencia": true,
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "urn": "urn:lex:br:federal:lei:1990-07-25;8072",
       "sentinela": "15.358",
       "obs": "Não tem tipo penal próprio: é o rol dos crimes hediondos (art. 1º), contra o qual o campo `hediondo` do catálogo é auditado. Ver data/hediondos.json e scripts/robos/auditor/auditar.py."
     },
@@ -536,6 +601,7 @@
       "rotulos": [],
       "referencia": true,
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "urn": "urn:lex:br:federal:lei:1984-07-11;7210",
       "sentinela": "15.410",
       "obs": "Não tem tipo penal próprio: fundamenta os atributos de execução (progressão, livramento, saída temporária, remição…). Referência para o histórico legislativo dos atributos (frente 4 do backlog)."
     },
@@ -544,6 +610,7 @@
       "rotulos": [],
       "referencia": true,
       "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "urn": "urn:lex:br:federal:lei:1995-09-26;9099",
       "sentinela": "14.245",
       "obs": "Não tem tipo penal próprio: fundamenta a transação penal (art. 76), a suspensão condicional do processo (art. 89) e o menor potencial ofensivo (art. 61). Referência para o histórico legislativo dos atributos (frente 4 do backlog)."
     },
@@ -552,6 +619,7 @@
       "rotulos": [],
       "referencia": true,
       "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "urn": "urn:lex:br:federal:decreto.lei:1941-10-03;3689",
       "sentinela": "15.487",
       "obs": "Não tem tipo penal próprio: fundamenta o ANPP (art. 28-A) e outros atributos processuais. Referência para o histórico legislativo dos atributos (frente 4 do backlog)."
     },
@@ -560,6 +628,7 @@
       "rotulos": [],
       "referencia": true,
       "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "urn": "urn:lex:br:federal:constituicao:1988-10-05;1988",
       "sentinela": "139, de 2026",
       "obs": "Não tem tipo penal próprio: fundamenta vedações e institutos constitucionais (art. 5º, XLIII: graça e anistia; art. 84, XII: indulto e comutação). Referência para o histórico legislativo dos atributos (frente 4 do backlog). A sentinela é o trecho da anotação da EC 139/2026."
     }

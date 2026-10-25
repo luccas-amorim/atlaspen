@@ -234,3 +234,32 @@ class TestReservaLegal:
     def test_portaria_e_decreto_seguem_de_fora(self):
         assert not self._passa("Portaria")
         assert not self._passa("Decreto")
+
+
+class TestUrnDaFonteProposta:
+    """A entrada proposta para `fontes.json` precisa de `urn` desde 25/10/2026,
+    ou o build do PR reprova (`validar_fontes`)."""
+
+    CANDIDATA = {"titulo": "LEI Nº 15.410, DE 20 DE MAIO DE 2026", "data": "2026-05-21",
+                 "url": "https://www.in.gov.br/web/dou/-/lei-15410", "diplomas_citados": []}
+    INTEGRAL = "Art. 1º Matar alguém. Pena - reclusão, de 6 (seis) a 20 (vinte) anos."
+
+    def test_data_da_assinatura_sai_do_titulo(self):
+        from datetime import date
+        from sentinela.dou_watcher import data_do_titulo
+        assert data_do_titulo("LEI Nº 15.410, DE 20 DE MAIO DE 2026") == date(2026, 5, 20)
+        assert data_do_titulo("LEI COMPLEMENTAR Nº 224, DE 1º DE MARÇO DE 2025") == date(2025, 3, 1)
+        assert data_do_titulo("DESPACHO DE ONTEM") is None
+
+    def test_proposta_traz_urn_que_o_construtor_aceita(self):
+        from sentinela.dou_watcher import propor_fonte
+        from catalogo.validacoes import _URN
+        proposta = propor_fonte(self.CANDIDATA, self.INTEGRAL, set())
+        assert proposta["urn"] == "urn:lex:br:federal:lei:2026-05-20;15410"
+        assert _URN.match(proposta["urn"])
+
+    def test_lei_complementar(self):
+        from sentinela.dou_watcher import propor_fonte
+        c = {**self.CANDIDATA, "titulo": "LEI COMPLEMENTAR Nº 230, DE 2 DE JUNHO DE 2026"}
+        assert propor_fonte(c, self.INTEGRAL, set())["urn"] == \
+            "urn:lex:br:federal:lei.complementar:2026-06-02;230"

@@ -408,3 +408,28 @@ def test_corpo_do_pr_mostra_modificadores_e_sentinelas(escolha):
     assert "## Sentinelas" in corpo and "15.384 → **15.517**" in corpo
     assert "**1** modificador(es) de escopo declarado" in corpo
 
+
+
+def test_rodada_de_auditoria_usa_o_auditor_importado(monkeypatch, tmp_path):
+    """Até 25/10/2026 a rodada fazia `import auditar`, que não resolve desde que
+    cada robô ganhou pasta própria: morria com 1, o código de "nada mecânico"."""
+    monkeypatch.setattr(propor.auditoria, "rodar", lambda: [])
+    args = SimpleNamespace(aplicar=False, saida=str(tmp_path))
+    assert propor._rodada_de_auditoria(args) == 1
+
+
+@pytest.mark.parametrize("eol", ["\n", "\r\n"])
+def test_fonte_proposta_entra_com_lf_e_com_crlf(eol, monkeypatch, tmp_path):
+    """Na CI o `fontes.json` é LF; até 25/10/2026 só o CRLF casava."""
+    fontes = tmp_path / "fontes.json"
+    base = {"fontes": [{"id": "cp", "urn": "urn:lex:br:federal:decreto.lei:1940-12-07;2848"}]}
+    fontes.write_bytes((json.dumps(base, ensure_ascii=False, indent=2) + "\n").replace("\n", eol).encode())
+    relatorios = tmp_path / "crawler" / "relatorios"
+    relatorios.mkdir(parents=True)
+    (relatorios / "fontes-propostas.json").write_text(json.dumps([
+        {"id": "NOVA-15410", "urn": "urn:lex:br:federal:lei:2026-05-20;15410"}]), encoding="utf-8")
+    monkeypatch.setattr(propor, "FONTES", fontes)
+    monkeypatch.setattr(propor, "RAIZ", tmp_path)
+
+    assert [n["id"] for n in propor.aplicar_fontes_propostas()] == ["NOVA-15410"]
+    assert [f["id"] for f in json.loads(fontes.read_text(encoding="utf-8"))["fontes"]] == ["cp", "NOVA-15410"]

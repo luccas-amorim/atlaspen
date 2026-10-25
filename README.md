@@ -90,7 +90,7 @@ ninguém consome. O derivado é commitado, e a CI exige que esteja sincronizado.
 | `data/historico-legislativo.json` | a vida de cada dispositivo: criação, alteração, revogação, com data de publicação e de vigência |
 | `data/hediondos.json` | o rol do art. 1º da Lei 8.072/90 transcrito, contra o qual a hediondez de cada tipo é auditada |
 | `data/modificadores.json` | agravantes, atenuantes e causas de aumento e diminuição que deslocam a moldura |
-| `data/fontes.json` | os diplomas monitorados, com a URL do compilado e a *sentinela* que prova o frescor da página |
+| `data/fontes.json` | os diplomas monitorados, com a URL do compilado, a URN LexML que os liga ao Senado e ao normas.leg.br, e a *sentinela* que prova o frescor da página |
 | `data/avisos.json` | ADI em curso, tese de repercussão geral, divergência entre tribunais — com a data em que a fonte foi consultada |
 | `data/conferencia.json` | a trilha: o que foi conferido contra o texto da lei, quando e por quem |
 | `data/ids-aposentados.json` | os ids que já foram URL pública e saíram do catálogo |
@@ -129,6 +129,7 @@ e, para quem lê o site, em [Os robôs](https://atlaspen.com.br/projeto/os-robos
 | **Sentinela** | tria o Diário Oficial da semana atrás de lei que cria ou altera tipo penal |
 | **Recenseador** | varre todas as leis do ano, para que nada passe entre uma semana e outra |
 | **Arquivista** | acusa documento cuja dependência mudou depois da última releitura |
+| **Cotejador** | pergunta a uma segunda fonte se o próprio compilado está em dia: as leis que o Senado registra, a moldura da compilação da Câmara, os vetos que ainda podem cair. Só pergunta |
 
 O **Proponente** (`scripts/robos/proponente/`) não é robô: é quem transforma o que é
 leitura direta em PR, com a nota de atualização quando a mudança vem de lei recente. O PR

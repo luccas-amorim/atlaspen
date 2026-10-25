@@ -1,0 +1,162 @@
+{
+ "DetalheDocumento": {
+  "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/DetalheDocumentov3.xsd",
+  "Metadados": {
+   "Versao": "25/10/2026 02:48:09",
+   "VersaoServico": "3",
+   "DataVersaoServico": "2017-02-01",
+   "DescricaoDataSet": "Obtém detalhes da Norma por meio do tipo/número/ano ou data de assinatura/sequencial."
+  },
+  "documentos": {
+   "documento": [
+    {
+     "id": "527942",
+     "identificacao": {
+      "tipo": "DEL",
+      "descricao": "Decreto-Lei",
+      "numero": "2848",
+      "norma": "DEL-2848-1940-12-07",
+      "normaNome": "Decreto-Lei nº 2.848 de 07/12/1940",
+      "dataassinatura": "07/12/1940",
+      "apelido": "DEL-2848-1940-12-07 , Código Penal (1940) (CP)",
+      "urlDocumento": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto.lei:1940-12-07;2848"
+     },
+     "vides": "",
+     "disps": {
+      "disp": [
+       {
+        "nomeDispositivo": "Art. 1, caput, Inciso 1-B [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "39751008",
+        "refs": ""
+       },
+       {
+        "nomeDispositivo": "Art. 155, § 10 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "43999836",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 15.517 de 22/09/2026",
+           "comentario": "Acréscimo (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "43999411"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 155, § 11 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "43999840",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 15.517 de 22/09/2026",
+           "comentario": "Acréscimo (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "43999411"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 155, § 12 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "43999844",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 15.517 de 22/09/2026",
+           "comentario": "Acréscimo (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "43999411"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 157, § 2, Inciso 11 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "44000212",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 15.517 de 22/09/2026",
+           "comentario": "Acréscimo (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "43999411"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 157, § 2-A, Inciso 3 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "44000217",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 15.517 de 22/09/2026",
+           "comentario": "Acréscimo (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "43999411"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 157, § 2-A, Inciso 3, Alínea e [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "43999872",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 15.517 de 22/09/2026",
+           "comentario": "Acréscimo Vetado (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "43999411"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 185 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "12270002",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 10.695 de 01/07/2003",
+           "comentario": "Alteração (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "552571"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 217 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "12291800",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 11.106 de 28/03/2005",
+           "comentario": "Alteração (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "570555"
+          }
+         ]
+        }
+       },
+       {
+        "nomeDispositivo": "Art. 240 [Decreto-Lei nº 2.848 de 07/12/1940]",
+        "codItemDocumento": "12267768",
+        "refs": {
+         "ref": [
+          {
+           "dispositivo": "Lei nº 6.515 de 26/12/1977",
+           "comentario": "Alteração (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "548391"
+          },
+          {
+           "dispositivo": "Lei nº 11.106 de 28/03/2005",
+           "comentario": "Alteração (Declaração de Alteração Permanente)",
+           "codNormaPosterior": "570555"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "ementa": "Código Penal.",
+     "observacao": "1 - A LEI 7209, DOU DE 13/07/84, ALTERA, RENUMERA E DÁ NOVA REDAÇÃO AO TEXTO DA PARTE GERAL DO CÓDIGO PENAL (ARTIGOS 1 AO 120). 2 - A LEI 8137, DOU DE 28/12/90, ACRESCENTA  O ARTIGO 163 E RENUMERA OS ARTIGOS SUBSEQUENTES DO CÓDIGO PENAL. 3 - A LEI 8176,DOU DE 13/02/91,REVOGA O DISPOSITIVO QUE ACRESCENTOU O ARTIGO 163, E RESTAURA A NUMERAÇÃO ANTERIOR DO CÓDIGO PENAL."
+    }
+   ]
+  }
+ }
+}

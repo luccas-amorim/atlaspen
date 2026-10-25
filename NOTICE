@@ -20,6 +20,9 @@ Não estão sob nenhuma das duas:
   da Equipe AtlasPen; está aqui como referência.
 - Os textos de lei, decreto e demais atos oficiais reproduzidos na base, que
   não são objeto de direito autoral (Lei 9.610/1998, art. 8º, IV).
+- Trechos de scripts/robos/fontes/ adaptados do repositório ctresb/leis
+  (https://github.com/ctresb/leis), Copyright (c) 2026 João Davi, sob a
+  licença MIT, cujo aviso está em scripts/robos/fontes/LICENSE-ctresb-leis.txt.
 
 O nome AtlasPen e o símbolo do projeto (static/img/) identificam a origem do
 trabalho. Citar o AtlasPen como fonte é livre, e é o crédito que as duas

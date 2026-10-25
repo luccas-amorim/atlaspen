@@ -41,8 +41,6 @@ import json
 import re
 import sys
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[3]
@@ -53,17 +51,21 @@ RAIZ = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(RAIZ / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from fontes.rede import UA_NAVEGADOR, Rede  # noqa: E402
 from nucleo.tempo import hoje  # noqa: E402
 
 FONTES = RAIZ / "data" / "fontes.json"
 SNAPSHOTS = RAIZ / "crawler" / "snapshots"
 
-# UA de navegador: sem ele o Planalto recusa a conexão (verificado na F0).
-UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 CORTESIA_S = 1.2   # intervalo entre requisições
 TENTATIVAS = 3
 TIMEOUT_S = 60
+# Depois da n-ésima falha, espera de 2n segundos.
+REDE = Rede({
+    "User-Agent": UA_NAVEGADOR,
+    "Accept": "text/html,application/xhtml+xml",
+    "Accept-Language": "pt-BR,pt;q=0.9",
+}, tentativas=TENTATIVAS, timeout=TIMEOUT_S, espera=lambda n: 2 * n)
 
 
 def decodificar(bruto: bytes) -> tuple[str, str]:
@@ -102,22 +104,12 @@ def normalizar(texto: str) -> str:
 
 
 def buscar(url: str) -> bytes:
-    """GET com UA de navegador, com repetição e espera progressiva."""
-    ultimo: Exception | None = None
-    for tentativa in range(1, TENTATIVAS + 1):
-        req = urllib.request.Request(url, headers={
-            "User-Agent": UA,
-            "Accept": "text/html,application/xhtml+xml",
-            "Accept-Language": "pt-BR,pt;q=0.9",
-        })
-        try:
-            with urllib.request.urlopen(req, timeout=TIMEOUT_S) as r:
-                return r.read()
-        except (urllib.error.URLError, TimeoutError, OSError) as e:
-            ultimo = e
-            if tentativa < TENTATIVAS:
-                time.sleep(2 * tentativa)
-    raise RuntimeError(f"falha após {TENTATIVAS} tentativas: {ultimo}")
+    """GET com UA de navegador, com repetição e espera progressiva.
+
+    Nenhum código HTTP conta como ausência: a URL vem de `data/fontes.json`, e
+    404 ali é página que mudou de lugar, que tem de derrubar o download.
+    """
+    return REDE.obter(url, ausentes=())
 
 
 def baixar_fonte(fonte: dict, destino: Path) -> dict:

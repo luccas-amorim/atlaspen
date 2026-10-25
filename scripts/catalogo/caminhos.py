@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "data" / "crimes.json"
 APOSENTADOS = ROOT / "data" / "ids-aposentados.json"
+FONTES = ROOT / "data" / "fontes.json"
 CONFERENCIA = ROOT / "data" / "conferencia.json"
 OUT = ROOT / "static" / "data" / "crimes.json"
 RELATORIO = ROOT / "static" / "data" / "qualidade.json"

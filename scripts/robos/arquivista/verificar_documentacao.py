@@ -170,7 +170,12 @@ def main() -> int:
     relatorio = montar_relatorio(veredito)
 
     if args.saida:
-        Path(args.saida).write_text(relatorio, encoding="utf-8")
+        # No checkout limpo da CI, `crawler/relatorios/` não existe: até
+        # 25/10/2026 o Arquivista quebrava aqui toda semana, e a quebra passava
+        # por "documentação em dia".
+        saida = Path(args.saida)
+        saida.parent.mkdir(parents=True, exist_ok=True)
+        saida.write_text(relatorio, encoding="utf-8")
     if args.md or args.saida:
         print(relatorio)
     else:

@@ -45,6 +45,7 @@ import io
 import json
 import re
 import sys
+import traceback
 from datetime import date
 from pathlib import Path
 
@@ -440,8 +441,12 @@ def aplicar_fontes_propostas() -> list[dict]:
     entram = [n for n in novas if n["id"] not in existentes]
     if not entram:
         return []
-    i = texto.rindex("}\r\n  ]")
-    bloco = ",\r\n" + ",\r\n".join(
+    # A quebra de linha é a do arquivo: CRLF na cópia de trabalho do Windows, LF
+    # na CI. Até 25/10/2026 só o CRLF casava, e na CI o `rindex` levantaria —
+    # o que nunca se viu porque a rodada de auditoria morria antes, no import.
+    eol = "\r\n" if "\r\n" in texto else "\n"
+    i = texto.rindex("}" + eol + "  ]")
+    bloco = "," + eol + ("," + eol).join(
         "    " + json.dumps(n, ensure_ascii=False) for n in entram)
     FONTES.write_bytes((texto[:i + 1] + bloco + texto[i + 1:]).encode("utf-8"))
     return entram
@@ -884,9 +889,11 @@ def _rodada_de_auditoria(args) -> int:
     tem prioridade — é o que a máquina lê com segurança. A classificação vem
     depois, e vem como proposta.
     """
-    import auditar
-
-    achados = auditar.rodar()
+    # O módulo é o `auditoria` importado no topo. Até 25/10/2026 havia aqui um
+    # `import auditar` dos tempos em que os robôs dividiam uma pasta só: desde
+    # 14/08 ele não resolvia, e a rodada de auditoria morria com 1 — o mesmo
+    # código de "nada mecânico" —, sem PR e sem aviso.
+    achados = auditoria.rodar()
     propostas = propostas_de_auditoria(achados)
     print(f"auditoria: {len(achados)} achado(s), {len(propostas)} viram proposta")
     for p in propostas[:40]:
@@ -909,7 +916,7 @@ def _rodada_de_auditoria(args) -> int:
     saida = Path(args.saida)
     saida.mkdir(parents=True, exist_ok=True)
     (saida / "corpo.md").write_text(
-        corpo_auditoria(propostas, versao, auditar.montar_relatorio(achados),
+        corpo_auditoria(propostas, versao, auditoria.montar_relatorio(achados),
                         fontes_novas),
         encoding="utf-8", newline="\n")
     meta = {
@@ -984,4 +991,11 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    # Exceção não tratada sai com 1, que aqui quer dizer "nada mecânico": o
+    # workflow não distinguia a quebra do silêncio. Quebra sai com 2, que o
+    # job trata como falha.
+    try:
+        raise SystemExit(main())
+    except Exception:
+        traceback.print_exc()
+        raise SystemExit(2)

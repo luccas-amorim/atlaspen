@@ -53,6 +53,20 @@ jobs:
           echo "codigo=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
           set -e
 
+      # Com as páginas na mão, a pergunta do Cotejador sai de graça: o compilado
+      # anota as leis que o Senado registra? A resposta vai para o resumo desta
+      # execução, e não para issue — a de segunda faz a mesma pergunta, com as
+      # páginas de segunda. Aqui ela só adianta o que vem.
+      - name: Cotejar o frescor com o Senado
+        if: always()
+        continue-on-error: true
+        run: |
+          set +e
+          python3 scripts/robos/cotejador/frescor.py --saida cotejo/ > /dev/null
+          echo "Cotejador: código $?" >> "$GITHUB_STEP_SUMMARY"
+          cat cotejo/cotejo-frescor-*.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null
+          exit 0
+
       # O snapshot NÃO é guardado. A segunda-feira baixa o seu, e um artifact de
       # sexta só serviria para alguém, um dia, comparar o catálogo com um texto
       # de três dias atrás sem perceber.

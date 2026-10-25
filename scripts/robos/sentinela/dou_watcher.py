@@ -46,8 +46,6 @@ import json
 import re
 import sys
 import time
-import urllib.error
-import urllib.request
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -61,6 +59,7 @@ FONTES = RAIZ / "data" / "fontes.json"
 from nucleo.preceito import (_ANO, _EMENTA_CRIMINALIZA,  # noqa: E402,F401
                              _NUMERO_LEI, _PENA_POR_REMISSAO,
                              _REVOGA_DISPOSITIVO, _TIPIFICA, comina_pena)
+from fontes.rede import UA_NAVEGADOR, FalhaDeRede, Rede  # noqa: E402
 from nucleo.tempo import hoje  # noqa: E402
 
 RELATORIOS = RAIZ / "crawler" / "relatorios"
@@ -70,12 +69,12 @@ ARTIGO = "https://www.in.gov.br/web/dou/-/{slug}"
 # Sem Accept/Accept-Language de navegador o in.gov.br devolve 403 — só o
 # User-Agent não basta (o Planalto, no baixar.py, se contenta com o UA).
 CABECALHOS = {
-    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"),
+    "User-Agent": UA_NAVEGADOR,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
 }
 PAUSA = 1.2                      # s entre requisições: ~15 por rodada
+REDE = Rede(CABECALHOS, timeout=60, espera=lambda n: PAUSA * 3)
 
 # Seção 1 e sua edição EXTRA — é na extra que sai a lei sancionada às pressas.
 SECOES = ("do1", "do1e")
@@ -121,27 +120,18 @@ _TAG = re.compile(r"(?s)<[^>]+>")
 # ── Rede ────────────────────────────────────────────────────────────────────
 def baixar(url: str, tentativas: int = 2) -> str | None:
     """HTML da página, ou None quando a data não tem edição (404/500)."""
-    for tentativa in range(tentativas):
-        try:
-            with urllib.request.urlopen(
-                    urllib.request.Request(url, headers=CABECALHOS), timeout=60) as r:
-                bruto = r.read()
-            # O in.gov.br anuncia UTF-8 e cumpre; o fallback existe porque o
-            # acervo oficial brasileiro tem histórico de misturar codificação.
-            try:
-                return bruto.decode("utf-8")
-            except UnicodeDecodeError:
-                return bruto.decode("cp1252", errors="replace")
-        except urllib.error.HTTPError as e:
-            if e.code in (404, 500):
-                return None      # dia sem edição daquela seção
-            if tentativa + 1 == tentativas:
-                raise
-        except (urllib.error.URLError, TimeoutError):
-            if tentativa + 1 == tentativas:
-                raise
-        time.sleep(PAUSA * 3)
-    return None
+    try:
+        bruto = REDE.obter(url, ausentes=(404, 500), tentativas=tentativas)
+    except FalhaDeRede as e:
+        raise e.causa from e
+    if bruto is None:
+        return None      # dia sem edição daquela seção
+    # O in.gov.br anuncia UTF-8 e cumpre; o fallback existe porque o
+    # acervo oficial brasileiro tem histórico de misturar codificação.
+    try:
+        return bruto.decode("utf-8")
+    except UnicodeDecodeError:
+        return bruto.decode("cp1252", errors="replace")
 
 
 def _limpar(html: str) -> str:
@@ -315,6 +305,24 @@ def triar(itens: list[dict], padrao: re.Pattern, numeros: dict[str, str],
 
 # Vocabulário que distingue "lei que CRIA crime" de "lei que fala de pena". Só o
 # primeiro justifica vigiar um diploma novo toda semana.
+_MESES = {m: i for i, m in enumerate(
+    ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto",
+     "setembro", "outubro", "novembro", "dezembro"), 1)}
+_DATA_DO_TITULO = re.compile(r"DE\s+(\d{1,2})[º°o]?\s+DE\s+(\w+)\s+DE\s+(\d{4})", re.I)
+
+
+def data_do_titulo(titulo: str) -> date | None:
+    """ "LEI Nº 15.410, DE 20 DE MAIO DE 2026" -> 2026-05-20."""
+    m = _DATA_DO_TITULO.search(titulo or "")
+    mes = _MESES.get(m.group(2).lower().replace("marco", "março")) if m else None
+    if not mes:
+        return None
+    try:
+        return date(int(m.group(3)), mes, int(m.group(1)))
+    except ValueError:
+        return None
+
+
 def propor_fonte(candidata: dict, integral: str, ja_monitorados: set[str]) -> dict | None:
     """Entrada de `data/fontes.json` para uma lei que parece criar tipo penal.
 
@@ -342,11 +350,22 @@ def propor_fonte(candidata: dict, integral: str, ja_monitorados: set[str]) -> di
     faixa = f"_ato{(int(ano) - (int(ano) - 2023) % 4)}-{(int(ano) - (int(ano) - 2023) % 4) + 3}"
     complementar = "complementar" in candidata["titulo"].lower()
     arquivo = f"lcp{numero}.htm" if complementar else f"l{numero}.htm"
-    return {
+    proposta = {
         "id": f"NOVA-{numero}",
         "rotulos": [f"Lei {numero[:-3]}.{numero[-3:]}/{ano[-2:]}" if len(numero) > 3
                     else f"Lei {numero}/{ano[-2:]}"],
         "url": f"https://www.planalto.gov.br/ccivil_03/{faixa}/{ano}/lei/{arquivo}",
+    }
+    # A URN que o construtor exige (`validar_fontes`) sai do próprio título:
+    # "LEI Nº 15.410, DE 20 DE MAIO DE 2026" é a data da assinatura, que é a da
+    # URN LexML. Sem data legível, a entrada sai sem `urn` e o build do PR diz
+    # o que falta.
+    assinatura = data_do_titulo(candidata["titulo"])
+    if assinatura:
+        especie = "lei.complementar" if complementar else "lei"
+        proposta["urn"] = f"urn:lex:br:federal:{especie}:{assinatura.isoformat()};{numero}"
+    return {
+        **proposta,
         "sentinela": numero,
         "obs": (f"PROPOSTA automática a partir do DOU de {candidata['data']}. Confira a "
                 f"URL (o Planalto muda o padrão em leis complementares e antigas), "

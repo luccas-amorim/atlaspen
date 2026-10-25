@@ -9,7 +9,7 @@ Um catálogo de direito penal envelhece sozinho. A lei muda toda semana, e a
 defasagem não avisa: um registro errado tem a mesma aparência de um registro
 certo. A resposta do projeto a isso são **rotinas automáticas** que rodam toda
 segunda-feira, às 5h de Brasília, cada uma vigiando uma coisa diferente. Hoje são
-cinco, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
+seis, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
 abrir a execução.
 
 Esta página existe para que você possa **discordar dos critérios**. Todos eles
@@ -19,10 +19,11 @@ largo demais, [abra uma issue](https://github.com/luccas-amorim/atlaspen/issues)
 o tipo de retorno que mais serve ao catálogo.
 
 :::note[Determinístico, sem IA]
-Nenhum dos cinco usa modelo de linguagem. São expressões regulares e comparação
-de texto, lidas contra o texto **compilado** oficial do `planalto.gov.br`. Onde
-não há certeza, o resultado é uma **pergunta para leitura humana**, nunca uma
-alteração automática do dado.
+Nenhum dos seis usa modelo de linguagem. São expressões regulares e comparação
+de texto, lidas contra o texto **compilado** oficial do `planalto.gov.br`. O
+Cotejador lê também o Senado e o normas.leg.br, mas só para perguntar: nada que
+vem de lá escreve no catálogo. Onde não há certeza, o resultado é uma **pergunta
+para leitura humana**, nunca uma alteração automática do dado.
 :::
 
 ## O que cada um vigia
@@ -34,11 +35,21 @@ alteração automática do dado.
 | **Auditor** | Os campos que a pena não alcança estão certos? | Hediondez, ação penal, causas de aumento e nomes |
 | **Arquivista** | A prosa ainda descreve o sistema? | A documentação, contra os arquivos de que ela fala |
 | **Recenseador** | Existe lei penal que ninguém leu? | Todas as leis do ano, uma a uma (mensal) |
+| **Cotejador** | O compilado do Planalto está em dia? | O registro do Senado e a compilação da Câmara |
 
-Sentinela e Arquivista correm em paralelo com o Vigia; o Auditor espera por ele,
-porque lê as páginas que ele baixou. O Recenseador roda uma vez por mês, na
-primeira semana. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se todos
-se calarem, a rodada deixa só o carimbo de que a conferência aconteceu.
+Sentinela e Arquivista correm em paralelo com o Vigia; Auditor e Cotejador esperam
+por ele, porque leem as páginas que ele baixou. O Recenseador roda uma vez por mês,
+na primeira semana. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se
+todos se calarem, a rodada deixa só o carimbo de que a conferência aconteceu.
+
+:::caution[Robô que quebra não se cala]
+Cada robô responde com um de dois códigos: nada a dizer, ou achados. Qualquer outro
+— uma exceção, uma fonte ilegível, um job que nem chegou ao passo — quer dizer que
+a pergunta da semana **ficou sem resposta**, e isso também abre a issue, com o robô
+nomeado. Até 25/10/2026 a triagem só olhava os achados: o Arquivista quebrou toda
+semana desde agosto, a rodada de auditoria do Proponente também, e as rodadas de 12
+e 19 de outubro terminaram verdes, sem issue, com dois robôs caídos.
+:::
 
 A issue da semana **substitui a da semana passada**, que é fechada como superada — mas só
 a que ninguém comentou. A conferência é sem estado: ela recalcula tudo a cada rodada, então
@@ -198,19 +209,73 @@ cada uma contra o mesmo critério do Sentinela — o preceito secundário. As qu
 pena e não estão entre os diplomas vigiados viram lista de leitura, curta, com a
 ementa de cada uma ao lado.
 
-Não há índice a consultar: o portal de legislação do Planalto está atrás de proteção
-anti-bot, e nenhum quadro por ano responde. Mas a página de cada lei responde, e a
-numeração das leis é sequencial e nacional — então a enumeração é feita por sondagem,
-do primeiro ao último número do ano, com o corte de ano vindo do cabeçalho que a
-própria lei declara. Custa alguns minutos, uma vez por mês.
+O portal de legislação do Planalto está atrás de proteção anti-bot, e nenhum quadro
+por ano responde. Mas a página de cada lei responde, e a numeração das leis é
+sequencial e nacional — então a enumeração é feita por sondagem, do primeiro ao
+último número do ano, com o corte de ano vindo do cabeçalho que a própria lei
+declara. Custa alguns minutos, uma vez por mês.
+
+Desde 25/10/2026 há uma **segunda lista**: a das leis do ano na API de Dados Abertos
+do Senado. Ela não substitui a sondagem e não decide nada — o texto lido continua
+sendo o do Planalto —, mas diz por onde começar e fecha as lacunas de numeração em
+que a sondagem pararia. O relatório diz quais das duas listas foram lidas. Na
+primeira rodada com as duas, elas terminaram na mesma lei (a 15.526, de 29/09/2026),
+e a sondagem achou uma que o Senado ainda não listava.
 
 :::note[Ele aponta, não conclui]
 Cominar pena **não é** criar tipo penal novo: a lei pode estar apenas alterando um
 diploma que já acompanhamos, ou repetindo preceito. O Recenseador diz que a lei
 existe e que ninguém a leu — quem decide se ela entra é gente. E, se não conseguir
 ler as leis, **não afirma nada**: reportar "nenhuma ficou de fora" sem ter lido a
-fonte seria produzir exatamente o silêncio que ele existe para quebrar.
+fonte seria produzir exatamente o silêncio que ele existe para quebrar. Até
+25/10/2026 o relatório dizia isso e o robô, mesmo assim, saía com o código de
+"nada a relatar"; e conexão perdida contava como número vazio, encerrando a
+varredura como se o ano tivesse acabado. Agora varredura incompleta tem código
+próprio e vira aviso na issue.
 :::
+
+---
+
+## Cotejador — a segunda leitura
+
+O Vigia confere o catálogo contra o compilado do Planalto. Ninguém conferia o
+**compilado**: se o Planalto demora a incorporar uma lei, o Vigia compara o catálogo
+com texto velho e diz que está tudo certo. O Cotejador pergunta a outras fontes
+oficiais, e só pergunta — nada que vem delas escreve no catálogo.
+
+**O compilado anota as leis que o Senado registra?** A API de Dados Abertos do Senado
+diz, norma por norma, que leis posteriores mudaram cada dispositivo. O Cotejador lê as
+alterações recentes de cada diploma vigiado e procura cada lei na página que o Vigia
+baixou — o Planalto anota toda lei que muda o texto ("Redação dada pela Lei nº …").
+A que não aparece vira pergunta, com prioridade para a que toca registro do catálogo.
+
+**A moldura do Planalto é a da Câmara?** O normas.leg.br, do Congresso, serve a
+compilação vigente que a Câmara mantém — outra equipe compilando o mesmo texto legal.
+O Cotejador lê a pena de cada dispositivo nas duas, com o mesmo leitor que o catálogo
+usa, e acusa onde discordam.
+
+**Vetos que ainda podem cair.** Veto derrubado muda o texto meses depois da sanção.
+O Cotejador lista os vetos do ano a leis que mexem em diploma vigiado e diz quais
+ainda tramitam. Só informa.
+
+:::caution[O Senado também erra]
+A classificação do Senado é catalogada à mão, e erra: a Lei 11.106/2005 revogou os
+arts. 217, 219 a 222 e 240 do Código Penal, e o Senado registra as seis como
+"alteração". E o compilado anota a redação que vale: quando outra lei reescreve o
+mesmo dispositivo, a anotação da anterior pode sumir — a Lei 15.229/2025 incluiu
+o art. 171, §5º, III, do Código Penal, a Lei 15.397/2026 reescreveu o artigo, e a
+página cita só a segunda. Esse caso não abre issue: sai numa lista à parte, de
+leis provavelmente superadas.
+:::
+
+Na primeira rodada, em 25/10/2026, 52 dos 68 diplomas conferiram, 9 não tinham
+alteração registrada no Senado e 7 tinham lei que a página não cita.
+
+O Cotejador lê também, por curiosidade técnica, o repositório público
+[ctresb/leis](https://github.com/ctresb/leis), que converte a legislação brasileira
+para Markdown: o que mudou no código dele e nos arquivos dos nossos diplomas. É de
+terceiro, operado por agentes, e nunca é fonte de dado; parte da rede comum dos robôs
+veio de lá.
 
 ---
 
