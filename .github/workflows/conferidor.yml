@@ -43,8 +43,8 @@ concurrency:
 
 # A rodada semanal são VÁRIOS robôs, não um. Antes eram passos de um job só, e o
 # log dizia apenas "conferidor falhou" — era preciso abrir a execução para saber
-# qual deles. Agora cada um é um job com nome próprio, e três correm em paralelo:
-# só o auditor depende dos snapshots que o vigia baixa.
+# qual deles. Agora cada um é um job com nome próprio, e quatro correm em
+# paralelo: só o auditor e o cotejador dependem dos snapshots que o vigia baixa.
 #
 #   vigia        — relê a moldura de cada tipo contra o compilado do Planalto
 #   sentinela    — varre o DOU atrás de lei penal nova e autônoma
@@ -54,6 +54,8 @@ concurrency:
 #   arquivista   — saúde da prosa: documento vencido ou que fala de algo que mudou
 #   cotejador    — segunda leitura: o compilado anota as leis que o Senado
 #                  registra? Lê os snapshots do vigia, e só pergunta
+#   relator      — o que o STF decidiu na semana sobre a lei vigiada, lido no
+#                  Banco Nacional de Precedentes do CNJ
 #   triagem      — junta os relatórios e abre a issue da semana
 #
 # Documentado para quem lê o site em docs/os-robos.md.
@@ -297,14 +299,45 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
+  # ── relator ──────────────────────────────────────────────────────────────
+  # A decisão de tribunal não passa pelo DOU, e até 25/10/2026 nenhum robô a
+  # via. Este lê no CNJ os precedentes do STF atualizados na semana e separa os
+  # que tocam diploma vigiado. Não depende do vigia: a chave de cada registro
+  # vem de static/data/crimes.json. Só aponta; o CNJ fora do ar sai 2.
+  relator:
+    name: Relator — o que o STF decidiu sobre a lei vigiada?
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    outputs:
+      codigo: ${{ steps.decisoes.outputs.codigo }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Ler o Banco Nacional de Precedentes
+        id: decisoes
+        run: |
+          set +e
+          python3 scripts/robos/relator/decisoes.py > /dev/null
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      - name: Guardar o relatório dos tribunais
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: relator-${{ github.run_number }}
+          path: crawler/relatorios/tribunais-*
+          if-no-files-found: ignore
+          retention-days: 30
+
   # ── triagem ──────────────────────────────────────────────────────────────
   # A issue é o canal: chega sozinha, tem histórico e permite discutir cada
   # achado em linha. Uma issue por rodada, para que a semana seja unidade de
-  # trabalho e o fechamento signifique "triado". Junta o que os quatro
+  # trabalho e o fechamento signifique "triado". Junta o que os robôs
   # produziram — e por isso roda mesmo se algum deles falhar.
   triagem:
     name: Triagem — a issue da semana
-    needs: [vigia, sentinela, auditor, arquivista, cotejador]
+    needs: [vigia, sentinela, auditor, arquivista, cotejador, relator]
     if: always()
     runs-on: ubuntu-latest
     permissions:
@@ -314,7 +347,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Recuperar os relatórios dos quatro
+      - name: Recuperar os relatórios dos robôs
         uses: actions/download-artifact@v5
         with:
           pattern: '*-${{ github.run_number }}'
@@ -348,6 +381,7 @@ jobs:
           COTEJADOR_TEXTOS: ${{ needs.cotejador.outputs.textos }}
           COTEJADOR_VETOS: ${{ needs.cotejador.outputs.vetos }}
           COTEJADOR_CTRESB: ${{ needs.cotejador.outputs.ctresb }}
+          RELATOR: ${{ needs.relator.outputs.codigo }}
           EXECUCAO: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           : > quebrados.md
@@ -368,6 +402,7 @@ jobs:
           avaliar "Cotejador (molduras)" "$COTEJADOR_TEXTOS"
           avaliar "Cotejador (vetos)" "$COTEJADOR_VETOS"
           avaliar "Cotejador (ctresb/leis)" "$COTEJADOR_CTRESB"
+          avaliar "Relator" "$RELATOR"
           if [ -s quebrados.md ]; then
             {
               echo "## Robôs que não terminaram"
@@ -388,6 +423,7 @@ jobs:
           || needs.sentinela.outputs.leis_do_ano == '3'
           || needs.cotejador.outputs.codigo == '3'
           || needs.cotejador.outputs.textos == '3'
+          || needs.relator.outputs.codigo == '3'
           || steps.quebrados.outputs.houve == '1'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -424,6 +460,7 @@ jobs:
             for COTEJO in crawler/relatorios/cotejo-*-"$HOJE".md; do
               [ -f "$COTEJO" ] && cat "$COTEJO" && echo
             done
+            [ -f "crawler/relatorios/tribunais-$HOJE.md" ] && cat "crawler/relatorios/tribunais-$HOJE.md" && echo
             # O Recenseador entrava no código da issue e não no corpo: com 3,
             # a issue abria sem dizer que lei ler.
             [ -f "crawler/relatorios/leis-do-ano-$(TZ=America/Sao_Paulo date +%Y).md" ] \
@@ -466,6 +503,7 @@ jobs:
           && needs.arquivista.outputs.codigo != '3'
           && needs.cotejador.outputs.codigo != '3'
           && needs.cotejador.outputs.textos != '3'
+          && needs.relator.outputs.codigo != '3'
           && steps.quebrados.outputs.houve != '1'
         run: echo "Catálogo em dia com o texto compilado e nada penal no DOU."
 
