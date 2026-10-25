@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """O Cotejador, frente 3: o que mudou no ctresb/leis na última semana.
 
-Só observar (decisão 4 do plano de fontes abertas). Duas perguntas:
+Só observar (decisão 4 do plano de fontes abertas). Três perguntas:
 
 - **O código dele mudou?** Os commits em `scripts/` da janela, para quem
   mantém os robôs saber o que talvez valha a pena trazer (a rede comum, em
@@ -10,6 +10,12 @@ Só observar (decisão 4 do plano de fontes abertas). Duas perguntas:
   `data/fontes.json`, os commits no arquivo correspondente (`fontes/ctresb.py`
   traduz a URN no caminho). É um terceiro olhar sobre o mesmo texto — e só isso:
   o repositório é operado por agentes e reescreve arquivos em massa.
+- **A jurisprudência dele mudou?** Os commits em `jurisprudencia/stf` e
+  `jurisprudencia/stj` — súmulas, súmulas vinculantes, controle concentrado,
+  repercussão geral —, que ele baixa do mesmo Banco Nacional de Precedentes que
+  o Relator lê (`relator/decisoes.py`) e de fontes de cada tribunal. É o segundo
+  olhar sobre a decisão de tribunal: o Relator lê o CNJ direto; aqui se vê o que
+  um terceiro trouxe de lá e de outros lugares.
 
 Nunca abre issue sozinho, nunca derruba a rodada: sai 0 sempre, e o relatório
 entra no corpo da issue quando ela abre por outro motivo.
@@ -37,14 +43,23 @@ from nucleo.tempo import hoje  # noqa: E402
 
 FONTES = RAIZ / "data" / "fontes.json"
 RELATORIOS = RAIZ / "crawler" / "relatorios"
+JURISPRUDENCIA = ("jurisprudencia/stf", "jurisprudencia/stj")
 
 
 def rodar(fontes: list[dict], desde: str, ler=ctresb.commits) -> dict:
-    r = {"desde": desde, "scripts": [], "diplomas": [], "nao_lidos": []}
+    r = {"desde": desde, "scripts": [], "jurisprudencia": {}, "diplomas": [], "nao_lidos": []}
     try:
         r["scripts"] = ler("scripts", desde)
     except (FalhaDeRede, ValueError) as e:
         r["nao_lidos"].append(f"`scripts/`: {e}")
+    for pasta in JURISPRUDENCIA:
+        try:
+            mudancas = ler(pasta, desde)
+        except (FalhaDeRede, ValueError) as e:
+            r["nao_lidos"].append(f"`{pasta}/`: {e}")
+            continue
+        if mudancas:
+            r["jurisprudencia"][pasta] = mudancas
     for f in fontes:
         caminho = ctresb.caminho_da_urn(f.get("urn") or "")
         if not caminho:
@@ -64,12 +79,20 @@ def montar_relatorio(r: dict, dia) -> str:
          "> Só observação: o repositório é de terceiro, operado por agentes, e nunca é fonte "
          "de dado do AtlasPen. O que muda no código pode valer a pena trazer; o que muda no "
          "arquivo de um diploma nosso é um terceiro olhar sobre o mesmo texto.", ""]
-    L.append(f"**{len(r['scripts'])}** commit(s) em `scripts/`; **{len(r['diplomas'])}** diploma(s) "
-             "vigiado(s) com o arquivo alterado.")
+    juris = sum(len(c) for c in r["jurisprudencia"].values())
+    L.append(f"**{len(r['scripts'])}** commit(s) em `scripts/`; **{juris}** na jurisprudência do STF e do "
+             f"STJ; **{len(r['diplomas'])}** diploma(s) vigiado(s) com o arquivo alterado.")
     L.append("")
     if r["scripts"]:
         L += ["### Commits em `scripts/`", ""]
         L += [f"- {c.data} [{c.sha[:7]}]({c.url}) — {c.mensagem}" for c in r["scripts"][:15]]
+        L.append("")
+    if r["jurisprudencia"]:
+        L += ["### Commits na jurisprudência", "",
+              "> O que ele trouxe de tribunal é pista para o Relator, não decisão lida: a súmula ou o "
+              "acórdão entra no catálogo só pelo texto oficial do tribunal.", ""]
+        for pasta, commits in r["jurisprudencia"].items():
+            L += [f"- {c.data} [{c.sha[:7]}]({c.url}) `{pasta}/` — {c.mensagem}" for c in commits[:10]]
         L.append("")
     if r["diplomas"]:
         L += ["### Diplomas vigiados cujo arquivo mudou", ""]

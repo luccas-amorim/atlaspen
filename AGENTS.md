@@ -124,7 +124,8 @@ pessoa que assina.
   pendência declarada — e sai no dia em que a pendência fechar.
 - **Fonte secundária aponta, não escreve** (decisão de 25/10/2026). O Senado (API de
   Dados Abertos), o normas.leg.br e o ctresb/leis são lidos pelo Cotejador
-  (`scripts/robos/cotejador/`) e pelo gerador de candidatos do acervo
+  (`scripts/robos/cotejador/`), o Banco Nacional de Precedentes do CNJ pelo Relator
+  (`scripts/robos/relator/`), e todos pelo gerador de candidatos do acervo
   (`scripts/robos/acervo/candidatos.py`), e nunca escrevem no catálogo, no acervo nem
   em `data/fontes.json`: o que dizem vira pergunta na issue ou linha de relatório. O
   Senado classifica mal — registra como "Alteração" as revogações que a Lei

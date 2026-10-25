@@ -1,0 +1,276 @@
+{
+ "aggsEspecies": [
+  {
+   "tipo": "RG",
+   "total": 12
+  },
+  {
+   "tipo": "ADI",
+   "total": 2
+  }
+ ],
+ "aggsOrgaos": [
+  {
+   "tipo": "TNU",
+   "total": 386
+  },
+  {
+   "tipo": "STJ",
+   "total": 26
+  },
+  {
+   "tipo": "TJRR",
+   "total": 26
+  },
+  {
+   "tipo": "TJMA",
+   "total": 20
+  },
+  {
+   "tipo": "STF",
+   "total": 14
+  },
+  {
+   "tipo": "TJMG",
+   "total": 13
+  },
+  {
+   "tipo": "TRT07",
+   "total": 9
+  },
+  {
+   "tipo": "TRF02",
+   "total": 8
+  },
+  {
+   "tipo": "TJES",
+   "total": 7
+  },
+  {
+   "tipo": "TRF06",
+   "total": 4
+  },
+  {
+   "tipo": "TRT02",
+   "total": 4
+  },
+  {
+   "tipo": "TST",
+   "total": 4
+  },
+  {
+   "tipo": "TJRJ",
+   "total": 2
+  },
+  {
+   "tipo": "TRT01",
+   "total": 2
+  },
+  {
+   "tipo": "TRT19",
+   "total": 2
+  },
+  {
+   "tipo": "STM",
+   "total": 1
+  },
+  {
+   "tipo": "TRF04",
+   "total": 1
+  },
+  {
+   "tipo": "TRT05",
+   "total": 1
+  },
+  {
+   "tipo": "TRT06",
+   "total": 1
+  },
+  {
+   "tipo": "TRT11",
+   "total": 1
+  },
+  {
+   "tipo": "TRT12",
+   "total": 1
+  },
+  {
+   "tipo": "TRT21",
+   "total": 1
+  }
+ ],
+ "posicao_final": 14,
+ "posicao_inicial": 1,
+ "resultados": [
+  {
+   "alertaSituacao": "cancelado",
+   "highlight": {
+    "tese_snippet": "-"
+   },
+   "historico": [
+    {
+     "dataCriacao": "2026-10-13T00:00:00.000-03:00",
+     "situacao": "Acórdão Publicado"
+    },
+    {
+     "dataCriacao": "2026-09-14T00:00:00.000-03:00",
+     "situacao": "Mérito Julgado"
+    },
+    {
+     "dataCriacao": "2026-09-10T00:00:00.000-03:00",
+     "situacao": "Afetado"
+    }
+   ],
+   "id": "stf-rg-106",
+   "nr": 106,
+   "orgao": "STF",
+   "processosParadigma": [
+    {
+     "classe": 1348,
+     "link": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2631072",
+     "numero": "590880"
+    }
+   ],
+   "questao": "a) Competência para, após o advento da Lei nº 8.112/90, julgar os efeitos de decisão anteriormente proferida pela Justiça do Trabalho. b) Extensão do reajuste de 84,32%, relativo ao IPC do mês de março de 1990 (Plano Collor), concedido pela Justiça Federal em decisão transitada em julgado, a outros servidores. ",
+   "situacao": "Cancelado",
+   "tipo": "RG",
+   "ultimaAtualizacao": "23/10/2026"
+  },
+  {
+   "highlight": {
+    "tese_snippet": "-"
+   },
+   "historico": [
+    {
+     "dataCriacao": "2026-10-13T00:00:00.000-03:00",
+     "situacao": "Acórdão Publicado"
+    },
+    {
+     "dataCriacao": "2026-09-14T00:00:00.000-03:00",
+     "situacao": "Mérito Julgado"
+    },
+    {
+     "dataCriacao": "2026-09-10T00:00:00.000-03:00",
+     "situacao": "Afetado"
+    }
+   ],
+   "id": "stf-rg-118",
+   "nr": 118,
+   "orgao": "STF",
+   "processosParadigma": [
+    {
+     "classe": 1348,
+     "link": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2637509",
+     "numero": "592616"
+    }
+   ],
+   "questao": "Inclusão do ISS na base de cálculo do PIS e da COFINS. ",
+   "situacao": "Há repercussão geral. Leading case: mérito julgado",
+   "tipo": "RG",
+   "ultimaAtualizacao": "23/10/2026"
+  },
+  {
+   "highlight": {
+    "tese_snippet": "-"
+   },
+   "historico": [
+    {
+     "dataCriacao": "2026-10-13T00:00:00.000-03:00",
+     "situacao": "Acórdão Publicado"
+    },
+    {
+     "dataCriacao": "2026-09-14T00:00:00.000-03:00",
+     "situacao": "Mérito Julgado"
+    },
+    {
+     "dataCriacao": "2026-09-10T00:00:00.000-03:00",
+     "situacao": "Afetado"
+    }
+   ],
+   "id": "stf-rg-1016",
+   "nr": 1016,
+   "orgao": "STF",
+   "processosParadigma": [
+    {
+     "classe": 1348,
+     "link": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5491645",
+     "numero": "1141156"
+    }
+   ],
+   "questao": "Constitucionalidade da inclusão dos expurgos inflacionários na correção monetária incidente sobre valores depositados judicialmente.",
+   "situacao": "Há repercussão geral. Leading case: mérito julgado",
+   "suspensoes": [
+    {
+     "ativa": true,
+     "dataSuspensao": "07/03/2019",
+     "descricao": "Suspensão nacional"
+    }
+   ],
+   "tipo": "RG",
+   "ultimaAtualizacao": "17/10/2026"
+  },
+  {
+   "highlight": {
+    "tese_snippet": "-"
+   },
+   "historico": [
+    {
+     "dataCriacao": "2026-10-13T00:00:00.000-03:00",
+     "situacao": "Acórdão Publicado"
+    },
+    {
+     "dataCriacao": "2026-09-14T00:00:00.000-03:00",
+     "situacao": "Mérito Julgado"
+    },
+    {
+     "dataCriacao": "2026-09-10T00:00:00.000-03:00",
+     "situacao": "Afetado"
+    }
+   ],
+   "id": "stf-rg-1348",
+   "nr": 1348,
+   "orgao": "STF",
+   "processosParadigma": [
+    {
+     "classe": 1348,
+     "link": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=6929423",
+     "numero": "1495108"
+    }
+   ],
+   "questao": "Alcance da imunidade do ITBI, prevista no inciso I do § 2º do art. 156 da Constituição, para a transferência de bens e direitos em integralização de capital social, quando a atividade preponderante da empresa é compra e venda ou locação de bens imóveis.",
+   "situacao": "Há repercussão geral. Leading case: mérito julgado",
+   "tipo": "RG",
+   "ultimaAtualizacao": "23/10/2026"
+  },
+  {
+   "cautelar": "NAO",
+   "decisao": "EMBARGOS_DE_DECLARACAO",
+   "historico": [
+    {
+     "dataAdmissao": "2025-11-24",
+     "dataCriacao": "2026-06-02T00:00:00.000-03:00",
+     "dataJulgamento": "2026-04-29",
+     "dataPublicacao": "2026-04-30",
+     "situacao": "Admitido"
+    },
+    {
+     "dataAdmissao": "2025-11-24",
+     "dataCriacao": "2026-08-21T00:00:00.000-03:00",
+     "dataJulgamento": "2026-04-29",
+     "dataPublicacao": "2026-04-30",
+     "situacao": "Acórdão Publicado"
+    }
+   ],
+   "id": "stf-adi-7947",
+   "linkDecisao": "https://redir.stf.jus.br/paginadorpub/paginador.jsp?docTP=TP&docID=802191531",
+   "nr": "7947",
+   "orgao": "STF",
+   "possuiDecisoes": true,
+   "textoDecisao": "O Tribunal, por unanimidade, acolheu parcialmente os embargos de declaração, sem efeitos modificativos, apenas para corrigir erro material e esclarecer que a improcedência do pedido de declaração de inconstitucionalidade alcança também o art. 54-T da Resolução TSE nº 23.571/18, com a redação conferida pela Resolução TSE nº 23.662/21, tal como já evidenciado na fundamentação, na ementa e na tese de julgamento fixada pelo Plenário, ficando mantido, no mais, o acórdão embargado em todos os seus termos. Foi fixada a seguinte tese de julgamento: “É cabível o acolhimento parcial de embargos de declaração, sem efeitos infringentes, para a correção de erro material consistente na omissão de dispositivo normativo expressamente abrangido pela fundamentação, pela ementa e pela tese fixada no julgamento, preservando-se integralmente a ratio decidendi e o resultado proclamado”. Tudo nos termos do voto do Relator, Ministro Dias Toffoli. Plenário, Sessão Virtual de 9.10.2026 a 19.10.2026.",
+   "textoEmenta": "EMENTA Direito constitucional e eleitoral. Embargos de declaração em ação direta de inconstitucionalidade. Resolução TSE nº 23.571/18, com a redação conferida pela Resolução TSE nº 23.662/21. Artigos 54-A, 54-B, 54-N, 54-O, 54-P, 54-Q, 54-R, 54-S e 54-T. Suspensão da anotação de órgão partidário em razão de contas julgadas não prestadas. Alegação de omissões e contradições. Inexistência. Rediscussão da matéria. Erro material na redação do dispositivo. Necessidade de correção. Ausência de efeitos modificativos. Embargos de declaração parcialmente acolhidos. I – Caso em exame 1. Embargos de declaração opostos contra acórdão em que se julgou improcedente ação direta de inconstitucionalidade ajuizada contra dispositivos da Resolução TSE nº 23.571/18 que disciplinam o procedimento de suspensão da anotação de órgão partidário em decorrência do julgamento definitivo de contas como não prestadas, bem como se rejeitou pedido subsidiário de interpretação conforme ao art. 54-R, § 4º. 2. Os embargantes sustentam a existência de omissões quanto à análise de dispositivos da Lei nº 9.096/95; à alegada distinção entre a desaprovação de contas e o julgamento de contas como não prestadas; aos efeitos da disciplina normativa sobre federações partidárias; ao precedente firmado na ADI nº 7.620 e ao alcance do art. 54-R, § 4º, da Resolução TSE nº 23.571/18; além de apontarem contradição relativa ao tratamento conferido ao art. 54-T do referido ato normativo. II – Questão em discussão 3. Há duas questões em discussão: (i) saber se o acórdão embargado incorreu em omissões ou contradições aptas a justificar sua integração ou modificação; e (ii) verificar se a ausência de menção expressa ao art. 54-T da Resolução TSE nº 23.571/18 em trecho do dispositivo do acórdão configura erro material passível de correção. III – Razões de decidir 4. Os embargos de declaração destinam-se exclusivamente ao saneamento de obscuridade, contradição, omissão ou erro material, não constituindo instrumento adequado para a rediscussão de matéria já decidida. 5. As questões relativas aos arts. 32, § 5º; 37, § 2º; e 37-A da Lei nº 9.096/95; à proporcionalidade da medida impugnada; aos reflexos sobre federações partidárias; ao precedente da ADI nº 7.620 e ao pedido de interpretação conforme ao art. 54-R, § 4º, foram adequadamente enfrentadas no acórdão embargado, inexistindo omissão ou deficiência de fundamentação. 6. A prestação jurisdicional foi regularmente entregue, sendo desnecessário o enfrentamento individualizado de todos os argumentos deduzidos pelas partes quando a fundamentação adotada se mostra suficiente para a resolução da controvérsia, nos termos da jurisprudência consolidada da Suprema Corte e do Tema nº 339 da Repercussão Geral. 7. A leitura integral do acórdão evidencia que o art. 54-T integrou o objeto da ação, foi examinado na fundamentação e incluído na ementa e na tese de julgamento, sendo inequívoca a intenção do Tribunal de reconhecer sua constitucionalidade. 8. A ausência de referência expressa ao art. 54-T em parte do dispositivo configura mero erro material de redação, cuja correção visa apenas assegurar plena correspondência entre a fundamentação, o dispositivo e a tese fixada, sem qualquer repercussão sobre o resultado do julgamento. IV – Dispositivo e tese 9. Embargos de declaração parcialmente acolhidos, sem efeitos modificativos, apenas para se corrigir erro material e se esclarecer que a improcedência do pedido de declaração de inconstitucionalidade alcança também o art. 54-T da Resolução TSE nº 23.571/18, ficando mantido, no mais, o acórdão embargado em todos os seus termos. Tese de julgamento: “1. É cabível o acolhimento parcial de embargos de declaração, sem efeitos infringentes, para a correção de erro material consistente na omissão de dispositivo normativo expressamente abrangido pela fundamentação, pela ementa e pela tese fixada no julgamento, preservando-se integralmente a ratio decidendi e o resultado proclamado.”",
+   "tipo": "ADI",
+   "ultimaAtualizacao": "20/10/2026"
+  }
+ ],
+ "total": 5
+}

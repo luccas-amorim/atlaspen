@@ -39,3 +39,18 @@ def test_rodar_separa_codigo_e_diplomas_e_nao_quebra():
     assert r["nao_lidos"] and "scripts" in r["nao_lidos"][0]
     texto = rel.montar_relatorio(r, date(2026, 10, 25))
     assert "Só observação" in texto and "`lep`" in texto and "Não deu para ler" in texto
+
+
+def test_rodar_le_a_jurisprudencia():
+    s = ctresb.Commit("def", "2026-10-20", "Atualiza versões oficiais STF", "https://y")
+
+    def ler(caminho, desde):
+        if caminho == "jurisprudencia/stj":
+            raise FalhaDeRede(caminho, 2, TimeoutError())
+        return [s] if caminho == "jurisprudencia/stf" else []
+    r = rel.rodar([], "2026-10-17", ler=ler)
+    assert list(r["jurisprudencia"]) == ["jurisprudencia/stf"]
+    assert any("jurisprudencia/stj" in x for x in r["nao_lidos"])
+    texto = rel.montar_relatorio(r, date(2026, 10, 25))
+    assert "**1** na jurisprudência" in texto and "pista para o Relator" in texto
+    assert "`jurisprudencia/stf/` — Atualiza versões oficiais STF" in texto

@@ -18,8 +18,8 @@ A rodada automática acontece **toda segunda-feira, 05:00 de Brasília**
 semanal* ▸ **Run workflow**. Ela produz, no máximo, **três coisas**: um commit, uma issue
 e um pull request.
 
-São **sete robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
-qual falhou sem que você precise abrir o passo. Cinco conferem, e desses três correm
+São **oito robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
+qual falhou sem que você precise abrir o passo. Seis conferem, e desses quatro correm
 em paralelo: auditor e cotejador esperam, porque leem as páginas que o vigia baixou.
 Os dois últimos entregam — a triagem abre a issue, o proponente abre o PR.
 
@@ -31,6 +31,7 @@ Os dois últimos entregam — a triagem abre a issue, o proponente abre o PR.
 | **auditor** | Hediondez, ação penal, causas de aumento e nome do tipo | Não |
 | **arquivista** | Saúde da prosa: documento vencido ou cuja dependência mudou | Não |
 | **cotejador** | A segunda leitura (desde 25/10/2026): o compilado anota as leis que o Senado registra? A moldura do Planalto é a da Câmara? Mais os vetos do ano e o que mudou no ctresb/leis, que só informam | Não: o Senado fora do ar não pode calar a rodada |
+| **relator** | O que o STF decidiu na semana sobre diploma vigiado, lido no Banco Nacional de Precedentes do CNJ (desde 25/10/2026) | Não: o CNJ fora do ar entra em "Robôs que não terminaram" |
 | **triagem** | Junta os relatórios e abre a issue | — |
 | **proponente** | Transforma em PR o que é leitura direta — moldura, sentinela defasada e modificador de escopo declarado —, e escreve a nota quando a lei é recente | Não: só roda se houver o que propor |
 
@@ -96,7 +97,8 @@ Os blocos, na ordem em que aparecem — o que pede ação primeiro:
 | **DOU da semana** | Atos normativos da Seção 1 triados em três níveis pelo PRECEITO SECUNDÁRIO — quem fala de pena sem cominar nenhuma não cria crime | Ler só os dois primeiros níveis. **Possível tipo penal em diploma não monitorado** é o ponto cego do conferidor, e o PR da semana já traz a entrada de `data/fontes.json` para conferir. **Mexe em diploma que já vigiamos** é antecedência: o conferidor veria na rodada seguinte, mas a `sentinela` daquela fonte talvez precise mudar. Os **descartados** ficam nomeados no fim, uma linha cada, para o corte ser auditável |
 | **Cotejo com o Senado** | Lei recente que o Senado registra para um diploma vigiado e que a página baixada do Planalto não cita; à parte, as provavelmente superadas por lei posterior no mesmo dispositivo. Desde 25/10/2026 | Abrir o compilado e procurar a lei. Se o Planalto está atrasado, o catálogo pode estar conferido contra texto velho; se o Senado errou, nada a fazer. O que toca registro do catálogo vem primeiro. A lei que não deu redação nova (remissão, suspensão temporária) e por isso não tem o que anotar vira exceção em `scripts/robos/cotejador/excecoes-cotejo.json`, com motivo e data; a exceção que deixa de casar aparece como "sem efeito" e sai |
 | **Molduras Planalto × Câmara** | Dispositivo cuja pena difere entre o compilado do Planalto e a compilação da Câmara (normas.leg.br) | Abrir as duas no dispositivo. O catálogo segue o Planalto; a divergência diz que uma das duas está atrasada |
-| **Vetos e ctresb/leis** | Vetos do ano a leis que mexem em diploma vigiado (os que ainda tramitam podem cair) e o que mudou no ctresb/leis | Nada, em regra: só informam, e nunca abrem issue sozinhos |
+| **Vetos e ctresb/leis** | Vetos do ano a leis que mexem em diploma vigiado (os que ainda tramitam podem cair) e o que mudou no ctresb/leis — no código, nos arquivos dos nossos diplomas e, desde 25/10/2026, na jurisprudência do STF e do STJ | Nada, em regra: só informam, e nunca abrem issue sozinhos |
+| **Tribunais** | Precedente do STF atualizado na semana que toca diploma vigiado. Sobe para leitura o que fala em não recepção, inconstitucionalidade ou interpretação conforme, e o que toca registro do catálogo; o resto fica numa linha. Desde 25/10/2026 | Ler o acórdão no portal do STF, não a ementa do CNJ: a natureza que o relatório mostra é pista lida do texto. Se a decisão retira o dispositivo, o registro ganha `vigencia_ate` e vai para o acervo; se modula o alcance, a ressalva vai para o `obs` ou para `data/avisos.json`. Nada disso o robô faz |
 | **Leis do ano** | Na primeira semana do mês, o relatório do Recenseador — antes ele decidia se a issue abria e não entrava no corpo | Ler as ementas. Varredura incompleta (aviso) quer dizer que a janela do falso negativo continua aberta |
 
 **Fechar a issue significa "triado"** — não "resolvido". O que virar tarefa vira commit ou

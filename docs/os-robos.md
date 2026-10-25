@@ -9,7 +9,7 @@ Um catálogo de direito penal envelhece sozinho. A lei muda toda semana, e a
 defasagem não avisa: um registro errado tem a mesma aparência de um registro
 certo. A resposta do projeto a isso são **rotinas automáticas** que rodam toda
 segunda-feira, às 5h de Brasília, cada uma vigiando uma coisa diferente. Hoje são
-seis, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
+sete, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
 abrir a execução.
 
 Esta página existe para que você possa **discordar dos critérios**. Todos eles
@@ -19,10 +19,10 @@ largo demais, [abra uma issue](https://github.com/luccas-amorim/atlaspen/issues)
 o tipo de retorno que mais serve ao catálogo.
 
 :::note[Determinístico, sem IA]
-Nenhum dos seis usa modelo de linguagem. São expressões regulares e comparação
+Nenhum dos sete usa modelo de linguagem. São expressões regulares e comparação
 de texto, lidas contra o texto **compilado** oficial do `planalto.gov.br`. O
-Cotejador lê também o Senado e o normas.leg.br, mas só para perguntar: nada que
-vem de lá escreve no catálogo. Onde não há certeza, o resultado é uma **pergunta
+Cotejador lê também o Senado e o normas.leg.br, e o Relator, o Banco Nacional de
+Precedentes do CNJ, mas só para perguntar: nada que vem de lá escreve no catálogo. Onde não há certeza, o resultado é uma **pergunta
 para leitura humana**, nunca uma alteração automática do dado.
 :::
 
@@ -36,8 +36,9 @@ para leitura humana**, nunca uma alteração automática do dado.
 | **Arquivista** | A prosa ainda descreve o sistema? | A documentação, contra os arquivos de que ela fala |
 | **Recenseador** | Existe lei penal que ninguém leu? | Todas as leis do ano, uma a uma (mensal) |
 | **Cotejador** | O compilado do Planalto está em dia? | O registro do Senado e a compilação da Câmara |
+| **Relator** | O STF decidiu algo sobre a lei que vigiamos? | O Banco Nacional de Precedentes do CNJ |
 
-Sentinela e Arquivista correm em paralelo com o Vigia; Auditor e Cotejador esperam
+Sentinela, Arquivista e Relator correm em paralelo com o Vigia; Auditor e Cotejador esperam
 por ele, porque leem as páginas que ele baixou. O Recenseador roda uma vez por mês,
 na primeira semana. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se
 todos se calarem, a rodada deixa só o carimbo de que a conferência aconteceu.
@@ -281,7 +282,44 @@ O Cotejador lê também, por curiosidade técnica, o repositório público
 [ctresb/leis](https://github.com/ctresb/leis), que converte a legislação brasileira
 para Markdown: o que mudou no código dele e nos arquivos dos nossos diplomas. É de
 terceiro, operado por agentes, e nunca é fonte de dado; parte da rede comum dos robôs
-veio de lá.
+veio de lá. Desde 25/10/2026 lê também os commits na jurisprudência do STF e do STJ
+que ele reúne: pista para o Relator, nunca decisão lida.
+
+---
+
+## Relator — o que o Supremo decidiu na semana
+
+A decisão de tribunal muda o catálogo com a força de uma lei, e não passa pelo Diário
+Oficial da União. O Relator lê, toda semana, no
+[Banco Nacional de Precedentes](https://pangeabnp.pdpj.jus.br) do CNJ, os precedentes
+do STF atualizados nos últimos oito dias — controle concentrado (ADI, ADPF, ADC, ADO)
+e temas de repercussão geral — e separa os que tocam um diploma vigiado.
+
+**Como ele sabe que a decisão toca a lei.** No controle concentrado, o CNJ codifica o
+ato impugnado: `LEG-FED DEL-002848 ANO-1940 ART-00331` é o art. 331 do Código Penal. No
+tema de repercussão geral não há código, e o diploma sai do texto da questão e da tese
+— pela citação ("Decreto-lei 3.688/1941") ou pelo nome ("Lei de Contravenções Penais"),
+e o artigo, do "art. N" que vem logo antes.
+
+**O que pede leitura.** A decisão cujo texto fala em não recepção, inconstitucionalidade
+ou interpretação conforme, e a que toca registro do catálogo, seja qual for. A natureza
+é pista lida do texto, não classificação: a ementa da ADPF 338, que julgou constitucional
+o aumento do art. 141, II, do Código Penal, cita a inconstitucionalidade que foi pedida
+e sai marcada por ela. Por isso o Relator aponta, e quem assina lê o acórdão.
+
+:::caution[Oficial, e incompleto]
+O banco do CNJ é a fonte oficial dos precedentes qualificados, e não tem tudo. Medido em
+25/10/2026: da ADPF 130 (Lei de Imprensa) ele guarda só a cautelar de 2008, não o mérito
+de 2009; a ADPF 291 (Código Penal Militar, art. 235) não está lá. O silêncio dele não
+prova nada.
+:::
+
+Na primeira rodada, em 25/10/2026, a semana trouxe 14 precedentes do STF e nenhum sobre
+lei vigiada. Na janela de um ano, 50 tocavam diploma vigiado, e o Tema 113 — o art. 25
+da Lei de Contravenções Penais, não recepcionado — apontou o registro 766, que já
+trazia a vigência encerrada em 05/10/1988 e já estava no acervo. A ADI 7555, que esta página dava como o exemplo
+da lacuna que nenhum robô via, está no banco, e o Relator a aponta com os registros do
+Código Penal Militar que ela atingiu.
 
 ---
 
@@ -416,6 +454,9 @@ scripts/robos/
   recenseador/   leis_do_ano
   auditor/       auditar · excecoes-auditoria
   arquivista/    verificar_documentacao
+  cotejador/     frescor · textos · vetos · ctresb · historico
+  relator/       decisoes
+  fontes/        rede · senado · normas · ctresb · cnj      (o transporte: toda requisição passa por aqui)
   proponente/    propor · corrigir · criar        (não é robô: é quem abre o PR — ver acima)
 ```
 
@@ -440,16 +481,16 @@ o custo de ceder já foi pago:
 
 Declarar o limite vale mais que fingir cobertura.
 
-**Decisão do Supremo.** Uma ADI que declara inconstitucionalidade não é ato
-normativo do Diário Oficial, Seção 1 — é publicada no Diário da Justiça. E altera
-o catálogo com a mesma força de uma lei revogadora: a ADI 7555 tornou
-inconstitucional o §3º do art. 232 do Código Penal Militar e deslocou o estupro
-de vulnerável praticado por militar para o art. 217-A do Código Penal. Três
-registros afetados, **nenhum ato no DOU**. O Sentinela jamais veria. É a lacuna
-mais séria que resta, e vai exigir robô próprio — para o **STF**, o **STJ** e o
-**STM**, que é quem julga os registros do Código Penal Militar — hoje o segundo maior
-diploma do catálogo (ver [Completude](./completude.md)). Está no
-[README](https://github.com/luccas-amorim/atlaspen/blob/main/README.md#o-que-falta).
+**Decisão de tribunal, fora do que o CNJ guarda.** Uma ADI que declara
+inconstitucionalidade não é ato normativo do Diário Oficial, Seção 1 — é publicada no
+Diário da Justiça. E altera o catálogo com a mesma força de uma lei revogadora: a ADI
+7555 tornou inconstitucional o §3º do art. 232 do Código Penal Militar e deslocou o
+estupro de vulnerável praticado por militar para o art. 217-A do Código Penal. O
+Relator vê o STF no que o banco do CNJ
+tem, e o banco não tem tudo. Continuam sem robô o **STJ**, cuja súmula muda a leitura
+de tipo e de atributo, e o **STM**, que é quem julga os registros do Código Penal
+Militar — hoje o segundo maior diploma do catálogo (ver [Completude](./completude.md)).
+Está no [README](https://github.com/luccas-amorim/atlaspen/blob/main/README.md#o-que-falta).
 
 **O tipo penal antigo que nunca foi cadastrado, e o que morreu sem aviso.** O
 Recenseador varre o ano corrente; a legislação penal brasileira tem quase dois
