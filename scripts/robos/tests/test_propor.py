@@ -408,3 +408,11 @@ def test_corpo_do_pr_mostra_modificadores_e_sentinelas(escolha):
     assert "## Sentinelas" in corpo and "15.384 → **15.517**" in corpo
     assert "**1** modificador(es) de escopo declarado" in corpo
 
+
+
+def test_rodada_de_auditoria_usa_o_auditor_importado(monkeypatch, tmp_path):
+    """Até 25/10/2026 a rodada fazia `import auditar`, que não resolve desde que
+    cada robô ganhou pasta própria: morria com 1, o código de "nada mecânico"."""
+    monkeypatch.setattr(propor.auditoria, "rodar", lambda: [])
+    args = SimpleNamespace(aplicar=False, saida=str(tmp_path))
+    assert propor._rodada_de_auditoria(args) == 1

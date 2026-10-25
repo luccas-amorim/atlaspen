@@ -252,12 +252,55 @@ jobs:
           find recolhido -name '*.md' -exec cp -f {} crawler/relatorios/ \; || true
           ls -la crawler/relatorios/ || true
 
+      # Quebra não é silêncio. Cada robô fala por dois códigos: 0 (nada) e 3
+      # (achados). Qualquer outro — 1 de exceção, 2 de fonte ilegível, ou vazio
+      # de job que nem chegou ao passo — quer dizer que a pergunta da semana
+      # ficou sem resposta. Até 25/10/2026 esta triagem só olhava o 3: o
+      # Arquivista quebrou toda semana desde agosto, e as rodadas de 12 e
+      # 19/10 terminaram verdes, sem issue, com robô caído.
+      - name: Quem não terminou
+        id: quebrados
+        env:
+          VIGIA: ${{ needs.vigia.outputs.codigo }}
+          SENTINELA: ${{ needs.sentinela.outputs.codigo }}
+          RECENSEADOR: ${{ needs.sentinela.outputs.leis_do_ano }}
+          AUDITOR: ${{ needs.auditor.outputs.codigo }}
+          ARQUIVISTA: ${{ needs.arquivista.outputs.codigo }}
+          EXECUCAO: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          : > quebrados.md
+          avaliar() {
+            case "$2" in
+              0|3) ;;
+              *) echo "- **$1**: código \`${2:-ausente}\`" >> quebrados.md ;;
+            esac
+          }
+          avaliar "Vigia" "$VIGIA"
+          avaliar "Sentinela" "$SENTINELA"
+          # O Recenseador só roda na primeira semana do mês: vazio fora dela é
+          # o esperado, e não quebra.
+          [ -n "$RECENSEADOR" ] && avaliar "Recenseador" "$RECENSEADOR"
+          avaliar "Auditor" "$AUDITOR"
+          avaliar "Arquivista" "$ARQUIVISTA"
+          if [ -s quebrados.md ]; then
+            {
+              echo "## Robôs que não terminaram"
+              echo
+              echo "O que eles vigiam ficou SEM resposta nesta rodada — não é o mesmo que \"nada a relatar\". O log está na [execução]($EXECUCAO)."
+              echo
+              cat quebrados.md
+            } > crawler/relatorios/quebrados.md
+            echo "houve=1" >> "$GITHUB_OUTPUT"
+            cat crawler/relatorios/quebrados.md
+          fi
+
       - name: Abrir issue com os achados
         if: >-
           needs.vigia.outputs.codigo == '3' || needs.sentinela.outputs.codigo == '3'
           || needs.auditor.outputs.codigo == '3'
           || needs.arquivista.outputs.codigo == '3'
           || needs.sentinela.outputs.leis_do_ano == '3'
+          || steps.quebrados.outputs.houve == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -281,6 +324,7 @@ jobs:
             echo
             echo "---"
             echo
+            [ -f "crawler/relatorios/quebrados.md" ] && cat "crawler/relatorios/quebrados.md" && echo
             [ -f "$RELATORIO" ] && cat "$RELATORIO"
             echo
             [ -f "$DOU" ] && cat "$DOU"
@@ -323,6 +367,7 @@ jobs:
           needs.vigia.outputs.codigo == '0' && needs.sentinela.outputs.codigo != '3'
           && needs.auditor.outputs.codigo != '3'
           && needs.arquivista.outputs.codigo != '3'
+          && steps.quebrados.outputs.houve != '1'
         run: echo "Catálogo em dia com o texto compilado e nada penal no DOU."
 
   # ── Carimbo da conferência e PR das correções mecânicas ───────────────────

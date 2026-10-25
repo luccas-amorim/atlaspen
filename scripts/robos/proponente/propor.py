@@ -45,6 +45,7 @@ import io
 import json
 import re
 import sys
+import traceback
 from datetime import date
 from pathlib import Path
 
@@ -884,9 +885,11 @@ def _rodada_de_auditoria(args) -> int:
     tem prioridade — é o que a máquina lê com segurança. A classificação vem
     depois, e vem como proposta.
     """
-    import auditar
-
-    achados = auditar.rodar()
+    # O módulo é o `auditoria` importado no topo. Até 25/10/2026 havia aqui um
+    # `import auditar` dos tempos em que os robôs dividiam uma pasta só: desde
+    # 14/08 ele não resolvia, e a rodada de auditoria morria com 1 — o mesmo
+    # código de "nada mecânico" —, sem PR e sem aviso.
+    achados = auditoria.rodar()
     propostas = propostas_de_auditoria(achados)
     print(f"auditoria: {len(achados)} achado(s), {len(propostas)} viram proposta")
     for p in propostas[:40]:
@@ -909,7 +912,7 @@ def _rodada_de_auditoria(args) -> int:
     saida = Path(args.saida)
     saida.mkdir(parents=True, exist_ok=True)
     (saida / "corpo.md").write_text(
-        corpo_auditoria(propostas, versao, auditar.montar_relatorio(achados),
+        corpo_auditoria(propostas, versao, auditoria.montar_relatorio(achados),
                         fontes_novas),
         encoding="utf-8", newline="\n")
     meta = {
@@ -984,4 +987,11 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    # Exceção não tratada sai com 1, que aqui quer dizer "nada mecânico": o
+    # workflow não distinguia a quebra do silêncio. Quebra sai com 2, que o
+    # job trata como falha.
+    try:
+        raise SystemExit(main())
+    except Exception:
+        traceback.print_exc()
+        raise SystemExit(2)

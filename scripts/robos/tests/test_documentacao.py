@@ -151,3 +151,22 @@ def test_mover_com_edicao_conta_como_releitura(tmp_path, monkeypatch):
     git("commit", "-q", "-m", "muda de lugar e reescreve", em="2026-09-24T12:00:00")
 
     assert vd.commit_mais_recente("docs/texto.md") == date(2026, 9, 24)
+
+
+def test_saida_em_pasta_que_ainda_nao_existe(tmp_path, monkeypatch):
+    """No checkout limpo da CI, `crawler/relatorios/` não existe.
+
+    Até 25/10/2026 o Arquivista quebrava aí toda semana, e a triagem lia a
+    quebra como "documentação em dia".
+    """
+    import io
+    monkeypatch.setattr(vd, "avaliar", lambda registro: [])
+    # `main` embrulha o `sys.stdout.buffer` num wrapper novo; sem a referência,
+    # o falso é coletado e fecha o buffer que o novo usa.
+    falso = io.TextIOWrapper(io.BytesIO(), encoding="utf-8")
+    monkeypatch.setattr(sys, "stdout", falso)
+    destino = tmp_path / "crawler" / "relatorios" / "documentacao.md"
+    monkeypatch.setattr(sys, "argv", ["verificar_documentacao.py", "--saida", str(destino)])
+
+    assert vd.main() == 0
+    assert destino.exists()
