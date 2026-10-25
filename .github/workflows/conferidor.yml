@@ -239,6 +239,9 @@ jobs:
       actions: read          # baixar o artifact com os snapshots desta rodada
     outputs:
       codigo: ${{ steps.frescor.outputs.codigo }}
+      textos: ${{ steps.textos.outputs.codigo }}
+      vetos: ${{ steps.vetos.outputs.codigo }}
+      ctresb: ${{ steps.ctresb.outputs.codigo }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -254,6 +257,30 @@ jobs:
         run: |
           set +e
           python3 scripts/robos/cotejador/frescor.py > /dev/null
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      # A moldura do Planalto contra a da compilação da Câmara (normas.leg.br).
+      - name: Cotejar as molduras com a Câmara
+        id: textos
+        run: |
+          set +e
+          python3 scripts/robos/cotejador/textos.py > /dev/null
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      # Os dois abaixo só informam (saem 0): entram no corpo da issue quando
+      # ela abre por outro motivo.
+      - name: Vetos do ano que tocam diplomas vigiados
+        id: vetos
+        run: |
+          set +e
+          python3 scripts/robos/cotejador/vetos.py > /dev/null
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      - name: O que mudou no ctresb/leis
+        id: ctresb
+        env:
+          # Sem token, a API do GitHub dá 60 requisições por hora; a leitura usa ~70.
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          python3 scripts/robos/cotejador/ctresb.py > /dev/null
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório do cotejo
         if: always()
@@ -312,6 +339,9 @@ jobs:
           AUDITOR: ${{ needs.auditor.outputs.codigo }}
           ARQUIVISTA: ${{ needs.arquivista.outputs.codigo }}
           COTEJADOR: ${{ needs.cotejador.outputs.codigo }}
+          COTEJADOR_TEXTOS: ${{ needs.cotejador.outputs.textos }}
+          COTEJADOR_VETOS: ${{ needs.cotejador.outputs.vetos }}
+          COTEJADOR_CTRESB: ${{ needs.cotejador.outputs.ctresb }}
           EXECUCAO: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           : > quebrados.md
@@ -328,7 +358,10 @@ jobs:
           [ -n "$RECENSEADOR" ] && avaliar "Recenseador" "$RECENSEADOR"
           avaliar "Auditor" "$AUDITOR"
           avaliar "Arquivista" "$ARQUIVISTA"
-          avaliar "Cotejador" "$COTEJADOR"
+          avaliar "Cotejador (frescor)" "$COTEJADOR"
+          avaliar "Cotejador (molduras)" "$COTEJADOR_TEXTOS"
+          avaliar "Cotejador (vetos)" "$COTEJADOR_VETOS"
+          avaliar "Cotejador (ctresb/leis)" "$COTEJADOR_CTRESB"
           if [ -s quebrados.md ]; then
             {
               echo "## Robôs que não terminaram"
@@ -348,6 +381,7 @@ jobs:
           || needs.arquivista.outputs.codigo == '3'
           || needs.sentinela.outputs.leis_do_ano == '3'
           || needs.cotejador.outputs.codigo == '3'
+          || needs.cotejador.outputs.textos == '3'
           || steps.quebrados.outputs.houve == '1'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -425,6 +459,7 @@ jobs:
           && needs.auditor.outputs.codigo != '3'
           && needs.arquivista.outputs.codigo != '3'
           && needs.cotejador.outputs.codigo != '3'
+          && needs.cotejador.outputs.textos != '3'
           && steps.quebrados.outputs.houve != '1'
         run: echo "Catálogo em dia com o texto compilado e nada penal no DOU."
 
