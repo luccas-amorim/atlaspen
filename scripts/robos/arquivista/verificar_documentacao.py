@@ -26,7 +26,8 @@ Uso:
     python scripts/robos/arquivista/verificar_documentacao.py            # relatório
     python scripts/robos/arquivista/verificar_documentacao.py --md       # em markdown, p/ a issue
 
-Saídas: 0 = tudo em dia; 2 = erro; 3 = há documento vencido.
+Saídas: 0 = tudo em dia; 2 = erro, ou clone raso (sem histórico, não há como saber);
+3 = há documento vencido.
 """
 from __future__ import annotations
 
@@ -50,6 +51,23 @@ REGISTRO = RAIZ / "data" / "documentacao.json"
 # Separador de commits no `git log`, para não confundir com o texto de nenhuma
 # linha de status. É o `%x01` do formato, escrito aqui uma vez só.
 _SEP = chr(1)
+
+
+def repositorio_raso() -> bool:
+    """O clone tem só os últimos commits (`actions/checkout` sem `fetch-depth: 0`)?
+
+    Num clone raso, todo arquivo parece commitado no último commit, e "editar é
+    conferir" faz todo documento parecer relido hoje. Foi o que a primeira rodada
+    com o Arquivista de pé mostrou, em 25/10/2026: na CI, os 18 documentos "em
+    dia"; na cópia completa, três vencidos. O relatório não pode afirmar nada
+    nessas condições.
+    """
+    try:
+        saida = subprocess.run(["git", "rev-parse", "--is-shallow-repository"],
+                               cwd=RAIZ, capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return saida.stdout.strip() == "true"
 
 
 def commit_mais_recente(caminho: str) -> date | None:
@@ -164,6 +182,12 @@ def main() -> int:
     p.add_argument("--md", action="store_true", help="imprime o relatório em markdown")
     p.add_argument("--saida", help="grava o markdown neste arquivo")
     args = p.parse_args()
+
+    if repositorio_raso():
+        print("clone raso: sem o histórico, todo documento parece relido hoje e o "
+              "relatório não afirmaria nada de verdadeiro. Use `fetch-depth: 0` no "
+              "checkout (ou `git fetch --unshallow`).", file=sys.stderr)
+        return 2
 
     registro = json.loads(REGISTRO.read_text(encoding="utf-8"))
     veredito = avaliar(registro)
