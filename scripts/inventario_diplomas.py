@@ -32,12 +32,17 @@ import json
 import re
 import sys
 import time
-import urllib.request
 from pathlib import Path
 
 BASE = "https://www.planalto.gov.br/ccivil_03/"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AtlasPen-inventario"
 RAIZ = Path(__file__).resolve().parent.parent
+# A rede é a dos robôs (`scripts/robos/fontes/rede.py`), com uma tentativa só:
+# o que não abre é relatado e a coleta segue.
+sys.path.insert(0, str(RAIZ / "scripts" / "robos"))
+from fontes.rede import Rede  # noqa: E402
+
+REDE = Rede({"User-Agent": UA}, tentativas=1, timeout=60)
 HOJE = "2026-07-19"
 
 # ---------------------------------------------------------------------------
@@ -780,12 +785,10 @@ def baixar(cache: Path, apenas: set[str] | None = None) -> None:
             print(f"  cache  {slug}")
             continue
         url = BASE + meta["url"]
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
-                corpo = resp.read()
+            corpo = REDE.obter(url, ausentes=())
         except Exception as exc:  # noqa: BLE001 — relatar e seguir
-            print(f"  ERRO   {slug}: {exc} ({url})")
+            print(f"  ERRO   {slug}: {getattr(exc, 'causa', exc)} ({url})")
             continue
         destino.write_bytes(corpo)
         print(f"  ok     {slug}  {len(corpo):>8} bytes")

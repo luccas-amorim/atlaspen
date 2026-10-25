@@ -38,7 +38,6 @@ import re
 import sys
 import time
 import urllib.error
-import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[3]
@@ -47,6 +46,7 @@ RAIZ = Path(__file__).resolve().parents[3]
 # não mora aqui.
 sys.path.insert(0, str(RAIZ / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from fontes.rede import UA_NAVEGADOR, FalhaDeRede, Rede  # noqa: E402
 from nucleo.preceito import comina_pena  # noqa: E402
 from nucleo.tempo import hoje  # noqa: E402
 
@@ -54,11 +54,13 @@ FONTES = RAIZ / "data" / "fontes.json"
 RELATORIOS = RAIZ / "crawler" / "relatorios"
 
 CABECALHOS = {
-    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"),
+    "User-Agent": UA_NAVEGADOR,
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "pt-BR,pt;q=0.9",
 }
+# Uma tentativa só: a caminhada sonda centenas de números, e o que não abre
+# conta como vazio.
+REDE = Rede(CABECALHOS, tentativas=1, timeout=60)
 PAUSA = 1.2                 # educação com o planalto.gov.br, como no baixar.py
 VAZIOS_ATE_PARAR = 5        # 404 seguidos que encerram a caminhada
 
@@ -96,14 +98,14 @@ def url_da_lcp(numero: int) -> str:
 def baixar(url: str) -> str | None:
     """O texto da lei, ou None quando o número não existe (404)."""
     try:
-        pedido = urllib.request.Request(url, headers=CABECALHOS)
-        with urllib.request.urlopen(pedido, timeout=60) as r:
-            bruto = r.read()
-    except urllib.error.HTTPError as e:
-        if e.code in (403, 404, 500):
-            return None
-        raise
-    except (urllib.error.URLError, TimeoutError):
+        bruto = REDE.obter(url, ausentes=(403, 404, 500))
+    except FalhaDeRede as e:
+        # Outro erro HTTP sobe; conexão que não abre conta como vazio.
+        if isinstance(e.causa, urllib.error.HTTPError) or not isinstance(
+                e.causa, (urllib.error.URLError, TimeoutError)):
+            raise e.causa from e
+        return None
+    if bruto is None:
         return None
     try:
         return bruto.decode("utf-8")
