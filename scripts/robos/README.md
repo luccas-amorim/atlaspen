@@ -55,6 +55,7 @@ decodifica o que é seu.
 | `cotejador/historico.py` | Sob demanda: `data/historico-legislativo.json` contra o registro do Senado, nos dois sentidos. |
 | `acervo/candidatos.py` | Sob demanda: os dispositivos revogados dos compilados e os diplomas revogados no todo que o acervo ainda não tem, cada um com o nível de prova de que era crime (pena no compilado, pena no original, pede juízo). **Não escreve no acervo.** |
 | `excecoes.json` | O que já foi julgado e decidido na conferência de PENAS. Sem isso o relatório repetiria para sempre os mesmos achados. |
+| `cotejador/excecoes-cotejo.json` | O mesmo, para o frescor do Cotejador: a lei que o compilado não anota porque não deu redação nova (remissão, suspensão temporária), julgada contra o texto da lei. Lei que deu redação nova e falta no compilado nunca vira exceção. A que deixa de casar sai, e a issue avisa. |
 | `excecoes-auditoria.json` | O mesmo, para a auditoria de classificação. Arquivo próprio porque as chaves são outras: ora o id do registro, ora o dispositivo do compilado. |
 | `cobertura-limites.json` | Quantos registros o conferidor aceita **não** garantir, por motivo. Crescer é regressão e vira achado; encolher vira convite a apertar. É a trava contra a falha que mais dói aqui — a silenciosa: registro que sai da conferência não aparece como divergente, aparece como nada. |
 | `../verificar_documentacao.py` | Saúde da prosa: documento vence por prazo ou porque algo de que ele fala mudou depois da última conferência. |

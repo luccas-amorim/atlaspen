@@ -156,3 +156,59 @@ class TestSuperada:
         v = frescor.cotejar({"id": "cp"}, ficha, "(Redação dada pela Lei nº 15.397, de 2026)", {}, DIA)
         assert v["situacao"] == "confere" and v["superadas"][0]["por"].startswith("Lei nº 15.397")
         assert "superada por Lei nº 15.397" in frescor.montar_relatorio([v], DIA)
+
+
+class TestRodadaDe25DeOutubro:
+    """Os casos que a issue #40 trouxe e que a conferência contra a lei resolveu."""
+
+    LEI = senado.Posterior("Lei nº 15.272 de 26/11/2025", "15.272", date(2025, 11, 26),
+                           senado.ALTERACAO_PERMANENTE, (senado.Item("Art. 312, § 3", "art. 312, §3º", "Acréscimo"),))
+
+    def test_lein_sem_espaco(self):
+        """O CPP anota "(Incluído pela Lein° 15.272, de 2025)"."""
+        assert frescor.anotada(frescor.texto_plano("(Incluído pela Lein° 15.272, de 2025)"), self.LEI)
+
+    def test_anotada_so_pelo_link(self):
+        """A Lei de Drogas anota "Lei nº 15.581" com o link para L15281.htm."""
+        drogas = senado.Posterior("Lei nº 15.281 de 05/12/2025", "15.281", date(2025, 12, 5),
+                                  senado.ALTERACAO_PERMANENTE,
+                                  (senado.Item("Art. 23, Parágrafo Único", "art. 23, parágrafo único", "Acréscimo"),))
+        html = '<a href="../../../_Ato2023-2026/2025/Lei/L15281.htm#art1">(Incluído pela Lei nº 15.581, de 2025)</a>'
+        ficha = senado.Norma("1", "Lei nº 11.343", "urn", None, "", (drogas,))
+        v = frescor.cotejar({"id": "drogas-11343"}, ficha, frescor.texto_plano(html), {}, DIA, html)
+        assert v["situacao"] == "confere" and [x["norma"] for x in v["pelo_link"]] == [drogas.nome]
+        assert "o texto da anotação não cita a lei" in frescor.montar_relatorio([v], DIA)
+
+    def _ficha_usura(self):
+        lei = senado.Posterior("Lei nº 14.286 de 29/12/2021", "14.286", date(2021, 12, 29),
+                               senado.ALTERACAO_PERMANENTE,
+                               (senado.Item("Art. 4, caput, Alínea a", "art. 4, a", "Alteração"),))
+        return senado.Norma("1", "Lei nº 1.521", "urn", None, "", (lei,))
+
+    def test_excecao_julgada_sai_da_issue_e_fica_visivel(self):
+        exc = [{"fonte": "economia-popular-1521", "norma": "Lei nº 14.286", "motivo": "art. 16",
+                "pendencia": "decidir a ressalva no registro 1007", "data": "2026-10-25"}]
+        v = frescor.cotejar({"id": "economia-popular-1521"}, self._ficha_usura(), "", {}, DIA, "", exc)
+        assert v["situacao"] == "confere" and not v["faltando"]
+        assert v["julgados"][0]["pendencia"] == "decidir a ressalva no registro 1007"
+        assert frescor.excecoes_sem_efeito([v], exc) == []
+        assert frescor.codigo_de_saida([v], []) == 0
+        assert "Já julgados — 1" in frescor.montar_relatorio([v], DIA)
+
+    def test_excecao_que_nao_casa_mais_e_acusada(self):
+        """O compilado passou a anotar a lei: a exceção tem de sair."""
+        exc = [{"fonte": "economia-popular-1521", "norma": "Lei nº 14.286", "motivo": "m", "data": "2026-10-25"}]
+        v = frescor.cotejar({"id": "economia-popular-1521"}, self._ficha_usura(),
+                            "(Redação dada pela Lei nº 14.286, de 2021)", {}, DIA, "", exc)
+        sem = frescor.excecoes_sem_efeito([v], exc)
+        assert sem == exc and frescor.codigo_de_saida([v], sem) == 3
+        assert "Exceções sem efeito" in frescor.montar_relatorio([v], DIA, sem)
+
+    def test_excecao_de_diploma_nao_lido_nao_e_acusada(self):
+        exc = [{"fonte": "cdc", "norma": "Lei nº 15.224", "motivo": "m", "data": "2026-10-25"}]
+        v = {"id": "cdc", "situacao": "nao_lido", "faltando": []}
+        assert frescor.excecoes_sem_efeito([v], exc) == []
+
+    def test_o_arquivo_de_excecoes_do_repositorio_e_valido(self):
+        exc = frescor.carregar_excecoes()
+        assert exc and all(e.get("fonte") and e.get("norma") and e.get("motivo") and e.get("data") for e in exc)

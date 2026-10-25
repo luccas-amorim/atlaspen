@@ -71,18 +71,62 @@ def _padrao(posterior: senado.Posterior) -> re.Pattern | None:
     """ "Lei nº 15.517" -> casa "Lei nº 15.517", "Lei n° 15517", "LEI Nº 15.517"…
 
     Inclusive "Lei n º 13.105", com espaço antes do ordinal, que é como o
-    compilado da Lei 5.478 anota as revogações pelo CPC de 2015."""
+    compilado da Lei 5.478 anota as revogações pelo CPC de 2015, e "Lein° 15.272",
+    sem espaço nenhum, como o do CPP anota o art. 312, §3º."""
     if not posterior.numero:
         return None
     especie = r"\s+".join(re.escape(p) for p in posterior.especie.split())
     digitos = posterior.numero.replace(".", "")
     numero = r"\.?".join(digitos[i] for i in range(len(digitos)))
-    return re.compile(rf"{especie}\s+n\s*[ºo°.]*\s*{numero}(?!\d)", re.I)
+    return re.compile(rf"{especie}\s*n\s*[ºo°.]*\s*{numero}(?!\d)", re.I)
 
 
 def anotada(texto: str, posterior: senado.Posterior) -> bool:
     padrao = _padrao(posterior)
     return bool(padrao and padrao.search(texto))
+
+
+# O arquivo da lei no Planalto, pelo prefixo da espécie: L15281.htm, Lcp224.htm…
+_PREFIXO_DO_LINK = {"Lei": "l", "Lei Complementar": "lcp", "Emenda Constitucional": "emc",
+                    "Medida Provisória": "mpv", "Decreto-Lei": "del"}
+
+
+def anotada_pelo_link(html: str, posterior: senado.Posterior) -> bool:
+    """O compilado LINKA a lei, mesmo que o texto da anotação diga outro número?
+
+    Caso medido em 25/10/2026: a Lei de Drogas anota o art. 23, parágrafo único,
+    como "(Incluído pela Lei nº 15.581, de 2025)", com o link para L15281.htm — a
+    Lei 15.281. O texto tem um erro de digitação; o link, não."""
+    prefixo = _PREFIXO_DO_LINK.get(posterior.especie)
+    if not prefixo or not posterior.numero:
+        return False
+    digitos = posterior.numero.replace(".", "")
+    return bool(re.search(rf"/{prefixo}{digitos}\.htm", html or "", re.I))
+
+
+# ── As exceções julgadas ────────────────────────────────────────────────────
+EXCECOES = Path(__file__).resolve().parent / "excecoes-cotejo.json"
+
+
+def carregar_excecoes(caminho: Path = EXCECOES) -> list[dict]:
+    if not caminho.exists():
+        return []
+    return json.loads(caminho.read_text(encoding="utf-8")).get("excecoes") or []
+
+
+def _numero_da_norma(texto: str) -> str | None:
+    m = re.search(r"n[ºo°]\s*([\d.]+)", texto or "")
+    return m.group(1).replace(".", "") if m else None
+
+
+def _excecao_de(fonte: str, norma: str, excecoes: list[dict]) -> dict | None:
+    numero = _numero_da_norma(norma)
+    especie = re.split(r"\s+n[ºo°]", norma or "", maxsplit=1)[0].strip()
+    for e in excecoes:
+        if (e.get("fonte") == fonte and _numero_da_norma(e.get("norma")) == numero
+                and re.split(r"\s+n[ºo°]", e.get("norma") or "", maxsplit=1)[0].strip() == especie):
+            return e
+    return None
 
 
 def chaves_do_catalogo(caminho: Path = CATALOGO) -> dict[str, list[int]]:
@@ -137,10 +181,13 @@ def superada_por(p: senado.Posterior, posteriores: list[senado.Posterior]) -> st
 
 
 def cotejar(fonte: dict, norma: senado.Norma | None, texto: str,
-            chaves: dict[str, list[int]], dia: date) -> dict:
-    """O veredito de um diploma. `texto` é o texto plano do snapshot."""
+            chaves: dict[str, list[int]], dia: date, html: str = "",
+            excecoes: list[dict] | None = None) -> dict:
+    """O veredito de um diploma. `texto` é o texto plano do snapshot; `html`, o
+    cru, onde se procura o link da lei quando o texto da anotação não a cita."""
     r = {"id": fonte["id"], "sentinela": fonte.get("sentinela"), "faltando": [],
-         "superadas": [], "ultima": None, "situacao": "confere"}
+         "superadas": [], "pelo_link": [], "julgados": [], "ultima": None,
+         "situacao": "confere"}
     if norma is None:
         r["situacao"] = "nao_lido"
         r["motivo"] = "o Senado não devolveu a ficha da URN"
@@ -163,9 +210,16 @@ def cotejar(fonte: dict, norma: senado.Norma | None, texto: str,
             "dispositivos": [i.dispositivo for i in p.itens_vigentes()][:12],
             "ids": ids_tocados(fonte["id"], p.itens_vigentes(), chaves),
         }
+        if anotada_pelo_link(html, p):
+            r["pelo_link"].append(linha)
+            continue
         posterior = superada_por(p, alteracoes)
+        excecao = _excecao_de(fonte["id"], p.nome, excecoes or [])
         if posterior:
             r["superadas"].append({**linha, "por": posterior})
+        elif excecao:
+            r["julgados"].append({**linha, "motivo": excecao.get("motivo"),
+                                  "pendencia": excecao.get("pendencia")})
         else:
             r["faltando"].append(linha)
     if r["faltando"]:
@@ -179,8 +233,10 @@ def snapshot_mais_recente(pasta: Path, fonte: str) -> Path | None:
 
 
 def rodar(fontes: list[dict], snapshots: Path, dia: date, ler=senado.norma_por_urn,
-          chaves: dict[str, list[int]] | None = None) -> list[dict]:
+          chaves: dict[str, list[int]] | None = None,
+          excecoes: list[dict] | None = None) -> list[dict]:
     chaves = chaves if chaves is not None else chaves_do_catalogo()
+    excecoes = excecoes if excecoes is not None else carregar_excecoes()
     vereditos = []
     for f in fontes:
         arquivo = snapshot_mais_recente(snapshots, f["id"])
@@ -202,20 +258,38 @@ def rodar(fontes: list[dict], snapshots: Path, dia: date, ler=senado.norma_por_u
             vereditos.append({"id": f["id"], "situacao": "nao_lido", "faltando": [],
                               "motivo": f"a ficha do Senado veio ilegível: {e}"})
             continue
-        texto = texto_plano(arquivo.read_text(encoding="utf-8"))
-        vereditos.append(cotejar(f, norma, texto, chaves, dia))
+        html = arquivo.read_text(encoding="utf-8")
+        vereditos.append(cotejar(f, norma, texto_plano(html), chaves, dia, html, excecoes))
     return vereditos
 
 
-def codigo_de_saida(vereditos: list[dict]) -> int:
+def excecoes_sem_efeito(vereditos: list[dict], excecoes: list[dict]) -> list[dict]:
+    """As exceções que não casaram com nada num diploma que foi lido.
+
+    Exceção é juízo tomado com pendência declarada, e sai no dia em que a
+    pendência fecha (AGENTS.md): quando o compilado passa a anotar a lei, ou o
+    Senado deixa de registrá-la, a exceção calaria o que ninguém mais precisa
+    calar — e fica, esquecida, pronta para calar o próximo caso parecido."""
+    lidos = {v["id"]: v for v in vereditos if v["situacao"] != "nao_lido"}
+    saida = []
+    for e in excecoes:
+        v = lidos.get(e.get("fonte"))
+        if v is None:
+            continue
+        if not any(_numero_da_norma(j["norma"]) == _numero_da_norma(e.get("norma")) for j in v.get("julgados", [])):
+            saida.append(e)
+    return saida
+
+
+def codigo_de_saida(vereditos: list[dict], sem_efeito: list[dict] | None = None) -> int:
     if vereditos and all(v["situacao"] == "nao_lido" for v in vereditos):
         return 2
-    if any(v["situacao"] in ("planalto_nao_anota", "nao_lido") for v in vereditos):
+    if any(v["situacao"] in ("planalto_nao_anota", "nao_lido") for v in vereditos) or sem_efeito:
         return 3
     return 0
 
 
-def montar_relatorio(vereditos: list[dict], dia: date) -> str:
+def montar_relatorio(vereditos: list[dict], dia: date, sem_efeito: list[dict] | None = None) -> str:
     por = {s: [v for v in vereditos if v["situacao"] == s]
            for s in ("confere", "planalto_nao_anota", "sem_registro", "nao_lido")}
     L = [f"## Cotejo com o Senado — o compilado anota as leis recentes? — {dia.isoformat()}", "",
@@ -251,6 +325,36 @@ def montar_relatorio(vereditos: list[dict], dia: date) -> str:
         L += [f"- `{fid}` — {s['norma']}, superada por {s['por']}" for fid, s in superadas]
         L.append("")
 
+    pelo_link = [(v["id"], s) for v in vereditos for s in v.get("pelo_link") or []]
+    if pelo_link:
+        L += ["### Anotadas só pelo link — o texto da anotação não cita a lei", "",
+              "> O compilado linka a página da lei, mas o texto da anotação não a cita. Ou é "
+              "erro de digitação (a Lei de Drogas anota \"Lei nº 15.581\" com o link para a "
+              "15.281), ou a anotação é da medida provisória que a lei converteu (a Lei 6.453 "
+              "anota a MP 1.049/2021 e linka a Lei 14.222). O catálogo não muda; no primeiro "
+              "caso, o histórico legislativo lido da anotação herdaria o número errado.", ""]
+        L += [f"- `{fid}` — {s['norma']}" for fid, s in pelo_link]
+        L.append("")
+
+    julgados = [(v["id"], j) for v in vereditos for j in v.get("julgados") or []]
+    if julgados:
+        L += [f"### Já julgados — {len(julgados)}", "",
+              "> Leis que o compilado não anota e cujo motivo já foi examinado "
+              "(`scripts/robos/cotejador/excecoes-cotejo.json`). Ficam visíveis: uma dispensa "
+              "que ninguém vê é indistinguível de um achado que nunca apareceu.", ""]
+        for fid, j in julgados:
+            pend = f" Pendência: {j['pendencia']}" if j.get("pendencia") else ""
+            L.append(f"- `{fid}` — {j['norma']}.{pend}")
+        L.append("")
+
+    if sem_efeito:
+        L += ["### Exceções sem efeito — retirar de `excecoes-cotejo.json`", "",
+              "> O diploma foi lido e a lei não voltou a faltar: o compilado passou a "
+              "anotá-la, ou o Senado deixou de registrá-la. A exceção sai, para não calar o "
+              "próximo caso parecido.", ""]
+        L += [f"- `{e.get('fonte')}` — {e.get('norma')} (julgada em {e.get('data')})" for e in sem_efeito]
+        L.append("")
+
     if por["nao_lido"]:
         L += ["### Não deu para conferir", ""]
         L += [f"- `{v['id']}` — {v.get('motivo', '')}" for v in por["nao_lido"]]
@@ -270,8 +374,10 @@ def main() -> int:
     if args.fonte:
         fontes = [f for f in fontes if f["id"] in set(args.fonte)]
     dia = hoje()
-    vereditos = rodar(fontes, Path(args.snapshots), dia)
-    relatorio = montar_relatorio(vereditos, dia)
+    excecoes = carregar_excecoes()
+    vereditos = rodar(fontes, Path(args.snapshots), dia, excecoes=excecoes)
+    sem_efeito = excecoes_sem_efeito(vereditos, excecoes)
+    relatorio = montar_relatorio(vereditos, dia, sem_efeito)
 
     destino = Path(args.saida)
     destino.mkdir(parents=True, exist_ok=True)
@@ -279,7 +385,7 @@ def main() -> int:
     (destino / f"cotejo-frescor-{dia.isoformat()}.json").write_text(
         json.dumps(vereditos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(relatorio)
-    return codigo_de_saida(vereditos)
+    return codigo_de_saida(vereditos, sem_efeito)
 
 
 if __name__ == "__main__":
