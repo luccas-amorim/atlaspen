@@ -13,8 +13,7 @@
     {
       "fonte": "economia-popular-1521",
       "norma": "Lei nº 14.286",
-      "motivo": "A Lei 14.286/2021 (marco cambial), art. 16, diz que a alínea \"a\" do art. 4º da Lei 1.521/1951 \"não se aplica às operações de câmbio efetuadas na forma desta Lei\". Não dá redação nova ao art. 4º: restringe o alcance do tipo de fora, e o compilado não tem o que anotar. A moldura do registro 1007 não muda.",
-      "pendencia": "decidir se a ressalva de alcance (operações de câmbio feitas na forma da Lei 14.286/2021) entra no registro 1007 — `obs` ou campo próprio.",
+      "motivo": "A Lei 14.286/2021 (marco cambial), art. 16, diz que a alínea \"a\" do art. 4º da Lei 1.521/1951 \"não se aplica às operações de câmbio efetuadas na forma desta Lei\". Não dá redação nova ao art. 4º: restringe o alcance do tipo de fora, e o compilado não tem o que anotar. A moldura do registro 1007 não muda; a ressalva de alcance entrou no `obs` dele em 25/10/2026, por decisão do dono do projeto.",
       "data": "2026-10-25"
     },
     {
