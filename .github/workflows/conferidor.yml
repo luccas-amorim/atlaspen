@@ -52,6 +52,8 @@ concurrency:
 #                  uma a uma, atrás da lei penal que ninguém leu
 #   auditor      — hediondez, ação penal e nome do tipo (o que a pena não alcança)
 #   arquivista   — saúde da prosa: documento vencido ou que fala de algo que mudou
+#   cotejador    — segunda leitura: o compilado anota as leis que o Senado
+#                  registra? Lê os snapshots do vigia, e só pergunta
 #   triagem      — junta os relatórios e abre a issue da semana
 #
 # Documentado para quem lê o site em docs/os-robos.md.
@@ -219,6 +221,49 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
+  # ── cotejador ────────────────────────────────────────────────────────────
+  # A segunda leitura (plano de fontes abertas, .superpowers/planos/). O Vigia
+  # confere o catálogo contra o compilado; ninguém conferia o COMPILADO. Este
+  # job pergunta ao Senado quais leis recentes mudaram cada diploma e procura
+  # cada uma na página que o Vigia baixou. Lê os snapshots daquele job, e não
+  # escreve nada: o que a fonte secundária diz vira pergunta na issue. O
+  # Senado fora do ar não derruba a rodada.
+  cotejador:
+    name: Cotejador — o compilado anota o que o Senado registra?
+    needs: vigia
+    if: always() && needs.vigia.result == 'success'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+      actions: read          # baixar o artifact com os snapshots desta rodada
+    outputs:
+      codigo: ${{ steps.frescor.outputs.codigo }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Recuperar os snapshots da rodada
+        uses: actions/download-artifact@v5
+        with:
+          name: conferidor-${{ github.run_number }}
+          path: crawler/
+      - name: Cotejar o frescor com o Senado
+        id: frescor
+        run: |
+          set +e
+          python3 scripts/robos/cotejador/frescor.py > /dev/null
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      - name: Guardar o relatório do cotejo
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: cotejador-${{ github.run_number }}
+          path: crawler/relatorios/cotejo-*
+          if-no-files-found: ignore
+          retention-days: 30
+
   # ── triagem ──────────────────────────────────────────────────────────────
   # A issue é o canal: chega sozinha, tem histórico e permite discutir cada
   # achado em linha. Uma issue por rodada, para que a semana seja unidade de
@@ -226,7 +271,7 @@ jobs:
   # produziram — e por isso roda mesmo se algum deles falhar.
   triagem:
     name: Triagem — a issue da semana
-    needs: [vigia, sentinela, auditor, arquivista]
+    needs: [vigia, sentinela, auditor, arquivista, cotejador]
     if: always()
     runs-on: ubuntu-latest
     permissions:
@@ -266,6 +311,7 @@ jobs:
           RECENSEADOR: ${{ needs.sentinela.outputs.leis_do_ano }}
           AUDITOR: ${{ needs.auditor.outputs.codigo }}
           ARQUIVISTA: ${{ needs.arquivista.outputs.codigo }}
+          COTEJADOR: ${{ needs.cotejador.outputs.codigo }}
           EXECUCAO: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           : > quebrados.md
@@ -282,6 +328,7 @@ jobs:
           [ -n "$RECENSEADOR" ] && avaliar "Recenseador" "$RECENSEADOR"
           avaliar "Auditor" "$AUDITOR"
           avaliar "Arquivista" "$ARQUIVISTA"
+          avaliar "Cotejador" "$COTEJADOR"
           if [ -s quebrados.md ]; then
             {
               echo "## Robôs que não terminaram"
@@ -300,6 +347,7 @@ jobs:
           || needs.auditor.outputs.codigo == '3'
           || needs.arquivista.outputs.codigo == '3'
           || needs.sentinela.outputs.leis_do_ano == '3'
+          || needs.cotejador.outputs.codigo == '3'
           || steps.quebrados.outputs.houve == '1'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -332,6 +380,15 @@ jobs:
             [ -f "crawler/relatorios/auditoria-$HOJE.md" ] && cat "crawler/relatorios/auditoria-$HOJE.md"
             echo
             [ -f "crawler/relatorios/documentacao.md" ] && cat "crawler/relatorios/documentacao.md"
+            echo
+            for COTEJO in crawler/relatorios/cotejo-*-"$HOJE".md; do
+              [ -f "$COTEJO" ] && cat "$COTEJO" && echo
+            done
+            # O Recenseador entrava no código da issue e não no corpo: com 3,
+            # a issue abria sem dizer que lei ler.
+            [ -f "crawler/relatorios/leis-do-ano-$(TZ=America/Sao_Paulo date +%Y).md" ] \
+              && cat "crawler/relatorios/leis-do-ano-$(TZ=America/Sao_Paulo date +%Y).md"
+            echo
           } > corpo.md
           # O corpo da issue tem limite de 65.536 caracteres.
           if [ "$(wc -c < corpo.md)" -gt 60000 ]; then
@@ -367,6 +424,7 @@ jobs:
           needs.vigia.outputs.codigo == '0' && needs.sentinela.outputs.codigo != '3'
           && needs.auditor.outputs.codigo != '3'
           && needs.arquivista.outputs.codigo != '3'
+          && needs.cotejador.outputs.codigo != '3'
           && steps.quebrados.outputs.houve != '1'
         run: echo "Catálogo em dia com o texto compilado e nada penal no DOU."
 

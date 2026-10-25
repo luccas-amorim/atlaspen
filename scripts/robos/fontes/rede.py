@@ -24,6 +24,7 @@ licença está em `LICENSE-ctresb-leis.txt`, nesta pasta.
 """
 from __future__ import annotations
 
+import http.client
 import threading
 import time
 import urllib.error
@@ -116,7 +117,11 @@ class Rede:
                 if e.code in ausentes:
                     return None
                 ultimo = e
-            except (urllib.error.URLError, TimeoutError, OSError) as e:
+            # `http.client.HTTPException` cobre a resposta que chega pela metade
+            # (`IncompleteRead`): não é OSError, e na primeira rodada real do
+            # Cotejador, em 25/10/2026, uma ficha do Senado de 226 KB truncada
+            # escapou por aqui e derrubou a execução inteira.
+            except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException) as e:
                 ultimo = e
             if n < total:
                 self._dormir(self.espera(n))

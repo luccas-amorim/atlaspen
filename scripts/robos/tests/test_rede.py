@@ -91,6 +91,15 @@ def test_timeout_e_tentado_de_novo(roteiro):
     assert isinstance(e.value.causa, TimeoutError)
 
 
+def test_resposta_truncada_e_tentada_de_novo(roteiro):
+    """`IncompleteRead` não é OSError: em 25/10/2026 escapou e derrubou o Cotejador."""
+    import http.client
+    chamadas = roteiro([http.client.IncompleteRead(b"meia ficha"), b"inteira"])
+    rede, _ = _rede(tentativas=2)
+    assert rede.obter("https://exemplo") == b"inteira"
+    assert len(chamadas) == 2
+
+
 def test_uma_tentativa_so_diz_tentativa_no_singular(roteiro):
     roteiro([urllib.error.URLError("caiu")])
     rede, esperas = _rede(tentativas=1)
