@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "proposito": "Leis que o Senado registra para um diploma vigiado, que a página do Planalto não cita, e cujo motivo já foi examinado contra o texto da lei e o compilado. É o irmão de scripts/robos/vigia/excecoes.json e de scripts/robos/auditor/excecoes-auditoria.json: sem a lista, os mesmos itens voltam toda semana e o alerta vira ruído.",
+    "regras": [
+      "Casa por `fonte` (id em data/fontes.json) MAIS `norma` (espécie e número, como o Senado escreve: \"Lei nº 14.286\"). Sem os dois, não casa.",
+      "Toda exceção declara MOTIVO e DATA, lidos no texto da lei alteradora e no compilado — não no registro do Senado, que classifica mal.",
+      "Lei que deu redação nova e o compilado não anota é Planalto atrasado, e NÃO vira exceção: continua na issue até o compilado anotar.",
+      "Exceção que deixa de casar num diploma lido sai com o aviso \"sem efeito\" na issue: o compilado passou a anotar a lei, ou o Senado deixou de registrá-la. Ela sai do arquivo nesse dia.",
+      "`pendencia`, quando existe, é a decisão que a exceção NÃO toma — e que continua de quem assina."
+    ]
+  },
+  "excecoes": [
+    {
+      "fonte": "economia-popular-1521",
+      "norma": "Lei nº 14.286",
+      "motivo": "A Lei 14.286/2021 (marco cambial), art. 16, diz que a alínea \"a\" do art. 4º da Lei 1.521/1951 \"não se aplica às operações de câmbio efetuadas na forma desta Lei\". Não dá redação nova ao art. 4º: restringe o alcance do tipo de fora, e o compilado não tem o que anotar. A moldura do registro 1007 não muda.",
+      "pendencia": "decidir se a ressalva de alcance (operações de câmbio feitas na forma da Lei 14.286/2021) entra no registro 1007 — `obs` ou campo próprio.",
+      "data": "2026-10-25"
+    },
+    {
+      "fonte": "cdc",
+      "norma": "Lei nº 15.224",
+      "motivo": "A Lei 15.224/2025, art. 15, faz da doação de alimentos uma exceção ao regime de responsabilidade objetiva dos arts. 12 e 13 do CDC. Não dá redação nova aos artigos, e a responsabilidade civil está fora do catálogo (os crimes do CDC são os arts. 63 a 74).",
+      "data": "2026-10-25"
+    },
+    {
+      "fonte": "eleitoral-9504",
+      "norma": "Lei nº 15.321",
+      "motivo": "A Lei 15.321/2025 é a LDO de 2026. O art. 95 (partes vetadas promulgadas) diz que a doação com encargo pela Administração não configura descumprimento do art. 73, VI, a, da Lei 9.504/1997. Não dá redação nova, e a conduta vedada do art. 73 não é tipo penal (os do catálogo são os arts. 33, §4º, e 34, §2º).",
+      "data": "2026-10-25"
+    },
+    {
+      "fonte": "locacao-8245",
+      "norma": "Lei nº 14.216",
+      "motivo": "A Lei 14.216/2021 suspendeu até 31/12/2021, pela pandemia, a liminar de despejo dos incisos I, II, V, VII, VIII e IX do art. 59, §1º, da Lei 8.245/1991. Não dá redação nova, a suspensão expirou, e o art. 59 está fora do catálogo (os crimes são os arts. 43 e 44).",
+      "data": "2026-10-25"
+    }
+  ]
+}

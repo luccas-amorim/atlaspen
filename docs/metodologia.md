@@ -66,7 +66,10 @@ dados precisa saber disso, e [Dados abertos](./dados-abertos.md) repete o aviso.
 isso a fonte do catálogo não é o texto de cada lei no dia em que foi publicada, e sim o
 **texto compilado** do `planalto.gov.br`, que traz a redação em vigor e, ao lado de cada
 dispositivo, a nota de quem o incluiu, alterou ou revogou. Cada registro diz contra qual
-página foi conferido e quando. Como isso é feito, toda semana, está em [Os robôs](./os-robos.md).
+página foi conferido e quando. Desde outubro de 2026, os robôs perguntam também a outras
+fontes oficiais — o registro do Senado e a compilação da Câmara — se o próprio compilado
+está em dia; elas apontam onde olhar e nunca escrevem no catálogo. Como isso é feito, toda
+semana, está em [Os robôs](./os-robos.md).
 
 ## Quatro camadas de dado
 
