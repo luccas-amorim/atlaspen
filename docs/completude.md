@@ -2,8 +2,8 @@
 id: completude
 title: Completude do catálogo
 sidebar_position: 2
-gerado_em: '2026-10-05'
-commit: '90bc398b2d0a'
+gerado_em: '2026-10-25'
+commit: '8d4a7d86e690'
 ---
 
 {/* GERADO AUTOMATICAMENTE por scripts/gerar_completude.py — não edite à mão. */}
@@ -13,7 +13,7 @@ commit: '90bc398b2d0a'
 :::note[Página gerada]
 Este acompanhamento é derivado de `data/diplomas.json` (o denominador da
 conferência do catálogo) e de
-`data/crimes.json` (o catálogo), gerado em 2026-10-05 a partir do commit `90bc398b2d0a`. Para atualizá-lo:
+`data/crimes.json` (o catálogo), gerado em 2026-10-25 a partir do commit `8d4a7d86e690`. Para atualizá-lo:
 `python scripts/gerar_completude.py`.
 :::
 
@@ -21,7 +21,7 @@ conferência do catálogo) e de
 |---|---|
 | Tipos penais catalogados | **1531** |
 | Diplomas com tipo penal vigente | 61 |
-| Diplomas revogados/não recepcionados | [11](/acervo) |
+| Diplomas revogados/não recepcionados | [13](/acervo) |
 
 ## Índice por diploma
 
