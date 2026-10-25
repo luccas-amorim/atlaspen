@@ -103,10 +103,12 @@ class Rede:
 
     def obter(self, url: str, *, ausentes: Iterable[int] = (404,),
               tentativas: int | None = None,
-              cabecalhos: dict[str, str] | None = None) -> bytes | None:
+              cabecalhos: dict[str, str] | None = None,
+              corpo: bytes | None = None) -> bytes | None:
+        """GET, ou POST quando há `corpo` (a API do CNJ só responde a POST)."""
         ausentes = frozenset(ausentes)
         total = tentativas or self.tentativas
-        pedido = urllib.request.Request(url, headers={**self.cabecalhos, **(cabecalhos or {})})
+        pedido = urllib.request.Request(url, data=corpo, headers={**self.cabecalhos, **(cabecalhos or {})})
         ultimo: BaseException | None = None
         for n in range(1, total + 1):
             self.limitador.esperar()
