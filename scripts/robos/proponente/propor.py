@@ -441,8 +441,12 @@ def aplicar_fontes_propostas() -> list[dict]:
     entram = [n for n in novas if n["id"] not in existentes]
     if not entram:
         return []
-    i = texto.rindex("}\r\n  ]")
-    bloco = ",\r\n" + ",\r\n".join(
+    # A quebra de linha é a do arquivo: CRLF na cópia de trabalho do Windows, LF
+    # na CI. Até 25/10/2026 só o CRLF casava, e na CI o `rindex` levantaria —
+    # o que nunca se viu porque a rodada de auditoria morria antes, no import.
+    eol = "\r\n" if "\r\n" in texto else "\n"
+    i = texto.rindex("}" + eol + "  ]")
+    bloco = "," + eol + ("," + eol).join(
         "    " + json.dumps(n, ensure_ascii=False) for n in entram)
     FONTES.write_bytes((texto[:i + 1] + bloco + texto[i + 1:]).encode("utf-8"))
     return entram

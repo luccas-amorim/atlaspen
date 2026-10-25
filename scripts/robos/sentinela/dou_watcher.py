@@ -305,6 +305,24 @@ def triar(itens: list[dict], padrao: re.Pattern, numeros: dict[str, str],
 
 # Vocabulário que distingue "lei que CRIA crime" de "lei que fala de pena". Só o
 # primeiro justifica vigiar um diploma novo toda semana.
+_MESES = {m: i for i, m in enumerate(
+    ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto",
+     "setembro", "outubro", "novembro", "dezembro"), 1)}
+_DATA_DO_TITULO = re.compile(r"DE\s+(\d{1,2})[º°o]?\s+DE\s+(\w+)\s+DE\s+(\d{4})", re.I)
+
+
+def data_do_titulo(titulo: str) -> date | None:
+    """ "LEI Nº 15.410, DE 20 DE MAIO DE 2026" -> 2026-05-20."""
+    m = _DATA_DO_TITULO.search(titulo or "")
+    mes = _MESES.get(m.group(2).lower().replace("marco", "março")) if m else None
+    if not mes:
+        return None
+    try:
+        return date(int(m.group(3)), mes, int(m.group(1)))
+    except ValueError:
+        return None
+
+
 def propor_fonte(candidata: dict, integral: str, ja_monitorados: set[str]) -> dict | None:
     """Entrada de `data/fontes.json` para uma lei que parece criar tipo penal.
 
@@ -332,11 +350,22 @@ def propor_fonte(candidata: dict, integral: str, ja_monitorados: set[str]) -> di
     faixa = f"_ato{(int(ano) - (int(ano) - 2023) % 4)}-{(int(ano) - (int(ano) - 2023) % 4) + 3}"
     complementar = "complementar" in candidata["titulo"].lower()
     arquivo = f"lcp{numero}.htm" if complementar else f"l{numero}.htm"
-    return {
+    proposta = {
         "id": f"NOVA-{numero}",
         "rotulos": [f"Lei {numero[:-3]}.{numero[-3:]}/{ano[-2:]}" if len(numero) > 3
                     else f"Lei {numero}/{ano[-2:]}"],
         "url": f"https://www.planalto.gov.br/ccivil_03/{faixa}/{ano}/lei/{arquivo}",
+    }
+    # A URN que o construtor exige (`validar_fontes`) sai do próprio título:
+    # "LEI Nº 15.410, DE 20 DE MAIO DE 2026" é a data da assinatura, que é a da
+    # URN LexML. Sem data legível, a entrada sai sem `urn` e o build do PR diz
+    # o que falta.
+    assinatura = data_do_titulo(candidata["titulo"])
+    if assinatura:
+        especie = "lei.complementar" if complementar else "lei"
+        proposta["urn"] = f"urn:lex:br:federal:{especie}:{assinatura.isoformat()};{numero}"
+    return {
+        **proposta,
         "sentinela": numero,
         "obs": (f"PROPOSTA automática a partir do DOU de {candidata['data']}. Confira a "
                 f"URL (o Planalto muda o padrão em leis complementares e antigas), "

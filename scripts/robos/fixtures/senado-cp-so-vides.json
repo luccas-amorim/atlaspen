@@ -1,0 +1,231 @@
+{
+ "DetalheDocumento": {
+  "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/DetalheDocumentov3.xsd",
+  "Metadados": {
+   "Versao": "25/10/2026 01:57:28",
+   "VersaoServico": "3",
+   "DataVersaoServico": "2017-02-01",
+   "DescricaoDataSet": "Obtém detalhes da Norma por meio do tipo/número/ano ou data de assinatura/sequencial."
+  },
+  "documentos": {
+   "documento": [
+    {
+     "id": "527942",
+     "identificacao": {
+      "tipo": "DEL",
+      "descricao": "Decreto-Lei",
+      "numero": "2848",
+      "norma": "DEL-2848-1940-12-07",
+      "normaNome": "Decreto-Lei nº 2.848 de 07/12/1940",
+      "dataassinatura": "07/12/1940",
+      "apelido": "DEL-2848-1940-12-07 , Código Penal (1940) (CP)",
+      "urlDocumento": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto.lei:1940-12-07;2848"
+     },
+     "vides": {
+      "vide": [
+       {
+        "codnormaposterior": "570555",
+        "datAssinatura": "28/03/2005",
+        "nomeNormaPosterior": "Lei nº 11.106 de 28/03/2005",
+        "pagina": "1",
+        "coluna": "1",
+        "edicao": "13832807",
+        "tipoEdicao": "750",
+        "datapub": "29/03/2005",
+        "nomePub": "Publicação Original   [Diário Oficial da União  de 29/03/2005] (p. 1, col. 1)",
+        "comentario": "Declaração de Alteração Permanente",
+        "itens": {
+         "item": [
+          {
+           "dispositivo": "Art. 107, caput, Inciso 7 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 107, caput, Inciso 8 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 148 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 215 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 216 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 217 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 219 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 220 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 221 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 222 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 226 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 226, caput, Inciso 3 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 227 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 231 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 231, § 3 ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 231-A ",
+           "comentario": "Alteração"
+          },
+          {
+           "dispositivo": "Art. 240 ",
+           "comentario": "Alteração"
+          }
+         ]
+        }
+       },
+       {
+        "codnormaposterior": "31300615",
+        "datAssinatura": "05/09/2019",
+        "nomeNormaPosterior": "Lei nº 13.869 de 05/09/2019",
+        "pagina": "1",
+        "coluna": "1",
+        "edicao": "31300635",
+        "tipoEdicao": "723",
+        "datapub": "05/09/2019",
+        "nomePub": "Publicação Original   [Diário Oficial da União - Edição Extra  de 05/09/2019 - nº 172-A] (p. 1, col. 1)",
+        "comentario": "Declaração de Alteração Permanente",
+        "itens": {
+         "item": [
+          {
+           "dispositivo": "Art. 150, § 2 ",
+           "comentario": "Revogação"
+          },
+          {
+           "dispositivo": "Art. 350 ",
+           "comentario": "Revogação"
+          }
+         ]
+        }
+       },
+       {
+        "codnormaposterior": "36551043",
+        "datAssinatura": "19/06/2020",
+        "nomeNormaPosterior": "Acórdão da Arguição de Descumprimento de Preceito Fundamental nº 496 de 19/06/2020",
+        "pagina": "2",
+        "coluna": "1",
+        "edicao": "36550636",
+        "tipoEdicao": "750",
+        "datapub": "23/11/2022",
+        "nomePub": "Publicação Original   [Diário Oficial da União  de 23/11/2022] (p. 2, col. 1)",
+        "comentario": "Declaração de Recepção pela Constituição",
+        "itens": {
+         "item": [
+          {
+           "dispositivo": "Art. 331 ",
+           "comentario": "Dispositivo Recepcionado pela Constituição"
+          }
+         ]
+        }
+       },
+       {
+        "codnormaposterior": "37467975",
+        "datAssinatura": "01/08/2023",
+        "nomeNormaPosterior": "Acórdão da Arguição de Descumprimento de Preceito Fundamental nº 779 de 01/08/2023",
+        "pagina": "5",
+        "coluna": "1",
+        "edicao": "37467904",
+        "tipoEdicao": "750",
+        "datapub": "10/08/2023",
+        "nomePub": "Publicação Original   [Diário Oficial da União  de 10/08/2023] (p. 5, col. 1)",
+        "comentario": "Declaração de Alteração Permanente",
+        "itens": {
+         "item": [
+          {
+           "dispositivo": "Art. 23, caput, Inciso 2 ",
+           "comentario": "Declaração de Interpretação conforme a Constituição"
+          },
+          {
+           "dispositivo": "Art. 25, caput ",
+           "comentario": "Declaração de Interpretação conforme a Constituição"
+          },
+          {
+           "dispositivo": "Art. 25, Parágrafo Único ",
+           "comentario": "Declaração de Interpretação conforme a Constituição"
+          }
+         ]
+        }
+       },
+       {
+        "codnormaposterior": "38586258",
+        "datAssinatura": "06/05/2024",
+        "nomeNormaPosterior": "Acórdão da Arguição de Descumprimento de Preceito Fundamental nº 1.107 de 06/05/2024",
+        "pagina": "3",
+        "coluna": "1",
+        "edicao": "38586193",
+        "tipoEdicao": "750",
+        "datapub": "04/06/2024",
+        "nomePub": "Publicação Original   [Diário Oficial da União  de 04/06/2024] (p. 3, col. 1)",
+        "comentario": "Declaração de Alteração Permanente",
+        "itens": {
+         "item": [
+          {
+           "dispositivo": "Art. 59 ",
+           "comentario": "Declaração de Interpretação conforme a Constituição"
+          }
+         ]
+        }
+       },
+       {
+        "codnormaposterior": "38526565",
+        "datAssinatura": "17/05/2024",
+        "nomeNormaPosterior": "Acórdão da Arguição de Descumprimento de Preceito Fundamental nº 569 de 17/05/2024",
+        "pagina": "2",
+        "coluna": "2",
+        "edicao": "38525990",
+        "tipoEdicao": "750",
+        "datapub": "22/05/2024",
+        "nomePub": "Publicação Original   [Diário Oficial da União  de 22/05/2024] (p. 2, col. 2)",
+        "comentario": "Declaração de Alteração Permanente",
+        "itens": {
+         "item": [
+          {
+           "dispositivo": "Art. 91, caput, Inciso 2, Alínea b ",
+           "comentario": "Declaração de Interpretação conforme a Constituição"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     "disps": "",
+     "ementa": "Código Penal.",
+     "observacao": "1 - A LEI 7209, DOU DE 13/07/84, ALTERA, RENUMERA E DÁ NOVA REDAÇÃO AO TEXTO DA PARTE GERAL DO CÓDIGO PENAL (ARTIGOS 1 AO 120). 2 - A LEI 8137, DOU DE 28/12/90, ACRESCENTA  O ARTIGO 163 E RENUMERA OS ARTIGOS SUBSEQUENTES DO CÓDIGO PENAL. 3 - A LEI 8176,DOU DE 13/02/91,REVOGA O DISPOSITIVO QUE ACRESCENTOU O ARTIGO 163, E RESTAURA A NUMERAÇÃO ANTERIOR DO CÓDIGO PENAL."
+    }
+   ]
+  }
+ }
+}

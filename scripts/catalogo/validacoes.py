@@ -19,7 +19,7 @@ import hediondez as _hediondez  # noqa: E402
 # na entrada é quem impede que uma grafia nova deixe de casar regra em silêncio.
 from dispositivo_canonico import problemas_de_grafia  # noqa: E402
 
-from .caminhos import APOSENTADOS
+from .caminhos import APOSENTADOS, FONTES
 from .tabelas import NAO_TIPIFICA, OPERADORES_REMISSAO, VOCABULARIO
 
 
@@ -338,6 +338,28 @@ def validar_grafia_artigo(crimes: list) -> list:
     return problemas
 
 
+# A URN LexML de cada diploma é a chave que liga `data/fontes.json` ao Senado e
+# ao normas.leg.br (plano de fontes abertas, F2). Errada, ela não quebra: aponta
+# para OUTRA norma, e o Cotejador passa a comparar o CP com a lei errada.
+_URN = re.compile(r"^urn:lex:br:federal:[a-z]+(?:\.[a-z]+)*:\d{4}-\d{2}-\d{2};\d+$")
+
+
+def validar_fontes(caminho=FONTES) -> list:
+    """Cada diploma de `data/fontes.json` com uma URN bem formada, e só uma vez."""
+    fontes = json.loads(caminho.read_text(encoding="utf-8"))["fontes"]
+    problemas = []
+    vistas = Counter(f.get("urn") for f in fontes)
+    for f in fontes:
+        urn = f.get("urn")
+        if not urn:
+            problemas.append(f"fontes.json: {f['id']} sem `urn`")
+        elif not _URN.match(urn):
+            problemas.append(f"fontes.json: {f['id']} com `urn` malformada: {urn!r}")
+        elif vistas[urn] > 1:
+            problemas.append(f"fontes.json: {f['id']} repete a `urn` {urn} de outro diploma")
+    return problemas
+
+
 def validar_tudo(crimes: list, tabela_hediondez: dict) -> list:
     """Todos os invariantes, na ordem em que o construtor sempre os rodou.
 
@@ -352,4 +374,5 @@ def validar_tudo(crimes: list, tabela_hediondez: dict) -> list:
             + validar_elemento_e_tentativa(crimes)
             + validar_vigencia(crimes)
             + validar_pena_por_remissao(crimes)
-            + validar_grafia_artigo(crimes))
+            + validar_grafia_artigo(crimes)
+            + validar_fontes())

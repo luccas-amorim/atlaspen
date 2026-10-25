@@ -1,0 +1,75 @@
+{
+ "ListaDocumento": {
+  "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/ListaDocumentov3.xsd",
+  "Metadados": {
+   "Versao": "25/10/2026 02:07:17",
+   "VersaoServico": "3",
+   "DataVersaoServico": "2017-02-01",
+   "DescricaoDataSet": "Obtém a lista de Legislação Federal com base nos parâmetros informados."
+  },
+  "documentos": {
+   "documento": [
+    {
+     "id": "44095919",
+     "tipo": "LEI-n",
+     "descricao": "Lei Numerada",
+     "numero": "15526",
+     "norma": "LEI-15526-2026-09-29",
+     "normaNome": "Lei nº 15.526 de 29/09/2026",
+     "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 10.823, de 19 de dezembro de 2003, e a Lei Complementar nº 137, de 26 de agosto de 2010, para aperfeiçoar o marco legal do seguro rural.",
+     "dataassinatura": "29/09/2026",
+     "anoassinatura": "2026",
+     "apelido": "LEI-15526-2026-09-29"
+    },
+    {
+     "id": "44076309",
+     "tipo": "LEI-n",
+     "descricao": "Lei Numerada",
+     "numero": "15524",
+     "norma": "LEI-15524-2026-09-28",
+     "normaNome": "Lei nº 15.524 de 28/09/2026",
+     "ementa": "Dispõe sobre a Estratégia Nacional de Controle e Avaliação da Qualidade da Assistência à Saúde prestada pela Iniciativa Privada; e altera a Lei nº 9.782, de 26 de janeiro de 1999.",
+     "dataassinatura": "28/09/2026",
+     "anoassinatura": "2026",
+     "apelido": "LEI-15524-2026-09-28"
+    },
+    {
+     "id": "43304746",
+     "tipo": "LEI-n",
+     "descricao": "Lei Numerada",
+     "numero": "15410",
+     "norma": "LEI-15410-2026-05-20",
+     "normaNome": "Lei nº 15.410 de 20/05/2026",
+     "ementa": "Altera a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para estabelecer medidas destinadas a reforçar a proteção da mulher vítima de violência doméstica e familiar, especialmente contra a reiteração de ameaça ou de violência perpetrada por agressores condenados ou submetidos a prisão provisória; e a Lei nº 9.455, de 7 de abril de 1997 (Lei dos Crimes de Tortura), para prever como modalidade de tortura a submissão reiterada da mulher a intenso sofrimento físico ou mental, no contexto de violência doméstica e familiar.",
+     "dataassinatura": "20/05/2026",
+     "anoassinatura": "2026",
+     "apelido": "LEI-15410-2026-05-20"
+    },
+    {
+     "id": "43271992",
+     "tipo": "LEI-n",
+     "descricao": "Lei Numerada",
+     "numero": "15402",
+     "norma": "LEI-15402-2026-05-08",
+     "normaNome": "Lei nº 15.402 de 08/05/2026",
+     "ementa": "Altera a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal) e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal).",
+     "dataassinatura": "08/05/2026",
+     "anoassinatura": "2026",
+     "apelido": "LEI-15402-2026-05-08"
+    },
+    {
+     "id": "42931693",
+     "tipo": "LEI-n",
+     "descricao": "Lei Numerada",
+     "numero": "15358",
+     "norma": "LEI-15358-2026-03-24",
+     "normaNome": "Lei nº 15.358 de 24/03/2026",
+     "ementa": "Institui o Marco Legal do Combate ao Crime Organizado no Brasil (Lei Raul Jungmann); tipifica os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado; e altera os Decretos-Leis nºs 2.848, de 7 de dezembro de 1940 (Código Penal), e 3.689, de 3 de outubro de 1941 (Código de Processo Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 7.210, de 11 de julho de 1984 (Lei de Execução Penal), 11.343, de 23 de agosto de 2006, 10.826, de 22 de dezembro de 2003, 9.613, de 3 de março de 1998, 4.737, de 15 de julho de 1965 (Código Eleitoral); 13.756, de 12 de dezembro de 2018; e 14.790, de 29 de dezembro de 2023.",
+     "dataassinatura": "24/03/2026",
+     "anoassinatura": "2026",
+     "apelido": "LEI-15358-2026-03-24 , Lei Raul Jungmann; Marco Legal do Combate ao Crime Organizado no Brasil"
+    }
+   ]
+  }
+ }
+}
