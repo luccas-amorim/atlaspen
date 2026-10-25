@@ -263,3 +263,56 @@ class TestUrnDaFonteProposta:
         c = {**self.CANDIDATA, "titulo": "LEI COMPLEMENTAR Nº 230, DE 2 DE JUNHO DE 2026"}
         assert propor_fonte(c, self.INTEGRAL, set())["urn"] == \
             "urn:lex:br:federal:lei.complementar:2026-06-02;230"
+
+
+class TestDiaQueNaoAbre:
+    """Em 25/10/2026 uma listagem lenta do in.gov.br derrubou o Sentinela
+    inteiro: a semana ficou sem resposta por causa de um dia."""
+
+    def _listar(self, quedas):
+        from fontes.rede import FalhaDeRede
+
+        def listar(dia, secao):
+            if (dia.day, secao) in quedas:
+                raise FalhaDeRede("https://www.in.gov.br/leiturajornal", 2, TimeoutError("read timed out"))
+            return []
+        return listar
+
+    def test_dia_que_nao_abre_vira_aviso_e_a_varredura_segue(self):
+        from datetime import date
+        from sentinela.dou_watcher import rodar
+        vistos = []
+
+        def listar(dia, secao):
+            vistos.append((dia.day, secao))
+            return self._listar({(24, "do1")})(dia, secao)
+        candidatas, nao_lidos, sem_texto = rodar(date(2026, 10, 25), 3, listar_dia=listar, pausa=0)
+        assert candidatas == [] and sem_texto == []
+        assert len(nao_lidos) == 1 and nao_lidos[0].startswith("24/10/2026, seção `do1`")
+        # Os outros dias e seções foram lidos, inclusive os depois da queda.
+        assert len(vistos) == 6
+
+    def test_ato_sem_texto_fica_contado_e_usa_a_ementa(self):
+        from datetime import date
+        from fontes.rede import FalhaDeRede
+        from sentinela.dou_watcher import rodar
+
+        def cai(slug):
+            raise FalhaDeRede(slug, 2, TimeoutError())
+        itens = carregar_itens()
+        candidatas, nao_lidos, sem_texto = rodar(
+            date(2026, 5, 21), 1, listar_dia=lambda d, s: itens if s == "do1" else [],
+            buscar_texto=cai, pausa=0)
+        assert not nao_lidos and sem_texto
+        assert all(not c["integral"] for c in candidatas)
+
+    def test_codigo_e_relatorio(self):
+        from datetime import date
+        from sentinela.dou_watcher import codigo_de_saida
+        assert codigo_de_saida([], []) == 0
+        assert codigo_de_saida([], ["24/10/2026, seção `do1`: timeout"]) == 2
+        assert codigo_de_saida([{"nivel": "novo"}], ["x"]) == 3
+        texto = montar_relatorio([], date(2026, 10, 18), date(2026, 10, 25),
+                                 ["24/10/2026, seção `do1`: timeout"])
+        assert "Varredura incompleta" in texto and "24/10/2026" in texto
+        assert "nos dias lidos" in texto and "nesta janela" not in texto

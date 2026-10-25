@@ -36,7 +36,8 @@ Uso:
     python scripts/robos/sentinela/dou_watcher.py --data 2026-06-12 --dias 3
     python scripts/robos/sentinela/dou_watcher.py --saida crawler/relatorios
 
-Saídas: 0 = nada a olhar; 2 = erro de execução; 3 = há candidatas.
+Saídas: 0 = janela lida, nada a olhar; 2 = alguma listagem do DOU não abriu e não
+há candidata (não dá para afirmar); 3 = há candidatas.
 """
 from __future__ import annotations
 
@@ -119,11 +120,14 @@ _TAG = re.compile(r"(?s)<[^>]+>")
 
 # ── Rede ────────────────────────────────────────────────────────────────────
 def baixar(url: str, tentativas: int = 2) -> str | None:
-    """HTML da página, ou None quando a data não tem edição (404/500)."""
-    try:
-        bruto = REDE.obter(url, ausentes=(404, 500), tentativas=tentativas)
-    except FalhaDeRede as e:
-        raise e.causa from e
+    """HTML da página, ou None quando a data não tem edição (404/500).
+
+    Página que não abre levanta `FalhaDeRede`, e quem chama decide: em
+    `rodar`, a listagem de um dia que não abre vira aviso nomeado, e não mais a
+    queda do robô inteiro — em 25/10/2026 uma listagem lenta do in.gov.br
+    derrubou a semana toda.
+    """
+    bruto = REDE.obter(url, ausentes=(404, 500), tentativas=tentativas)
     if bruto is None:
         return None      # dia sem edição daquela seção
     # O in.gov.br anuncia UTF-8 e cumpre; o fallback existe porque o
@@ -154,7 +158,8 @@ def listar(dia: date, secao: str) -> list[dict]:
 
 
 def texto_integral(slug: str) -> str:
-    """Texto do ato. Vazio quando a página não abre — o resumo cobre a falta."""
+    """Texto do ato; vazio quando o ato não existe. Página que não abre levanta
+    `FalhaDeRede`, e `rodar` a conta como ato sem texto — a ementa cobre a falta."""
     pagina = baixar(ARTIGO.format(slug=slug))
     if not pagina:
         return ""
@@ -381,13 +386,28 @@ TITULO_NIVEL = {
 }
 
 
-def montar_relatorio(candidatas: list[dict], inicio: date, fim: date) -> str:
+def montar_relatorio(candidatas: list[dict], inicio: date, fim: date,
+                     nao_lidos: list[str] | None = None,
+                     sem_texto: list[str] | None = None) -> str:
     L = [f"## DOU — normas possivelmente penais ({inicio:%d/%m} a {fim:%d/%m})", ""]
     ler = [c for c in candidatas if c["nivel"] in TITULO_NIVEL]
     descartados = [c for c in candidatas if c["nivel"] == "descartado"]
 
+    # Antes de tudo, o que NÃO foi lido: o resto do relatório só fala dos dias
+    # que abriram, e "nenhum ato tocou em matéria penal" seria falso sobre os
+    # outros.
+    if nao_lidos:
+        L += [f"> **Varredura incompleta.** {len(nao_lidos)} listagem(ns) do DOU não "
+              "abriram — o que saiu nelas não foi examinado, e nada abaixo as cobre. "
+              "Rode de novo com `--data` e `--dias` para cobrir a janela:", ">"]
+        L += [f"> - {x}" for x in nao_lidos] + [""]
+    if sem_texto:
+        L += [f"> {len(sem_texto)} ato(s) sem texto integral legível: a triagem deles "
+              "usou só a ementa.", ""]
+
     if not ler and not descartados:
-        L += ["Nenhum ato normativo da Seção 1 tocou em matéria penal nesta janela.", ""]
+        onde = "nos dias lidos" if nao_lidos else "nesta janela"
+        L += [f"Nenhum ato normativo da Seção 1 tocou em matéria penal {onde}.", ""]
         return "\n".join(L) + "\n"
 
     if not ler:
@@ -449,23 +469,53 @@ def montar_relatorio(candidatas: list[dict], inicio: date, fim: date) -> str:
     return "\n".join(L) + "\n"
 
 
-def rodar(fim: date, dias: int) -> list[dict]:
+def rodar(fim: date, dias: int, listar_dia=listar, buscar_texto=texto_integral,
+          pausa: float = PAUSA) -> tuple[list[dict], list[str], list[str]]:
+    """(candidatas, listagens não lidas, atos sem texto integral).
+
+    Uma listagem que não abre é um dia-seção NÃO LIDO, com o motivo, e a
+    varredura segue pelos outros: antes ela derrubava o robô, e a semana
+    inteira ficava sem resposta por causa de um dia.
+    """
     fontes = json.loads(FONTES.read_text(encoding="utf-8"))["fontes"]
     padrao, numeros = padrao_dos_diplomas(fontes)
 
     itens: list[dict] = []
     vistos: set[str] = set()
+    nao_lidos: list[str] = []
     for i in range(dias):
         dia = fim - timedelta(days=i)
         for secao in SECOES:
-            for item in listar(dia, secao):
+            try:
+                atos = listar_dia(dia, secao)
+            except FalhaDeRede as e:
+                nao_lidos.append(f"{dia:%d/%m/%Y}, seção `{secao}`: {e}")
+                atos = []
+            for item in atos:
                 slug = item.get("urlTitle") or ""
                 if slug in vistos:
                     continue
                 vistos.add(slug)
                 itens.append(item)
-            time.sleep(PAUSA)
-    return triar(itens, padrao, numeros)
+            if pausa:
+                time.sleep(pausa)
+
+    sem_texto: list[str] = []
+
+    def texto(slug: str) -> str:
+        try:
+            return buscar_texto(slug)
+        except FalhaDeRede:
+            sem_texto.append(slug)
+            return ""
+    return triar(itens, padrao, numeros, buscar_texto=texto), nao_lidos, sem_texto
+
+
+def codigo_de_saida(candidatas: list[dict], nao_lidos: list[str]) -> int:
+    """3 = há o que ler; 2 = varredura incompleta, sem achado; 0 = janela lida e quieta."""
+    if candidatas:
+        return 3
+    return 2 if nao_lidos else 0
 
 
 def main() -> int:
@@ -479,9 +529,9 @@ def main() -> int:
 
     fim = date.fromisoformat(args.data) if args.data else hoje()
     inicio = fim - timedelta(days=args.dias - 1)
-    candidatas = rodar(fim, args.dias)
+    candidatas, nao_lidos, sem_texto = rodar(fim, args.dias)
 
-    relatorio = montar_relatorio(candidatas, inicio, fim)
+    relatorio = montar_relatorio(candidatas, inicio, fim, nao_lidos, sem_texto)
     destino = Path(args.saida)
     destino.mkdir(parents=True, exist_ok=True)
     (destino / f"dou-{fim.isoformat()}.md").write_text(relatorio, encoding="utf-8")
@@ -492,7 +542,7 @@ def main() -> int:
         json.dumps([c["fonte_proposta"] for c in candidatas if c.get("fonte_proposta")],
                    ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(relatorio)
-    return 3 if candidatas else 0
+    return codigo_de_saida(candidatas, nao_lidos)
 
 
 if __name__ == "__main__":
