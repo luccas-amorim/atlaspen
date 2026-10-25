@@ -156,21 +156,25 @@
     {
       "arquivo": "crawler/DECISOES-F0.md",
       "sobre": "Registro do spike que abriu o conferidor: por que o fetcher é como é.",
-      "conferido_em": "2026-09-11",
+      "conferido_em": "2026-10-25",
       "depende_de": [
         "scripts/robos/nucleo/baixar.py"
       ]
     },
     {
       "arquivo": "docs/os-robos.md",
-      "sobre": "Como cada robo funciona, com que criterio corta, e o que nenhum deles alcanca. Vigia, Sentinela, Recenseador, Auditor e Arquivista. Pagina publica, para receber discordancia sobre os criterios.",
-      "conferido_em": "2026-09-28",
+      "sobre": "Como cada robo funciona, com que criterio corta, e o que nenhum deles alcanca. Vigia, Sentinela, Recenseador, Auditor, Arquivista e Cotejador. Pagina publica, para receber discordancia sobre os criterios.",
+      "conferido_em": "2026-10-25",
       "depende_de": [
         "scripts/robos/vigia/conferir.py",
         "scripts/robos/sentinela/dou_watcher.py",
         "scripts/robos/auditor/auditar.py",
         "scripts/robos/arquivista/verificar_documentacao.py",
         "scripts/robos/recenseador/leis_do_ano.py",
+        "scripts/robos/cotejador/frescor.py",
+        "scripts/robos/cotejador/textos.py",
+        "scripts/robos/cotejador/vetos.py",
+        "scripts/robos/fontes/senado.py",
         "scripts/robos/vigia/cobertura-limites.json",
         ".github/workflows/conferidor.yml"
       ]

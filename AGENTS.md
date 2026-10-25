@@ -117,6 +117,14 @@ pessoa que assina.
   nada decidido sobre `grave_ameaca`, e exceção por id sozinho calaria o que ninguém julgou.
   Divergência real nunca vira exceção: vira correção no dado. Exceção é juízo TOMADO, com
   pendência declarada — e sai no dia em que a pendência fechar.
+- **Fonte secundária aponta, não escreve** (decisão de 25/10/2026). O Senado (API de
+  Dados Abertos), o normas.leg.br e o ctresb/leis são lidos pelo Cotejador
+  (`scripts/robos/cotejador/`) e pelo gerador de candidatos do acervo
+  (`scripts/robos/acervo/candidatos.py`), e nunca escrevem no catálogo, no acervo nem
+  em `data/fontes.json`: o que dizem vira pergunta na issue ou linha de relatório. O
+  Senado classifica mal — registra como "Alteração" as revogações que a Lei
+  11.106/2005 fez no CP —, e por isso nem a revogação que ele afirma entra sem o
+  compilado. Plano e decisões em `.superpowers/planos/2026-10-25-fontes-abertas-e-acervo.md`.
 - **A questão jurídica em aberto não vira dado.** Havia um `REVISAO-PENDENTE.md` na raiz
   para isso; ele saiu na v2.0.0, quando a revisão da base fechou as perguntas que ele
   guardava. Se a próxima aparecer, o lugar dela é o mesmo de sempre: **o registro diz o

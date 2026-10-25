@@ -139,6 +139,7 @@ cada pendência). O que esta página fixa são as **travas** — o que a CI impe
 | Hediondez sem regra | Hediondez afirmada sem entrada na tabela curada reprova. |
 | Grafia do dispositivo | O campo `artigo` segue uma forma canônica (`Art. 121, §2º, I`): grafia que a régua não lê reprova, em vez de casar regra nenhuma em silêncio. |
 | Derivado dessincronizado | O `static/data/crimes.json` commitado tem de ser o que a fonte produz. |
+| URN do diploma | Cada diploma de `data/fontes.json` tem a sua URN LexML, bem formada e de um diploma só. É ela que liga o diploma ao registro do Senado e ao normas.leg.br, que os robôs leem para perguntar se o compilado está em dia; URN errada apontaria para outra norma sem quebrar nada. |
 | Divergência com o compilado | Não é trava de build: é achado da rodada semanal, e vira issue. O estado de cada registro está em [`/data/conferencia.json`](pathname:///data/conferencia.json). |
 
 ### Contradições: zeradas e travadas

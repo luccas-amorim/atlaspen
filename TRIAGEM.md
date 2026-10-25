@@ -7,18 +7,21 @@ Na **sexta-feira, 23:00**, um ensaio (`fontes.yml`) baixa os ~70 compilados
 exatamente como a segunda os baixará, e joga fora. Não é para deixar texto
 pronto — a segunda baixa o dela e sempre opera com o do dia. É para descobrir
 na sexta, e não na segunda de manhã, que uma fonte saiu do ar ou mudou de forma
-e perdeu a sentinela: quando isso acontece, o `vigia` cai e leva os outros três
-com ele. Falhou, abre issue com rótulo `fontes`; voltou, ela se fecha sozinha.
+e perdeu a sentinela: quando isso acontece, o `vigia` cai e leva com ele os que
+dependem das páginas dele (auditor, cotejador, proponente). Falhou, abre issue com
+rótulo `fontes`; voltou, ela se fecha sozinha. Desde 25/10/2026 o ensaio também
+adianta o cotejo com o Senado, no resumo da execução — sem issue, porque a segunda
+faz a mesma pergunta com as páginas dela.
 
 A rodada automática acontece **toda segunda-feira, 05:00 de Brasília**
 (`.github/workflows/conferidor.yml`), e também sob demanda em Actions ▸ *Conferidor
 semanal* ▸ **Run workflow**. Ela produz, no máximo, **três coisas**: um commit, uma issue
 e um pull request.
 
-São **seis robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
-qual falhou sem que você precise abrir o passo. Quatro conferem, e desses três correm
-em paralelo: só o auditor espera, porque lê as páginas que o vigia baixou. Os dois
-últimos entregam — a triagem abre a issue, o proponente abre o PR.
+São **sete robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
+qual falhou sem que você precise abrir o passo. Cinco conferem, e desses três correm
+em paralelo: auditor e cotejador esperam, porque leem as páginas que o vigia baixou.
+Os dois últimos entregam — a triagem abre a issue, o proponente abre o PR.
 
 | Job | O que vigia | Falha dele derruba a rodada? |
 |---|---|---|
@@ -27,6 +30,7 @@ em paralelo: só o auditor espera, porque lê as páginas que o vigia baixou. Os
 | **recenseador** | Uma vez por mês, todas as leis sancionadas no ano — a defesa contra o falso negativo | Não: roda dentro do job da sentinela |
 | **auditor** | Hediondez, ação penal, causas de aumento e nome do tipo | Não |
 | **arquivista** | Saúde da prosa: documento vencido ou cuja dependência mudou | Não |
+| **cotejador** | A segunda leitura (desde 25/10/2026): o compilado anota as leis que o Senado registra? A moldura do Planalto é a da Câmara? Mais os vetos do ano e o que mudou no ctresb/leis, que só informam | Não: o Senado fora do ar não pode calar a rodada |
 | **triagem** | Junta os relatórios e abre a issue | — |
 | **proponente** | Transforma em PR o que é leitura direta — moldura, sentinela defasada e modificador de escopo declarado —, e escreve a nota quando a lei é recente | Não: só roda se houver o que propor |
 
@@ -36,8 +40,14 @@ a lei é penal, diz que existe e que o filtro não a examinou. Leitura curta —
 ementa —, e o que criar, agravar ou revogar tipo penal vira entrada em
 `data/fontes.json`.
 
-A issue **só nasce se pelo menos um dos quatro tiver o que dizer**. Silêncio dos quatro
-significa catálogo em dia, e nesse caso a rodada deixa apenas o commit do carimbo.
+A issue **só nasce se algum dos robôs tiver o que dizer — ou se algum não terminou**.
+Cada um responde com 0 (nada) ou 3 (achados); qualquer outro código, ou nenhum,
+quer dizer que a pergunta dele ficou sem resposta, e a issue abre com a seção
+*Robôs que não terminaram*. Até 25/10/2026 a triagem só olhava o 3, e o Arquivista
+e a rodada de auditoria do Proponente passaram semanas caídos sem que nada
+chegasse: as rodadas de 12 e 19/10 terminaram verdes, sem issue. Silêncio de todos,
+com todos terminados, significa catálogo em dia, e nesse caso a rodada deixa apenas
+o commit do carimbo.
 
 ## 1. Um commit que chega sozinho — nada a fazer
 
@@ -76,6 +86,7 @@ Os blocos, na ordem em que aparecem — o que pede ação primeiro:
 
 | Bloco | O que é | O que costuma exigir |
 |---|---|---|
+| **Robôs que não terminaram** | Robô que saiu com código que não é 0 nem 3 — exceção, fonte ilegível, job que não chegou ao passo. Desde 25/10/2026 | Abrir o log da execução (o link está no bloco). A pergunta daquele robô ficou sem resposta nesta semana, e o resto da issue não a cobre |
 | **Achados de pena** | Moldura ou espécie de pena divergindo do compilado; dispositivo revogado; dispositivo com pena própria ausente do catálogo; linha de pena derivada cuja conta (base × fração da lei) não fecha — `DIVERGENTE-derivada`, desde 28/09/2026 | Ler o artigo no Planalto. O que for mecânico já veio em PR (item 3); o resto é decisão de modelagem |
 | **A lei escreveu a pena e o parser não leu** | Os `ilegivel`: registros em que há moldura no compilado e o `pena_parser` não a extraiu | Ação NOSSA, e o único balde do "sem moldura" que pede alguma. Abrir o dispositivo e ver o que o parser não leu; o número tende a zero. Tem seção própria, no alto, desde 24/09/2026 — antes dividia a tela com 152 registros que estavam certos |
 | **Cobertura** | Quantos registros foram conferidos e, por motivo, quantos não têm moldura própria na lei | Nada, em regra: são limites DECLARADOS, a lei não deixou moldura ali. No corpo da issue vêm como contagem; id por id fica no artifact. Se "não localizado" subir, é sinal de rótulo errado no catálogo ou de mudança na página |
@@ -83,6 +94,10 @@ Os blocos, na ordem em que aparecem — o que pede ação primeiro:
 | **Já julgado** | Uma linha dizendo quantos achados foram omitidos por decisão anterior | Nada. Se o número subir sem motivo, abrir `scripts/robos/auditor/excecoes-auditoria.json` e conferir se alguma exceção está ampla demais |
 | **Saúde da documentação** | Documento que passou da cadência (90 dias) ou de que algum arquivo dependente mudou depois da última conferência | Reler. Se nada mudar, atualizar `conferido_em` em `data/documentacao.json`; se corrigir, o commit já responde |
 | **DOU da semana** | Atos normativos da Seção 1 triados em três níveis pelo PRECEITO SECUNDÁRIO — quem fala de pena sem cominar nenhuma não cria crime | Ler só os dois primeiros níveis. **Possível tipo penal em diploma não monitorado** é o ponto cego do conferidor, e o PR da semana já traz a entrada de `data/fontes.json` para conferir. **Mexe em diploma que já vigiamos** é antecedência: o conferidor veria na rodada seguinte, mas a `sentinela` daquela fonte talvez precise mudar. Os **descartados** ficam nomeados no fim, uma linha cada, para o corte ser auditável |
+| **Cotejo com o Senado** | Lei recente que o Senado registra para um diploma vigiado e que a página baixada do Planalto não cita; à parte, as provavelmente superadas por lei posterior no mesmo dispositivo. Desde 25/10/2026 | Abrir o compilado e procurar a lei. Se o Planalto está atrasado, o catálogo pode estar conferido contra texto velho; se o Senado errou, nada a fazer. O que toca registro do catálogo vem primeiro |
+| **Molduras Planalto × Câmara** | Dispositivo cuja pena difere entre o compilado do Planalto e a compilação da Câmara (normas.leg.br) | Abrir as duas no dispositivo. O catálogo segue o Planalto; a divergência diz que uma das duas está atrasada |
+| **Vetos e ctresb/leis** | Vetos do ano a leis que mexem em diploma vigiado (os que ainda tramitam podem cair) e o que mudou no ctresb/leis | Nada, em regra: só informam, e nunca abrem issue sozinhos |
+| **Leis do ano** | Na primeira semana do mês, o relatório do Recenseador — antes ele decidia se a issue abria e não entrava no corpo | Ler as ementas. Varredura incompleta (aviso) quer dizer que a janela do falso negativo continua aberta |
 
 **Fechar a issue significa "triado"** — não "resolvido". O que virar tarefa vira commit ou
 PR próprio.
@@ -126,6 +141,8 @@ como proposta com o fundamento ao lado:
   em outro diploma não é alcançada;
 - **fontes novas** — quando o DOU trouxe lei que parece criar tipo penal, a entrada
   proposta para `data/fontes.json` vem junto, para você corrigir em vez de escrever.
+  Desde 25/10/2026 ela traz a `urn`, montada da data do título; confira contra a
+  ficha do Senado, porque URN errada aponta para outra norma sem quebrar nada.
 
 ## O que a máquina NUNCA faz sozinha
 

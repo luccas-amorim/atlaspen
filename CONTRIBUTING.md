@@ -32,7 +32,9 @@ determinístico, sem IA, descrito em [`scripts/robos/README.md`](scripts/robos/R
 
 1. **Toda segunda-feira, 05:00 de Brasília**, o workflow `conferidor.yml` baixa o texto
    compilado dos diplomas de `data/fontes.json`, compara pena a pena com o catálogo e olha
-   os atos normativos da Seção 1 do Diário Oficial da semana.
+   os atos normativos da Seção 1 do Diário Oficial da semana. Desde 25/10/2026 pergunta
+   também ao Senado e à compilação da Câmara se o próprio compilado está em dia — só
+   pergunta: nada que vem de lá escreve no catálogo.
 2. **O que diverge vira issue.** Cada achado é uma pergunta, não uma conclusão.
 3. **O que é leitura direta vira PR**, aberto pelo próprio robô (`atlaspen-automacao[bot]`):
    moldura ou espécie de pena de um registro que já existe divergindo do que a lei comina;

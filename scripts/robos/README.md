@@ -11,11 +11,28 @@ quando há correção inequívoca, **um PR** aberto pelo próprio robô.
 É determinístico de ponta a ponta — sem IA, sem inferência. Onde não há leitura
 segura, o achado vira pergunta na issue em vez de virar dado.
 
+Desde 25/10/2026 há uma **segunda leitura**: o Senado (API de Dados Abertos) e o
+normas.leg.br dizem o que mudou em cada diploma e como a Câmara compila o mesmo
+texto. Elas apontam e nunca escrevem — o plano e as decisões estão em
+`.superpowers/planos/2026-10-25-fontes-abertas-e-acervo.md`.
+
+## As fontes (`fontes/`)
+
+Toda requisição HTTP dos robôs passa por aqui. A decodificação, não: cada fonte
+decodifica o que é seu.
+
+| Arquivo | O que faz |
+|---|---|
+| `rede.py` | Cabeçalhos, novas tentativas, espera, intervalo mínimo, e a separação entre "não existe" (código HTTP declarado ausente → `None`) e "a rede falhou" (`FalhaDeRede`). Adaptado do ctresb/leis (MIT, aviso em `LICENSE-ctresb-leis.txt`). |
+| `senado.py` | A ficha de uma norma (por tipo/número/ano, URN ou código), com as normas posteriores que a tocaram — da união de `vides` e `disps`, porque as duas não chegam sempre juntas — e as anteriores que ela revogou; a lista de leis do ano; os vetos do ano. Traduz a notação do Senado para a chave do histórico. |
+| `normas.py` | A ficha JSON-LD do normas.leg.br e o texto de cada versão (`Original`, `Current`). |
+| `ctresb.py` | Os commits do ctresb/leis por caminho, pela API do GitHub. Só observação. |
+
 ## Os módulos
 
 | Arquivo | O que faz |
 |---|---|
-| `baixar.py` | Fetch dos compilados. Detecta codificação (BOM → meta → UTF-8 → cp1252) e valida a **sentinela** de cada fonte: a página é gravada em `.html.part` e só é promovida a `<data>.html` quando a sentinela passa — snapshot no caminho canônico significa "conferido", por construção, e o differ nunca compara com texto velho ou truncado. |
+| `baixar.py` | Fetch dos compilados, sobre `fontes/rede.py`. Detecta codificação (BOM → meta → UTF-8 → cp1252) e valida a **sentinela** de cada fonte: a página é gravada em `.html.part` e só é promovida a `<data>.html` quando a sentinela passa — snapshot no caminho canônico significa "conferido", por construção, e o differ nunca compara com texto velho ou truncado. |
 | `parsear.py` | HTML → dispositivos (caput, §§, pena, situação, anotação). Fatia o HTML cru: a árvore do Word malformado desloca as fronteiras de parágrafo. |
 | `../pena_parser.py` | Lê a moldura. **Compartilhado com `transform_data.py`**, para que catálogo e conferidor leiam a mesma pena do mesmo jeito. |
 | `conferir.py` | O differ. Classifica cada achado e escreve DOIS relatórios: `crawler/relatorios/AAAA-MM-DD.md`, completo, id por id, que vai no artifact; e `-resumo.md`, que vai no corpo da issue — lá os limites declarados de cobertura saem como contagem, porque o corpo tem teto de 65.536 caracteres e o despejo empurrava para fora justamente o que pede ação. Ambos abrem dizendo contra que branch e commit a rodada correu. Sai com 3 quando há achados. |
@@ -31,6 +48,12 @@ segura, o achado vira pergunta na issue em vez de virar dado.
 | `conferir_violencia.py`, `conferir_acao_penal.py` | Os derivadores de `violencia`/`grave_ameaca` e de `acao`, por regra escrita (`scripts/violencia.py`, `scripts/acao_penal.py`). Toda resposta cita o trecho da lei que a decidiu e carrega `fundamento_verificado`: **sem lastro, a derivação não vale** — trecho que o texto não tem zera a resposta, que vai para "pede juízo", e o relatório conta quantas foram zeradas. Não escrevem no catálogo. |
 | `dou_watcher.py` | Filtro semanal da Seção 1 do DOU, para achar lei penal **nova e autônoma**. Só lei ordinária e lei complementar, pela reserva legal — MP, lei delegada, decreto-lei e emenda não criam tipo penal. Baixa o texto INTEGRAL de cada uma — não há mais pré-filtro por vocabulário — e tria em três níveis pelo preceito secundário, que inclui a pena por remissão ("nas mesmas penas", "metade da pena"). O descartado sai nomeado, não some, e o integral fica no JSON da rodada para permitir retriagem quando o critério mudar. |
 | `leis_do_ano.py` | A defesa contra o falso NEGATIVO. Uma vez por mês, confronta a lista de leis sancionadas do ano (no Planalto, que é a FONTE) com o que o watcher examinou. O que sobra é a lista de leis que ninguém olhou. Não classifica: só aponta. Se a lista não puder ser lida, não afirma nada — reportar zero sem ter lido seria o silêncio que ele existe para quebrar. |
+| `cotejador/frescor.py` | O compilado anota as leis recentes que o Senado registra para o diploma? A que falta vira pergunta, com prioridade para a que toca registro do catálogo; a superada por lei posterior no mesmo dispositivo sai em lista à parte. Lê, pela `urn` de `fontes.json`, a ficha do Senado. |
+| `cotejador/textos.py` | A moldura de cada dispositivo no Planalto contra a da compilação da Câmara (normas.leg.br), com o mesmo `parsear` e o mesmo `pena_parser`. |
+| `cotejador/vetos.py` | Os vetos do ano a matérias que citam diploma vigiado, e quais ainda tramitam. Só informa. |
+| `cotejador/ctresb.py` | O que mudou na semana nos `scripts/` do ctresb/leis e nos arquivos dos nossos diplomas. Só informa. |
+| `cotejador/historico.py` | Sob demanda: `data/historico-legislativo.json` contra o registro do Senado, nos dois sentidos. |
+| `acervo/candidatos.py` | Sob demanda: os dispositivos revogados dos compilados e os diplomas revogados no todo que o acervo ainda não tem, cada um com o nível de prova de que era crime (pena no compilado, pena no original, pede juízo). **Não escreve no acervo.** |
 | `excecoes.json` | O que já foi julgado e decidido na conferência de PENAS. Sem isso o relatório repetiria para sempre os mesmos achados. |
 | `excecoes-auditoria.json` | O mesmo, para a auditoria de classificação. Arquivo próprio porque as chaves são outras: ora o id do registro, ora o dispositivo do compilado. |
 | `cobertura-limites.json` | Quantos registros o conferidor aceita **não** garantir, por motivo. Crescer é regressão e vira achado; encolher vira convite a apertar. É a trava contra a falha que mais dói aqui — a silenciosa: registro que sai da conferência não aparece como divergente, aparece como nada. |
@@ -47,6 +70,12 @@ python scripts/robos/vigia/conferir.py --atualizar-limites   # regrava a trava d
 python scripts/robos/proponente/propor.py                  # o PR que sairia (não escreve)
 python scripts/robos/sentinela/dou_watcher.py --dias 8
 python scripts/robos/recenseador/leis_do_ano.py             # o que o watcher nao viu
+python scripts/robos/cotejador/frescor.py                    # o compilado anota o que o Senado registra?
+python scripts/robos/cotejador/textos.py --fonte cp          # moldura do Planalto x da Câmara
+python scripts/robos/cotejador/vetos.py                      # vetos do ano que tocam diplomas vigiados
+python scripts/robos/cotejador/ctresb.py                     # o que mudou no ctresb/leis (GITHUB_TOKEN ajuda)
+python scripts/robos/cotejador/historico.py --fonte lep      # historico-legislativo.json x Senado
+python scripts/robos/acervo/candidatos.py                    # candidatos ao acervo histórico
 python -m pytest scripts/robos/tests            # sem rede, contra fixtures
 ```
 
@@ -114,8 +143,10 @@ Cada uma tem teste e fixture; nenhuma volta em silêncio.
 
 ## Acrescentar um diploma
 
-Uma entrada em `data/fontes.json` (`id`, `rotulos`, `url` do compilado,
-`sentinela` — uma string que prova que a página está fresca). O conferidor passa
+Uma entrada em `data/fontes.json` (`id`, `rotulos`, `url` do compilado, `urn`
+LexML — conferida contra o nome e a ementa da ficha do Senado, porque URN errada
+aponta para outra norma sem quebrar nada —, e `sentinela`, uma string que prova
+que a página está fresca). O conferidor passa
 a vigiá-lo na rodada seguinte, e o watcher do DOU passa a reconhecer citações a
 ele. Todo rótulo distinto de `data/crimes.json` precisa constar de exatamente um
 diploma.

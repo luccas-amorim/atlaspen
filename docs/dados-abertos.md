@@ -232,7 +232,9 @@ lida com a publicada no catálogo e reporta o que divergiu numa issue pública. 
 divergência é de leitura direta — a moldura de um registro que já existe não corresponde
 ao que a lei comina —, abre também um pull request com a correção proposta. Na mesma
 rodada, outros programas vigiam o que a conferência de penas não alcança: o Diário Oficial,
-atrás de lei penal nova; a hediondez e a ação penal; a própria documentação. Cada um, com
+atrás de lei penal nova; a hediondez e a ação penal; a própria documentação; e, desde
+outubro de 2026, o próprio compilado, perguntando ao registro do Senado e à compilação da
+Câmara se ele anota as leis recentes e se a pena dele é a mesma. Cada um, com
 seus critérios e seus limites, está descrito em [Os robôs](./os-robos.md) — e essa é a página a
 ler antes de citar um dado, porque é lá que está escrito o que a máquina não vê.
 

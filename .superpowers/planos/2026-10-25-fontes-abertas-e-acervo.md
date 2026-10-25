@@ -1,6 +1,7 @@
 # Fontes abertas, o Cotejador e o acervo — plano
 
-25/10/2026. Decisões tomadas no mesmo dia (fim do documento); nada implementado ainda.
+25/10/2026. Decisões tomadas e fases implementadas no mesmo dia, num PR único
+(seções "Execução" e "Decisões", no fim).
 
 ## Por que agora
 
@@ -21,9 +22,10 @@ do Planalto. Hoje, se o Planalto atrasa ou erra, ninguém percebe.
 | Fonte | Achado | Consequência |
 |---|---|---|
 | Senado, `legislacao/LEI/7210/1984` | a última alteração registrada da LEP é a Lei 15.410, igual à nossa sentinela | dá para cotejar frescor por diploma |
-| Senado, `legislacao/lista?tipo=LEI&ano=2026` | 204 leis, da 15.322 à 15.526 (29/09); nenhuma depois disso | ou não houve lei, ou o Senado anda semanas atrás: **soma** ao Planalto, não o substitui |
+| Senado, `legislacao/lista?tipo=LEI&ano=2026` | 204 leis, da 15.322 à 15.526 (29/09); nenhuma depois disso | **conferido na execução:** a sondagem do Planalto também para na 15.526; não há atraso. O Senado ainda não listava uma (a 15.393) |
 | Senado, CP | a Lei 11.106/2005 revogou os arts. 217, 219 a 222 e 240, e o Senado classifica as seis como **"Alteração"** | a classificação do Senado não decide nada; ela aponta onde olhar |
-| Senado, CP e LCP | não registra revogação dos arts. 185, 279 e 281 do CP nem dos arts. 27 e 69 da LCP, que o compilado mostra | o Senado não é completo para mudanças antigas |
+| Senado, CP | **corrigido na execução:** os arts. 185, 279 e 281 estão nos `disps`, também como "Alteração"; a primeira leitura só olhava os `vides` | mesma conclusão: o tipo de mudança que o Senado dá não vale |
+| Senado, ficha do CP | às 02:20 vieram 164 `vides`; às 02:48, nenhum, com os 590 `disps` intactos (a LCP também perdeu os seus) | o cliente lê as duas listas e junta |
 | Nossos snapshots do Planalto | 431 dispositivos marcados como revogados nos 68 diplomas (CP 37, LCP 9), contando os não penais | **o maior ganho para o acervo está no dado que já temos**; ele tem 14 registros |
 | normas.leg.br, CP | versões `Original` (DOU de 31/12/1940) e `Current`; sem intermediárias | serve o texto original; não serve para a história de patamares |
 | normas.leg.br × `data/acervo.json` | art. 240, §2º: nós temos "dentro de 1 (um) mês", o original de 1940 diz "dentro de um mês" | é o tipo de divergência que só uma segunda fonte levanta; quem decide é o DOU |
@@ -79,7 +81,8 @@ Nada é removido na primeira leva.
 
 ## As fases
 
-Cada fase fecha com a verificação completa do `AGENTS.md` verde e um PR próprio.
+Cada fase fecha com a verificação completa do `AGENTS.md` verde. O plano previa um
+PR por fase; o dono do projeto pediu um PR único, com um commit por fase.
 
 ### F0. Decisões (de quem assina)
 
@@ -226,6 +229,44 @@ F5 vem logo depois, com o escopo ampliado da decisão 3.
   for publicado) e o ctresb/leis (MIT, pelo código).
 - Workflow: o Cotejador entra como job do `conferidor.yml`, depois do `vigia`,
   sem derrubar a rodada se uma fonte secundária falhar.
+
+## Execução (25/10/2026)
+
+O dono do projeto pediu tudo num PR único, com cada edição registrada e testada,
+e a investigação de por que não havia issue aberta. A ordem dos commits seguiu as
+fases, com o conserto da triagem na frente.
+
+**Por que não havia issue.** Três defeitos que faziam a quebra parecer silêncio: o
+Arquivista gravava em `crawler/relatorios/`, que não existe no checkout limpo, e
+caía toda semana; a rodada de auditoria do Proponente fazia `import auditar`, que
+não resolve desde 14/08, e saía com o código de "nada mecânico"; e a triagem só
+abria issue com código 3. Corrigidos, com teste; a triagem agora lista na issue
+todo robô que saiu com outro código.
+
+**Desvios do plano, cada um com o porquê:**
+
+- *Sem cache de rede* (F1). O snapshot do Vigia já é o cache do Planalto, e as
+  fontes novas rodam uma vez por semana.
+- *A prova de pena em níveis* (F5, decisão 2). O compilado do CP não guarda o
+  riscado do artigo revogado; a decisão "pena no riscado" só se aplicaria à LCP.
+  O gerador classifica em níveis — pena no compilado, pena no original
+  (normas.leg.br, só artigo inteiro), pede juízo, fora do intervalo — e deixa a
+  escolha de qual basta para quem assina.
+- *O acervo não recebe registro neste PR* (F5). O gerador entrega relatório e
+  propostas no formato de `acervo.json`; incluir é juízo.
+- *Lei superada* (F3). Achado da primeira rodada real: quando lei posterior
+  reescreve o mesmo dispositivo, o compilado pode trocar a anotação. Vai para
+  uma lista à parte, sem abrir issue.
+- *Vetos sem o resultado da votação* (F8). A lista do Senado diz se o veto
+  tramita, não como foi votado; a derrubada aparece como promulgação anotada, e o
+  frescor a vê.
+- *Histórico sob demanda* (F8). O sentido "o Senado não registra" é quase todo
+  lacuna do Senado em lei antiga; na rodada semanal seria ruído.
+
+**Defeitos achados pelo caminho:** `IncompleteRead` escapava da rede;
+`aplicar_fontes_propostas` só casava CRLF (quebraria na CI); a fonte proposta
+pelo Sentinela não teria `urn` e reprovaria o build; o Recenseador contava queda
+de conexão como número vazio e saía com 0 sem ter lido nada.
 
 ## Decisões (25/10/2026)
 
