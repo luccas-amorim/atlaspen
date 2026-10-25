@@ -1136,6 +1136,32 @@
       "data_revogacao_nota": "A Lei 13.445/2017 entrou em vigor 180 dias depois de publicada.",
       "preceitos_esperados": 0,
       "tipos_catalogados": 0
+    },
+    {
+      "id": "lei7646",
+      "nome": "Programas de computador (antiga)",
+      "norma": "Lei nº 7.646, de 18 de dezembro de 1987",
+      "situacao": "revogado",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l7646.htm",
+      "conferido_em": "2026-10-25",
+      "norma_revogadora": "Lei nº 9.609/1998, art. 16",
+      "data_revogacao": "1998-02-20",
+      "data_revogacao_nota": "A Lei 9.609/1998 entrou em vigor na data da publicação (DOU de 20/02/1998).",
+      "preceitos_esperados": 0,
+      "tipos_catalogados": 0
+    },
+    {
+      "id": "lei8974",
+      "nome": "Biossegurança (antiga)",
+      "norma": "Lei nº 8.974, de 5 de janeiro de 1995",
+      "situacao": "revogado",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l8974.htm",
+      "conferido_em": "2026-10-25",
+      "norma_revogadora": "Lei nº 11.105/2005, art. 42",
+      "data_revogacao": "2005-03-28",
+      "data_revogacao_nota": "A Lei 11.105/2005 entrou em vigor na data da publicação (DOU de 28/03/2005).",
+      "preceitos_esperados": 0,
+      "tipos_catalogados": 0
     }
   ],
   "excluidos": [

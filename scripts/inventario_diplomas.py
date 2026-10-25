@@ -733,6 +733,30 @@ META: dict[str, dict] = {
         "data_revogacao_nota": "A Lei 13.445/2017 entrou em vigor 180 dias depois de publicada.",
         "rotulos": [],
     },
+    # Os dois abaixo vieram do gerador de candidatos do acervo
+    # (scripts/robos/acervo/candidatos.py), em 25/10/2026: a ficha do Senado
+    # das leis vigiadas aponta a revogação no todo, e a página do Planalto do
+    # diploma revogado e o artigo da lei revogadora a confirmam.
+    "lei7646": {
+        "nome": "Programas de computador (antiga)",
+        "norma": "Lei nº 7.646, de 18 de dezembro de 1987",
+        "url": "leis/l7646.htm",
+        "situacao": "revogado",
+        "revogadora": "Lei nº 9.609/1998, art. 16",
+        "data_revogacao": "1998-02-20",
+        "data_revogacao_nota": "A Lei 9.609/1998 entrou em vigor na data da publicação (DOU de 20/02/1998).",
+        "rotulos": [],
+    },
+    "lei8974": {
+        "nome": "Biossegurança (antiga)",
+        "norma": "Lei nº 8.974, de 5 de janeiro de 1995",
+        "url": "leis/l8974.htm",
+        "situacao": "revogado",
+        "revogadora": "Lei nº 11.105/2005, art. 42",
+        "data_revogacao": "2005-03-28",
+        "data_revogacao_nota": "A Lei 11.105/2005 entrou em vigor na data da publicação (DOU de 28/03/2005).",
+        "rotulos": [],
+    },
 }
 
 # Diplomas considerados e deliberadamente fora do denominador.
