@@ -191,6 +191,12 @@ tipificar", "para agravar a pena", "para tornar hediondo", "acrescenta o art.".
 O descartado sair nomeado é deliberado: três segundos de leitura, e a decisão do
 filtro fica auditável. Um corte que apaga o que cortou não pode ser conferido.
 
+Pela mesma razão, o **dia que não abre sai nomeado**. Se a listagem de um dia do DOU
+não responde, o Sentinela registra o dia e a seção que ficaram sem leitura e segue
+pelos outros; o relatório abre dizendo que a varredura está incompleta. Até
+25/10/2026 uma listagem lenta derrubava o robô inteiro, e a semana toda ficava sem
+resposta por causa de um dia.
+
 ---
 
 ## Recenseador — a lei que ninguém leu
@@ -353,6 +359,12 @@ quando alguém relê e **não** encontra o que corrigir.
 Prazo é relógio; dependência é sinal. A convenção que manda a pena vir de
 `pena_min`/`pena_max` ficou meses documentada ao contrário do que o transformador
 fazia, e o prazo do documento nem havia corrido.
+
+As datas vêm do histórico do repositório, e **sem histórico ele não afirma nada**. Na
+primeira rodada em que voltou a funcionar, em 25/10/2026, a cópia sem histórico da CI
+fazia todo arquivo parecer editado naquele dia — e editar conta como ler: os 18
+documentos saíram "em dia", com três vencidos. O job passou a baixar o histórico
+inteiro, e numa cópia sem histórico o Arquivista se declara sem resposta.
 
 ---
 

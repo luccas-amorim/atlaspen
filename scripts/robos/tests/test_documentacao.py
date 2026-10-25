@@ -161,6 +161,8 @@ def test_saida_em_pasta_que_ainda_nao_existe(tmp_path, monkeypatch):
     """
     import io
     monkeypatch.setattr(vd, "avaliar", lambda registro: [])
+    # A CI roda os testes num clone raso; aqui o que se testa é a pasta.
+    monkeypatch.setattr(vd, "repositorio_raso", lambda: False)
     # `main` embrulha o `sys.stdout.buffer` num wrapper novo; sem a referência,
     # o falso é coletado e fecha o buffer que o novo usa.
     falso = io.TextIOWrapper(io.BytesIO(), encoding="utf-8")
@@ -170,3 +172,35 @@ def test_saida_em_pasta_que_ainda_nao_existe(tmp_path, monkeypatch):
 
     assert vd.main() == 0
     assert destino.exists()
+
+
+def test_clone_raso_e_detectado(tmp_path, monkeypatch):
+    """Num clone raso todo arquivo parece commitado no último commit: a rodada
+    de 25/10/2026 deu os 18 documentos por em dia, com três vencidos."""
+    import subprocess
+    origem = tmp_path / "origem"
+    origem.mkdir()
+    git = _repo_git(origem, monkeypatch)
+    for i, dia in enumerate(("2026-01-10", "2026-09-24")):
+        (origem / f"a{i}.md").write_text("x\n", encoding="utf-8")
+        git("add", "-A")
+        git("commit", "-q", "-m", f"c{i}", em=f"{dia}T12:00:00")
+    raso = tmp_path / "raso"
+    subprocess.run(["git", "clone", "-q", "--depth", "1", origem.as_uri(), str(raso)],
+                   capture_output=True, text=True)
+
+    monkeypatch.setattr(vd, "RAIZ", origem)
+    assert vd.repositorio_raso() is False
+    monkeypatch.setattr(vd, "RAIZ", raso)
+    assert vd.repositorio_raso() is True
+    # E é exatamente o defeito: o arquivo de janeiro parece de setembro.
+    assert vd.commit_mais_recente("a0.md") == date(2026, 9, 24)
+
+
+def test_clone_raso_nao_afirma_nada(monkeypatch):
+    import io
+    monkeypatch.setattr(vd, "repositorio_raso", lambda: True)
+    falso = io.TextIOWrapper(io.BytesIO(), encoding="utf-8")
+    monkeypatch.setattr(sys, "stdout", falso)
+    monkeypatch.setattr(sys, "argv", ["verificar_documentacao.py"])
+    assert vd.main() == 2

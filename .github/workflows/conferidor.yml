@@ -202,7 +202,13 @@ jobs:
     outputs:
       codigo: ${{ steps.docs.outputs.codigo }}
     steps:
+      # O histórico inteiro: o Arquivista data cada documento pelo último commit
+      # que o mudou, e no clone raso de sempre todo arquivo parecia commitado
+      # hoje — a rodada de 25/10/2026 deu os 18 documentos por em dia, com três
+      # vencidos. Sem histórico, o script agora sai com 2 em vez de afirmar.
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
