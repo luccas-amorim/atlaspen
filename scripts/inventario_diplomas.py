@@ -757,6 +757,26 @@ META: dict[str, dict] = {
         "data_revogacao_nota": "A Lei 11.105/2005 entrou em vigor na data da publicação (DOU de 28/03/2005).",
         "rotulos": [],
     },
+    # Revogação TÁCITA, decidida pelo dono do projeto em 25/10/2026: o Planalto
+    # não marca a lei como revogada ("Vide novo Código Eleitoral"), e o CE de
+    # 1965 não a revoga expressamente. A data fica nula: a vacatio é de 30 dias
+    # da publicação, e houve retificação em 30/07/1965 — a contagem não foi
+    # conferida.
+    "lei1164": {
+        "nome": "Código Eleitoral (antigo)",
+        "norma": "Lei nº 1.164, de 24 de julho de 1950",
+        "url": "leis/1950-1969/l1164.htm",
+        "situacao": "revogado",
+        "revogadora": "Lei nº 4.737/1965 (Código Eleitoral), por revogação tácita",
+        "data_revogacao": None,
+        "data_revogacao_nota": (
+            "O Código Eleitoral de 1965 não revoga a Lei 1.164/1950 expressamente — diz só "
+            "\"Revogam-se as disposições em contrário\" (art. 383) —, "
+            "mas regula inteiramente a matéria dela, o que a revoga (Decreto-Lei 4.657/1942, "
+            "hoje Lei de Introdução às Normas do Direito Brasileiro, art. 2º, §1º). O novo "
+            "Código entrou em vigor 30 dias após a publicação no DOU de 19/07/1965 (art. 382)."),
+        "rotulos": [],
+    },
 }
 
 # Diplomas considerados e deliberadamente fora do denominador.
