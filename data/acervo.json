@@ -567,6 +567,20 @@
       "retirado": null,
       "data_revogacao": null,
       "texto_original": null
+    },
+    {
+      "id": "lcp-25",
+      "dispositivo": "LCP, art. 25",
+      "nome": "Posse não justificada de instrumento de emprego usual na prática de furto",
+      "diploma": "lcp",
+      "artigos": ["lcp-25"],
+      "categoria": "nao_recepcionado",
+      "o_que_houve": "Não recepcionado pela Constituição de 1988: o STF, no RE 583.523/RS (Plenário, 03/10/2013, repercussão geral, Tema 113), fixou que o artigo viola a dignidade da pessoa humana (CF, art. 1º, III) e a isonomia (CF, art. 5º, caput e I), por punir a posse do instrumento em razão da condição do agente. O texto continua no compilado do Planalto.",
+      "normas": [{"norma": "STF, RE 583.523/RS", "ano": 2013}],
+      "caso": true,
+      "retirado": null,
+      "data_revogacao": "1988-10-05",
+      "texto_original": "Art. 25. Ter alguem em seu poder, depois de condenado, por crime de furto ou roubo, ou enquanto sujeito à liberdade vigiada ou quando conhecido como vadio ou mendigo, gazuas, chaves falsas ou alteradas ou instrumentos empregados usualmente na prática de crime de furto, desde que não prove destinação legítima:\nPena – prisão simples, de dois meses a um ano, e multa de duzentos mil réis a dois contos de réis."
     }
   ]
 }
