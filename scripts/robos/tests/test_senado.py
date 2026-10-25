@@ -26,7 +26,9 @@ class TestUnidade:
         ("Art. 146-E, caput", "art. 146-e, caput"),
         ("Art. 9-A", "art. 9-a"),
         ("Art. 121, § 2, Inciso 8", "art. 121, §2º, viii"),
-        ("Art. 52, § 10", "art. 52, §10"),
+        # O ordinal vai também acima de 9: é a forma da chave canônica
+        # (`dispositivo_canonico.partes()`), não a do campo `artigo`.
+        ("Art. 52, § 10", "art. 52, §10º"),
         ("Art. 171, § 2-A", "art. 171, §2º-a"),
         ("Art. 112, caput, Inciso 4 ", "art. 112, iv"),
         ("Art. 154-A, Pena", "art. 154-a"),
@@ -118,3 +120,24 @@ def test_urls():
     assert senado.url_norma("LEI", 7210, 1984).endswith("/legislacao/LEI/7210/1984")
     assert senado.url_urn("urn:lex:br:federal:lei:1984-07-11;7210").endswith(
         "urn=urn:lex:br:federal:lei:1984-07-11;7210")
+
+
+class TestNormasAnteriores:
+    """A Lei 13.869/2019 (abuso de autoridade) revogou a Lei 4.898/1965 no todo
+    e os arts. 150, §2º, e 350 do CP: é daqui que o acervo levanta candidatos."""
+
+    @pytest.fixture
+    def abuso(self):
+        return senado.ler_norma(_json("senado-abuso-13869.json"))
+
+    def test_revogacao_no_todo(self, abuso):
+        assert [a.nome for a in abuso.anteriores if a.revogada_no_todo] == ["Lei nº 4.898 de 09/12/1965"]
+
+    def test_revogacao_de_dispositivo_de_outra_lei(self, abuso):
+        cp = next(a for a in abuso.anteriores if a.nome.startswith("Decreto-Lei nº 2.848"))
+        assert [i.unidade for i in cp.revogacoes()] == ["art. 150, §2º", "art. 350"]
+        assert cp.codigo
+
+    def test_acrescimo_nao_e_revogacao(self, abuso):
+        oab = next(a for a in abuso.anteriores if a.nome.startswith("Lei nº 8.906"))
+        assert not oab.revogacoes() and not oab.revogada_no_todo

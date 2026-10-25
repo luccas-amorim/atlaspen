@@ -1,0 +1,288 @@
+{
+ "ListaVetosAnoCN": {
+  "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/cn/ListaVetosAnoCNv7.xsd",
+  "Metadados": {
+   "Versao": "23/10/2026 22:20:41",
+   "VersaoServico": "7",
+   "DataVersaoServico": "2018-08-06",
+   "DescricaoDataSet": "Lista dos vetos ocorridos em determinado ano"
+  },
+  "Vetos": {
+   "Veto": [
+    {
+     "Codigo": "18729",
+     "Materia": {
+      "Codigo": "175844",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "VET",
+      "Numero": "52",
+      "Ano": "2026",
+      "EmTramitacao": "Sim",
+      "Ementa": "Veto parcial aposto ao Projeto de Lei nº 1.482, de 2019, que \"Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal) e a Lei nº 8.176, de 8 de fevereiro de 1991, para dispor sobre os crimes de furto e roubo de petróleo e derivados, gás natural e suas frações recuperáveis, álcool etílico hidratado carburante e demais combustíveis fluidos carburantes, inclusive biocombustíveis, e óleos lubrificantes, bem como para tipificar novos crimes contra a ordem econômica\".",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/175844"
+     },
+     "MateriaVetada": {
+      "Codigo": "170383",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "PL",
+      "Numero": "1482",
+      "Ano": "2019",
+      "DescricaoObjetivoProcesso": "Revisora",
+      "EmTramitacao": "Sim",
+      "Ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para dispor sobre os crimes de furto e de roubo de petróleo e derivados, gás natural e suas frações recuperáveis, álcool etílico hidratado carburante e demais combustíveis líquidos carburantes, biocombustíveis e óleos lubrificantes removidos dos estabelecimentos de produção, de quaisquer instalações de armazenamento e de transporte de combustíveis, incluídos dutos e unidades de transporte em qualquer modal; e altera a Lei nº 8.176, de 8 de fevereiro de 1991, para tipificar novos crimes contra a ordem econômica.",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/170383",
+      "UrlRelatorias": "https://legis.senado.leg.br/dadosabertos/materia/relatorias/170383",
+      "NormaGerada": {
+       "NomeNorma": "Lei nº 15.517 de 22/09/2026",
+       "UrlNorma": "https://legis.senado.leg.br/norma/43999411",
+       "CodigoNorma": "43999411",
+       "SiglaTipoNorma": "LEI-n",
+       "DescricaoTipoNorma": "Lei Numerada",
+       "NumeroNorma": "15517",
+       "AnoNorma": "2026",
+       "DataAssinatura": "2026-09-22",
+       "DataPublicacao": "2026-09-23",
+       "SiglaVeiculoPublicacao": "DOU",
+       "DescricaoVeiculoPublicacao": "[Diário Oficial da União  de 23/09/2026] (p. 4, col. 1)"
+      }
+     },
+     "Mensagem": {
+      "Sigla": "MSG",
+      "Numero": "772",
+      "Ano": "2026",
+      "UrlPlanalto": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/msg/vep/vep-772-26.htm"
+     },
+     "Total": "Não",
+     "Assunto": "Crime de roubo e furto de Petróleo e derivados.",
+     "DataRecebimentoCongresso": "2026-09-23",
+     "DataPublicacao": "2026-09-23",
+     "DataSobrestacaoPauta": "2026-10-23",
+     "SobrestandoPauta": "Sim",
+     "QuantidadeDispositivos": "1",
+     "UrlDispositivos": "https://www.congressonacional.leg.br/dados/plenario/resultado/veto/materia/175844"
+    },
+    {
+     "Codigo": "18449",
+     "Materia": {
+      "Codigo": "174934",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "VET",
+      "Numero": "36",
+      "Ano": "2026",
+      "EmTramitacao": "Sim",
+      "Ementa": "Veto parcial aposto ao Projeto de Lei nº 5.760, de 2023, que \"Estabelece medidas de proteção e acolhimento de trabalhadoras e trabalhadores resgatados de condição análoga à de escravo; vincula o poder público e os empregadores à obrigação de efetivar a proteção de trabalhadores no ambiente doméstico; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), as Leis nºs 7.998, de 11 de janeiro de 1990, 10.593, de 6 de dezembro de 2002, e 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei Complementar nº 150, de 1º de junho de 2015, para incluir disposições referentes ao combate ao trabalho em condição análoga à de escravo.\".",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/174934"
+     },
+     "MateriaVetada": {
+      "Codigo": "166703",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "PL",
+      "Numero": "5760",
+      "Ano": "2023",
+      "DescricaoObjetivoProcesso": "Revisora",
+      "EmTramitacao": "Sim",
+      "Ementa": "Estabelece medidas de proteção e acolhimento de trabalhadoras e trabalhadores resgatados de condição análoga à de escravo; vincula o poder público e os empregadores à obrigação de efetivar a proteção de trabalhadores no ambiente doméstico; e altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), as Leis nºs 7.998, de 11 de janeiro de 1990, 10.593, de 6 de dezembro de 2002, e 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), e a Lei Complementar nº 150, de 1º de junho de 2015, para incluir disposições referentes ao combate ao trabalho em condição análoga à de escravo.",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/166703",
+      "UrlRelatorias": "https://legis.senado.leg.br/dadosabertos/materia/relatorias/166703",
+      "NormaGerada": {
+       "NomeNorma": "Lei nº 15.455 de 01/07/2026",
+       "UrlNorma": "https://legis.senado.leg.br/norma/43476361",
+       "CodigoNorma": "43476361",
+       "SiglaTipoNorma": "LEI-n",
+       "DescricaoTipoNorma": "Lei Numerada",
+       "NumeroNorma": "15455",
+       "AnoNorma": "2026",
+       "DataAssinatura": "2026-07-01",
+       "DataPublicacao": "2026-07-02",
+       "SiglaVeiculoPublicacao": "DOU",
+       "DescricaoVeiculoPublicacao": "[Diário Oficial da União  de 02/07/2026] (p. 1, col. 2)"
+      }
+     },
+     "Mensagem": {
+      "Sigla": "MSG",
+      "Numero": "579",
+      "Ano": "2026",
+      "UrlPlanalto": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/Msg/Vep/VEP-579-26.htm"
+     },
+     "Total": "Não",
+     "Assunto": "Trabalho em Condição Análoga à de Escravo",
+     "Comentario": "O veto incide sobre dispositivo que determina à autoridade policial, judicial ou aos órgãos de fiscalização das normas de trabalho a expedição de ordem judicial para inclusão da vítima, empregada doméstica em condição análoga à de escravo, entre os beneficiários do seguro-desemprego.",
+     "DataRecebimentoCongresso": "2026-07-03",
+     "DataPublicacao": "2026-07-02",
+     "DataSobrestacaoPauta": "2026-08-02",
+     "SobrestandoPauta": "Sim",
+     "QuantidadeDispositivos": "1",
+     "UrlDispositivos": "https://www.congressonacional.leg.br/dados/plenario/resultado/veto/materia/174934"
+    },
+    {
+     "Codigo": "18249",
+     "Materia": {
+      "Codigo": "174102",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "VET",
+      "Numero": "23",
+      "Ano": "2026",
+      "EmTramitacao": "Sim",
+      "Ementa": "Veto parcial aposto ao Projeto de Lei de nº 5.391, de 2020, que \"Altera a Lei nº 11.671, de 8 de maio de 2008, para incluir em estabelecimentos penais federais de segurança máxima o preso, provisório ou condenado, pela prática do crime de homicídio qualificado previsto no inciso VII do § 2º do art. 121 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a aplicação do regime disciplinar diferenciado, na forma que especifica\".",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/174102"
+     },
+     "MateriaVetada": {
+      "Codigo": "154366",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "PL",
+      "Numero": "5391",
+      "Ano": "2020",
+      "DescricaoObjetivoProcesso": "Revisora",
+      "EmTramitacao": "Sim",
+      "Ementa": "Altera a Lei nº 11.671, de 8 de maio de 2008, para incluir em estabelecimentos penais federais de segurança máxima o preso, provisório ou condenado, pela prática do crime de homicídio qualificado previsto no inciso VII do § 2º do art. 121 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a aplicação do regime disciplinar diferenciado, na forma que especifica.",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/154366",
+      "UrlRelatorias": "https://legis.senado.leg.br/dadosabertos/materia/relatorias/154366",
+      "NormaGerada": {
+       "NomeNorma": "Lei nº 15.407 de 11/05/2026",
+       "UrlNorma": "https://legis.senado.leg.br/norma/43283496",
+       "CodigoNorma": "43283496",
+       "SiglaTipoNorma": "LEI-n",
+       "DescricaoTipoNorma": "Lei Numerada",
+       "NumeroNorma": "15407",
+       "AnoNorma": "2026",
+       "DataAssinatura": "2026-05-11",
+       "DataPublicacao": "2026-05-12",
+       "SiglaVeiculoPublicacao": "DOU",
+       "DescricaoVeiculoPublicacao": "[Diário Oficial da União  de 12/05/2026 - nº 87] (p. 1, col. 1)"
+      }
+     },
+     "Mensagem": {
+      "Sigla": "MSG",
+      "Numero": "389",
+      "Ano": "2026",
+      "UrlPlanalto": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/Msg/Vep/VEP-389-26.htm"
+     },
+     "Total": "Não",
+     "Assunto": "Regime Disciplinar Diferenciado",
+     "Comentario": "O veto incide sobre a inclusão automática no RDD com base no tipo penal cometido ou na reiteração delitiva, independentemente da configuração da reincidência jurídica; recai também sobre o dispositivo que proíbe o preso de progredir de regime ou obter livramento condicional enquanto estiver no\nRDD.",
+     "DataRecebimentoCongresso": "2026-05-13",
+     "DataPublicacao": "2026-05-12",
+     "DataSobrestacaoPauta": "2026-06-12",
+     "SobrestandoPauta": "Sim",
+     "QuantidadeDispositivos": "4",
+     "UrlDispositivos": "https://www.congressonacional.leg.br/dados/plenario/resultado/veto/materia/174102"
+    },
+    {
+     "Codigo": "18769",
+     "Materia": {
+      "Codigo": "175890",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "VET",
+      "Numero": "55",
+      "Ano": "2026",
+      "EmTramitacao": "Sim",
+      "Ementa": "Veto parcial aposto ao Projeto de Lei nº 2.951, de 2024, que \"Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 10.823, de 19 de dezembro de 2003, e a Lei Complementar nº 137, de 26 de agosto de 2010, para aperfeiçoar o marco legal do seguro rural.\".",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/175890"
+     },
+     "MateriaVetada": {
+      "Codigo": "164777",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "PL",
+      "Numero": "2951",
+      "Ano": "2024",
+      "DescricaoObjetivoProcesso": "Iniciadora",
+      "EmTramitacao": "Sim",
+      "Ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, que dispõe sobre a política agrícola; a Lei nº 10.823, de 19 de dezembro de 2003, que dispõe sobre a subvenção econômica ao prêmio do Seguro Rural e dá outras providências; e a Lei Complementar nº 137, de 26 de agosto de 2010, que autoriza a participação da União em fundo destinado à cobertura suplementar dos riscos do seguro rural; bem como revoga dispositivos da Lei Complementar nº 137, de 26 de agosto de 2010, para aperfeiçoar os marcos legais do seguro rural.",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/164777",
+      "UrlRelatorias": "https://legis.senado.leg.br/dadosabertos/materia/relatorias/164777",
+      "NormaGerada": {
+       "NomeNorma": "Lei nº 15.526 de 29/09/2026",
+       "UrlNorma": "https://legis.senado.leg.br/norma/44095919",
+       "CodigoNorma": "44095919",
+       "SiglaTipoNorma": "LEI-n",
+       "DescricaoTipoNorma": "Lei Numerada",
+       "NumeroNorma": "15526",
+       "AnoNorma": "2026",
+       "DataAssinatura": "2026-09-29",
+       "DataPublicacao": "2026-09-30",
+       "SiglaVeiculoPublicacao": "DOU",
+       "DescricaoVeiculoPublicacao": "[Diário Oficial da União  de 30/09/2026] (p. 2, col. 2)"
+      }
+     },
+     "Mensagem": {
+      "Sigla": "MSG",
+      "Numero": "794",
+      "Ano": "2026",
+      "UrlPlanalto": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/Msg/Vep/VEP-794-26.htm"
+     },
+     "Total": "Não",
+     "Assunto": "Marco Legal do Seguro Rural",
+     "Comentario": "O veto incide sobre os dispositivos que tratam sobre a isenção tributária da operação rural e sobre a aquisição de Letra de Risco de Seguro pelo Fundo.",
+     "DataRecebimentoCongresso": "2026-09-30",
+     "DataPublicacao": "2026-09-30",
+     "DataSobrestacaoPauta": "2026-10-30",
+     "SobrestandoPauta": "Não",
+     "QuantidadeDispositivos": "3",
+     "UrlDispositivos": "https://www.congressonacional.leg.br/dados/plenario/resultado/veto/materia/175890"
+    },
+    {
+     "Codigo": "18749",
+     "Materia": {
+      "Codigo": "175849",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "VET",
+      "Numero": "54",
+      "Ano": "2026",
+      "EmTramitacao": "Sim",
+      "Ementa": "Veto parcial aposto ao Projeto de Lei nº 1.675, de 2023, que \"Dispõe sobre o exercício da atividade de psicopedagogia.\".",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/175849"
+     },
+     "MateriaVetada": {
+      "Codigo": "156730",
+      "SiglaCasa": "CN",
+      "NomeCasa": "Congresso Nacional",
+      "Sigla": "PL",
+      "Numero": "1675",
+      "Ano": "2023",
+      "DescricaoObjetivoProcesso": "Iniciadora",
+      "EmTramitacao": "Sim",
+      "Ementa": "Dispõe sobre o exercício da atividade de Psicopedagogia.",
+      "UrlMovimentacoes": "https://legis.senado.leg.br/dadosabertos/materia/movimentacoes/156730",
+      "UrlRelatorias": "https://legis.senado.leg.br/dadosabertos/materia/relatorias/156730",
+      "NormaGerada": {
+       "NomeNorma": "Lei nº 15.519 de 22/09/2026",
+       "UrlNorma": "https://legis.senado.leg.br/norma/43999260",
+       "CodigoNorma": "43999260",
+       "SiglaTipoNorma": "LEI-n",
+       "DescricaoTipoNorma": "Lei Numerada",
+       "NumeroNorma": "15519",
+       "AnoNorma": "2026",
+       "DataAssinatura": "2026-09-22",
+       "DataPublicacao": "2026-09-23",
+       "SiglaVeiculoPublicacao": "DOU",
+       "DescricaoVeiculoPublicacao": "[Diário Oficial da União  de 23/09/2026] (p. 5, col. 1)"
+      }
+     },
+     "Mensagem": {
+      "Sigla": "MSG",
+      "Numero": "774",
+      "Ano": "2026",
+      "UrlPlanalto": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/msg/vep/vep-774-26.htm"
+     },
+     "Total": "Não",
+     "Assunto": "Atividade de Psicopedagogia",
+     "DataRecebimentoCongresso": "2026-09-23",
+     "DataPublicacao": "2026-09-23",
+     "DataSobrestacaoPauta": "2026-10-23",
+     "SobrestandoPauta": "Sim",
+     "QuantidadeDispositivos": "5",
+     "UrlDispositivos": "https://www.congressonacional.leg.br/dados/plenario/resultado/veto/materia/175849"
+    }
+   ]
+  }
+ }
+}

@@ -96,6 +96,27 @@ class Posterior:
         return tuple(i for i in self.itens if not i.vetado)
 
 
+REVOGACAO_NO_TODO = "Declaração de Revogação Permanente da Norma no Todo"
+
+
+@dataclass(frozen=True)
+class Anterior:
+    """Uma norma ANTERIOR que a norma lida tocou (um `ediv` do Senado)."""
+    codigo: str                 # o código do Senado, para `legislacao/{codigo}`
+    nome: str                   # "Lei nº 4.898 de 09/12/1965"
+    declaracao: str             # "Declaração de Revogação Permanente da Norma no Todo"…
+    itens: tuple[Item, ...]
+
+    @property
+    def revogada_no_todo(self) -> bool:
+        return self.declaracao == REVOGACAO_NO_TODO
+
+    def revogacoes(self) -> tuple[Item, ...]:
+        """Os dispositivos dela que a norma lida revogou (sem os vetados)."""
+        return tuple(i for i in self.itens
+                     if i.comentario.lower().startswith("revoga") and not i.vetado)
+
+
 @dataclass(frozen=True)
 class Norma:
     codigo: str
@@ -104,6 +125,7 @@ class Norma:
     assinatura: date | None
     ementa: str
     posteriores: tuple[Posterior, ...]
+    anteriores: tuple[Anterior, ...] = ()
 
     def alteracoes(self, so_legislativas: bool = True) -> list[Posterior]:
         """As alterações permanentes com pelo menos um item que não foi vetado,
@@ -172,6 +194,7 @@ def unidade(dispositivo: str) -> str | None:
 
         "Art. 66, caput, Inciso 5, Alínea j" -> "art. 66, v, j"
         "Art. 112, § 1"                      -> "art. 112, §1º"
+        "Art. 52, § 10"                      -> "art. 52, §10º"
         "Art. 112, caput, Inciso 6-A"        -> "art. 112, vi-a"
         "Art. 41, Parágrafo Único"           -> "art. 41, parágrafo único"
         "Art. 146-E, caput"                  -> "art. 146-e, caput"
@@ -200,8 +223,10 @@ def unidade(dispositivo: str) -> str | None:
             return ", ".join(saida + ["caput"])
     for p in resto:
         if (q := _PAR.match(p)):
-            n = int(q.group(1))
-            saida.append(f"§{n}{'º' if n <= 9 else ''}{q.group(2).lower()}")
+            # A chave canônica põe o ordinal em todo parágrafo, inclusive acima
+            # de 9 (`§10º`): é assim que `dispositivo_canonico.partes()` e o
+            # histórico gravam, embora o campo `artigo` do catálogo escreva `§10`.
+            saida.append(f"§{int(q.group(1))}º{q.group(2).lower()}")
         elif p.lower() == "parágrafo único":
             saida.append("parágrafo único")
         elif (q := _INC.match(p)):
@@ -268,9 +293,16 @@ def ler_norma(dados: dict) -> Norma | None:
         posteriores.append(Posterior(nome, m.group(1) if m else None, g["assinatura"],
                                      declaracao, tuple(g["itens"].values())))
     posteriores.sort(key=lambda p: (p.assinatura or date.min, p.nome))
+
+    anteriores = tuple(
+        Anterior(str(e.get("codnormaAnterior", "")), (e.get("nomeNormaAnterior") or "").strip(),
+                 (e.get("comentario") or "").strip(),
+                 tuple(_item(i.get("dispositivo"), i.get("comentario"))
+                       for i in _lista((e.get("itens") or {}).get("item"))))
+        for e in _lista((doc.get("edivs") or {}).get("ediv")))
     return Norma(str(doc.get("id", "")), (ident.get("normaNome") or "").strip(),
                  _urn(ident.get("urlDocumento")), _data(ident.get("dataassinatura")),
-                 (doc.get("ementa") or "").strip(), tuple(posteriores))
+                 (doc.get("ementa") or "").strip(), tuple(posteriores), anteriores)
 
 
 def ler_lista(dados: dict) -> list[Resumo]:
@@ -310,6 +342,12 @@ def norma(tipo: str, numero: int | str, ano: int | str) -> Norma | None:
     return ler_norma(dados) if dados else None
 
 
+def norma_por_codigo(codigo: str) -> Norma | None:
+    """A ficha pelo código interno do Senado (o `codnormaAnterior` de um ediv)."""
+    dados = _json(f"{BASE}/legislacao/{codigo}")
+    return ler_norma(dados) if dados else None
+
+
 def norma_por_urn(urn: str) -> Norma | None:
     dados = _json(url_urn(urn))
     return ler_norma(dados) if dados else None
@@ -318,3 +356,42 @@ def norma_por_urn(urn: str) -> Norma | None:
 def leis_do_ano(ano: int, tipo: str = "LEI") -> list[Resumo]:
     dados = _json(url_lista(ano, tipo))
     return ler_lista(dados) if dados else []
+
+
+# ── Vetos ───────────────────────────────────────────────────────────────────
+@dataclass(frozen=True)
+class Veto:
+    """Um veto do ano (`materia/vetos/{ano}`).
+
+    A lista não traz o resultado da votação: ela diz se o veto ainda tramita.
+    Veto em tramitação pode ser derrubado, e a derrubada muda o texto; quando
+    isso acontece, a promulgação das partes vetadas é anotada no compilado, e
+    o Cotejador de frescor a vê como qualquer outra lei."""
+    numero: str                 # "55/2026"
+    total: bool
+    em_tramitacao: bool
+    assunto: str
+    ementa: str                 # a ementa da MATÉRIA vetada, que diz o que ela altera
+    publicado_em: str | None
+    url_mensagem: str | None
+
+
+def ler_vetos(dados: dict) -> list[Veto]:
+    vetos = _lista(((dados.get("ListaVetosAnoCN") or {}).get("Vetos") or {}).get("Veto"))
+    saida = []
+    for v in vetos:
+        mat = v.get("Materia") or {}
+        vet = v.get("MateriaVetada") or {}
+        saida.append(Veto(f"{mat.get('Numero', '?')}/{mat.get('Ano', '?')}",
+                          (v.get("Total") or "") == "Sim",
+                          (mat.get("EmTramitacao") or "") == "Sim",
+                          (v.get("Assunto") or "").strip(),
+                          (vet.get("Ementa") or mat.get("Ementa") or "").strip(),
+                          v.get("DataPublicacao"),
+                          (v.get("Mensagem") or {}).get("UrlPlanalto")))
+    return saida
+
+
+def vetos_do_ano(ano: int) -> list[Veto]:
+    dados = _json(f"{BASE}/materia/vetos/{ano}")
+    return ler_vetos(dados) if dados else []
