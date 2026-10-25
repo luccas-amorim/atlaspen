@@ -105,3 +105,82 @@ class TestRelatorio:
         texto = lda.montar_relatorio(2026, {}, {15358}, [])
         assert "não afirma nada" in texto
         assert "Nenhuma lei penal ficou de fora" not in texto
+
+
+class TestRedeQueCai:
+    """Até 25/10/2026, conexão perdida contava como número vazio: cinco quedas
+    seguidas encerravam a caminhada como se o ano tivesse acabado."""
+
+    ACERVO = TestCaminhada.ACERVO
+
+    def _buscar_que_cai_em(self, quedas):
+        import re
+        from fontes.rede import FalhaDeRede
+
+        def buscar(url):
+            n = int(re.search(r"/l(\d+)\.htm$", url).group(1))
+            if n in quedas:
+                raise FalhaDeRede(url, 2, TimeoutError())
+            if n not in self.ACERVO:
+                return None
+            ano, corpo = self.ACERVO[n]
+            return pagina(n, ano, corpo)
+        return buscar
+
+    def test_queda_nao_e_vazio(self):
+        achadas, avisos = lda.caminhar(2026, semente=15400,
+                                       buscar=self._buscar_que_cai_em({15401}), pausa=0)
+        assert 15401 not in achadas and {15400, 15402, 15403, 15404} <= set(achadas)
+        assert any("não lido" in a and "15401" in a for a in avisos)
+
+    def test_planalto_fora_do_ar_encerra_e_avisa(self):
+        todos = set(range(15390, 15420))
+        achadas, avisos = lda.caminhar(2026, semente=15402,
+                                       buscar=self._buscar_que_cai_em(todos), pausa=0)
+        assert not achadas
+        assert any("parou de responder" in a for a in avisos)
+
+
+class TestListaDoSenado:
+    """O Planalto imaginário tem 15.400 a 15.404; o Senado lista também 15.410,
+    que fica além de cinco números vazios e a caminhada não alcança."""
+
+    def _buscar(self, url):
+        import re
+        n = int(re.search(r"/l(\d+)\.htm$", url).group(1))
+        if n == 15410:
+            return pagina(n, 2026, "Pena - reclusão, de 1 (um) a 3 (três) anos.")
+        return TestCaminhada()._buscar(url)
+
+    def test_fecha_a_lacuna_que_a_caminhada_nao_atravessa(self):
+        achadas, _ = lda.caminhar(2026, semente=15402, buscar=self._buscar, pausa=0)
+        assert 15410 not in achadas
+        avisos = lda.completar(achadas, {15400, 15410}, 2026, buscar=self._buscar, pausa=0)
+        assert 15410 in achadas and not avisos
+
+    def test_o_que_o_planalto_nao_tem_vira_aviso(self):
+        achadas = {}
+        avisos = lda.completar(achadas, {15999}, 2026, buscar=self._buscar, pausa=0)
+        assert not achadas and "Planalto não tem página" in avisos[0]
+
+
+class TestCodigoDeSaida:
+    LEI = TestRelatorio.LEI
+
+    def test_nada_lido_nao_e_zero(self):
+        """Era o silêncio de agosto: "não afirmo nada" no relatório, 0 na saída."""
+        assert lda.codigo_de_saida({}, set(), []) == 2
+
+    def test_varredura_incompleta_nao_fecha_a_janela(self):
+        lei = {**self.LEI, "penal": False}
+        assert lda.codigo_de_saida({15487: lei}, set(), ["orçamento esgotado"]) == 2
+
+    def test_lei_penal_fora_da_vigilancia_e_tres_mesmo_incompleta(self):
+        assert lda.codigo_de_saida({15487: self.LEI}, set(), ["queda"]) == 3
+
+    def test_completa_e_sem_nada_fora_e_zero(self):
+        assert lda.codigo_de_saida({15487: self.LEI}, {15487}, []) == 0
+
+    def test_relatorio_incompleto_nao_diz_janela_fechada(self):
+        texto = lda.montar_relatorio(2026, {15487: self.LEI}, {15487}, ["queda"])
+        assert "incompleta" in texto and "janela do falso negativo **não** está fechada" in texto
