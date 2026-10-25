@@ -264,7 +264,9 @@ Honestidade sobre o alcance, para quem for citar:
 - **tentativa, violência e grave ameaça** não têm fonte textual que os declare — são
   qualificações do tipo, revisadas à mão;
 - **decisão de tribunal superior** que altere o catálogo — uma ADI que retira dispositivo
-  do ordenamento — não passa pelo Diário Oficial e hoje nenhum robô a vê;
+  do ordenamento — não passa pelo Diário Oficial. Desde 25/10/2026 o Relator lê a do STF
+  no Banco Nacional de Precedentes do CNJ, que é oficial e incompleto, e só aponta: o
+  registro muda depois de lido o acórdão. A do STJ e a do STM nenhum robô vê;
 - o [relatório de qualidade](pathname:///data/qualidade.json) publica, a cada build, as
   contradições conhecidas e os `id` envolvidos.
 

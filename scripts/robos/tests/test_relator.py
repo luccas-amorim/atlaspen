@@ -17,7 +17,8 @@ FONTES = [
     {"id": "drogas-11343", "urn": "urn:lex:br:federal:lei:2006-08-23;11343"},
     {"id": "cf", "urn": "urn:lex:br:federal:constituicao:1988-10-05;1988"},
 ]
-CHAVES = {"lcp|art. 25, caput": [766], "cp|art. 331, caput": [270], "cp|art. 121, §2º, i": [3]}
+# Os ids reais de static/data/crimes.json em 25/10/2026.
+CHAVES = {"lcp|art. 25, caput": [766], "cp|art. 331, caput": [269], "cp|art. 121, §2º, i": [3]}
 
 
 @pytest.fixture
@@ -58,7 +59,7 @@ class TestLeitura:
         assert "331" in a["fontes"]["cp"]
         assert a["natureza"] == "recepção"
         # Toca o registro do desacato: pede leitura, mesmo sem mudar o alcance.
-        assert a["ids"] == [270] and a["a_ler"]
+        assert a["ids"] == [269] and a["a_ler"]
 
     def test_precedente_que_nao_toca_nada(self, idx):
         p = cnj.Precedente("stf-adi-1", "ADI", "1", "MERITO", date(2026, 10, 20),
