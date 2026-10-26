@@ -1,0 +1,4945 @@
+{
+ "_meta": {
+  "anos": "Por espécie e ano: o sha da árvore do git no ctresb (igual ao da rodada anterior, o ano não é relido), quantos arquivos, quantos com pena própria e quantos só com pena citada entre aspas.",
+  "apontadas": "Cada lei com pena própria que o projeto não conhecia: o que o ctresb diz e, em `planalto`, o que o compilado oficial disse e quando. É lista de leitura, não dado do catálogo.",
+  "descricao": "O estado do Curador (scripts/robos/curador/): o que ele já triou no ctresb/leis e o que o Planalto disse de cada lei apontada. Escrito pela rodada, não à mão.",
+  "senado": "Quantas normas a API do Senado lista por espécie e ano — a régua da completude do ctresb."
+ },
+ "anos": {
+  "del": {
+   "1937": {
+    "arquivos": 159,
+    "arvore": "58830bd14fb7b06ee24299ba238f56e64ecfebbf",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1938": {
+    "arquivos": 854,
+    "arvore": "d8c6ee4692b12524ee266ec02ec305cd2a13a5f9",
+    "pena_citada": 1,
+    "pena_propria": 20
+   },
+   "1939": {
+    "arquivos": 921,
+    "arvore": "2b2ee35b673dcbffb1bfcadd75cdf5abf6ddb598",
+    "pena_citada": 1,
+    "pena_propria": 15
+   },
+   "1940": {
+    "arquivos": 985,
+    "arvore": "ca0c7912f20671cca25f6b5bb6099b08626e406f",
+    "pena_citada": 0,
+    "pena_propria": 9
+   },
+   "1941": {
+    "arquivos": 1060,
+    "arvore": "e84b11f8ea8473c723ecf0e64d4854babe1267a2",
+    "pena_citada": 0,
+    "pena_propria": 7
+   },
+   "1942": {
+    "arquivos": 1175,
+    "arvore": "720bf8df863d1b893249d19d76392c2189f73d25",
+    "pena_citada": 0,
+    "pena_propria": 7
+   },
+   "1943": {
+    "arquivos": 999,
+    "arvore": "e84e1d74883d498ddee811c27080652640e675a3",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1944": {
+    "arquivos": 1054,
+    "arvore": "95cddd8439dfbe1217386b67c1f8c9308aedfee0",
+    "pena_citada": 0,
+    "pena_propria": 4
+   },
+   "1945": {
+    "arquivos": 1300,
+    "arvore": "cb9567e1ac643a1eb56d2177546eba67d83b2855",
+    "pena_citada": 1,
+    "pena_propria": 6
+   },
+   "1946": {
+    "arquivos": 1385,
+    "arvore": "8590917fa4bb8983d64f5ff4c58ea5fa3cc2376b",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1965": {
+    "arquivos": 1,
+    "arvore": "c2e3a1bd8731d6831efa70bd41c8125cc7398f8f",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1966": {
+    "arquivos": 98,
+    "arvore": "e4fa474de834396aa3b711faca792c9ca3901b2a",
+    "pena_citada": 0,
+    "pena_propria": 4
+   },
+   "1967": {
+    "arquivos": 249,
+    "arvore": "88bc17ad1daa8050e4d0a87391fb6681af1361a0",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1968": {
+    "arquivos": 62,
+    "arvore": "8287ff33ad2580f3b3b10f3b5b05e9b27f78cf13",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1969": {
+    "arquivos": 665,
+    "arvore": "84d9e7789196c043c229c68815a513c7ac2c72d3",
+    "pena_citada": 1,
+    "pena_propria": 10
+   },
+   "1970": {
+    "arquivos": 74,
+    "arvore": "f90e4724efd0ad6ac68d9e0fb3220e859d3a5192",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1971": {
+    "arquivos": 55,
+    "arvore": "e90c61fbe49c139033c61213515c017d2cd60603",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1972": {
+    "arquivos": 54,
+    "arvore": "b5d4cdf1ac608158faae36cf269b64da70b568bb",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1973": {
+    "arquivos": 48,
+    "arvore": "65c50520f5d67cd62e55931a4da2e4fc411e19ea",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1974": {
+    "arquivos": 83,
+    "arvore": "4cc876974718efcda565b53388890f9452a8ca5a",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1975": {
+    "arquivos": 54,
+    "arvore": "86d03c43a57e70d48849d3e50aaf686fe2ce9aa7",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1976": {
+    "arquivos": 77,
+    "arvore": "96318fd957cdfd7d8288de059afdbb0977aaa6bc",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1977": {
+    "arquivos": 82,
+    "arvore": "15334c9fd07b3d79d30d3db6a5871c80450a92cb",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1978": {
+    "arquivos": 55,
+    "arvore": "5f7fed44ce3a63e35fb1e1ee8ec8950d146c0463",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1979": {
+    "arquivos": 102,
+    "arvore": "51e9ecb43982f69a1f26908442ea8c5ea664daf9",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1980": {
+    "arquivos": 91,
+    "arvore": "154ed8e30c8b7860bf0bc7ff9d7240c0d0d877bf",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1981": {
+    "arquivos": 68,
+    "arvore": "2e32aad6450e2c4a2e74a0a2db1922e836fdda09",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1982": {
+    "arquivos": 85,
+    "arvore": "9e30ff8868bd7564eeb365e9f7680ef6f7f8a6d7",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1983": {
+    "arquivos": 103,
+    "arvore": "014ce8ddd9aef8224bed0b548e394888428e4b24",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1984": {
+    "arquivos": 111,
+    "arvore": "862e40338bd1477a38ac57433add77086eaaee5f",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1985": {
+    "arquivos": 66,
+    "arvore": "9123614dab2412e27ebcad8a0c8f3bb303500f79",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1986": {
+    "arquivos": 38,
+    "arvore": "691a9f993df86b500a39b7073dacebf31f206ca0",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1987": {
+    "arquivos": 87,
+    "arvore": "307ee973ed200f2493e92bce490e7002406afde8",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1988": {
+    "arquivos": 76,
+    "arvore": "c2e12ba5379bb5b44da4d5ac87964deb63eb6ae1",
+    "pena_citada": 0,
+    "pena_propria": 0
+   }
+  },
+  "lcp": {
+   "1962": {
+    "arquivos": 2,
+    "arvore": "2f8261264874576b0d3bcea753aa0c926811b4a8",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1967": {
+    "arquivos": 3,
+    "arvore": "77e7c8ee0331fba1654fb39754dc9621bb108af3",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1969": {
+    "arquivos": 1,
+    "arvore": "986199c30705d029f21ed6edb46e308192d7d41f",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1970": {
+    "arquivos": 5,
+    "arvore": "0637a183035a49c91736773bd16e19882586f4d3",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1971": {
+    "arquivos": 3,
+    "arvore": "bbda92d1fa41891692d154a4f6478df6f1715080",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1972": {
+    "arquivos": 1,
+    "arvore": "90c189720f6c61b1e5ba578e264539ec2fdbc5c7",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1973": {
+    "arquivos": 4,
+    "arvore": "60cfe768a1f53d62d9a1efaff1810aafef4556f5",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1974": {
+    "arquivos": 6,
+    "arvore": "460dd8f9b6659db7cf6dd8a8355f667b972ad086",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1975": {
+    "arquivos": 5,
+    "arvore": "e7dcbd5318fac10c7d3791f69b8956c7e720e880",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1976": {
+    "arquivos": 1,
+    "arvore": "dea040fc457cd26e3d581239f371e37ead4f90be",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1977": {
+    "arquivos": 3,
+    "arvore": "a16150aa484b14872976cd1fd8c52043f71fdf54",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1978": {
+    "arquivos": 2,
+    "arvore": "fbc958710d24a3619db86307c448c9f38919bd88",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1979": {
+    "arquivos": 4,
+    "arvore": "73f86ef9552874f1488181e96785cdce8510f857",
+    "pena_citada": 1,
+    "pena_propria": 1
+   },
+   "1980": {
+    "arquivos": 1,
+    "arvore": "751f5a668fdefed842d104117e961c7c8d1fe09c",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1981": {
+    "arquivos": 2,
+    "arvore": "86ca3b1d3951f5fe679c843ddc0a69a8a58a03aa",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1982": {
+    "arquivos": 2,
+    "arvore": "485b96ee4ab5c68a3665c244e270db3a6c7bccd8",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1983": {
+    "arquivos": 2,
+    "arvore": "41bda43913f5f1262faa991ee02d0d522c29da69",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1984": {
+    "arquivos": 3,
+    "arvore": "eaf9c96ef5df89b899ac230b9ab26c079a685f61",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1985": {
+    "arquivos": 3,
+    "arvore": "f0f0a94fa1c7620491a00fd7d3c3d4f0f604dc7a",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1986": {
+    "arquivos": 3,
+    "arvore": "ce52822df8f50fc2c900d5163b90c4a4efa7c162",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1987": {
+    "arquivos": 3,
+    "arvore": "6cad7defe93467db104e6b0916d31cf5987c3404",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1988": {
+    "arquivos": 2,
+    "arvore": "c8824162fd31926996f63e3a07900af3bd9c6d1d",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1989": {
+    "arquivos": 3,
+    "arvore": "50bd97aa48a4a57eacae02b430d1701ac4d97f53",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1990": {
+    "arquivos": 2,
+    "arvore": "f10594562e6166d549fd6179ad2546cd85e4886a",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1991": {
+    "arquivos": 6,
+    "arvore": "04f549271e5c09de4b604ecf5e46fdf8c6676457",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1992": {
+    "arquivos": 1,
+    "arvore": "8b0d8814c5e97a509806bad74e86b4b530748cab",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1993": {
+    "arquivos": 7,
+    "arvore": "45306952c95e8b19c5a2f248d33acb5334b95b33",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1994": {
+    "arquivos": 3,
+    "arvore": "c06b871533b4a10dee8d279fc418d1c752bd6865",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1995": {
+    "arquivos": 2,
+    "arvore": "a7ad70fe8757bd4d8157dca4522210a42020884a",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1996": {
+    "arquivos": 5,
+    "arvore": "ef71e97a5c3e4ac64d8b4bfcb1ecef523efa3817",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1997": {
+    "arquivos": 4,
+    "arvore": "795131d7cc9a34ec22f8906d6d515b54d11d075c",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1998": {
+    "arquivos": 3,
+    "arvore": "555f5af9acb367ae6d4f197c68de8fe5d9016126",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1999": {
+    "arquivos": 5,
+    "arvore": "55b9f11f4a8da6a190289570641843059fea57f9",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2000": {
+    "arquivos": 3,
+    "arvore": "e8a053a5353f6900137b763c2beb091c43fd540d",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2001": {
+    "arquivos": 10,
+    "arvore": "20a4df6c16589bbc8d37f077380bf35675c1561e",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "2002": {
+    "arquivos": 2,
+    "arvore": "3e1f440b8c07a9ceb4de829b6b1e265341b2d80d",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2003": {
+    "arquivos": 1,
+    "arvore": "e1f175822cc6593f3a2402922fac49712f44f223",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2004": {
+    "arquivos": 1,
+    "arvore": "454889643233dfd481df05eec61af25badfb5aea",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2005": {
+    "arquivos": 3,
+    "arvore": "d5a9a8ef8aa1f7d42b5a1328bff678e1db1817b1",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2006": {
+    "arquivos": 3,
+    "arvore": "fdffd9cf87428b350d7fae1e957107b4317909da",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2007": {
+    "arquivos": 4,
+    "arvore": "e762ab8b97579114c3c410a4178349a3909045c3",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2008": {
+    "arquivos": 1,
+    "arvore": "bb7dcd6f19ae1ad1dc4b15027b5654f3f147c610",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2009": {
+    "arquivos": 5,
+    "arvore": "8943122047130c74251c52e5cf58f0ad7e3cdf73",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2010": {
+    "arquivos": 5,
+    "arvore": "31a22943f64f7b93cc0ccd89be4c36e2cce17560",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2011": {
+    "arquivos": 2,
+    "arvore": "738c022da1f774963acd8b52ddab3ff857689de9",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2012": {
+    "arquivos": 1,
+    "arvore": "8f9a249d9cfd0d94b7620ecf4135f85520079428",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2013": {
+    "arquivos": 2,
+    "arvore": "40aed11ea47764e50f579fc248f8ffa95f31801b",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2014": {
+    "arquivos": 5,
+    "arvore": "23242e82e5b795ed3d1d9ae162a010ff46144a1e",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2015": {
+    "arquivos": 5,
+    "arvore": "c7df2194582d91b00fa1ca9e2a49798a854f2c6f",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2016": {
+    "arquivos": 4,
+    "arvore": "157ba362e6dc85ec7869a764ed3a93ae32b5c75b",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2017": {
+    "arquivos": 3,
+    "arvore": "32edd4eab8319771513ac1be72653b830167637e",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2018": {
+    "arquivos": 4,
+    "arvore": "612665099b9d52adebfc567e6fbb3cadf4045374",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2019": {
+    "arquivos": 7,
+    "arvore": "fb2f00c1cb3711258cc3295c2ed7e387d6507e09",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "2020": {
+    "arquivos": 5,
+    "arvore": "0a9dcf6f2d0f9d9181fbe51fb69540d9eddab329",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2021": {
+    "arquivos": 12,
+    "arvore": "390ac1b9b653e2cfbf36908850917a13c8448c79",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2022": {
+    "arquivos": 9,
+    "arvore": "f6fdaa0350125fcfd2036b728cabfaaede715639",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2023": {
+    "arquivos": 7,
+    "arvore": "655d8c054f025f873773834517b8f0d35a59073b",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2024": {
+    "arquivos": 7,
+    "arvore": "1c329b3e564ae1618f388695c5184a5966d633a6",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2025": {
+    "arquivos": 13,
+    "arvore": "c7cea4b904645652aca9c37fec14edfaab413a20",
+    "pena_citada": 1,
+    "pena_propria": 0
+   },
+   "2026": {
+    "arquivos": 13,
+    "arvore": "bba1316361114ecfa38805f553033a81338d1952",
+    "pena_citada": 0,
+    "pena_propria": 0
+   }
+  },
+  "lei": {
+   "1889": {
+    "arquivos": 1,
+    "arvore": "78356cd51ec9d2e70e7af5bef80b610b965c0316",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1891": {
+    "arquivos": 8,
+    "arvore": "3de5adc8a5352d1b7faa793f723fb21ae1aa1bcb",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1892": {
+    "arquivos": 14,
+    "arvore": "d8f0171c49cb3b85e583043d0208ef9cb92bade0",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1893": {
+    "arquivos": 4,
+    "arvore": "97eec7b77a4d9aaacb6f7c859f36a9ef0fdf4d54",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1894": {
+    "arquivos": 9,
+    "arvore": "585dcb05e7d1bdc3e8051c29ecadfc5101142c91",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1895": {
+    "arquivos": 13,
+    "arvore": "89567c052e87171917cddb62255de7befdcda56e",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1896": {
+    "arquivos": 12,
+    "arvore": "abaccd4301f828def977182eca4506177a8523da",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1897": {
+    "arquivos": 7,
+    "arvore": "cfbee44f8666f152b9e3d7ace667be849c0f7a81",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1898": {
+    "arquivos": 9,
+    "arvore": "530efd98e25fcc0715679dd23f0c0ba9305d068e",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1899": {
+    "arquivos": 11,
+    "arvore": "7d3593ca7d25d889c13687bddc8ef0cc5051fe5a",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1900": {
+    "arquivos": 6,
+    "arvore": "36a46a09b8d5b2ab5027dd0fc1f03a36873dca22",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1901": {
+    "arquivos": 5,
+    "arvore": "82a881b81915806183e8e9417f0c737f1bae4e96",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1902": {
+    "arquivos": 7,
+    "arvore": "f82e0bf46bb139aa9743acf17e1e3572a5b8911b",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1903": {
+    "arquivos": 5,
+    "arvore": "3ebd4fccdfcee21d00158047140840fd1b7f82b5",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1904": {
+    "arquivos": 7,
+    "arvore": "d7b008b5b4cf12c5c05bc1ea1bec1445e27f9b2f",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1905": {
+    "arquivos": 5,
+    "arvore": "81570aa6990c3a56baf21a0cbb6331a3d3ec78b6",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1906": {
+    "arquivos": 6,
+    "arvore": "825f78b3d039ac81565b210631f0affa15385176",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1907": {
+    "arquivos": 4,
+    "arvore": "4575dda1e031a0ef727d7633d82361dfafc295eb",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1908": {
+    "arquivos": 6,
+    "arvore": "47505a41cab1b777dfdb940b0919620d862365bf",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1909": {
+    "arquivos": 4,
+    "arvore": "64200bd7bbe1be65a800bbd402480207296a525c",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1910": {
+    "arquivos": 4,
+    "arvore": "70e8a7e9a04324570646c2801e56244b0dcb52f4",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1911": {
+    "arquivos": 3,
+    "arvore": "87746bca9a3b16d0988d554109e5c2bb18d89cf6",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1912": {
+    "arquivos": 4,
+    "arvore": "7657d54cde0a2e3ae0c9de7acdb74011a53e7c3d",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1913": {
+    "arquivos": 2,
+    "arvore": "dde9992dca329dcda855d61703fd01b84eb7d3d3",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1914": {
+    "arquivos": 3,
+    "arvore": "9df2c86b1eb157e8c7b1e82fb1364a74345ed867",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1915": {
+    "arquivos": 3,
+    "arvore": "c23fb6fe079b50ffb9f3aa79b7b773e4c1306a06",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1916": {
+    "arquivos": 6,
+    "arvore": "a1a474d48e36c1bbba268b2ba2b25367aac1801d",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1917": {
+    "arquivos": 5,
+    "arvore": "a13eedb8c7e8c87d04f033ec55ed6862b07d8c3b",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1919": {
+    "arquivos": 2,
+    "arvore": "fae9fc46694e0f63d5665b8f351df420f0923086",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1920": {
+    "arquivos": 2,
+    "arvore": "165e6e940758aee8416f05348e2db4e951bdb3b7",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1921": {
+    "arquivos": 5,
+    "arvore": "76e678dad3dc2edb41be74a429eedce9da989792",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1922": {
+    "arquivos": 1,
+    "arvore": "de3bdb3a17fb8f6f2e6c5542cdceda662e4f4015",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1923": {
+    "arquivos": 1,
+    "arvore": "d63b6e766cd73b35f47b0a0076af123a20b15002",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1925": {
+    "arquivos": 1,
+    "arvore": "550134b798afc3ed42ed48ca6034bd41dbe0628e",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1927": {
+    "arquivos": 6,
+    "arvore": "24590840c51b1bbde7d429bbfafb145a3670db6e",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1928": {
+    "arquivos": 5,
+    "arvore": "793444e3b34e296a3138cfe9e0043b66c8eaca3a",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1929": {
+    "arquivos": 3,
+    "arvore": "c2d02a40e599857a1ad0d53c4c115e910210b845",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1935": {
+    "arquivos": 141,
+    "arvore": "4545a0689304d500a30c2ebbe62e0efc9b8bbdc7",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1936": {
+    "arquivos": 171,
+    "arvore": "447888da48c274bfe8a7c545932b5a6c7d3f1554",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1937": {
+    "arquivos": 214,
+    "arvore": "497b2e11387f7624a6764a09ea12cd3d6a3b83db",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1946": {
+    "arquivos": 12,
+    "arvore": "c580cc4e13acc888a3c940c1af3c8efd31645dac",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1947": {
+    "arquivos": 196,
+    "arvore": "9172926f9a74314b4c3fe18a6861106d9386fd3a",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1948": {
+    "arquivos": 403,
+    "arvore": "3fc2abe99c223a150e74e4ecf98ec15697974b96",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1949": {
+    "arquivos": 447,
+    "arvore": "2b102ddd5e21309b0161a919b1f70d61a0ccbe7d",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1950": {
+    "arquivos": 271,
+    "arvore": "224afd3b7f1c078e3ffe5687482fffe2da267a70",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1951": {
+    "arquivos": 257,
+    "arvore": "027d19fd76b6f0ec0a6da82dcebab53d2ad7e646",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1952": {
+    "arquivos": 301,
+    "arvore": "38b08fed6c331ea8647f138dcf3a8dc936fc612e",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1953": {
+    "arquivos": 356,
+    "arvore": "c96bb55d1ff06deedcb3e9293cdc4090c0215dc9",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1954": {
+    "arquivos": 231,
+    "arvore": "cda8c56dd02e75cb5d82c41969a3f383a3ef94c7",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1955": {
+    "arquivos": 321,
+    "arvore": "5b234379917c18313f0fb15f0cdea471fa485af9",
+    "pena_citada": 1,
+    "pena_propria": 1
+   },
+   "1956": {
+    "arquivos": 391,
+    "arvore": "5aa900b8f5b27122e52ee8ab75f701314d2a0208",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1957": {
+    "arquivos": 276,
+    "arvore": "debda8416331a4f0a44e0b67a4cdb3fcefe9dfd0",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1958": {
+    "arquivos": 154,
+    "arvore": "229abaecf48c3bc5de270688331c3201cfab19bf",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1959": {
+    "arquivos": 205,
+    "arvore": "5656eea00f1c8e2231cca25f37958ddaa8b9ad04",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1960": {
+    "arquivos": 148,
+    "arvore": "43fa180c9c31940570e7869bd5b9989cfa1f7f2d",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1961": {
+    "arquivos": 189,
+    "arvore": "cb4b98752fbfb13fa06d68a42befe98df6b654f6",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1962": {
+    "arquivos": 158,
+    "arvore": "1821c8457a47cf352b7655720190e2e53c755160",
+    "pena_citada": 1,
+    "pena_propria": 2
+   },
+   "1963": {
+    "arquivos": 123,
+    "arvore": "d2c44df813eeaf765fcf5c3c94f1d4264056598c",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1964": {
+    "arquivos": 278,
+    "arvore": "74e55f5ec88302bb395cd0f4bab9f038daa251ef",
+    "pena_citada": 1,
+    "pena_propria": 5
+   },
+   "1965": {
+    "arquivos": 333,
+    "arvore": "40df8e4b1e17c948b30a7fb35bb8292f04c1815d",
+    "pena_citada": 0,
+    "pena_propria": 5
+   },
+   "1966": {
+    "arquivos": 272,
+    "arvore": "faf0f71c41be1be8c08895b3b4e155889870f06f",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1967": {
+    "arquivos": 183,
+    "arvore": "5400b46a7a8d19dbb965262033c3573dd59b45bf",
+    "pena_citada": 1,
+    "pena_propria": 2
+   },
+   "1968": {
+    "arquivos": 188,
+    "arvore": "c86663c5c29c6bf9e00d54d02dca413df4451959",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1969": {
+    "arquivos": 11,
+    "arvore": "8bc57f4f00f7a54ae147480573d147faa89016bb",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1970": {
+    "arquivos": 77,
+    "arvore": "4987e4acb8bf44f327c946e01b81dac2dbbc9271",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1971": {
+    "arquivos": 123,
+    "arvore": "55a7da81b88152e8fffbc3047483e4bc320d872a",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1972": {
+    "arquivos": 93,
+    "arvore": "d9c9f70a9a07c561dd4fb7e307585c4171c33333",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1973": {
+    "arquivos": 149,
+    "arvore": "eb05dd048e33c51e384a6a4ecdf7b74e9e81eca6",
+    "pena_citada": 0,
+    "pena_propria": 5
+   },
+   "1974": {
+    "arquivos": 181,
+    "arvore": "345686a7fa83f43c6f687c656d7ca75e20488411",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1975": {
+    "arquivos": 120,
+    "arvore": "ac374b2a4e6e458da8507324ce8ec4ae69ebd621",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "1976": {
+    "arquivos": 87,
+    "arvore": "eec9be422aaaa4da597def4d0eac1a6b5540d11f",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1977": {
+    "arquivos": 110,
+    "arvore": "d8ed29fb962bdf849e5367af6e09ed0221b38da3",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1978": {
+    "arquivos": 106,
+    "arvore": "3c0f333a779e6b1d3283120fd745da433bc1ad07",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1979": {
+    "arquivos": 147,
+    "arvore": "c484712886b06006b0dfa3eca728ac7198fe8a2d",
+    "pena_citada": 1,
+    "pena_propria": 4
+   },
+   "1980": {
+    "arquivos": 127,
+    "arvore": "948eaa163918262464b3b9d1fc131038f633c55d",
+    "pena_citada": 1,
+    "pena_propria": 1
+   },
+   "1981": {
+    "arquivos": 82,
+    "arvore": "36031a72acab677b43ccdad91a0af278acc5459c",
+    "pena_citada": 2,
+    "pena_propria": 0
+   },
+   "1982": {
+    "arquivos": 110,
+    "arvore": "2e50343c227e87014f04090c31ea32d2809288cf",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1983": {
+    "arquivos": 94,
+    "arvore": "75264194061fb2f903b398e7457743c1622eedd0",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1984": {
+    "arquivos": 117,
+    "arvore": "82b70e27c21079181d3a192d4299e709a23a40b9",
+    "pena_citada": 2,
+    "pena_propria": 0
+   },
+   "1985": {
+    "arquivos": 156,
+    "arvore": "468e28610ac2e3299ad28fd4cdd7339ff18fae26",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1986": {
+    "arquivos": 127,
+    "arvore": "9caff68accc30e943e5a04c1047e4c6e1fcaa563",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1987": {
+    "arquivos": 65,
+    "arvore": "143a5c51e0be852c973bee49af8dcfebf77966de",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1988": {
+    "arquivos": 68,
+    "arvore": "ed27f2c945ec7aaa8b5e35928affc2190ebb7a33",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1989": {
+    "arquivos": 276,
+    "arvore": "2612d96ccfd6820554019b471e81770611368a96",
+    "pena_citada": 0,
+    "pena_propria": 5
+   },
+   "1990": {
+    "arquivos": 166,
+    "arvore": "3c013b2f19ce836d67609730e70d24b03fad7d8a",
+    "pena_citada": 1,
+    "pena_propria": 3
+   },
+   "1991": {
+    "arquivos": 238,
+    "arvore": "b3e044a84beaeeb5c9c808c1c8052591ce8c3d8b",
+    "pena_citada": 0,
+    "pena_propria": 2
+   },
+   "1992": {
+    "arquivos": 222,
+    "arvore": "d95db671749528b48d2e9abe0b7c89e132169b80",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "1993": {
+    "arquivos": 225,
+    "arvore": "e48b3211f33161843aefcf7153f0a715d306fb75",
+    "pena_citada": 0,
+    "pena_propria": 4
+   },
+   "1994": {
+    "arquivos": 131,
+    "arvore": "7c49875fe7adeea4ab0a3bc6645a94a6a8cfe141",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "1995": {
+    "arquivos": 281,
+    "arvore": "12697d207752cd4b3062b9534fd08ed1af9852aa",
+    "pena_citada": 0,
+    "pena_propria": 5
+   },
+   "1996": {
+    "arquivos": 177,
+    "arvore": "4d65c60a3e25ba96e625878b2a9776a5789db7c9",
+    "pena_citada": 1,
+    "pena_propria": 3
+   },
+   "1997": {
+    "arquivos": 169,
+    "arvore": "d176ca426542671be8c494afe3050469ca893bd3",
+    "pena_citada": 1,
+    "pena_propria": 5
+   },
+   "1998": {
+    "arquivos": 178,
+    "arvore": "5457118081db5fc747ec125579df3a9882f95e45",
+    "pena_citada": 5,
+    "pena_propria": 3
+   },
+   "1999": {
+    "arquivos": 175,
+    "arvore": "4ae34b15a63838752e0d66fd21d378b02dba167e",
+    "pena_citada": 0,
+    "pena_propria": 0
+   },
+   "2000": {
+    "arquivos": 218,
+    "arvore": "2f3fc1de3e37ab4a900c3754113334867a9ac4fd",
+    "pena_citada": 3,
+    "pena_propria": 2
+   },
+   "2001": {
+    "arquivos": 230,
+    "arvore": "e444769b17f3b3d687089bfb38770439fb2e3d31",
+    "pena_citada": 1,
+    "pena_propria": 2
+   },
+   "2002": {
+    "arquivos": 237,
+    "arvore": "16129ca4f70d0be38d4f19dbd6e49046563d2b2c",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "2003": {
+    "arquivos": 197,
+    "arvore": "bd4f7a3e599cafa6c6c3b1bf861d67a4192dd32f",
+    "pena_citada": 0,
+    "pena_propria": 7
+   },
+   "2004": {
+    "arquivos": 252,
+    "arvore": "3638f2340814c7eee82378f7e264c6067f43f24c",
+    "pena_citada": 0,
+    "pena_propria": 1
+   },
+   "2005": {
+    "arquivos": 176,
+    "arvore": "44c6b6908bd8d037b5d7e9100835e38f35324b0b",
+    "pena_citada": 0,
+    "pena_propria": 4
+   },
+   "2006": {
+    "arquivos": 178,
+    "arvore": "18617432fe9ae9de072a2ac034ad6712206d5986",
+    "pena_citada": 0,
+    "pena_propria": 5
+   },
+   "2007": {
+    "arquivos": 198,
+    "arvore": "ecb94b19512e6d45cdb662f509931c594a3cc023",
+    "pena_citada": 1,
+    "pena_propria": 1
+   },
+   "2008": {
+    "arquivos": 259,
+    "arvore": "6f26dfde1cb189458cf1e76b0ec5f753a09c3202",
+    "pena_citada": 2,
+    "pena_propria": 1
+   },
+   "2009": {
+    "arquivos": 290,
+    "arvore": "a4ed8d4fddc6e75cef368b8206099d3bbf43bb2a",
+    "pena_citada": 3,
+    "pena_propria": 1
+   },
+   "2010": {
+    "arquivos": 191,
+    "arvore": "8b23c9e296aa39883e84fa7a3fb9772e0504a621",
+    "pena_citada": 1,
+    "pena_propria": 1
+   },
+   "2011": {
+    "arquivos": 208,
+    "arvore": "db937b9e8a74c8131822d182609edf425f2a48f6",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "2012": {
+    "arquivos": 193,
+    "arvore": "cf0341578f0efc22d6ef115eaa6ce66408ea4283",
+    "pena_citada": 0,
+    "pena_propria": 5
+   },
+   "2013": {
+    "arquivos": 172,
+    "arvore": "d374adcc194a3876a43e99a158c39f4d1af6ebb7",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "2014": {
+    "arquivos": 128,
+    "arvore": "4a96adcc259bab4301831859181749a0f139394e",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "2015": {
+    "arquivos": 163,
+    "arvore": "3530c70401d9037799848dafcd8059503886ad91",
+    "pena_citada": 0,
+    "pena_propria": 3
+   },
+   "2016": {
+    "arquivos": 171,
+    "arvore": "be6ee6f6f92c9fba344c8117abeae22f3a5b9d64",
+    "pena_citada": 2,
+    "pena_propria": 3
+   },
+   "2017": {
+    "arquivos": 173,
+    "arvore": "95a584863009c862f8df7dffb4cd005da304eaa3",
+    "pena_citada": 3,
+    "pena_propria": 2
+   },
+   "2018": {
+    "arquivos": 202,
+    "arvore": "e1e7fc41abbf98583dcb97581e159a80d00492aa",
+    "pena_citada": 3,
+    "pena_propria": 0
+   },
+   "2019": {
+    "arquivos": 185,
+    "arvore": "757092cfd2ae613f6562644d5dc3e872a00617c3",
+    "pena_citada": 3,
+    "pena_propria": 1
+   },
+   "2020": {
+    "arquivos": 143,
+    "arvore": "40cfea71f26270255ae7af6e94635b1e3aa47fbe",
+    "pena_citada": 1,
+    "pena_propria": 0
+   },
+   "2021": {
+    "arquivos": 172,
+    "arvore": "a09876109b4848fac6a7f433b4bc230861e0abd5",
+    "pena_citada": 5,
+    "pena_propria": 0
+   },
+   "2022": {
+    "arquivos": 228,
+    "arvore": "f5db5308c8880c08f02bb64556f4046f1c5bfc0a",
+    "pena_citada": 3,
+    "pena_propria": 1
+   },
+   "2023": {
+    "arquivos": 275,
+    "arvore": "63c2e46098f70ddf01deebfcfc75913d9dfa5b84",
+    "pena_citada": 2,
+    "pena_propria": 0
+   },
+   "2024": {
+    "arquivos": 291,
+    "arvore": "1a03591ec4024a299846315b2199bc369356074c",
+    "pena_citada": 5,
+    "pena_propria": 1
+   },
+   "2025": {
+    "arquivos": 239,
+    "arvore": "63379796705371e8afb6b5d5d92a2b2480a0a24a",
+    "pena_citada": 4,
+    "pena_propria": 0
+   },
+   "2026": {
+    "arquivos": 204,
+    "arvore": "c8b03120f64a3ea63743fd43a1db34f39d041de8",
+    "pena_citada": 6,
+    "pena_propria": 1
+   }
+  }
+ },
+ "apontadas": {
+  "del-1002-1969": {
+   "caminho": "federal/decretos-lei/1969/del-1002-1969-10-21.md",
+   "chave": "del-1002-1969",
+   "ementa": "Código de Processo Penal Militar.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del1002.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.002 de 21/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1002"
+  },
+  "del-1003-1969": {
+   "caminho": "federal/decretos-lei/1969/del-1003-1969-10-21.md",
+   "chave": "del-1003-1969",
+   "ementa": "Lei de Organização Judiciária Militar.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 8.457, de 1992 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1003.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 1.003 de 21/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1003"
+  },
+  "del-1004-1969": {
+   "caminho": "federal/decretos-lei/1969/del-1004-1969-10-21.md",
+   "chave": "del-1004-1969",
+   "ementa": "Código Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.578, de 1978 Texto para impressão DECRETAM: PARTE GERA",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1004.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 1.004 de 21/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1004"
+  },
+  "del-1063-1969": {
+   "caminho": "federal/decretos-lei/1969/del-1063-1969-10-21.md",
+   "chave": "del-1063-1969",
+   "ementa": "Estabelece, de acordo com a Emenda Constitucional nº 1, de 17 de outubro   de 1969, casos de inelegibilidades e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1063.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.063 de 21/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1063"
+  },
+  "del-1064-1969": {
+   "caminho": "federal/decretos-lei/1969/del-1064-1969-10-24.md",
+   "chave": "del-1064-1969",
+   "ementa": "Altera a redação do art. 302 do Código Eleitoral e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1064.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.064 de 24/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-24;1064"
+  },
+  "del-1164-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1164-1939-03-18.md",
+   "chave": "del-1164-1939",
+   "ementa": "Dispõe sôbre as concessões de terras e vias de comunicação na faixa da   fronteira, bem como sôbre as indústrias aí situadas.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.164 de 18/03/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-03-18;1164"
+  },
+  "del-1191-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1191-1939-04-04.md",
+   "chave": "del-1191-1939",
+   "ementa": "Dispõe sobre o monopólio postal da União e estabelece penas a serem   aplicadas aos contraventores do transporte e da distribuição da correspondência.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 1.191 de 04/04/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-04-04;1191"
+  },
+  "del-1237-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1237-1939-05-02.md",
+   "chave": "del-1237-1939",
+   "ementa": "Organiza a Justiça do Trabalho.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1237.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.237 de 02/05/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-05-02;1237"
+  },
+  "del-1391-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1391-1939-06-29.md",
+   "chave": "del-1391-1939",
+   "ementa": "Dispõe sobre a cobrança do imposto de renda relativo a juros de apólices   ao portador, estaduais e municipais, prêmios de loterias ou sorteios e   vencimentos dos funcionários públicos estaduais e municipais.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.391 de 29/06/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-06-29;1391"
+  },
+  "del-1404-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1404-1939-07-06.md",
+   "chave": "del-1404-1939",
+   "ementa": "Modifica o art. 7º, n.º 16, do Regulamento baixado pelo Decreto-Lei n.º   739, de 24 de setembro de 1938, que estabelece a incidência do imposto de   consumo sobre artefatos de tecidos e peles.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.404 de 06/07/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-07-06;1404"
+  },
+  "del-1532-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1532-1939-08-23.md",
+   "chave": "del-1532-1939",
+   "ementa": "Suspende a exucação do art.. 12, parágrafo único, do Decreto-Lei número   406, de 4 de maio de 1938.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1532.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.532 de 23/08/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-08-23;1532"
+  },
+  "del-1593-1977": {
+   "caminho": "federal/decretos-lei/1977/del-1593-1977-12-21.md",
+   "chave": "del-1593-1977",
+   "ementa": "Altera a legislação do Imposto sobre Produtos Industrializados, em relação aos casos que especifica, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 11.488, de 2007",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del1593.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.593 de 21/12/1977",
+   "urn": "urn:lex:br:federal:decreto.lei:1977-12-21;1593"
+  },
+  "del-16-1966": {
+   "caminho": "federal/decretos-lei/1966/del-16-1966-08-10.md",
+   "chave": "del-16-1966",
+   "ementa": "Dispõe sôbre a produção, o comércio e o transporte clandestino de açúcar e   do álcool e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0016.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 16 de 10/08/1966",
+   "urn": "urn:lex:br:federal:decreto.lei:1966-08-10;16"
+  },
+  "del-1608-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1608-1939-09-18.md",
+   "chave": "del-1608-1939",
+   "ementa": "Código de Processo Civil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1608.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.608 de 18/09/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-09-18;1608"
+  },
+  "del-1628-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1628-1939-09-26.md",
+   "chave": "del-1628-1939",
+   "ementa": "Dispõe sobre a concessão de diárias a funcionários e extranumerários.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.628 de 26/09/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-09-26;1628"
+  },
+  "del-1641-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1641-1939-09-29.md",
+   "chave": "del-1641-1939",
+   "ementa": "Dispõe sobre a criação o funcionamento da Comissão de Defesa da Economia   Nacional.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.641 de 29/09/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-09-29;1641"
+  },
+  "del-1681-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1681-1939-10-13.md",
+   "chave": "del-1681-1939",
+   "ementa": "Revoga o Decreto-lei n.º 1.191, de 04 de abril de 1939, dispõe sobre o   monopólio postal da União e estabelece penas a serem aplicadas aos   contraventores da coleta, do transporte e da distribuição dos objetos de   correspondência.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1681.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.681 de 13/10/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-10-13;1681"
+  },
+  "del-1687-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1687-1939-10-17.md",
+   "chave": "del-1687-1939",
+   "ementa": "Determina as zonas interditadas à navegação aérea e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.687 de 17/10/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-10-17;1687"
+  },
+  "del-1713-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1713-1939-10-28.md",
+   "chave": "del-1713-1939",
+   "ementa": "Dispõe sobre o Estatuto dos Funcionários Públicos Civis da União.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1713.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.713 de 28/10/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-10-28;1713"
+  },
+  "del-1768-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1768-1939-11-11.md",
+   "chave": "del-1768-1939",
+   "ementa": "Estabelece penalidades para as infrações do Código de Caça.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.768 de 11/11/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-11-11;1768"
+  },
+  "del-1831-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1831-1939-12-04.md",
+   "chave": "del-1831-1939",
+   "ementa": "Dispõe sobre a defesa da produção do açúcar e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1831.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.831 de 04/12/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-12-04;1831"
+  },
+  "del-1949-1939": {
+   "caminho": "federal/decretos-lei/1939/del-1949-1939-12-30.md",
+   "chave": "del-1949-1939",
+   "ementa": "Dispõe sobre o exercício da atividade de imprensa e propaganda no   território nacional e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1949.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 1.949 de 30/12/1939",
+   "urn": "urn:lex:br:federal:decreto.lei:1939-12-30;1949"
+  },
+  "del-2035-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2035-1940-02-27.md",
+   "chave": "del-2035-1940",
+   "ementa": "Dispõe sobre a organização da Justiça do Distrito Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.035 de 27/02/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-02-27;2035"
+  },
+  "del-2049-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2049-1940-02-29.md",
+   "chave": "del-2049-1940",
+   "ementa": "Dispõe sobre os emolumentos e taxas relativas a serviços executados ou   fiscalizados pela Secretaria Geral de Viação e Obras da Prefeitura do Distrito   Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.049 de 29/02/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-02-29;2049"
+  },
+  "del-2063-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2063-1940-03-07.md",
+   "chave": "del-2063-1940",
+   "ementa": "Regulamenta sob novos moldes as operações de seguros privados e sua   fiscalização.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del2063.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.063 de 07/03/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-03-07;2063"
+  },
+  "del-2084-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2084-1940-03-08.md",
+   "chave": "del-2084-1940",
+   "ementa": "Sujeita a registo a autorização para o exercício da respectiva atividade   os organizadores, mediante taxas, de cadastros de comerciantes e industriais.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.084 de 08/03/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-03-08;2084"
+  },
+  "del-2141-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2141-1940-04-15.md",
+   "chave": "del-2141-1940",
+   "ementa": "Regulamenta a execução do Recenseamento Geral de 1940, nos termos de   decreto-lei número 969, de 21 de dezembro de 1938.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del2141.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.141 de 15/04/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-04-15;2141"
+  },
+  "del-236-1967": {
+   "caminho": "federal/decretos-lei/1967/del-236-1967-02-28.md",
+   "chave": "del-236-1967",
+   "ementa": "Complementa e modifica a Lei número 4.117 de 27 de agôsto de 1962.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/Del0236.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 236 de 28/02/1967",
+   "urn": "urn:lex:br:federal:decreto.lei:1967-02-28;236"
+  },
+  "del-2506-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2506-1940-08-20.md",
+   "chave": "del-2506-1940",
+   "ementa": "Regimento de Custas da Justiça do Distrito Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.506 de 20/08/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-08-20;2506"
+  },
+  "del-2524-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2524-1940-08-23.md",
+   "chave": "del-2524-1940",
+   "ementa": "Modifica o art. 3º do Decreto-Lei nº 869, de 18 de novembro de 1938.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.524 de 23/08/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-08-23;2524"
+  },
+  "del-2627-1940": {
+   "caminho": "federal/decretos-lei/1940/del-2627-1940-09-26.md",
+   "chave": "del-2627-1940",
+   "ementa": "Dispõe sobre as sociedades por ações.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.404, de 1976",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2627.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.627 de 26/09/1940",
+   "urn": "urn:lex:br:federal:decreto.lei:1940-09-26;2627"
+  },
+  "del-281-1938": {
+   "caminho": "federal/decretos-lei/1938/del-281-1938-02-18.md",
+   "chave": "del-281-1938",
+   "ementa": "Sujeita ao registro industrial do Departamento Nacional da Indústria e   Comércio todas as firmas e empresas industriais, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 281 de 18/02/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-02-18;281"
+  },
+  "del-2980-1941": {
+   "caminho": "federal/decretos-lei/1941/del-2980-1941-01-24.md",
+   "chave": "del-2980-1941",
+   "ementa": "Consolida as disposições sobre o serviço de loterias e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 2.980 de 24/01/1941",
+   "urn": "urn:lex:br:federal:decreto.lei:1941-01-24;2980"
+  },
+  "del-301-1938": {
+   "caminho": "federal/decretos-lei/1938/del-301-1938-02-24.md",
+   "chave": "del-301-1938",
+   "ementa": "Aprova o regulamento para a arrecadação e fiscalização do imposto de   consumo.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0301.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 301 de 24/02/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-02-24;301"
+  },
+  "del-314-1967": {
+   "caminho": "federal/decretos-lei/1967/del-314-1967-03-13.md",
+   "chave": "del-314-1967",
+   "ementa": "Define os crimes contra a segurança nacional, a ordem política e social e   dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pelo Decreto-Lei nº 898, de 1969 Texto para impressão Vigência *",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0314.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 314 de 13/03/1967",
+   "urn": "urn:lex:br:federal:decreto.lei:1967-03-13;314"
+  },
+  "del-3366-1941": {
+   "caminho": "federal/decretos-lei/1941/del-3366-1941-06-25.md",
+   "chave": "del-3366-1941",
+   "ementa": "Dispõe sobre a execução dos serviços de transporte coletivos no Município   de São Paulo e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 3.366 de 25/06/1941",
+   "urn": "urn:lex:br:federal:decreto.lei:1941-06-25;3366"
+  },
+  "del-351-1938": {
+   "caminho": "federal/decretos-lei/1938/del-351-1938-03-24.md",
+   "chave": "del-351-1938",
+   "ementa": "Dispõe sobre a arrecadação dos impostos devidos à Fazenda do Distrito   Federal nos inventários e outros procedimentos judiciais.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 351 de 24/03/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-03-24;351"
+  },
+  "del-3545-1941": {
+   "caminho": "federal/decretos-lei/1941/del-3545-1941-08-22.md",
+   "chave": "del-3545-1941",
+   "ementa": "Regula a compra e venda de título da dívida pública da União, dos Estados   e dos Municípios.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del3545.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 3.545 de 22/08/1941",
+   "urn": "urn:lex:br:federal:decreto.lei:1941-08-22;3545"
+  },
+  "del-37-1937": {
+   "caminho": "federal/decretos-lei/1937/del-37-1937-12-02.md",
+   "chave": "del-37-1937",
+   "ementa": "Dispõe sobre partidos políticos.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 37 de 02/12/1937",
+   "urn": "urn:lex:br:federal:decreto.lei:1937-12-02;37"
+  },
+  "del-37-1966": {
+   "caminho": "federal/decretos-lei/1966/del-37-1966-11-18.md",
+   "chave": "del-37-1966",
+   "ementa": "Dispõe sôbre o Impôsto de Importação, reorganiza os serviços aduaneiros e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/Del0037.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 37 de 18/11/1966",
+   "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;37"
+  },
+  "del-385-1968": {
+   "caminho": "federal/decretos-lei/1968/del-385-1968-12-26.md",
+   "chave": "del-385-1968",
+   "ementa": "Da nova redação ao artigo 281 do Código Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0385.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 385 de 26/12/1968",
+   "urn": "urn:lex:br:federal:decreto.lei:1968-12-26;385"
+  },
+  "del-3914-1941": {
+   "caminho": "federal/decretos-lei/1941/del-3914-1941-12-09.md",
+   "chave": "del-3914-1941",
+   "ementa": "Lei de introdução do Código Penal (decreto-lei nº 2.848, de 7-12-940) e da Lei das Contravenções Penais (decreto-lei nº 3.688, de 3 de outubro de 1941).",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3914.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 3.914 de 09/12/1941",
+   "urn": "urn:lex:br:federal:decreto.lei:1941-12-09;3914"
+  },
+  "del-392-1938": {
+   "caminho": "federal/decretos-lei/1938/del-392-1938-04-27.md",
+   "chave": "del-392-1938",
+   "ementa": "Regula a expulsão de estrangeiros.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 392 de 27/04/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-04-27;392"
+  },
+  "del-394-1938": {
+   "caminho": "federal/decretos-lei/1938/del-394-1938-04-28.md",
+   "chave": "del-394-1938",
+   "ementa": "Regula a extradição.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/Del0394.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 394 de 28/04/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-04-28;394"
+  },
+  "del-3971-1941": {
+   "caminho": "federal/decretos-lei/1941/del-3971-1941-12-24.md",
+   "chave": "del-3971-1941",
+   "ementa": "Dispõe sobre o cumprimento de penas do Distrito Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 3.971 de 24/12/1941",
+   "urn": "urn:lex:br:federal:decreto.lei:1941-12-24;3971"
+  },
+  "del-398-1968": {
+   "caminho": "federal/decretos-lei/1968/del-398-1968-12-30.md",
+   "chave": "del-398-1968",
+   "ementa": "Dispõe sobre acréscimo de alíquotas da Tarifa das Alfândegas incidentes   nos produtos que enumera e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0398.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 398 de 30/12/1968",
+   "urn": "urn:lex:br:federal:decreto.lei:1968-12-30;398"
+  },
+  "del-4014-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4014-1942-01-13.md",
+   "chave": "del-4014-1942",
+   "ementa": "Cria o Destacamento Misto de Guarnição com sede em Fernando de   Noronha.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4014.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.014-A de 13/01/1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-01-13;4014"
+  },
+  "del-406-1938": {
+   "caminho": "federal/decretos-lei/1938/del-406-1938-05-04.md",
+   "chave": "del-406-1938",
+   "ementa": "Dispõe sôbre a entrada de estrangeiros no território nacional.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.815, de 1980 Texto para impressão decreta: Getulio Var",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0406.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 406 de 04/05/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-05-04;406"
+  },
+  "del-4098-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4098-1942-02-06.md",
+   "chave": "del-4098-1942",
+   "ementa": "Define, como encargos necessários à defesa da Pátria, os serviços de   defesa passiva anti-aérea.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4098.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.098 de 06/02/1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-02-06;4098"
+  },
+  "del-4099-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4099-1942-02-06.md",
+   "chave": "del-4099-1942",
+   "ementa": "Aprova o plano geral de uniformes para os oficiais e praças da Aeronáutica   e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4099.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.099 de 06/02/1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-02-06;4099"
+  },
+  "del-431-1938": {
+   "caminho": "federal/decretos-lei/1938/del-431-1938-05-18.md",
+   "chave": "del-431-1938",
+   "ementa": "Define crimes contra a personalidade internacional, a Estrutura e a   segurança do Estado e contra a ordem social.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 1.802, de 1953 Revogado pela Lei nº 2.083, de 1953 Texto",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0431.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 431 de 18/05/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-05-18;431"
+  },
+  "del-4599-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4599-1942-08-20.md",
+   "chave": "del-4599-1942",
+   "ementa": "Autoriza o Departamento Federal de Compras a requisitar material necessario ao serviço publico, e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.599, de 20 de Agosto de 1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-08-20;4599"
+  },
+  "del-47-1966": {
+   "caminho": "federal/decretos-lei/1966/del-47-1966-11-18.md",
+   "chave": "del-47-1966",
+   "ementa": "Dispõe sobre a aplicação e qualifica as penalidades pelas infrações às   normas e resoluções de competência do Instituto Brasileiro do Café e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0047.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 47 de 18/11/1966",
+   "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;47"
+  },
+  "del-4766-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4766-1942-10-01.md",
+   "chave": "del-4766-1942",
+   "ementa": "Define crimes militares e contra a segurança do Estado, e dá outras   prividências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4766.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.766 de 01/10/1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-10-01;4766"
+  },
+  "del-479-1938": {
+   "caminho": "federal/decretos-lei/1938/del-479-1938-06-08.md",
+   "chave": "del-479-1938",
+   "ementa": "Dispõe sobre a expulsão de estrangeiros.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 479 de 08/06/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-06-08;479"
+  },
+  "del-4812-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4812-1942-10-08.md",
+   "chave": "del-4812-1942",
+   "ementa": "Dispõe sobre a requisição de bens imóveis e móveis, necessários às forças armadas e à defesa passiva da população, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4812.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.812 de 08/10/1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-10-08;4812"
+  },
+  "del-4828-1942": {
+   "caminho": "federal/decretos-lei/1942/del-4828-1942-10-13.md",
+   "chave": "del-4828-1942",
+   "ementa": "Coordena os meios e órgãos de divulgação e publicidade existentes no país   e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 4.828 de 13/10/1942",
+   "urn": "urn:lex:br:federal:decreto.lei:1942-10-13;4828"
+  },
+  "del-483-1938": {
+   "caminho": "federal/decretos-lei/1938/del-483-1938-06-08.md",
+   "chave": "del-483-1938",
+   "ementa": "Institue o Código Brasileiro do Ar.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pelo Decreto-Lei nº 32, de 1966 Texto para impressão Art. 91. No transporte",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0483.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 483 de 08/06/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-06-08;483"
+  },
+  "del-5353-1943": {
+   "caminho": "federal/decretos-lei/1943/del-5353-1943-03-29.md",
+   "chave": "del-5353-1943",
+   "ementa": "Dispõe sobre a aplicação de legislação penal militar ao pessoal marítimo,   durante os contratos de trabalho e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 5.353 de 29/03/1943",
+   "urn": "urn:lex:br:federal:decreto.lei:1943-03-29;5353"
+  },
+  "del-5452-1943": {
+   "caminho": "federal/decretos-lei/1943/del-5452-1943-05-01.md",
+   "chave": "del-5452-1943",
+   "ementa": "Aprova a Consolidação das Leis do Trabalho.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 5.452 de 01/05/1943",
+   "urn": "urn:lex:br:federal:decreto.lei:1943-05-01;5452"
+  },
+  "del-56-1966": {
+   "caminho": "federal/decretos-lei/1966/del-56-1966-11-18.md",
+   "chave": "del-56-1966",
+   "ementa": "Dispõe sobre a arrecadação de taxas pelo Instituto do Açúcar e do Álcool,   a produção, o comércio e o transporte do açúcar e do álcool e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/Del0056.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 56 de 18/11/1966",
+   "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;56"
+  },
+  "del-6227-1944": {
+   "caminho": "federal/decretos-lei/1944/del-6227-1944-01-24.md",
+   "chave": "del-6227-1944",
+   "ementa": "Institui o código penal militar.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del6227.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 6.227 de 24/01/1944",
+   "urn": "urn:lex:br:federal:decreto.lei:1944-01-24;6227"
+  },
+  "del-65-1937": {
+   "caminho": "federal/decretos-lei/1937/del-65-1937-12-14.md",
+   "chave": "del-65-1937",
+   "ementa": "Dispõe sobre o recolhimento das contribuiçoes devidas por empregados aos   Institutos e Caixas de Aposentadorias e Pensões.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 65 de 14/12/1937",
+   "urn": "urn:lex:br:federal:decreto.lei:1937-12-14;65"
+  },
+  "del-6739-1944": {
+   "caminho": "federal/decretos-lei/1944/del-6739-1944-07-26.md",
+   "chave": "del-6739-1944",
+   "ementa": "Dispõe sobre a locação de imóveis.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 6.739 de 26/07/1944",
+   "urn": "urn:lex:br:federal:decreto.lei:1944-07-26;6739"
+  },
+  "del-6916-1944": {
+   "caminho": "federal/decretos-lei/1944/del-6916-1944-10-02.md",
+   "chave": "del-6916-1944",
+   "ementa": "Modifica o art. 46 da Lei das Contravenções Penais.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del6916.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 6.916 de 02/10/1944",
+   "urn": "urn:lex:br:federal:decreto.lei:1944-10-02;6916"
+  },
+  "del-739-1938": {
+   "caminho": "federal/decretos-lei/1938/del-739-1938-09-24.md",
+   "chave": "del-739-1938",
+   "ementa": "Aprova o regulamento para a arrecadação e fiscalização do imposto de   consumo.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pelo Decreto-lei nº 7.404, de 1945",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0739.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 739 de 24/09/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-09-24;739"
+  },
+  "del-7586-1945": {
+   "caminho": "federal/decretos-lei/1945/del-7586-1945-05-28.md",
+   "chave": "del-7586-1945",
+   "ementa": "Regula, em todo país, o alistamento eleitoral e a eleições a que se refere o artigo 4º da Lei Constitucional n. 9, de 28 de fevereiro de 1945.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del7586.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 7.586 de 28/05/1945",
+   "urn": "urn:lex:br:federal:decreto.lei:1945-05-28;7586"
+  },
+  "del-7675-1945": {
+   "caminho": "federal/decretos-lei/1945/del-7675-1945-06-26.md",
+   "chave": "del-7675-1945",
+   "ementa": "Reorganiza o Tribunal Marítimo Administrativo e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 7.675, de 26 de Junho de 1945",
+   "urn": "urn:lex:br:federal:decreto.lei:1945-06-26;7675"
+  },
+  "del-785-1969": {
+   "caminho": "federal/decretos-lei/1969/del-785-1969-08-25.md",
+   "chave": "del-785-1969",
+   "ementa": "Dispõe sobre infrações às normas relativas á saúde e respectivas   penalidades.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.437, de 1977 Texto para impressão",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0785.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 785 de 25/08/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-08-25;785"
+  },
+  "del-7903-1945": {
+   "caminho": "federal/decretos-lei/1945/del-7903-1945-08-27.md",
+   "chave": "del-7903-1945",
+   "ementa": "Código da Propriedade Industrial.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_riscada",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del7903.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 7.903 de 27/08/1945",
+   "urn": "urn:lex:br:federal:decreto.lei:1945-08-27;7903"
+  },
+  "del-794-1938": {
+   "caminho": "federal/decretos-lei/1938/del-794-1938-10-19.md",
+   "chave": "del-794-1938",
+   "ementa": "Aprova e baixa o Código de Pesca.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0794.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 794 de 19/10/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-10-19;794"
+  },
+  "del-7967-1945": {
+   "caminho": "federal/decretos-lei/1945/del-7967-1945-09-18.md",
+   "chave": "del-7967-1945",
+   "ementa": "Dispõe sôbre a Imigração e Colonização, e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.815, de 1980 Texto para impressão O Presidente da Repú",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del7967.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 7.967 de 18/09/1945",
+   "urn": "urn:lex:br:federal:decreto.lei:1945-09-18;7967"
+  },
+  "del-803-1938": {
+   "caminho": "federal/decretos-lei/1938/del-803-1938-10-24.md",
+   "chave": "del-803-1938",
+   "ementa": "Cria o cargo de Corregedor na Justiça do Distrito Federal, e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 803 de 24/10/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-10-24;803"
+  },
+  "del-8527-1945": {
+   "caminho": "federal/decretos-lei/1945/del-8527-1945-12-31.md",
+   "chave": "del-8527-1945",
+   "ementa": "Consolida e revê as leis de organização judiciária   instituindo o Código de Organização Judiciária do Distrito   Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del8527.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 8.527 de 31/12/1945",
+   "urn": "urn:lex:br:federal:decreto.lei:1945-12-31;8527"
+  },
+  "del-854-1938": {
+   "caminho": "federal/decretos-lei/1938/del-854-1938-11-12.md",
+   "chave": "del-854-1938",
+   "ementa": "Dispõe sobre o serviço de loterias e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 854 de 12/11/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-11-12;854"
+  },
+  "del-869-1938": {
+   "caminho": "federal/decretos-lei/1938/del-869-1938-11-18.md",
+   "chave": "del-869-1938",
+   "ementa": "Define os crimes contra a economia popular sua guarda e seu emprego.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 869 de 18/11/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-11-18;869"
+  },
+  "del-891-1938": {
+   "caminho": "federal/decretos-lei/1938/del-891-1938-11-25.md",
+   "chave": "del-891-1938",
+   "ementa": "Aprova a Lei de Fiscalização de Entorpecentes.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0891.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 891 de 25/11/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-11-25;891"
+  },
+  "del-898-1969": {
+   "caminho": "federal/decretos-lei/1969/del-898-1969-09-29.md",
+   "chave": "del-898-1969",
+   "ementa": "Define os crimes contra a segurança nacional, a ordem política e social,   estabelece seu processo e julgamento e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.620, de 1978 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0898.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 898 de 29/09/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-09-29;898"
+  },
+  "del-9070-1946": {
+   "caminho": "federal/decretos-lei/1946/del-9070-1946-03-15.md",
+   "chave": "del-9070-1946",
+   "ementa": "Dispõe sobre a suspensão ou abandono coletivo do trabalho e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 4.330, de 1º.6.1964 Texto para impressão Dispõe sôbre a",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del9070.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 9.070 de 15/03/1946",
+   "urn": "urn:lex:br:federal:decreto.lei:1946-03-15;9070"
+  },
+  "del-910-1938": {
+   "caminho": "federal/decretos-lei/1938/del-910-1938-11-30.md",
+   "chave": "del-910-1938",
+   "ementa": "Dispõe sobre a duração e condições do trabalho em empresas jornalísticas.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 910 de 30/11/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-11-30;910"
+  },
+  "del-921-1938": {
+   "caminho": "federal/decretos-lei/1938/del-921-1938-12-01.md",
+   "chave": "del-921-1938",
+   "ementa": "Cria taxa de inspeção sanitária a que ficam sujeitos os estabelecimentos   que abatem animais para os mercados insterestadual e internacional e manipulam   ou por qualquer forma, industrializam produtos ou sub-produtos de origem animal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 921 de 01/12/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-12-01;921"
+  },
+  "del-925-1938": {
+   "caminho": "federal/decretos-lei/1938/del-925-1938-12-02.md",
+   "chave": "del-925-1938",
+   "ementa": "Estabelece o Código de Justiça Militar.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0925.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 925 de 02/12/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-12-02;925"
+  },
+  "del-941-1969": {
+   "caminho": "federal/decretos-lei/1969/del-941-1969-10-13.md",
+   "chave": "del-941-1969",
+   "ementa": "Define a situação jurídica do estrangeiro no Brasil, e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.815, de 1980 Texto para impressão Define a situação ju",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0941.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 941 de 13/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-13;941"
+  },
+  "del-96-1937": {
+   "caminho": "federal/decretos-lei/1937/del-96-1937-12-22.md",
+   "chave": "del-96-1937",
+   "ementa": "Dispõe sobre a administração do Distrito Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 96 de 22/12/1937",
+   "urn": "urn:lex:br:federal:decreto.lei:1937-12-22;96"
+  },
+  "del-969-1938": {
+   "caminho": "federal/decretos-lei/1938/del-969-1938-12-21.md",
+   "chave": "del-969-1938",
+   "ementa": "Dispõe sobre os recenseamentos gerais do Brasil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0969.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 969 de 21/12/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-12-21;969"
+  },
+  "del-975-1969": {
+   "caminho": "federal/decretos-lei/1969/del-975-1969-10-20.md",
+   "chave": "del-975-1969",
+   "ementa": "Define os crimes de contrabando e transporte de terroristas e subversivos,   praticados por meio de aeronaves e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.620, de 1978. Texto para impressão Define os crimes de",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0975.htm"
+   },
+   "revogada": true,
+   "titulo": "Decreto-Lei nº 975 de 20/10/1969",
+   "urn": "urn:lex:br:federal:decreto.lei:1969-10-20;975"
+  },
+  "del-986-1938": {
+   "caminho": "federal/decretos-lei/1938/del-986-1938-12-27.md",
+   "chave": "del-986-1938",
+   "ementa": "Dispõe sobre a organização do Ministério Público Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0986.htm"
+   },
+   "revogada": false,
+   "titulo": "Decreto-Lei nº 986 de 27/12/1938",
+   "urn": "urn:lex:br:federal:decreto.lei:1938-12-27;986"
+  },
+  "lcp-105-2001": {
+   "caminho": "federal/leis-complementares/2001/lcp-105-2001-01-10.md",
+   "chave": "lcp-105-2001",
+   "ementa": "Dispõe sobre o sigilo das operações de instituições financeiras e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei Complementar nº 105 de 10/01/2001",
+   "urn": "urn:lex:br:federal:lei.complementar:2001-01-10;105"
+  },
+  "lcp-167-2019": {
+   "caminho": "federal/leis-complementares/2019/lcp-167-2019-04-24.md",
+   "chave": "lcp-167-2019",
+   "ementa": "Dispõe sobre a Empresa Simples de Crédito (ESC) e altera a Lei nº 9.613, de 3 de março de 1998 (Lei de Lavagem de Dinheiro), a Lei nº 9.249, de 26 de dezembro de 1995, e a Lei Complementar nº 123, de 14 de dezembro de 2006 (Lei do Simples Nacional), para regulamentar a ESC e instituir o Inova Simple",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp167.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei Complementar nº 167 de 24/04/2019",
+   "urn": "urn:lex:br:federal:lei.complementar:2019-04-24;167"
+  },
+  "lcp-35-1979": {
+   "caminho": "federal/leis-complementares/1979/lcp-35-1979-03-14.md",
+   "chave": "lcp-35-1979",
+   "ementa": "Dispõe sobre a Lei Orgânica da Magistratura Nacional.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp35.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei Complementar nº 35 de 14/03/1979",
+   "urn": "urn:lex:br:federal:lei.complementar:1979-03-14;35"
+  },
+  "lcp-5-1970": {
+   "caminho": "federal/leis-complementares/1970/lcp-5-1970-04-29.md",
+   "chave": "lcp-5-1970",
+   "ementa": "Estabelece, de acordo com a Emenda Constitucional nº 1, de 17 de outubro de 1969, art. 151 e seu parágrafo único, casos de inelegibilidades, e dá outras providências .",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei Complementar nº 5 de 29/04/1970",
+   "urn": "urn:lex:br:federal:lei.complementar:1970-04-29;5"
+  },
+  "lei-10224-2001": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/2001/lei-10224-2001-05-15.md",
+   "chave": "lei-10224-2001",
+   "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal,   para dispor sobre o crime de assédio sexual e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10224.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.224 de 15/05/2001",
+   "urn": "urn:lex:br:federal:lei:2001-05-15;10224"
+  },
+  "lei-10300-2001": {
+   "caminho": "federal/leis-ordinarias/2001/lei-10300-2001-10-31.md",
+   "chave": "lei-10300-2001",
+   "ementa": "Proíbe o emprego, o desenvolvimento, a fabricação, a comercialização, a   importação, a exportação, a aquisição, a estocagem, a retenção ou a   transferência, direta ou indiretamente, de minas terrestres antipessoal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10300.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.300 de 31/10/2001",
+   "urn": "urn:lex:br:federal:lei:2001-10-31;10300"
+  },
+  "lei-10406-2002": {
+   "caminho": "federal/leis-ordinarias/2002/lei-10406-2002-01-10.md",
+   "chave": "lei-10406-2002",
+   "ementa": "Institui o Código Civil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/L10406.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.406 de 10/01/2002",
+   "urn": "urn:lex:br:federal:lei:2002-01-10;10406"
+  },
+  "lei-10467-2002": {
+   "altera": [
+    "del-2848-1940",
+    "lei-9613-1998"
+   ],
+   "caminho": "federal/leis-ordinarias/2002/lei-10467-2002-06-11.md",
+   "chave": "lei-10467-2002",
+   "ementa": "Acrescenta o Capítulo II-A ao Título XI do Decreto-Lei nº 2.848, de 7 de   dezembro de 1940 - Código Penal, e dispositivo à Lei nº 9.613, de 3 de março de   1998, que \\\"dispõe sobre os crimes de ''lavagem'' ou ocultação de bens, direitos   e valores; a prevenção da utilização do Sistema Financeiro p",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/L10467.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.467 de 11/06/2002",
+   "urn": "urn:lex:br:federal:lei:2002-06-11;10467"
+  },
+  "lei-10637-2002": {
+   "caminho": "federal/leis-ordinarias/2002/lei-10637-2002-12-30.md",
+   "chave": "lei-10637-2002",
+   "ementa": "Dispõe sobre a não-cumulatividade na cobrança da contribuição para os Programas de Integração Social (PIS) e de Formação do Patrimônio do Servidor Público (Pasep), nos casos que especifica; sobre o pagamento e o parcelamento de débitos tributários federais, a compensação de créditos fiscais, a decla",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 11.727, de 2008",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/L10637.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.637 de 30/12/2002",
+   "urn": "urn:lex:br:federal:lei:2002-12-30;10637"
+  },
+  "lei-10763-2003": {
+   "caminho": "federal/leis-ordinarias/2003/lei-10763-2003-11-12.md",
+   "chave": "lei-10763-2003",
+   "ementa": "Acrescenta artigo ao Código Penal e modifica a pena cominada aos crimes de corrupção ativa e passiva.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.763.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.763 de 12/11/2003",
+   "urn": "urn:lex:br:federal:lei:2003-11-12;10763"
+  },
+  "lei-10764-2003": {
+   "altera": [
+    "lei-8069-1990"
+   ],
+   "caminho": "federal/leis-ordinarias/2003/lei-10764-2003-11-12.md",
+   "chave": "lei-10764-2003",
+   "ementa": "Altera a Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.764.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.764 de 12/11/2003",
+   "urn": "urn:lex:br:federal:lei:2003-11-12;10764"
+  },
+  "lei-10803-2003": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/2003/lei-10803-2003-12-11.md",
+   "chave": "lei-10803-2003",
+   "ementa": "Altera o art. 149 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para estabelecer penas ao crime nele tipificado e indicar as hipóteses em que se configura condição análoga à de escravo.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/L10.803.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.803 de 11/12/2003",
+   "urn": "urn:lex:br:federal:lei:2003-12-11;10803"
+  },
+  "lei-10886-2004": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/2004/lei-10886-2004-06-17.md",
+   "chave": "lei-10886-2004",
+   "ementa": "Acrescenta parágrafos ao art. 129 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, criando o tipo especial denominado \\\"Violência Doméstica\\\".",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.886.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 10.886 de 17/06/2004",
+   "urn": "urn:lex:br:federal:lei:2004-06-17;10886"
+  },
+  "lei-11254-2005": {
+   "caminho": "federal/leis-ordinarias/2005/lei-11254-2005-12-27.md",
+   "chave": "lei-11254-2005",
+   "ementa": "Estabelece as sanções administrativas e penais em caso de realização de atividades proibidas pela Convenção Internacional sobre a Proibição do Desenvolvimento, Produção, Estocagem e Uso das Armas Químicas e sobre a Destruição das Armas Químicas existentes no mundo (CPAQ).",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11254.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 11.254 de 27/12/2005",
+   "urn": "urn:lex:br:federal:lei:2005-12-27;11254"
+  },
+  "lei-11284-2006": {
+   "caminho": "federal/leis-ordinarias/2006/lei-11284-2006-03-02.md",
+   "chave": "lei-11284-2006",
+   "ementa": "Dispõe sobre a gestão de florestas públicas para a produção sustentável; institui, na estrutura do Ministério do Meio Ambiente, o Serviço Florestal Brasileiro - SFB; cria o Fundo Nacional de Desenvolvimento Florestal - FNDF; altera as Leis nºs 10.683, de 28 de maio de 2003, 5.868, de 12 de dezembro ",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11284.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 11.284 de 02/03/2006",
+   "urn": "urn:lex:br:federal:lei:2006-03-02;11284"
+  },
+  "lei-11419-2006": {
+   "caminho": "federal/leis-ordinarias/2006/lei-11419-2006-12-19.md",
+   "chave": "lei-11419-2006",
+   "ementa": "Dispõe sobre a informatização do processo judicial; altera a Lei nº 5.869, de 11 de janeiro de 1973 - Código de Processo Civil; e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11419.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 11.419 de 19/12/2006",
+   "urn": "urn:lex:br:federal:lei:2006-12-19;11419"
+  },
+  "lei-11428-2006": {
+   "caminho": "federal/leis-ordinarias/2006/lei-11428-2006-12-22.md",
+   "chave": "lei-11428-2006",
+   "ementa": "Dispõe sobre a utilização e proteção da vegetação nativa do Bioma Mata Atlântica, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11428.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 11.428 de 22/12/2006",
+   "urn": "urn:lex:br:federal:lei:2006-12-22;11428"
+  },
+  "lei-11484-2007": {
+   "caminho": "federal/leis-ordinarias/2007/lei-11484-2007-05-31.md",
+   "chave": "lei-11484-2007",
+   "ementa": "Dispõe sobre os incentivos às indústrias de equipamentos para TV Digital e de componentes eletrônicos semicondutores e sobre a proteção à propriedade intelectual das topografias de circuitos integrados, instituindo o Programa de Apoio ao Desenvolvimento Tecnológico da Indústria de Semicondutores - P",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11484.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 11.484 de 31/05/2007",
+   "urn": "urn:lex:br:federal:lei:2007-05-31;11484"
+  },
+  "lei-11771-2008": {
+   "caminho": "federal/leis-ordinarias/2008/lei-11771-2008-09-17.md",
+   "chave": "lei-11771-2008",
+   "ementa": "Dispõe sobre a Política Nacional de Turismo, define as atribuições do Governo Federal no planejamento, desenvolvimento e estímulo ao setor turístico; revoga a Lei nº 6.505, de 13 de dezembro de 1977, o Decreto-Lei nº 2.294, de 21 de novembro de 1986, e dispositivos da Lei nº 8.181, de 28 de março de",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11771.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 11.771 de 17/09/2008",
+   "urn": "urn:lex:br:federal:lei:2008-09-17;11771"
+  },
+  "lei-12038-2009": {
+   "altera": [
+    "lei-8069-1990"
+   ],
+   "caminho": "federal/leis-ordinarias/2009/lei-12038-2009-10-01.md",
+   "chave": "lei-12038-2009",
+   "ementa": "Altera o art. 250 da Lei nº 8.069, de 13 de julho de 1990 - Estatuto da Criança e do Adolescente, para determinar o fechamento definitivo de hotel, pensão, motel ou congênere que reiteradamente hospede crianças e adolescentes desacompanhados dos pais ou responsáveis, ou sem autorização.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12038.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.038 de 01/10/2009",
+   "urn": "urn:lex:br:federal:lei:2009-10-01;12038"
+  },
+  "lei-12305-2010": {
+   "caminho": "federal/leis-ordinarias/2010/lei-12305-2010-08-02.md",
+   "chave": "lei-12305-2010",
+   "ementa": "Institui a Política Nacional de Resíduos Sólidos; altera a Lei nº 9.605, de 12 de fevereiro de 1998; e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.305 de 02/08/2010",
+   "urn": "urn:lex:br:federal:lei:2010-08-02;12305"
+  },
+  "lei-12408-2011": {
+   "altera": [
+    "lei-9605-1998"
+   ],
+   "caminho": "federal/leis-ordinarias/2011/lei-12408-2011-05-25.md",
+   "chave": "lei-12408-2011",
+   "ementa": "Altera o art. 65 da Lei nº 9.605, de 12 de fevereiro de 1998, para descriminalizar o ato de grafitar, e dispõe sobre a proibição de comercialização de tintas em embalagens do tipo aerossol a menores de 18 (dezoito) anos.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12408.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.408 de 25/05/2011",
+   "urn": "urn:lex:br:federal:lei:2011-05-25;12408"
+  },
+  "lei-12550-2011": {
+   "caminho": "federal/leis-ordinarias/2011/lei-12550-2011-12-15.md",
+   "chave": "lei-12550-2011",
+   "ementa": "Autoriza o Poder Executivo a criar a empresa pública denominada Empresa Brasileira de Serviços Hospitalares - EBSERH; acrescenta dispositivos ao Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal; e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12550.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.550 de 15/12/2011",
+   "urn": "urn:lex:br:federal:lei:2011-12-15;12550"
+  },
+  "lei-12653-2012": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/2012/lei-12653-2012-05-28.md",
+   "chave": "lei-12653-2012",
+   "ementa": "Acresce o art. 135-A ao Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para tipificar o crime de condicionar atendimento médico-hospitalar emergencial a qualquer garantia e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12653.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.653 de 28/05/2012",
+   "urn": "urn:lex:br:federal:lei:2012-05-28;12653"
+  },
+  "lei-12663-2012": {
+   "caminho": "federal/leis-ordinarias/2012/lei-12663-2012-06-05.md",
+   "chave": "lei-12663-2012",
+   "ementa": "Dispõe sobre as medidas relativas à Copa das Confederações FIFA 2013, à Copa do Mundo FIFA 2014 e à Jornada Mundial da Juventude - 2013, que serão realizadas no Brasil; altera as Leis nºs 6.815, de 19 de agosto de 1980, e 10.671, de 15 de maio de 2003; e estabelece concessão de prêmio e de auxílio e",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12663.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.663 de 05/06/2012",
+   "urn": "urn:lex:br:federal:lei:2012-06-05;12663"
+  },
+  "lei-12683-2012": {
+   "altera": [
+    "lei-9613-1998"
+   ],
+   "caminho": "federal/leis-ordinarias/2012/lei-12683-2012-07-09.md",
+   "chave": "lei-12683-2012",
+   "ementa": "Altera a Lei nº 9.613, de 3 de março de 1998, para tornar mais eficiente a persecução penal dos crimes de lavagem de dinheiro.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12683.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.683 de 09/07/2012",
+   "urn": "urn:lex:br:federal:lei:2012-07-09;12683"
+  },
+  "lei-1269-1904": {
+   "caminho": "federal/leis-ordinarias/1904/lei-1269-1904-11-15.md",
+   "chave": "lei-1269-1904",
+   "ementa": "Reforma a legislação eleitoral, e dá outras providencias",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 1.269 de 15/11/1904",
+   "urn": "urn:lex:br:federal:lei:1904-11-15;1269"
+  },
+  "lei-12720-2012": {
+   "caminho": "federal/leis-ordinarias/2012/lei-12720-2012-09-27.md",
+   "chave": "lei-12720-2012",
+   "ementa": "Dispõe sobre o crime de extermínio de seres humanos; altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal; e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12720.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.720 de 27/09/2012",
+   "urn": "urn:lex:br:federal:lei:2012-09-27;12720"
+  },
+  "lei-12815-2013": {
+   "caminho": "federal/leis-ordinarias/2013/lei-12815-2013-06-05.md",
+   "chave": "lei-12815-2013",
+   "ementa": "Dispõe sobre a exploração direta e indireta pela União de portos e instalações portuárias e sobre as atividades desempenhadas pelos operadores portuários; altera as Leis nºs 5.025, de 10 de junho de 1966, 10.233, de 5 de junho de 2001, 10.683, de 28 de maio de 2003, 9.719, de 27 de novembro de 1998,",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12815.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.815 de 05/06/2013",
+   "urn": "urn:lex:br:federal:lei:2013-06-05;12815"
+  },
+  "lei-12921-2013": {
+   "caminho": "federal/leis-ordinarias/2013/lei-12921-2013-12-26.md",
+   "chave": "lei-12921-2013",
+   "ementa": "Proíbe a fabricação, a comercialização, a distribuição e a propaganda de produtos nacionais e importados, de qualquer natureza, bem como embalagens, destinados ao público infantojuvenil, reproduzindo a forma de cigarros e similares.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12921.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.921 de 26/12/2013",
+   "urn": "urn:lex:br:federal:lei:2013-12-26;12921"
+  },
+  "lei-12971-2014": {
+   "altera": [
+    "lei-9503-1997"
+   ],
+   "caminho": "federal/leis-ordinarias/2014/lei-12971-2014-05-09.md",
+   "chave": "lei-12971-2014",
+   "ementa": "Altera os arts. 173, 174, 175, 191, 202, 203, 292, 302, 303, 306 e 308 da Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro, para dispor sobre sanções administrativas e crimes de trânsito.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12971.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 12.971 de 09/05/2014",
+   "urn": "urn:lex:br:federal:lei:2014-05-09;12971"
+  },
+  "lei-13008-2014": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/2014/lei-13008-2014-06-26.md",
+   "chave": "lei-13008-2014",
+   "ementa": "Dá nova redação ao art. 334 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal e acrescenta-lhe o art. 334-A.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13008.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.008 de 26/06/2014",
+   "urn": "urn:lex:br:federal:lei:2014-06-26;13008"
+  },
+  "lei-1301-1950": {
+   "caminho": "federal/leis-ordinarias/1950/lei-1301-1950-12-28.md",
+   "chave": "lei-1301-1950",
+   "ementa": "Dispõe sôbre a organização judiciária do Distrito Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l1301.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 1.301 de 28/12/1950",
+   "urn": "urn:lex:br:federal:lei:1950-12-28;1301"
+  },
+  "lei-13105-2015": {
+   "caminho": "federal/leis-ordinarias/2015/lei-13105-2015-03-16.md",
+   "chave": "lei-13105-2015",
+   "ementa": "Código de Processo Civil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.105 de 16/03/2015",
+   "urn": "urn:lex:br:federal:lei:2015-03-16;13105"
+  },
+  "lei-13106-2015": {
+   "altera": [
+    "del-3688-1941",
+    "lei-8069-1990"
+   ],
+   "caminho": "federal/leis-ordinarias/2015/lei-13106-2015-03-17.md",
+   "chave": "lei-13106-2015",
+   "ementa": "Altera a Lei nº 8.069, de 13 de julho de 1990 - Estatuto da Criança e do Adolescente, para tornar crime vender, fornecer, servir, ministrar ou entregar bebida alcoólica a criança ou a adolescente; e revoga o inciso I do art. 63 do Decreto-Lei nº 3.688, de 3 de outubro de 1941 - Lei das Contravenções",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13106.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.106 de 17/03/2015",
+   "urn": "urn:lex:br:federal:lei:2015-03-17;13106"
+  },
+  "lei-13284-2016": {
+   "caminho": "federal/leis-ordinarias/2016/lei-13284-2016-05-10.md",
+   "chave": "lei-13284-2016",
+   "ementa": "Dispõe sobre as medidas relativas aos Jogos Olímpicos e Paraolímpicos de 2016 e aos eventos relacionados, que serão realizados no Brasil; e altera a Lei nº 12.035, de 1º de outubro de 2009, que \\\"institui o Ato Olímpico, no âmbito da administração pública federal\\\", e a Lei nº 12.780, de 9 de janeir",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13284.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.284 de 10/05/2016",
+   "urn": "urn:lex:br:federal:lei:2016-05-10;13284"
+  },
+  "lei-13301-2016": {
+   "caminho": "federal/leis-ordinarias/2016/lei-13301-2016-06-27.md",
+   "chave": "lei-13301-2016",
+   "ementa": "Dispõe sobre a adoção de medidas de vigilância em saúde quando verificada situação de iminente perigo à saúde pública pela presença do mosquito transmissor do vírus da dengue, do vírus chikungunya e do vírus da zika; e altera a Lei nº 6.437, de 20 de agosto de 1977.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13301.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.301 de 27/06/2016",
+   "urn": "urn:lex:br:federal:lei:2016-06-27;13301"
+  },
+  "lei-13431-2017": {
+   "caminho": "federal/leis-ordinarias/2017/lei-13431-2017-04-04.md",
+   "chave": "lei-13431-2017",
+   "ementa": "Estabelece o sistema de garantia de direitos da criança e do adolescente vítima ou testemunha de violência e altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente).",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.431 de 04/04/2017",
+   "urn": "urn:lex:br:federal:lei:2017-04-04;13431"
+  },
+  "lei-13488-2017": {
+   "altera": [
+    "lei-4737-1965",
+    "lei-9504-1997"
+   ],
+   "caminho": "federal/leis-ordinarias/2017/lei-13488-2017-10-06.md",
+   "chave": "lei-13488-2017",
+   "ementa": "Altera as Leis nºs 9.504, de 30 de setembro de 1997 (Lei das Eleições), 9.096, de 19 de setembro de 1995, e 4.737, de 15 de julho de 1965 (Código Eleitoral), e revoga dispositivos da Lei nº 13.165, de 29 de setembro de 2015 (Minirreforma Eleitoral de 2015), com o fim de promover reforma no ordenamen",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13488.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 13.488 de 06/10/2017",
+   "urn": "urn:lex:br:federal:lei:2017-10-06;13488"
+  },
+  "lei-136-1935": {
+   "caminho": "federal/leis-ordinarias/1935/lei-136-1935-12-14.md",
+   "chave": "lei-136-1935",
+   "ementa": "Modifica vários dispositivos da Lei n.º 38, de 4 de abril de 1935 e define novos crimes contra a ordem político social.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 1802, de 1953 Texto para impressão (Vide Decreto-lei nº",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1930-1949/L0136.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 136 de 14/12/1935",
+   "urn": "urn:lex:br:federal:lei:1935-12-14;136"
+  },
+  "lei-1390-1951": {
+   "caminho": "federal/leis-ordinarias/1951/lei-1390-1951-07-03.md",
+   "chave": "lei-1390-1951",
+   "ementa": "Inclui entre as contravenções penais a prática de atos resultantes de preconceitos de raça ou de côr.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l1390.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 1.390 de 03/07/1951",
+   "urn": "urn:lex:br:federal:lei:1951-07-03;1390"
+  },
+  "lei-14967-2024": {
+   "caminho": "federal/leis-ordinarias/2024/lei-14967-2024-09-09.md",
+   "chave": "lei-14967-2024",
+   "ementa": "Institui o Estatuto da Segurança Privada e da Segurança das Instituições Financeiras; altera a Lei nº 10.826, de 22 de dezembro de 2003 (Estatuto do Desarmamento), a Lei nº 10.446, de 8 de maio de 2002, a Lei nº 10.637, de 30 de dezembro de 2002, a Lei nº 10.833, de 29 de dezembro de 2003, e o Decre",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 14.967 de 09/09/2024",
+   "urn": "urn:lex:br:federal:lei:2024-09-09;14967"
+  },
+  "lei-1616-1906": {
+   "caminho": "federal/leis-ordinarias/1906/lei-1616-1906-12-30.md",
+   "chave": "lei-1616-1906",
+   "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brazil para o exercicio de 1907, e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 1.616 de 30/12/1906",
+   "urn": "urn:lex:br:federal:lei:1906-12-30;1616"
+  },
+  "lei-1785-1907": {
+   "caminho": "federal/leis-ordinarias/1907/lei-1785-1907-11-28.md",
+   "chave": "lei-1785-1907",
+   "ementa": "Estabelece penas para o crime de peculato, e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 1.785 de 28/11/1907",
+   "urn": "urn:lex:br:federal:lei:1907-11-28;1785"
+  },
+  "lei-1802-1953": {
+   "caminho": "federal/leis-ordinarias/1953/lei-1802-1953-01-05.md",
+   "chave": "lei-1802-1953",
+   "ementa": "Define os crimes contra o Estado e a Ordem Política e Social, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l1802.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 1.802 de 05/01/1953",
+   "urn": "urn:lex:br:federal:lei:1953-01-05;1802"
+  },
+  "lei-187-1936": {
+   "caminho": "federal/leis-ordinarias/1936/lei-187-1936-01-15.md",
+   "chave": "lei-187-1936",
+   "ementa": "Dispõe sobre as duplicatas e contas assignadas.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1930-1949/l187.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 187 de 15/01/1936",
+   "urn": "urn:lex:br:federal:lei:1936-01-15;187"
+  },
+  "lei-196-1936": {
+   "caminho": "federal/leis-ordinarias/1936/lei-196-1936-01-18.md",
+   "chave": "lei-196-1936",
+   "ementa": "Institue a Lei Organica para o Districto Federal",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 196 de 18/01/1936",
+   "urn": "urn:lex:br:federal:lei:1936-01-18;196"
+  },
+  "lei-2024-1908": {
+   "caminho": "federal/leis-ordinarias/1908/lei-2024-1908-12-17.md",
+   "chave": "lei-2024-1908",
+   "ementa": "Reforma a lei sobre fallencias",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.024 de 17/12/1908",
+   "urn": "urn:lex:br:federal:lei:1908-12-17;2024"
+  },
+  "lei-2180-1954": {
+   "caminho": "federal/leis-ordinarias/1954/lei-2180-1954-02-05.md",
+   "chave": "lei-2180-1954",
+   "ementa": "Dispõe sobre o Tribunal Marítimo.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l2180.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.180 de 05/02/1954",
+   "urn": "urn:lex:br:federal:lei:1954-02-05;2180"
+  },
+  "lei-2321-1910": {
+   "caminho": "federal/leis-ordinarias/1910/lei-2321-1910-12-30.md",
+   "chave": "lei-2321-1910",
+   "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brazil para o exercicio de 1911 e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.321 de 30/12/1910",
+   "urn": "urn:lex:br:federal:lei:1910-12-30;2321"
+  },
+  "lei-2416-1911": {
+   "caminho": "federal/leis-ordinarias/1911/lei-2416-1911-06-28.md",
+   "chave": "lei-2416-1911",
+   "ementa": "Regula a extradição de nacionaes e estrangeiros e o processo e julgamento   dos mesmos, quando, fóra do paiz, perpetrarem algum dos crimes mencionados nesta   lei",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.416 de 28/06/1911",
+   "urn": "urn:lex:br:federal:lei:1911-06-28;2416"
+  },
+  "lei-2550-1955": {
+   "caminho": "federal/leis-ordinarias/1955/lei-2550-1955-07-25.md",
+   "chave": "lei-2550-1955",
+   "ementa": "Altera dispositivos do Código Eleitoral e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l2550.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.550 de 25/07/1955",
+   "urn": "urn:lex:br:federal:lei:1955-07-25;2550"
+  },
+  "lei-264-1936": {
+   "caminho": "federal/leis-ordinarias/1936/lei-264-1936-10-05.md",
+   "chave": "lei-264-1936",
+   "ementa": "Regula o horario de   trabalho nos serviços publicos",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 264 de 05/10/1936",
+   "urn": "urn:lex:br:federal:lei:1936-10-05;264"
+  },
+  "lei-2841-1913": {
+   "caminho": "federal/leis-ordinarias/1913/lei-2841-1913-12-31.md",
+   "chave": "lei-2841-1913",
+   "ementa": "Orça a Receita Geral da Republica dos Estados Unidos do Brazil para o exercicio de 1914",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pena",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1901-1929/L2841.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.841 de 31/12/1913",
+   "urn": "urn:lex:br:federal:lei:1913-12-31;2841"
+  },
+  "lei-2924-1915": {
+   "caminho": "federal/leis-ordinarias/1915/lei-2924-1915-01-05.md",
+   "chave": "lei-2924-1915",
+   "ementa": "Fixa a Despeza Geral da Republica dos Estados Unidos do Brazil para o axercicio de 1915.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.924 de 05/01/1915",
+   "urn": "urn:lex:br:federal:lei:1915-01-05;2924"
+  },
+  "lei-2974-1956": {
+   "caminho": "federal/leis-ordinarias/1956/lei-2974-1956-11-26.md",
+   "chave": "lei-2974-1956",
+   "ementa": "Altera disposições do Decreto nº 26.149, de 5 de janeiro de 1949 (Consolidação das Leis do Imposto de Consumo), e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l2974.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.974 de 26/11/1956",
+   "urn": "urn:lex:br:federal:lei:1956-11-26;2974"
+  },
+  "lei-2992-1915": {
+   "caminho": "federal/leis-ordinarias/1915/lei-2992-1915-09-25.md",
+   "chave": "lei-2992-1915",
+   "ementa": "Modifica os arts. 266, 277 e 278 do Codigo Penal",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 2.992 de 25/09/1915",
+   "urn": "urn:lex:br:federal:lei:1915-09-25;2992"
+  },
+  "lei-3071-1916": {
+   "caminho": "federal/leis-ordinarias/1916/lei-3071-1916-01-01.md",
+   "chave": "lei-3071-1916",
+   "ementa": "Código Civil dos Estados Unidos do Brasil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 10.406, de 2002 Texto para impressão (Vide alterações na",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l3071.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 3.071 de 01/01/1916",
+   "urn": "urn:lex:br:federal:lei:1916-01-01;3071"
+  },
+  "lei-3139-1916": {
+   "caminho": "federal/leis-ordinarias/1916/lei-3139-1916-08-02.md",
+   "chave": "lei-3139-1916",
+   "ementa": "Prescreve o modo por que deve ser feito o alistamento eleitoral e dá outras providencias",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 3.139 de 02/08/1916",
+   "urn": "urn:lex:br:federal:lei:1916-08-02;3139"
+  },
+  "lei-3208-1916": {
+   "caminho": "federal/leis-ordinarias/1916/lei-3208-1916-12-27.md",
+   "chave": "lei-3208-1916",
+   "ementa": "Regula o processo eleitoral e dá outras providencias",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 3.208 de 27/12/1916",
+   "urn": "urn:lex:br:federal:lei:1916-12-27;3208"
+  },
+  "lei-3274-1957": {
+   "caminho": "federal/leis-ordinarias/1957/lei-3274-1957-10-02.md",
+   "chave": "lei-3274-1957",
+   "ementa": "Dispõe sôbre Normas Gerais do Regime Penitenciário, em conformidade do que estatui o art. 5º, nº XV, letra \\\"b\\\", da Constituição Federal, e amplia as atribuições da Inspetoria Geral Penitenciária.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 7.210, de 1984 Texto para impressão (Vide art. 5º, n.º X",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3274.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 3.274 de 02/10/1957",
+   "urn": "urn:lex:br:federal:lei:1957-10-02;3274"
+  },
+  "lei-35-1892": {
+   "caminho": "federal/leis-ordinarias/1892/lei-35-1892-01-26.md",
+   "chave": "lei-35-1892",
+   "ementa": "Estabelece o processo para as eleições federais,",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 35 de 26/01/1892",
+   "urn": "urn:lex:br:federal:lei:1892-01-26;35"
+  },
+  "lei-3750-1960": {
+   "caminho": "federal/leis-ordinarias/1960/lei-3750-1960-04-11.md",
+   "chave": "lei-3750-1960",
+   "ementa": "Autoriza o Poder Executivo a transformar em Fundação o Serviço Especial de Saúde Pública, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3750.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 3.750 de 11/04/1960",
+   "urn": "urn:lex:br:federal:lei:1960-04-11;3750"
+  },
+  "lei-379-1937": {
+   "caminho": "federal/leis-ordinarias/1937/lei-379-1937-01-16.md",
+   "chave": "lei-379-1937",
+   "ementa": "Regula o casamento religioso para os effeitos civis.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 379 de 16/01/1937",
+   "urn": "urn:lex:br:federal:lei:1937-01-16;379"
+  },
+  "lei-38-1935": {
+   "caminho": "federal/leis-ordinarias/1935/lei-38-1935-04-04.md",
+   "chave": "lei-38-1935",
+   "ementa": "Define crimes contra a ordem política e social.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 1.802, de 1953 Texto para impressão (Vide Lei nº 136, de",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1930-1949/L0038.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 38 de 04/04/1935",
+   "urn": "urn:lex:br:federal:lei:1935-04-04;38"
+  },
+  "lei-3807-1960": {
+   "caminho": "federal/leis-ordinarias/1960/lei-3807-1960-08-26.md",
+   "chave": "lei-3807-1960",
+   "ementa": "Dispõe sobre a Lei Orgânica da Previdência Social.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 15.257, de 2025 Texto para impressão d",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3807.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 3.807 de 26/08/1960",
+   "urn": "urn:lex:br:federal:lei:1960-08-26;3807"
+  },
+  "lei-3833-1960": {
+   "caminho": "federal/leis-ordinarias/1960/lei-3833-1960-12-08.md",
+   "chave": "lei-3833-1960",
+   "ementa": "Cria regime especial de desapropriação por utilidade pública para execução de obras no Polígono das Secas.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3833.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 3.833 de 08/12/1960",
+   "urn": "urn:lex:br:federal:lei:1960-12-08;3833"
+  },
+  "lei-388-1937": {
+   "caminho": "federal/leis-ordinarias/1937/lei-388-1937-02-03.md",
+   "chave": "lei-388-1937",
+   "ementa": "Regula os fretes marítimos para o exterior.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 388 de 03/02/1937",
+   "urn": "urn:lex:br:federal:lei:1937-02-03;388"
+  },
+  "lei-4115-1962": {
+   "caminho": "federal/leis-ordinarias/1962/lei-4115-1962-08-22.md",
+   "chave": "lei-4115-1962",
+   "ementa": "Introduz alterações na Lei nº 4.109, de 27 de julho de 1962, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4115.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.115 de 22/08/1962",
+   "urn": "urn:lex:br:federal:lei:1962-08-22;4115"
+  },
+  "lei-4215-1963": {
+   "caminho": "federal/leis-ordinarias/1963/lei-4215-1963-04-27.md",
+   "chave": "lei-4215-1963",
+   "ementa": "Dispõe sôbre o Estatuto da Ordem dos Advogados do Brasil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 8.906, de 1994 Texto para impressão Mensagem de veto Vig",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4215.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 4.215 de 27/04/1963",
+   "urn": "urn:lex:br:federal:lei:1963-04-27;4215"
+  },
+  "lei-4263-1921": {
+   "caminho": "federal/leis-ordinarias/1921/lei-4263-1921-01-14.md",
+   "chave": "lei-4263-1921",
+   "ementa": "Regula as requisições militares",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1901-1929/L4263.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.263 de 14/01/1921",
+   "urn": "urn:lex:br:federal:lei:1921-01-14;4263"
+  },
+  "lei-4319-1964": {
+   "caminho": "federal/leis-ordinarias/1964/lei-4319-1964-03-16.md",
+   "chave": "lei-4319-1964",
+   "ementa": "Cria o Conselho de Defesa dos Direitos da Pessoa Humana.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 12.986, de 2014 Texto para impressão Art. 2º O Conselho",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4319.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 4.319 de 16/03/1964",
+   "urn": "urn:lex:br:federal:lei:1964-03-16;4319"
+  },
+  "lei-4330-1964": {
+   "caminho": "federal/leis-ordinarias/1964/lei-4330-1964-06-01.md",
+   "chave": "lei-4330-1964",
+   "ementa": "Regula o direito de greve, na forma do art. 158, da Constituição Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 7.783, de 28.6.1989 Texto para impressão Regula o direit",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4330.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 4.330 de 01/06/1964",
+   "urn": "urn:lex:br:federal:lei:1964-06-01;4330"
+  },
+  "lei-4494-1964": {
+   "caminho": "federal/leis-ordinarias/1964/lei-4494-1964-11-25.md",
+   "chave": "lei-4494-1964",
+   "ementa": "Regula a Locação de Prédios Urbanos.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 6.649, de 1979 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4494.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 4.494 de 25/11/1964",
+   "urn": "urn:lex:br:federal:lei:1964-11-25;4494"
+  },
+  "lei-4502-1964": {
+   "caminho": "federal/leis-ordinarias/1964/lei-4502-1964-11-30.md",
+   "chave": "lei-4502-1964",
+   "ementa": "Dispõe sobre o Impôsto de Consumo e reorganiza a Diretoria de Rendas Internas.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l4502.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.502 de 30/11/1964",
+   "urn": "urn:lex:br:federal:lei:1964-11-30;4502"
+  },
+  "lei-4680-1965": {
+   "caminho": "federal/leis-ordinarias/1965/lei-4680-1965-06-18.md",
+   "chave": "lei-4680-1965",
+   "ementa": "Dispõe sôbre o exercício da profissão de Publicitário e de Agenciador de Propaganda e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Vigência encerrada",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l4680.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.680 de 18/06/1965",
+   "urn": "urn:lex:br:federal:lei:1965-06-18;4680"
+  },
+  "lei-4738-1965": {
+   "caminho": "federal/leis-ordinarias/1965/lei-4738-1965-07-15.md",
+   "chave": "lei-4738-1965",
+   "ementa": "Estabelece novos casos de inelegibilidades, com fundamento no art. 2º da Emenda Constitucional número 14.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4738.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.738 de 15/07/1965",
+   "urn": "urn:lex:br:federal:lei:1965-07-15;4738"
+  },
+  "lei-48-1935": {
+   "caminho": "federal/leis-ordinarias/1935/lei-48-1935-05-04.md",
+   "chave": "lei-48-1935",
+   "ementa": "Modifica o Código Eleitoral.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1930-1949/L0048.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 48 de 04/05/1935",
+   "urn": "urn:lex:br:federal:lei:1935-05-04;48"
+  },
+  "lei-4886-1965": {
+   "caminho": "federal/leis-ordinarias/1965/lei-4886-1965-12-09.md",
+   "chave": "lei-4886-1965",
+   "ementa": "Regula as atividades dos representantes comerciais autônomos.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l4886.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.886 de 09/12/1965",
+   "urn": "urn:lex:br:federal:lei:1965-12-09;4886"
+  },
+  "lei-496-1898": {
+   "caminho": "federal/leis-ordinarias/1898/lei-496-1898-08-01.md",
+   "chave": "lei-496-1898",
+   "ementa": "Define e garante os direitos autoraes",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 496 de 01/08/1898",
+   "urn": "urn:lex:br:federal:lei:1898-08-01;496"
+  },
+  "lei-4961-1966": {
+   "caminho": "federal/leis-ordinarias/1966/lei-4961-1966-05-04.md",
+   "chave": "lei-4961-1966",
+   "ementa": "Altera a redação da Lei nº 4.737, de 15 julho de 1965 (Código Eleitoral).",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4961.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 4.961 de 04/05/1966",
+   "urn": "urn:lex:br:federal:lei:1966-05-04;4961"
+  },
+  "lei-5056-1966": {
+   "caminho": "federal/leis-ordinarias/1966/lei-5056-1966-06-29.md",
+   "chave": "lei-5056-1966",
+   "ementa": "Modifica dispositivos da Lei nº 2.180, de 5 de fevereiro de 1954, alterada pela de nº 3.543, de 11 de fevereiro de 1959, que dispõe sobre o Tribunal Marítimo, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l5056.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 5.056 de 29/06/1966",
+   "urn": "urn:lex:br:federal:lei:1966-06-29;5056"
+  },
+  "lei-5258-1967": {
+   "caminho": "federal/leis-ordinarias/1967/lei-5258-1967-04-10.md",
+   "chave": "lei-5258-1967",
+   "ementa": "Dispõe sôbre medidas aplicáveis aos menores de 18 anos pela prática de fatos definidos como infrações penais e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 6.697, de 1979 Texto para impressão Dispõe sôbre medidas",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l5258.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 5.258 de 10/04/1967",
+   "urn": "urn:lex:br:federal:lei:1967-04-10;5258"
+  },
+  "lei-5474-1968": {
+   "caminho": "federal/leis-ordinarias/1968/lei-5474-1968-07-18.md",
+   "chave": "lei-5474-1968",
+   "ementa": "Dispõe sôbre as Duplicatas, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pelo Decreto-Lei nº 436, de 27.1.1969",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l5474.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 5.474 de 18/07/1968",
+   "urn": "urn:lex:br:federal:lei:1968-07-18;5474"
+  },
+  "lei-559-1898": {
+   "caminho": "federal/leis-ordinarias/1898/lei-559-1898-12-31.md",
+   "chave": "lei-559-1898",
+   "ementa": "Orça receita geral da Republica dos Estados Unidos do   Brazil para o exercicio de 1899, e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 559 de 31/12/1898",
+   "urn": "urn:lex:br:federal:lei:1898-12-31;559"
+  },
+  "lei-5786-1972": {
+   "caminho": "federal/leis-ordinarias/1972/lei-5786-1972-06-27.md",
+   "chave": "lei-5786-1972",
+   "ementa": "Define como crimes contra a segurança nacional o apoderamento e o controle   de aeronave.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 6.620, de 1978 Texto para impressão Define como crimes c",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L5786.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 5.786 de 27/06/1972",
+   "urn": "urn:lex:br:federal:lei:1972-06-27;5786"
+  },
+  "lei-5869-1973": {
+   "caminho": "federal/leis-ordinarias/1973/lei-5869-1973-01-11.md",
+   "chave": "lei-5869-1973",
+   "ementa": "Institui o Código de Processo Civil.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 13.105, de 2015 (Vigência",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l5869.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 5.869 de 11/01/1973",
+   "urn": "urn:lex:br:federal:lei:1973-01-11;5869"
+  },
+  "lei-5905-1973": {
+   "caminho": "federal/leis-ordinarias/1973/lei-5905-1973-07-12.md",
+   "chave": "lei-5905-1973",
+   "ementa": "Dispõe sobre a criação dos Conselhos Federal e Regionais de Enfermagem e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l5905.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 5.905 de 12/07/1973",
+   "urn": "urn:lex:br:federal:lei:1973-07-12;5905"
+  },
+  "lei-5917-1973": {
+   "caminho": "federal/leis-ordinarias/1973/lei-5917-1973-09-10.md",
+   "chave": "lei-5917-1973",
+   "ementa": "Aprova o Plano Nacional de Viação e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 14.273, de 2021",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l5917.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 5.917 de 10/09/1973",
+   "urn": "urn:lex:br:federal:lei:1973-09-10;5917"
+  },
+  "lei-6016-1973": {
+   "caminho": "federal/leis-ordinarias/1973/lei-6016-1973-12-31.md",
+   "chave": "lei-6016-1973",
+   "ementa": "Altera dispositivos do Decreto-lei nº 1.004, de 21 de outubro de   1969, que instituiu o Código Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 6.578, de 1978 Texto para impressão Emílio G. Médici",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6016.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 6.016 de 31/12/1973",
+   "urn": "urn:lex:br:federal:lei:1973-12-31;6016"
+  },
+  "lei-6192-1974": {
+   "caminho": "federal/leis-ordinarias/1974/lei-6192-1974-12-19.md",
+   "chave": "lei-6192-1974",
+   "ementa": "Dispõe sobre restrições a brasileiros naturalizados, e dá outras   providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6192.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 6.192 de 19/12/1974",
+   "urn": "urn:lex:br:federal:lei:1974-12-19;6192"
+  },
+  "lei-628-1899": {
+   "caminho": "federal/leis-ordinarias/1899/lei-628-1899-10-28.md",
+   "chave": "lei-628-1899",
+   "ementa": "Amplia a acção penal por denuncia do Ministerio Publico, e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 628 de 28/10/1899",
+   "urn": "urn:lex:br:federal:lei:1899-10-28;628"
+  },
+  "lei-6416-1977": {
+   "altera": [
+    "del-2848-1940",
+    "del-3688-1941",
+    "del-3689-1941"
+   ],
+   "caminho": "federal/leis-ordinarias/1977/lei-6416-1977-05-24.md",
+   "chave": "lei-6416-1977",
+   "ementa": "Altera dispositivos do Código Penal (Decreto-lei nº 2.848, de 7 de dezembro de 1940), do Código de Processo Penal (Decreto-lei nº 3.689, de 3 de outubro de 1941), da Lei das Contravenções Penais (Decreto-lei nº 3.688, de 3 de outubro de 1941), e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l6416.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 6.416 de 24/05/1977",
+   "urn": "urn:lex:br:federal:lei:1977-05-24;6416"
+  },
+  "lei-6437-1977": {
+   "caminho": "federal/leis-ordinarias/1977/lei-6437-1977-08-20.md",
+   "chave": "lei-6437-1977",
+   "ementa": "Configura infrações à legislação sanitária federal, estabelece as sanções respectivas, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l6437.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 6.437 de 20/08/1977",
+   "urn": "urn:lex:br:federal:lei:1977-08-20;6437"
+  },
+  "lei-6562-1978": {
+   "caminho": "federal/leis-ordinarias/1978/lei-6562-1978-09-18.md",
+   "chave": "lei-6562-1978",
+   "ementa": "Altera a redação dos artigos 48 e 169 do Decreto-Lei nº 37, de 18 de novembro de 1966, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pelo Decreto-lei nº 2.472, de 1988",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6562.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 6.562 de 18/09/1978",
+   "urn": "urn:lex:br:federal:lei:1978-09-18;6562"
+  },
+  "lei-6620-1978": {
+   "caminho": "federal/leis-ordinarias/1978/lei-6620-1978-12-17.md",
+   "chave": "lei-6620-1978",
+   "ementa": "Define os crimes contra a Segurança Nacional, estabelece a sistemática para o seu processo e julgamento e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 7.170, de 1983 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6620.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 6.620 de 17/12/1978",
+   "urn": "urn:lex:br:federal:lei:1978-12-17;6620"
+  },
+  "lei-6633-1979": {
+   "caminho": "federal/leis-ordinarias/1979/lei-6633-1979-04-28.md",
+   "chave": "lei-6633-1979",
+   "ementa": "Veda a exibição de cartaz cinematográfico que não seja criado, produzido e   impresso por brasileiro ou empresa brasileira.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6633.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 6.633 de 28/04/1979",
+   "urn": "urn:lex:br:federal:lei:1979-04-28;6633"
+  },
+  "lei-6649-1979": {
+   "caminho": "federal/leis-ordinarias/1979/lei-6649-1979-05-16.md",
+   "chave": "lei-6649-1979",
+   "ementa": "Regula a locação predial urbana e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei 8.245, de 1991 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6649.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 6.649 de 16/05/1979",
+   "urn": "urn:lex:br:federal:lei:1979-05-16;6649"
+  },
+  "lei-6697-1979": {
+   "caminho": "federal/leis-ordinarias/1979/lei-6697-1979-10-10.md",
+   "chave": "lei-6697-1979",
+   "ementa": "Institui o Código de Menores.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogada pela Lei nº 8.069, de 1990 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6697.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 6.697 de 10/10/1979",
+   "urn": "urn:lex:br:federal:lei:1979-10-10;6697"
+  },
+  "lei-6996-1982": {
+   "caminho": "federal/leis-ordinarias/1982/lei-6996-1982-06-07.md",
+   "chave": "lei-6996-1982",
+   "ementa": "Dispõe sobre a utilização de processamento eletrônico de dados nos serviços eleitorais, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 7.444, de 1985",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/L6996.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 6.996 de 07/06/1982",
+   "urn": "urn:lex:br:federal:lei:1982-06-07;6996"
+  },
+  "lei-7021-1982": {
+   "caminho": "federal/leis-ordinarias/1982/lei-7021-1982-09-06.md",
+   "chave": "lei-7021-1982",
+   "ementa": "Estabelece o modelo de cédula oficial única a ser usada nas eleições de 15   de novembro de 1982 e dá outra providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/L7021.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 7.021 de 06/09/1982",
+   "urn": "urn:lex:br:federal:lei:1982-09-06;7021"
+  },
+  "lei-741-1900": {
+   "caminho": "federal/leis-ordinarias/1900/lei-741-1900-12-26.md",
+   "chave": "lei-741-1900",
+   "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brasil para o exercicio de 1901, e dá outras providencias.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 741 de 26/12/1900",
+   "urn": "urn:lex:br:federal:lei:1900-12-26;741"
+  },
+  "lei-7653-1988": {
+   "altera": [
+    "lei-5197-1967"
+   ],
+   "caminho": "federal/leis-ordinarias/1988/lei-7653-1988-02-12.md",
+   "chave": "lei-7653-1988",
+   "ementa": "Altera a redação dos arts. 18, 27, 33 e 34 da Lei nº 5.197, de 03 de janeiro de 1967, que dispõe sobre a proteção à fauna, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l7653.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 7.653 de 12/02/1988",
+   "urn": "urn:lex:br:federal:lei:1988-02-12;7653"
+  },
+  "lei-7664-1988": {
+   "caminho": "federal/leis-ordinarias/1988/lei-7664-1988-06-29.md",
+   "chave": "lei-7664-1988",
+   "ementa": "Estabelece normas para a realização das eleições municipais de 15 de novembro de 1988 e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/L7664.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 7.664 de 29/06/1988",
+   "urn": "urn:lex:br:federal:lei:1988-06-29;7664"
+  },
+  "lei-7780-1989": {
+   "caminho": "federal/leis-ordinarias/1989/lei-7780-1989-06-22.md",
+   "chave": "lei-7780-1989",
+   "ementa": "Introduz alterações nos arts. 325 e 581 do Código de Processo Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l7780.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 7.780 de 22/06/1989",
+   "urn": "urn:lex:br:federal:lei:1989-06-22;7780"
+  },
+  "lei-7853-1989": {
+   "caminho": "federal/leis-ordinarias/1989/lei-7853-1989-10-24.md",
+   "chave": "lei-7853-1989",
+   "ementa": "Dispõe sobre o apoio às pessoas portadoras de deficiência, sua integração social, sobre a Coordenadoria Nacional para Integração da Pessoa Portadora de Deficiência (CORDE), institui a tutela jurisdicional de interesses coletivos ou difusos dessas pessoas, disciplina a atuação do Ministério Público, ",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l7853.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 7.853 de 24/10/1989",
+   "urn": "urn:lex:br:federal:lei:1989-10-24;7853"
+  },
+  "lei-7925-1989": {
+   "caminho": "federal/leis-ordinarias/1989/lei-7925-1989-12-12.md",
+   "chave": "lei-7925-1989",
+   "ementa": "Autoriza o Poder Executivo a abrir, ao Orçamento Fiscal da União, créditos adicionais até o limite de NCz$ 5.960.646.387,00, para os fins que especifica, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 7.925 de 12/12/1989",
+   "urn": "urn:lex:br:federal:lei:1989-12-12;7925"
+  },
+  "lei-8214-1991": {
+   "caminho": "federal/leis-ordinarias/1991/lei-8214-1991-07-24.md",
+   "chave": "lei-8214-1991",
+   "ementa": "Estabelece normas para a realização das eleições municipais de 3 de outubro de 1992 e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8214.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 8.214 de 24/07/1991",
+   "urn": "urn:lex:br:federal:lei:1991-07-24;8214"
+  },
+  "lei-85-1892": {
+   "caminho": "federal/leis-ordinarias/1892/lei-85-1892-09-20.md",
+   "chave": "lei-85-1892",
+   "ementa": "Estabelece a organização municipal do Districto Federal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 85 de 20/09/1892",
+   "urn": "urn:lex:br:federal:lei:1892-09-20;85"
+  },
+  "lei-859-1902": {
+   "caminho": "federal/leis-ordinarias/1902/lei-859-1902-08-16.md",
+   "chave": "lei-859-1902",
+   "ementa": "Reforma a lei sobre fallencias",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 859 de 16/08/1902",
+   "urn": "urn:lex:br:federal:lei:1902-08-16;859"
+  },
+  "lei-8630-1993": {
+   "caminho": "federal/leis-ordinarias/1993/lei-8630-1993-02-25.md",
+   "chave": "lei-8630-1993",
+   "ementa": "Dispõe sobre o regime jurídico da exploração dos portos organizados e das instalações portuárias e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Medida Provisória nº 595, de 2012 Revogado pela Lei nº 12.815, de 2013 Texto",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8630.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 8.630 de 25/02/1993",
+   "urn": "urn:lex:br:federal:lei:1993-02-25;8630"
+  },
+  "lei-8635-1993": {
+   "caminho": "federal/leis-ordinarias/1993/lei-8635-1993-03-16.md",
+   "chave": "lei-8635-1993",
+   "ementa": "Dá nova redação ao art. 184 do Código Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 8.635 de 16/03/1993",
+   "urn": "urn:lex:br:federal:lei:1993-03-16;8635"
+  },
+  "lei-8683-1993": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/1993/lei-8683-1993-07-15.md",
+   "chave": "lei-8683-1993",
+   "ementa": "Dá nova redação ao art. 206 do Decreto-Lei n° 2.848, de 7 de dezembro   de 1940 -Código Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 8.683 de 15/07/1993",
+   "urn": "urn:lex:br:federal:lei:1993-07-15;8683"
+  },
+  "lei-8713-1993": {
+   "caminho": "federal/leis-ordinarias/1993/lei-8713-1993-09-30.md",
+   "chave": "lei-8713-1993",
+   "ementa": "Estabelece normas para as eleições de 3 de outubro de 1994.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8713.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 8.713 de 30/09/1993",
+   "urn": "urn:lex:br:federal:lei:1993-09-30;8713"
+  },
+  "lei-8935-1994": {
+   "caminho": "federal/leis-ordinarias/1994/lei-8935-1994-11-18.md",
+   "chave": "lei-8935-1994",
+   "ementa": "Regulamenta o art. 236 da Constituição Federal, dispondo sobre serviços notariais e de registro.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8935.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 8.935 de 18/11/1994",
+   "urn": "urn:lex:br:federal:lei:1994-11-18;8935"
+  },
+  "lei-8969-1994": {
+   "caminho": "federal/leis-ordinarias/1994/lei-8969-1994-12-28.md",
+   "chave": "lei-8969-1994",
+   "ementa": "Altera dispositivos da Lei nº 2.180, de 5 de fevereiro de 1954, que dispõe   sobre o Tribunal Marítimo.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 8.969 de 28/12/1994",
+   "urn": "urn:lex:br:federal:lei:1994-12-28;8969"
+  },
+  "lei-9100-1995": {
+   "caminho": "federal/leis-ordinarias/1995/lei-9100-1995-09-29.md",
+   "chave": "lei-9100-1995",
+   "ementa": "Estabelece normas para a realização das eleições municipais de 3 de outubro de 1996, e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9100.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 9.100 de 29/09/1995",
+   "urn": "urn:lex:br:federal:lei:1995-09-29;9100"
+  },
+  "lei-9112-1995": {
+   "caminho": "federal/leis-ordinarias/1995/lei-9112-1995-10-10.md",
+   "chave": "lei-9112-1995",
+   "ementa": "Dispõe sobre a exportação de bens sensíveis e serviços diretamente vinculados.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Medida Provisória nº 2.216-37, de 31.8.2001",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9112.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 9.112 de 10/10/1995",
+   "urn": "urn:lex:br:federal:lei:1995-10-10;9112"
+  },
+  "lei-9127-1995": {
+   "altera": [
+    "del-2848-1940"
+   ],
+   "caminho": "federal/leis-ordinarias/1995/lei-9127-1995-11-16.md",
+   "chave": "lei-9127-1995",
+   "ementa": "Altera a redação do art. 332 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "pena_vigente",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9127.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 9.127 de 16/11/1995",
+   "urn": "urn:lex:br:federal:lei:1995-11-16;9127"
+  },
+  "lei-9733-1998": {
+   "caminho": "federal/leis-ordinarias/1998/lei-9733-1998-12-11.md",
+   "chave": "lei-9733-1998",
+   "ementa": "Abre ao Orçamento de Investimento, em favor de diversas empresas estatais, crédito suplementar até o limite de R$ 57.197.301,00, para os fins que especifica.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_pagina",
+    "indicio": null,
+    "url": null
+   },
+   "revogada": false,
+   "titulo": "Lei nº 9.733 de 11/12/1998",
+   "urn": "urn:lex:br:federal:lei:1998-12-11;9733"
+  },
+  "lei-9966-2000": {
+   "caminho": "federal/leis-ordinarias/2000/lei-9966-2000-04-28.md",
+   "chave": "lei-9966-2000",
+   "ementa": "Dispõe sobre a prevenção, o controle e a fiscalização da poluição causada por lançamento de óleo e outras substâncias nocivas ou perigosas em águas sob jurisdição nacional e dá outras providências.",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "indicio": null,
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9966.htm"
+   },
+   "revogada": false,
+   "titulo": "Lei nº 9.966 de 28/04/2000",
+   "urn": "urn:lex:br:federal:lei:2000-04-28;9966"
+  },
+  "lei-9974-2000": {
+   "altera": [
+    "lei-7802-1989"
+   ],
+   "caminho": "federal/leis-ordinarias/2000/lei-9974-2000-06-06.md",
+   "chave": "lei-9974-2000",
+   "ementa": "Altera a Lei nº 7.802, de 11 de julho de 1989, que dispõe sobre a pesquisa, a experimentação, a produção, a embalagem e rotulagem, o transporte, o armazenamento, a comercialização, a propaganda comercial, a utilização, a importação, a exportação, o destino final dos resíduos e embalagens, o registro",
+   "pena_citada": false,
+   "pena_propria": true,
+   "planalto": {
+    "conferido_em": "2026-10-26",
+    "estado": "revogada",
+    "indicio": "Revogado pela Lei nº 14.785, de 2023 Texto para impressão *",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9974.htm"
+   },
+   "revogada": true,
+   "titulo": "Lei nº 9.974 de 06/06/2000",
+   "urn": "urn:lex:br:federal:lei:2000-06-06;9974"
+  }
+ },
+ "commit_ctresb": "15eb09b618ff08a38c4dfee06a91bd139d093f5d",
+ "senado": {
+  "dec": {
+   "1889": 329,
+   "1890": 1205,
+   "1891": 934,
+   "1930": 481,
+   "1931": 1328,
+   "1932": 1379,
+   "1933": 1233,
+   "1934": 1304
+  },
+  "del": {
+   "1937": 160,
+   "1938": 854,
+   "1939": 922,
+   "1940": 985,
+   "1941": 1060,
+   "1942": 1175,
+   "1943": 999,
+   "1944": 1054,
+   "1945": 1300,
+   "1946": 1385,
+   "1965": 1,
+   "1966": 98,
+   "1967": 249,
+   "1968": 62,
+   "1969": 665,
+   "1970": 74,
+   "1971": 55,
+   "1972": 54,
+   "1973": 48,
+   "1974": 83,
+   "1975": 54,
+   "1976": 77,
+   "1977": 82,
+   "1978": 55,
+   "1979": 102,
+   "1980": 91,
+   "1981": 68,
+   "1982": 85,
+   "1983": 103,
+   "1984": 111,
+   "1985": 66,
+   "1986": 38,
+   "1987": 87,
+   "1988": 76
+  },
+  "lcp": {
+   "1962": 2,
+   "1967": 3,
+   "1969": 1,
+   "1970": 5,
+   "1971": 3,
+   "1972": 1,
+   "1973": 4,
+   "1974": 6,
+   "1975": 5,
+   "1976": 1,
+   "1977": 3,
+   "1978": 2,
+   "1979": 4,
+   "1980": 1,
+   "1981": 2,
+   "1982": 2,
+   "1983": 2,
+   "1984": 3,
+   "1985": 3,
+   "1986": 3,
+   "1987": 3,
+   "1988": 2,
+   "1989": 3,
+   "1990": 2,
+   "1991": 6,
+   "1992": 1,
+   "1993": 7,
+   "1994": 3,
+   "1995": 2,
+   "1996": 5,
+   "1997": 4,
+   "1998": 3,
+   "1999": 5,
+   "2000": 3,
+   "2001": 10,
+   "2002": 2,
+   "2003": 1,
+   "2004": 1,
+   "2005": 3,
+   "2006": 3,
+   "2007": 4,
+   "2008": 1,
+   "2009": 5,
+   "2010": 5,
+   "2011": 2,
+   "2012": 1,
+   "2013": 2,
+   "2014": 5,
+   "2015": 5,
+   "2016": 4,
+   "2017": 3,
+   "2018": 4,
+   "2019": 7,
+   "2020": 5,
+   "2021": 12,
+   "2022": 9,
+   "2023": 7,
+   "2024": 7,
+   "2025": 13,
+   "2026": 14
+  },
+  "lei": {
+   "1889": 1,
+   "1891": 8,
+   "1892": 14,
+   "1893": 4,
+   "1894": 9,
+   "1895": 13,
+   "1896": 12,
+   "1897": 7,
+   "1898": 9,
+   "1899": 13,
+   "1900": 6,
+   "1901": 5,
+   "1902": 7,
+   "1903": 5,
+   "1904": 7,
+   "1905": 5,
+   "1906": 6,
+   "1907": 4,
+   "1908": 6,
+   "1909": 4,
+   "1910": 4,
+   "1911": 3,
+   "1912": 4,
+   "1913": 3,
+   "1914": 3,
+   "1915": 3,
+   "1916": 6,
+   "1917": 5,
+   "1919": 3,
+   "1920": 4,
+   "1921": 6,
+   "1922": 3,
+   "1923": 3,
+   "1925": 3,
+   "1927": 6,
+   "1928": 6,
+   "1929": 3,
+   "1935": 141,
+   "1936": 204,
+   "1937": 214,
+   "1946": 12,
+   "1947": 197,
+   "1948": 403,
+   "1949": 447,
+   "1950": 271,
+   "1951": 257,
+   "1952": 301,
+   "1953": 356,
+   "1954": 231,
+   "1955": 321,
+   "1956": 391,
+   "1957": 276,
+   "1958": 154,
+   "1959": 205,
+   "1960": 148,
+   "1961": 189,
+   "1962": 158,
+   "1963": 123,
+   "1964": 278,
+   "1965": 333,
+   "1966": 272,
+   "1967": 183,
+   "1968": 188,
+   "1969": 11,
+   "1970": 77,
+   "1971": 123,
+   "1972": 93,
+   "1973": 149,
+   "1974": 181,
+   "1975": 120,
+   "1976": 87,
+   "1977": 110,
+   "1978": 106,
+   "1979": 147,
+   "1980": 127,
+   "1981": 82,
+   "1982": 110,
+   "1983": 94,
+   "1984": 117,
+   "1985": 156,
+   "1986": 127,
+   "1987": 65,
+   "1988": 68,
+   "1989": 276,
+   "1990": 166,
+   "1991": 238,
+   "1992": 222,
+   "1993": 225,
+   "1994": 131,
+   "1995": 281,
+   "1996": 177,
+   "1997": 169,
+   "1998": 178,
+   "1999": 175,
+   "2000": 218,
+   "2001": 230,
+   "2002": 237,
+   "2003": 197,
+   "2004": 252,
+   "2005": 176,
+   "2006": 178,
+   "2007": 198,
+   "2008": 259,
+   "2009": 290,
+   "2010": 191,
+   "2011": 208,
+   "2012": 193,
+   "2013": 172,
+   "2014": 128,
+   "2015": 163,
+   "2016": 171,
+   "2017": 173,
+   "2018": 202,
+   "2019": 185,
+   "2020": 143,
+   "2021": 172,
+   "2022": 228,
+   "2023": 275,
+   "2024": 291,
+   "2025": 239,
+   "2026": 204
+  }
+ }
+}
