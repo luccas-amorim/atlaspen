@@ -7,7 +7,7 @@
 // preenchidos por plausibilidade.
 import Base from '../../layouts/Base.astro';
 import {registrosDoAcervo, ROTULO_CATEGORIA, type RegistroAcervo} from '../../site/acervo-servidor';
-import {passosDoRegistro} from '../../components/acervo/tipos';
+import {avisoDoTextoInteiro, passosDoRegistro, rotuloDaFonte} from '../../components/acervo/tipos';
 import {caminho} from '../../site/url';
 import s from '../../components/acervo/acervo.module.css';
 
@@ -73,7 +73,7 @@ const selo = r.categoria === 'vetado' ? 'NUNCA VIGOROU' : 'NÃO VIGENTE';
             r.textoOriginal ? (
               <blockquote class={s.textoOriginal}>{r.textoOriginal}</blockquote>
             ) : r.tipo === 'diploma' ? (
-              <p class="ausente">Diploma inteiro: o texto está na fonte oficial, citada nesta ficha.</p>
+              <p class="ausente">{avisoDoTextoInteiro(r.fonteTexto)}</p>
             ) : (
               <p class="ausente">
                 Ainda não transcrito. Entra quando o registro for conferido contra o texto compilado; até lá, a ficha diz o
@@ -124,7 +124,9 @@ const selo = r.categoria === 'vetado' ? 'NUNCA VIGOROU' : 'NÃO VIGENTE';
           {
             r.fonteUrl && (
               <a href={r.fonteUrl} rel="noopener" target="_blank">
-                {r.tipo === 'diploma' ? 'texto compilado no Planalto' : `${r.diploma?.nome ?? 'diploma'}, texto compilado no Planalto`}
+                {r.tipo === 'diploma'
+                  ? rotuloDaFonte(r.fonteTexto)
+                  : `${r.diploma?.nome ?? 'diploma'}, ${rotuloDaFonte(r.fonteTexto)}`}
               </a>
             )
           }

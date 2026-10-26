@@ -9,7 +9,9 @@
 // O que a fonte não diz, a tela não diz: data da revogação e texto original
 // ficam ausentes até serem conferidos contra o Planalto. Conferidos em
 // 18/09/2026: todos os dispositivos têm os dois; os diplomas inteiros têm a
-// data, e o texto deles é a própria fonte oficial.
+// data, e o texto deles é a própria fonte oficial — salvo os que o Planalto não
+// tem, cujo texto é o do normas.leg.br (`fonte_texto`), sem valor legal oficial,
+// e a tela diz isso (decisão de 26/10/2026).
 
 import acervo from '../../data/acervo.json';
 import marcosBrutos from '../../data/marcos.json';
@@ -72,6 +74,7 @@ export function registrosDoAcervo(): RegistroAcervo[] {
       artigos: r.artigos,
       diploma: d ? {id: d.id, nome: d.nome, norma: d.norma} : null,
       fonteUrl: d?.fonte_url ?? null,
+      fonteTexto: d?.fonte_texto ?? null,
       publicacao: null,
       dataRevogacao: r.data_revogacao,
       textoOriginal: r.texto_original,
@@ -94,6 +97,7 @@ export function registrosDoAcervo(): RegistroAcervo[] {
       artigos: [d.id],
       diploma: {id: d.id, nome: d.nome, norma: d.norma},
       fonteUrl: d.fonte_url ?? null,
+      fonteTexto: d.fonte_texto ?? null,
       publicacao: pub ? {data: pub, norma: d.norma} : null,
       dataRevogacao: d.data_revogacao ?? null,
       // O texto de um diploma inteiro não cabe na ficha: o link da fonte cumpre esse papel.
