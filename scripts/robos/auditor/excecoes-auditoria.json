@@ -190,6 +190,27 @@
       ],
       "motivo": "Colaboração premiada da Lei 12.850/13 (art. 4º: perdão judicial, redução em até 2/3 ou substituição por restritiva; § 5º, após a sentença: redução até a metade ou progressão sem os requisitos objetivos). Instituto premial de escopo não delimitado por tipo — vale para qualquer crime da organização, em qualquer diploma —, com efeitos alternativos e dependente de acordo homologado. Não é modificador de tipo, e um modificador geral 'até 2/3' apareceria em todos os 1.531 registros. As colaborações de escopo fechado no próprio diploma (Lei 11.343, art. 41; Lei 7.492, art. 25, § 2º; Lei 8.137, art. 16, parágrafo único; CPM, art. 244, § 4º) entraram como modificadores.",
       "data": "2026-09-28"
+    },
+    {
+      "tipo": "NOME-SUSPEITO",
+      "ids": [
+        1535,
+        1536,
+        1537,
+        1538,
+        1539,
+        1540
+      ],
+      "motivo": "Desdobramento por inciso, como nos ids 1410 a 1421: o caput do art. 8º da Lei 7.853/89 diz só 'Constitui crime punível com reclusão de 2 (dois) a 5 (cinco) anos e multa:', e cada conduta está no inciso. Os seis registros foram criados em 26/10/2026 a partir do texto de cada inciso, conferido no compilado (redação da Lei 13.146/2015). O achado volta se o nome mudar.",
+      "data": "2026-10-26"
+    },
+    {
+      "tipo": "ACAO-COM-RESSALVA",
+      "ids": [
+        1550
+      ],
+      "motivo": "Lei 11.484/07, art. 54: o §4º faz a ação penal privada ('somente se procede mediante queixa') e ressalva o crime em prejuízo de entidade de direito público, empresa pública, sociedade de economia mista ou fundação pública. O registro diz Ação Penal Privada e guarda a ressalva em `acao_condicao`, conferida no compilado em 26/10/2026.",
+      "data": "2026-10-26"
     }
   ]
 }

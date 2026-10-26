@@ -4,7 +4,7 @@
     "gerado_por": "scripts/inventario_diplomas.py",
     "unidade": "preceito secundário: cada cominação de pena vigente no texto compilado do Planalto. Tipos do catálogo desdobram incisos e condutas, então tipos_catalogados pode legitimamente exceder preceitos_esperados.",
     "fonte": "Textos compilados oficiais de planalto.gov.br (ccivil_03), texto vigente (revogações riscadas excluídas), conferidos em 2026-07-19.",
-    "total_preceitos_esperados": 1172
+    "total_preceitos_esperados": 1180
   },
   "diplomas": [
     {
@@ -1175,6 +1175,130 @@
       "data_revogacao_nota": "O Código Eleitoral de 1965 não revoga a Lei 1.164/1950 expressamente — diz só \"Revogam-se as disposições em contrário\" (art. 383) —, mas regula inteiramente a matéria dela, o que a revoga (Decreto-Lei 4.657/1942, hoje Lei de Introdução às Normas do Direito Brasileiro, art. 2º, §1º). O novo Código entrou em vigor 30 dias após a publicação no DOU de 19/07/1965 (art. 382).",
       "preceitos_esperados": 0,
       "tipos_catalogados": 0
+    },
+    {
+      "id": "lei7853",
+      "nome": "Pessoa com deficiência — apoio e ação civil pública (crimes do art. 8º)",
+      "norma": "Lei nº 7.853, de 24 de outubro de 1989",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l7853compilado.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 8",
+      "preceitos_medidos": 0,
+      "preceitos_esperados": 1,
+      "ajuste_motivo": "O art. 8º comina reclusão em linha corrida (\"Constitui crime punível com reclusão de 2 (dois) a 5 (cinco) anos e multa\").",
+      "tipos_catalogados": 7,
+      "rotulos_catalogo": [
+        "Lei 7.853/89"
+      ],
+      "obs": "Redação do art. 8º dada pela Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)."
+    },
+    {
+      "id": "lc105",
+      "nome": "Lei do Sigilo Bancário (crime do art. 10)",
+      "norma": "Lei Complementar nº 105, de 10 de janeiro de 2001",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 10",
+      "preceitos_medidos": 0,
+      "preceitos_esperados": 1,
+      "ajuste_motivo": "O art. 10 comina reclusão em linha corrida (\"sujeita os responsáveis à pena de reclusão, de um a quatro anos\").",
+      "tipos_catalogados": 2,
+      "rotulos_catalogo": [
+        "LC 105/01"
+      ]
+    },
+    {
+      "id": "lei10300",
+      "nome": "Minas terrestres antipessoal (crime do art. 2º)",
+      "norma": "Lei nº 10.300, de 31 de outubro de 2001",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10300.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 2",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 1,
+      "rotulos_catalogo": [
+        "Lei 10.300/01"
+      ]
+    },
+    {
+      "id": "lei11254",
+      "nome": "Armas químicas (crimes do art. 4º)",
+      "norma": "Lei nº 11.254, de 27 de dezembro de 2005",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11254.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 4",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 2,
+      "rotulos_catalogo": [
+        "Lei 11.254/05"
+      ]
+    },
+    {
+      "id": "lei11484",
+      "nome": "Topografia de circuito integrado (crime do art. 54)",
+      "norma": "Lei nº 11.484, de 31 de maio de 2007",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11484compilado.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 54",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 1,
+      "rotulos_catalogo": [
+        "Lei 11.484/07"
+      ],
+      "obs": "O caput do art. 54 define o crime e não comina pena; a pena está no §1º."
+    },
+    {
+      "id": "lei13431",
+      "nome": "Escuta protegida de criança e adolescente (crime do art. 24)",
+      "norma": "Lei nº 13.431, de 4 de abril de 2017",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 24",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 1,
+      "rotulos_catalogo": [
+        "Lei 13.431/17"
+      ]
+    },
+    {
+      "id": "lc167",
+      "nome": "Empresa Simples de Crédito (crime do art. 9º)",
+      "norma": "Lei Complementar nº 167, de 24 de abril de 2019",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp167.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 9",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 1,
+      "rotulos_catalogo": [
+        "LC 167/19"
+      ]
+    },
+    {
+      "id": "lei14967",
+      "nome": "Estatuto da Segurança Privada (crime do art. 50)",
+      "norma": "Lei nº 14.967, de 9 de setembro de 2024",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 50",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 1,
+      "rotulos_catalogo": [
+        "Lei 14.967/24"
+      ]
     }
   ],
   "excluidos": [

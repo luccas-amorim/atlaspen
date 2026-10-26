@@ -4184,6 +4184,106 @@
         "valor": "Lei 8.137/90"
       },
       "obs": "Nos crimes previstos nesta Lei, cometidos em quadrilha ou coautoria, o coautor ou partícipe que através de confissão espontânea revelar à autoridade policial ou judicial toda a trama delituosa terá a sua pena reduzida de um a dois terços. Alcança todos os crimes da lei, quando cometidos em concurso. Mesma fórmula da Lei 7.492/86, art. 25, § 2º; as duas vieram da Lei 9.080/1995. Cadastrado em 28/09/2026, na triagem dos 30 dispositivos que a regex ampliada do auditor passou a enxergar; texto conferido no compilado do Planalto baixado no dia."
+    },
+    {
+      "id": "aumento-pcd-7853-8-p1",
+      "nome": "Crime contra pessoa com deficiência menor de 18 anos (+1/3)",
+      "dispositivo": "Lei 7.853/89, art. 8º, §1º",
+      "natureza": "aumento",
+      "fase": 3,
+      "sobre": "pena_provisoria",
+      "fracao_min": 0.3333333333333333,
+      "fracao_max": 0.3333333333333333,
+      "piso_minimo": false,
+      "escopo": {
+        "tipo": "tipos_por_artigo",
+        "lei": "Lei 7.853/89",
+        "artigos": [
+          "Art. 8º"
+        ]
+      },
+      "obs": "A pena é agravada em 1/3 se o crime é praticado contra pessoa com deficiência menor de 18 anos.",
+      "ignora_embutida": true
+    },
+    {
+      "id": "aumento-pcd-7853-8-p4",
+      "nome": "Crime praticado em atendimento de urgência e emergência (+1/3)",
+      "dispositivo": "Lei 7.853/89, art. 8º, §4º",
+      "natureza": "aumento",
+      "fase": 3,
+      "sobre": "pena_provisoria",
+      "fracao_min": 0.3333333333333333,
+      "fracao_max": 0.3333333333333333,
+      "piso_minimo": false,
+      "escopo": {
+        "tipo": "tipos_por_artigo",
+        "lei": "Lei 7.853/89",
+        "artigos": [
+          "Art. 8º"
+        ]
+      },
+      "obs": "A pena é agravada em 1/3 se o crime é praticado em atendimento de urgência e emergência.",
+      "ignora_embutida": true
+    },
+    {
+      "id": "aumento-minas-10300-2-p1",
+      "nome": "Minas antipessoal por funcionário público (+1/3)",
+      "dispositivo": "Lei 10.300/01, art. 2º, §1º",
+      "natureza": "aumento",
+      "fase": 3,
+      "sobre": "pena_provisoria",
+      "fracao_min": 0.3333333333333333,
+      "fracao_max": 0.3333333333333333,
+      "piso_minimo": false,
+      "escopo": {
+        "tipo": "tipos_por_artigo",
+        "lei": "Lei 10.300/01",
+        "artigos": [
+          "Art. 2º"
+        ]
+      },
+      "obs": "A pena é acrescida de 1/3 se o agente for funcionário público civil ou militar.",
+      "ignora_embutida": true
+    },
+    {
+      "id": "aumento-minas-10300-2-p2",
+      "nome": "Minas antipessoal em reincidência (+1/2)",
+      "dispositivo": "Lei 10.300/01, art. 2º, §2º",
+      "natureza": "aumento",
+      "fase": 3,
+      "sobre": "pena_provisoria",
+      "fracao_min": 0.5,
+      "fracao_max": 0.5,
+      "piso_minimo": false,
+      "escopo": {
+        "tipo": "tipos_por_artigo",
+        "lei": "Lei 10.300/01",
+        "artigos": [
+          "Art. 2º"
+        ]
+      },
+      "obs": "A pena é acrescida de metade em caso de reincidência. A reincidência também agrava na 2ª fase (CP, art. 61, I); a lei a escreve como causa de aumento, e o bis in idem fica para quem aplica.",
+      "ignora_embutida": true
+    },
+    {
+      "id": "aumento-topografia-11484-54-p2",
+      "nome": "Violação de topografia por vinculado ao titular ou reincidente (+1/3 a 1/2)",
+      "dispositivo": "Lei 11.484/07, art. 54, §2º",
+      "natureza": "aumento",
+      "fase": 3,
+      "sobre": "pena_provisoria",
+      "fracao_min": 0.3333333333333333,
+      "fracao_max": 0.5,
+      "piso_minimo": false,
+      "escopo": {
+        "tipo": "tipos_por_artigo",
+        "lei": "Lei 11.484/07",
+        "artigos": [
+          "Art. 54"
+        ]
+      },
+      "obs": "A pena de detenção é acrescida de 1/3 a 1/2 se o agente for ou tiver sido representante, mandatário, preposto, sócio ou empregado do titular do registro ou do seu licenciado, ou se incorrer em reincidência.",
+      "ignora_embutida": true
     }
   ]
 }

@@ -631,6 +631,78 @@
       "urn": "urn:lex:br:federal:constituicao:1988-10-05;1988",
       "sentinela": "139, de 2026",
       "obs": "Não tem tipo penal próprio: fundamenta vedações e institutos constitucionais (art. 5º, XLIII: graça e anistia; art. 84, XII: indulto e comutação). Referência para o histórico legislativo dos atributos (frente 4 do backlog). A sentinela é o trecho da anotação da EC 139/2026."
+    },
+    {
+      "id": "deficiencia-7853",
+      "rotulos": [
+        "Lei 7.853/89"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7853compilado.htm",
+      "urn": "urn:lex:br:federal:lei:1989-10-24;7853",
+      "sentinela": "15.155"
+    },
+    {
+      "id": "lc105",
+      "rotulos": [
+        "LC 105/01"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm",
+      "urn": "urn:lex:br:federal:lei.complementar:2001-01-10;105",
+      "sentinela": "224, de 2025"
+    },
+    {
+      "id": "minas-10300",
+      "rotulos": [
+        "Lei 10.300/01"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10300.htm",
+      "urn": "urn:lex:br:federal:lei:2001-10-31;10300",
+      "sentinela": "minas terrestres antipessoal"
+    },
+    {
+      "id": "armas-quimicas-11254",
+      "rotulos": [
+        "Lei 11.254/05"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11254.htm",
+      "urn": "urn:lex:br:federal:lei:2005-12-27;11254",
+      "sentinela": "armas químicas"
+    },
+    {
+      "id": "escuta-protegida-13431",
+      "rotulos": [
+        "Lei 13.431/17"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm",
+      "urn": "urn:lex:br:federal:lei:2017-04-04;13431",
+      "sentinela": "14.344"
+    },
+    {
+      "id": "lc167",
+      "rotulos": [
+        "LC 167/19"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp167.htm",
+      "urn": "urn:lex:br:federal:lei.complementar:2019-04-24;167",
+      "sentinela": "Empresa Simples de Crédito"
+    },
+    {
+      "id": "seguranca-privada-14967",
+      "rotulos": [
+        "Lei 14.967/24"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+      "urn": "urn:lex:br:federal:lei:2024-09-09;14967",
+      "sentinela": "Estatuto da Segurança Privada"
+    },
+    {
+      "id": "topografia-11484",
+      "rotulos": [
+        "Lei 11.484/07"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11484compilado.htm",
+      "urn": "urn:lex:br:federal:lei:2007-05-31;11484",
+      "sentinela": "15.503"
     }
   ]
 }
