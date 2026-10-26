@@ -45,7 +45,8 @@ INCOMPLETOS: set[str] = set()
 # é acervo histórico: isso é descrito na nota da versão em que saiu. Misturar as
 # duas coisas transformaria o acervo — que é material de pesquisa sobre o que já
 # foi crime no Brasil — num histórico dos nossos enganos.
-CATEGORIAS_ACERVO = {"revogado": "revogado", "nao_recepcionado": "não recepcionado", "vetado": "vetado"}
+CATEGORIAS_ACERVO = {"revogado": "revogado", "nao_recepcionado": "não recepcionado", "vetado": "vetado",
+                     "vigencia_encerrada": "vigência encerrada"}
 
 
 def validar_acervo() -> None:

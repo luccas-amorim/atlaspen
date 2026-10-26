@@ -149,6 +149,18 @@ pessoa que assina.
   uma para o dado, e o que a fecha. A primeira foi a #71, sobre quando deixou de valer o
   DL 4.828/1942, que fica fora do acervo até a resposta. A issue fecha com a resposta
   fundamentada, e o registro que entra por ela cita a issue.
+- **O acervo data a parte penal, não o diploma** (decisões de 26/10/2026). Duas regras:
+  - Lei especial cujo crime o Código Penal de 1940 tipificou — o reingresso do expulso
+    (art. 338), a duplicata simulada (art. 172), os entorpecentes (art. 281) — perde a
+    parte penal em 01/01/1942, pelo art. 360 do CP. A nota diz o artigo do CP e quem
+    revogou o resto do diploma.
+  - O tipo de lei temporária cujo prazo a própria lei fixou (a Copa de 2014, as
+    Olimpíadas de 2016) entra na categoria `vigencia_encerrada`, com o último dia do
+    prazo. A lei de eficácia esgotada sem prazo escrito — as leis de uma eleição só —
+    não entra: dizer que ela se esgotou é juízo.
+  Revogação tácita pede busca da revogadora **intermediária**: o DL 1.191/1939 entrou
+  no acervo como revogado em 1978, e o DL 1.681/1939 o revogara expressamente seis
+  meses depois de editado.
 
 ## Dependências: o Dependabot abre, gente decide
 

@@ -12,6 +12,7 @@ import {caminho} from '../../site/url';
 import {normalizar} from '../tipos/filtros';
 import {
   ROTULO_CATEGORIA,
+  anoDaSaida,
   avisoDoTextoInteiro,
   passosDoRegistro,
   rotuloDaFonte,
@@ -28,10 +29,13 @@ interface Props {
   naUrl?: boolean;
 }
 
-const CATEGORIAS: CategoriaAcervo[] = ['revogado', 'nao_recepcionado', 'vetado'];
+const CATEGORIAS: CategoriaAcervo[] = ['revogado', 'nao_recepcionado', 'vetado', 'vigencia_encerrada'];
 
 function doAno(r: RegistroAcervo, ano: number): boolean {
-  return r.normas.some((n) => n.ano === ano) || (r.publicacao !== null && Number(r.publicacao.data.slice(0, 4)) === ano);
+  return (
+    r.normas.some((n) => anoDaSaida(r, n) === ano) ||
+    (r.publicacao !== null && Number(r.publicacao.data.slice(0, 4)) === ano)
+  );
 }
 
 export default function ListaAcervo({registros, ano = null, naUrl = false}: Props) {

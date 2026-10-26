@@ -3,7 +3,12 @@
 // Separado do leitor de build (src/site/acervo-servidor.ts), que carrega os
 // JSON: as ilhas importam daqui e não arrastam dado para o navegador.
 
-export type CategoriaAcervo = 'revogado' | 'nao_recepcionado' | 'vetado';
+/**
+ * `vigencia_encerrada`: o tipo de lei temporária cujo prazo a própria lei fixou
+ * (a Copa de 2014, as Olimpíadas de 2016). Não é revogação — ninguém o tirou de
+ * vigência —, e a data dele é o último dia que a lei deu (decisão de 26/10/2026).
+ */
+export type CategoriaAcervo = 'revogado' | 'nao_recepcionado' | 'vetado' | 'vigencia_encerrada';
 
 export interface NormaDeSaida {
   norma: string;
@@ -54,7 +59,18 @@ export const ROTULO_CATEGORIA: Record<CategoriaAcervo, string> = {
   revogado: 'revogado',
   nao_recepcionado: 'não recepcionado',
   vetado: 'vetado',
+  vigencia_encerrada: 'vigência encerrada',
 };
+
+/**
+ * O ano em que o registro saiu de vigência, para a linha do tempo e o recorte
+ * por ano: o da norma que o tirou (lido da designação dela), salvo na vigência
+ * encerrada, em que a norma é a própria lei e o ano é o do fim do prazo.
+ */
+export function anoDaSaida(r: RegistroAcervo, n: NormaDeSaida): number | null {
+  if (r.categoria === 'vigencia_encerrada' && r.dataRevogacao) return Number(r.dataRevogacao.slice(0, 4));
+  return n.ano;
+}
 
 export interface Marco {
   data: string;
@@ -98,7 +114,9 @@ export function passosDoRegistro(r: RegistroAcervo): PassoRegistro[] {
         ? 'Vetado na sanção — nunca vigorou'
         : r.categoria === 'nao_recepcionado'
           ? 'Declarado não recepcionado pela Constituição de 1988'
-          : // Só "revogado": revogação não é abolitio criminis. A conduta pode ter
+          : r.categoria === 'vigencia_encerrada'
+            ? 'Fim da vigência que a própria lei fixou'
+            : // Só "revogado": revogação não é abolitio criminis. A conduta pode ter
             // seguido punível noutro tipo (o ECA, art. 233, foi para a Lei de
             // Tortura), e isso o registro diz em "o que houve", não o passo.
             `Revogado${n.alcance ? ` (${n.alcance})` : ''}`;

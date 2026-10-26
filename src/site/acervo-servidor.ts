@@ -17,10 +17,11 @@ import acervo from '../../data/acervo.json';
 import marcosBrutos from '../../data/marcos.json';
 import historico from '../../data/historico-legislativo.json';
 import {DIPLOMAS} from './diplomas-servidor';
+import {ROTULO_CATEGORIA, anoDaSaida} from '../components/acervo/tipos';
 import type {CategoriaAcervo, EventoDoAno, Marco, NormaDeSaida, RegistroAcervo} from '../components/acervo/tipos';
 
 export type {CategoriaAcervo, EventoDoAno, Marco, NormaDeSaida, RegistroAcervo};
-export {ROTULO_CATEGORIA} from '../components/acervo/tipos';
+export {ROTULO_CATEGORIA};
 
 /** O começo da linha do tempo: a Independência. */
 export const INICIO_DA_LINHA = 1822;
@@ -151,11 +152,12 @@ export function eventosDaLinha(): EventoDoAno[] {
       });
     }
     for (const n of r.normas) {
-      if (n.ano === null) continue;
+      const ano = anoDaSaida(r, n);
+      if (ano === null) continue;
       eventos.push({
-        ano: n.ano,
-        categoria: r.categoria === 'revogado' ? 'REVOGADO' : r.categoria === 'vetado' ? 'VETADO' : 'NÃO RECEPCIONADO',
-        tom: r.categoria === 'revogado' ? 'saida' : 'excecao',
+        ano,
+        categoria: ROTULO_CATEGORIA[r.categoria].toUpperCase(),
+        tom: r.categoria === 'revogado' || r.categoria === 'vigencia_encerrada' ? 'saida' : 'excecao',
         titulo: `${r.nome}${n.alcance ? ` (${n.alcance})` : ''}`,
         norma: `${r.dispositivo} · ${n.norma}`,
         rota: `/acervo/${r.id}`,
