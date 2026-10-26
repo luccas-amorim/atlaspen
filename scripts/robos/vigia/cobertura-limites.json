@@ -10,12 +10,12 @@
       "ilegivel": "A LEI ESCREVEU A PENA E O PARSER NÃO LEU — lacuna a fechar",
       "nao_localizado": "o dispositivo do registro não foi achado no compilado"
     },
-    "gerado_em": "2026-09-28"
+    "gerado_em": "2026-10-26"
   },
   "limites": {
     "nao_localizado": 0,
     "pena_derivada": 1,
-    "pena_importada": 69,
+    "pena_importada": 71,
     "sancao_nao_privativa": 31,
     "sem_preceito_proprio": 10
   }
