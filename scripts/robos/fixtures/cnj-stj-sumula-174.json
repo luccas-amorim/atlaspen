@@ -1,0 +1,19 @@
+{
+ "aggsEspecies": null,
+ "aggsOrgaos": null,
+ "posicao_final": 1,
+ "posicao_inicial": 1,
+ "resultados": [
+  {
+   "alertaSituacao": "cancelado",
+   "id": "stj-sum-174",
+   "nr": 174,
+   "orgao": "STJ",
+   "situacao": "Cancelado",
+   "tese": "<p>No crime de roubo, a intimidação feita com arma de brinquedo autoriza o aumento da pena.</p><br>",
+   "tipo": "SUM",
+   "ultimaAtualizacao": "01/04/2025"
+  }
+ ],
+ "total": 1
+}

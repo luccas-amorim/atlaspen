@@ -1,0 +1,19 @@
+{
+ "aggsEspecies": null,
+ "aggsOrgaos": null,
+ "posicao_final": 1,
+ "posicao_inicial": 1,
+ "resultados": [
+  {
+   "id": "stf-sum-609",
+   "nr": 609,
+   "orgao": "STF",
+   "questao": "É pública incondicionada a ação penal por crime de sonegação fiscal. ",
+   "situacao": "APROVADO",
+   "tese": "não informado",
+   "tipo": "SUM",
+   "ultimaAtualizacao": "22/05/2025"
+  }
+ ],
+ "total": 1
+}

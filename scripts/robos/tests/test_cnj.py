@@ -68,3 +68,33 @@ def test_resposta_sem_resultados_e_erro(monkeypatch):
     monkeypatch.setattr(cnj.REDE, "obter", lambda *a, **k: b'{"erro": "x"}')
     with pytest.raises(ValueError):
         cnj.por_numero("RG", "113")
+
+
+def test_sumula_do_stj_cancelada():
+    p = cnj.ler_resultados(_json("cnj-stj-sumula-174.json"))[0]
+    assert p.rotulo == "Súmula 174 do STJ" and p.orgao == "STJ" and p.situacao == "Cancelado"
+    assert p.texto.startswith("No crime de roubo, a intimidação feita com arma de brinquedo")
+    assert "<" not in p.texto
+
+
+def test_repetitivo_do_stj():
+    p = cnj.ler_resultados(_json("cnj-stj-tema-1087.json"))[0]
+    assert p.rotulo == "Tema 1087 dos repetitivos do STJ"
+    assert "§ 1° do art. 155 do Código Penal" in p.texto and "<p>" not in p.texto
+
+
+def test_sumula_do_stf_sem_o_nao_informado():
+    p = cnj.ler_resultados(_json("cnj-stf-sumula-609.json"))[0]
+    assert p.rotulo == "Súmula 609 do STF"
+    assert p.texto == "É pública incondicionada a ação penal por crime de sonegação fiscal."
+
+
+def test_consulta_por_orgao(monkeypatch):
+    enviados = []
+
+    def falso(f):
+        enviados.append(f)
+        return {"total": 0, "resultados": []}
+    monkeypatch.setattr(cnj, "_consultar", falso)
+    cnj.atualizados_desde(date(2026, 10, 17), "STJ")
+    assert enviados[0]["orgaos"] == ["STJ"] and enviados[0]["tipos"] == ["SUM", "RR", "IAC"]
