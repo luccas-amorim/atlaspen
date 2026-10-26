@@ -581,6 +581,62 @@
       "retirado": null,
       "data_revogacao": "1988-10-05",
       "texto_original": "Art. 25. Ter alguem em seu poder, depois de condenado, por crime de furto ou roubo, ou enquanto sujeito à liberdade vigiada ou quando conhecido como vadio ou mendigo, gazuas, chaves falsas ou alteradas ou instrumentos empregados usualmente na prática de crime de furto, desde que não prove destinação legítima:\nPena – prisão simples, de dois meses a um ano, e multa de duzentos mil réis a dois contos de réis."
+    },
+    {
+      "id": "dl2627-168",
+      "dispositivo": "DL 2.627/40, art. 168",
+      "nome": "Fraudes e abusos na constituição e na administração de sociedade por ações",
+      "diploma": "dl2627",
+      "artigos": ["dl2627-168"],
+      "categoria": "revogado",
+      "o_que_houve": "Revogado pela Lei 6.404/1976, art. 300, que revogou o Decreto-Lei 2.627/1940 com exceção dos arts. 59 a 73. A Lei 6.404 entrou em vigor sessenta dias depois de publicada (DOU de 17/12/1976). Pena: prisão celular de um a quatro anos, em dez hipóteses.",
+      "normas": [{"norma": "Lei 6.404/1976", "ano": 1976}],
+      "caso": false,
+      "retirado": null,
+      "data_revogacao": "1977-02-15",
+      "texto_original": "Art. 168. Observado o disposto no art. 2º, ns. IX e X, do Decreto-lei n. 869, de 18 de novembro de 1938 , incorrerão na pena de prisão celular por um a quatro anos:\n1º, os fundadores, diretores, gerentes e fiscais, que, em prospectos, relatórios, pareceres, balanços ou comunicações ao público ou à assembléia, fizerem afirmações falsas sobre a constituição ou as condições econômicas da sociedade ou fraudulentamente ocultarem, no todo ou em parte, fatos a elas relativos;\n2º, os diretores, gerentes e fiscais que promoverem, por qualquer artifício, falsas cotações das ações ou de outros títulos pertencentes à sociedade;\n3º, os diretores ou gerentes que tomarem empréstimos à sociedade ou usarem dos seus bens ou haveres em proveito próprio, sem prévia autorização da assembléia geral;\n4º, os diretores ou gerentes que comprarem ou venderem, por conta da sociedade, as ações por ela emitidas, salvo as permissões expressas em lei;\n5º, os diretores ou gerentes, como garantia de créditos sociais, aceitarem em caução ou penhor ações da própria sociedade;\n6º, os diretores ou gerentes que distribuirem lucros ou dividendos antes de levantado o balanço ou em desacordo com os resultados deste ou mediante sua falsificação;\n7º, os diretores, gerentes e fiscais que, por interpostas pessoas ou conluiados com acionitas, conseguirem a aprovação de contas ou pareceres;\n8º, os peritos que, por prevaricação manifesta, atribuirem aos bens do subscritor valor acima do real;\n9º, os liquidantes, nos casos dos números 1º, 2º, 3º, 4º, 5º e 7º deste artigo;\n10, os representantes das sociedades por ações estrangeiras autorizadas a funcionar no país que praticarem qualquer dos atos mencionados nos ns. 1º e 2º ou derem falsas informações ao Governo.\nParágrafo único. Serão consideradas cúmplices as pessoas que, direta ou indiretamente, prestarem auxílio para a execução dos crimes referidos neste artigo."
+    },
+    {
+      "id": "dl2627-169",
+      "dispositivo": "DL 2.627/40, art. 169",
+      "nome": "Aceitação e exercício de cargo de diretor, gerente ou fiscal com impedimento legal",
+      "diploma": "dl2627",
+      "artigos": ["dl2627-169"],
+      "categoria": "revogado",
+      "o_que_houve": "Revogado pela Lei 6.404/1976, art. 300, que revogou o Decreto-Lei 2.627/1940 com exceção dos arts. 59 a 73. A Lei 6.404 entrou em vigor sessenta dias depois de publicada (DOU de 17/12/1976). Pena: prisão de um a três meses, ou multa.",
+      "normas": [{"norma": "Lei 6.404/1976", "ano": 1976}],
+      "caso": false,
+      "retirado": null,
+      "data_revogacao": "1977-02-15",
+      "texto_original": "Art. 169. Incorrerão na pena de prisão, de um mês a três meses, ou multa de 10:000$0 a 20:000$0, as pessoas que, com infração do § 4º, do art. 116 e do art. 126, aceitarem e exercerem o cargo de diretor, gerente ou fiscal."
+    },
+    {
+      "id": "dl2627-170",
+      "dispositivo": "DL 2.627/40, art. 170",
+      "nome": "Falta de envio ao Serviço de Estatística, por diretores, do jornal oficial com os atos sociais publicados",
+      "diploma": "dl2627",
+      "artigos": ["dl2627-170"],
+      "categoria": "revogado",
+      "o_que_houve": "Deixou de ser crime pelo Decreto-Lei 3.391, de 7 de julho de 1941, que trocou a pena de prisão de dez a trinta dias, ou multa, por multa aplicada pelo Diretor do Serviço de Estatística da Previdência e Trabalho, com recurso ao Ministro do Trabalho, Indústria e Comércio. A data de vigência do Decreto-Lei 3.391 não está na página do Planalto e não foi conferida. A Lei 6.404/1976, art. 300, revogou depois o artigo, já sem pena criminal.",
+      "normas": [{"norma": "Decreto-Lei 3.391/1941", "ano": 1941}],
+      "caso": false,
+      "retirado": null,
+      "data_revogacao": null,
+      "texto_original": "Art. 170. Serão punidos com a pena de prisão de dez a trinta dias, ou multa de 2:000$0 a 5:000$0, os diretores de sociedades nacionais e os representantes de sociedades estrangeiras, que não observarem o disposto no art. 176, parágrafo único."
+    },
+    {
+      "id": "dl2627-171",
+      "dispositivo": "DL 2.627/40, art. 171",
+      "nome": "Negociação de voto em assembleia geral de sociedade por ações",
+      "diploma": "dl2627",
+      "artigos": ["dl2627-171"],
+      "categoria": "revogado",
+      "o_que_houve": "Revogado pela Lei 6.404/1976, art. 300, que revogou o Decreto-Lei 2.627/1940 com exceção dos arts. 59 a 73. A Lei 6.404 entrou em vigor sessenta dias depois de publicada (DOU de 17/12/1976). Pena: prisão celular de seis meses a dois anos.",
+      "normas": [{"norma": "Lei 6.404/1976", "ano": 1976}],
+      "caso": false,
+      "retirado": null,
+      "data_revogacao": "1977-02-15",
+      "texto_original": "Art. 171. Incorrem na pena de seis meses a dois anos de prisão celular os acionistas que, para, obterem vantagem para si ou para outrem, negociarem o voto nas deliberações da assembléia geral."
     }
   ]
 }

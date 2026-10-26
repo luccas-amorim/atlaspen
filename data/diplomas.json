@@ -1509,6 +1509,32 @@
       "rotulos_catalogo": [
         "Lei 9.112/95"
       ]
+    },
+    {
+      "id": "dl2627",
+      "nome": "Sociedades por ações de 1940 (crimes revogados)",
+      "norma": "Decreto-Lei nº 2.627, de 26 de setembro de 1940",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2627.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 168 a 171",
+      "preceitos_medidos": 0,
+      "preceitos_esperados": 0,
+      "ajuste_motivo": "Nenhum crime vigente: a Lei 6.404/1976, art. 300, revogou o decreto-lei com exceção dos arts. 59 a 73, e com ele os crimes dos arts. 168, 169 e 171; o art. 170 já deixara de ser crime em 1941 (Decreto-Lei 3.391). O diploma fica no inventário porque o acervo o usa para nomear o dispositivo revogado (conferido em 26/10/2026).",
+      "tipos_catalogados": 0
+    },
+    {
+      "id": "dl7903",
+      "nome": "Código da Propriedade Industrial de 1945",
+      "norma": "Decreto-Lei nº 7.903, de 27 de agosto de 1945",
+      "situacao": "revogado",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del7903.htm",
+      "conferido_em": "2026-10-26",
+      "norma_revogadora": "Lei nº 9.279/1996, art. 244 (arts. 169 a 189); o restante, pela Lei nº 5.772/1971",
+      "data_revogacao": "1997-05-15",
+      "data_revogacao_nota": "A Lei 5.772/1971 (Código da Propriedade Industrial), em vigor na data da publicação (DOU de 31/12/1971), substituiu o decreto-lei e manteve, no art. 128, os crimes e o processo dos arts. 169 a 189 \"até que entre em vigor o Código Penal (Decreto-Lei n. 1.004, de 21 de outubro de 1969)\" — que nunca vigorou. Esses artigos ficaram em vigor até a Lei 9.279/1996, art. 244, que entrou em vigor um ano depois de publicada (DOU de 15/05/1996). A Lei 8.401/1992 ainda acrescentara ao art. 178 o inciso XIII, a venda, a locação ou o uso de obra audiovisual com violação do direito autoral.",
+      "preceitos_esperados": 0,
+      "tipos_catalogados": 0
     }
   ],
   "excluidos": [
