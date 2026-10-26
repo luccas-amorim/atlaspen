@@ -3,7 +3,7 @@ id: completude
 title: Completude do catálogo
 sidebar_position: 2
 gerado_em: '2026-10-26'
-commit: 'bf25316fde67'
+commit: 'b0556a467f34'
 ---
 
 {/* GERADO AUTOMATICAMENTE por scripts/gerar_completude.py — não edite à mão. */}
@@ -13,14 +13,14 @@ commit: 'bf25316fde67'
 :::note[Página gerada]
 Este acompanhamento é derivado de `data/diplomas.json` (o denominador da
 conferência do catálogo) e de
-`data/crimes.json` (o catálogo), gerado em 2026-10-26 a partir do commit `bf25316fde67`. Para atualizá-lo:
+`data/crimes.json` (o catálogo), gerado em 2026-10-26 a partir do commit `b0556a467f34`. Para atualizá-lo:
 `python scripts/gerar_completude.py`.
 :::
 
 | Indicador | Valor |
 |---|---|
-| Tipos penais catalogados | **1547** |
-| Diplomas com tipo penal vigente | 69 |
+| Tipos penais catalogados | **1548** |
+| Diplomas com tipo penal vigente | 70 |
 | Diplomas revogados/não recepcionados | [29](/acervo) |
 
 ## Índice por diploma
@@ -29,7 +29,7 @@ conferência do catálogo) e de
 **concluído ❓** — a conferência dispositivo a dispositivo não localizou nenhum preceito faltante após as revisões. Não é uma garantia: o denominador real (quantos tipos a lei comporta) não é conhecido com certeza, então este estado é **passível de erro** e pode voltar a "em coleta" se uma revisão futura encontrar algo. **em coleta** — há preceitos sabidamente faltando. **não iniciado** — nenhum tipo reunido ainda. A pergunta — quantos tipos penais existem — é a que abre a [História do projeto](/projeto).
 :::
 
-Todos os 69 diplomas com tipo penal vigente estão concluídos: a conferência dispositivo a dispositivo não localizou preceito faltante.
+Todos os 70 diplomas com tipo penal vigente estão concluídos: a conferência dispositivo a dispositivo não localizou preceito faltante.
 
 | Diploma | Tipos coletados | Situação |
 |---|---:|---|
@@ -102,6 +102,7 @@ Todos os 69 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Escuta protegida de criança e adolescente (crime do art. 24) | 1 | concluído ❓ |
 | Empresa Simples de Crédito (crime do art. 9º) | 1 | concluído ❓ |
 | Estatuto da Segurança Privada (crime do art. 50) | 1 | concluído ❓ |
+| Exportação de bens sensíveis (crime do art. 7º) | 1 | concluído ❓ |
 
 A lista completa dos tipos já reunidos, com o texto de cada um, está na [busca por tipo penal](/tipos).
 
