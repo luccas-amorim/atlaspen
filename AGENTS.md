@@ -139,5 +139,14 @@ pessoa que assina.
   `acao_condicao`, `pena_por_remissao`, `vigencia_ate` — e a discussão vai para a issue,
   não para o campo. Nunca preencha lacuna com plausibilidade.
 
+## Dependências: o Dependabot abre, gente decide
+
+Desde 26/10/2026, `.github/dependabot.yml` abre PR toda quarta com as atualizações das
+GitHub Actions e do npm. As menores vêm agrupadas por família; cada versão **maior** vem
+sozinha, e é a que pede leitura das notas de versão antes do merge — a do `github-script`
+v9 deixou de aceitar `require('@actions/github')`, a do `download-artifact` v8 passou a
+recusar artifact com hash divergente. O PR de dependência passa pela mesma verificação de
+qualquer outro, e não gera nota no feed.
+
 Trabalhe em branch própria, commits pequenos e descritivos; **não faça push nem abra PR sem
 o usuário pedir**.
