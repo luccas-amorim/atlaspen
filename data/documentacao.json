@@ -179,6 +179,7 @@
         "scripts/robos/relator/decisoes.py",
         "scripts/robos/curador/curar.py",
         "scripts/robos/curador/confirmar.py",
+        "scripts/robos/curador/lexml.py",
         "scripts/robos/cotejador/ctresb.py",
         "scripts/robos/vigia/cobertura-limites.json",
         ".github/workflows/conferidor.yml"

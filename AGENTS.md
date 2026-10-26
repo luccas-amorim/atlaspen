@@ -132,6 +132,12 @@ pessoa que assina.
   Senado classifica mal — registra como "Alteração" as revogações que a Lei
   11.106/2005 fez no CP —, e por isso nem a revogação que ele afirma entra sem o
   compilado. Plano e decisões em `.superpowers/planos/2026-10-25-fontes-abertas-e-acervo.md`.
+  **Uma exceção estreita** (decisão de 26/10/2026): quando o Planalto NÃO tem a norma —
+  a lei antiga sem página, o decreto dos governos provisórios —, o texto do normas.leg.br
+  pode sustentar um registro do **acervo**, e o registro diz de onde veio (`fonte_texto`).
+  O catálogo ativo continua só com o Planalto, e a revogação que o registro afirma
+  continua tendo de vir da lei revogadora, nunca da classificação do Senado. A leitura é
+  do `scripts/robos/curador/lexml.py`, que não escreve no acervo.
 - **A questão jurídica em aberto não vira dado.** Havia um `REVISAO-PENDENTE.md` na raiz
   para isso; ele saiu na v2.0.0, quando a revisão da base fechou as perguntas que ele
   guardava. Se a próxima aparecer, o lugar dela é o mesmo de sempre: **o registro diz o
