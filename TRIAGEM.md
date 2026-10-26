@@ -61,7 +61,9 @@ numa semana, a rodada falhou: vale abrir o log em Actions.
 
 ## 2. Uma issue — leitura, não ação imediata
 
-Título: `Conferidor: achados de AAAA-MM-DD`, rótulo `conferidor`.
+Título: `Conferidor: achados de AAAA-MM-DD`, rótulo `conferidor`. A data é a do dia
+em que a rodada começou, lida dos próprios relatórios: a rodada que atravessa a
+meia-noite não perde, no corpo da issue, os relatórios datados da véspera.
 
 Ela só nasce quando há o que dizer, **é uma só** e **substitui a da semana
 passada** — mas só a que ninguém comentou. O conferidor é SEM ESTADO: re-deriva

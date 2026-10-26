@@ -46,7 +46,7 @@
     {
       "arquivo": "TRIAGEM.md",
       "sobre": "A segunda-feira do mantenedor: o que a rodada automática produz, o que cada coisa exige e o que espera decisão.",
-      "conferido_em": "2026-10-01",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         ".github/workflows/conferidor.yml",
         "scripts/robos/proponente/propor.py",
@@ -109,7 +109,7 @@
     {
       "arquivo": "docs/progressao-de-regime.md",
       "sobre": "O art. 112 da LEP: as frações em vigor, as duas tabelas com corte pela data do fato, o efeito do veto aos incisos IV a X, a leitura condicional do reincidente no Título XII e as ADIs em curso. A página mais perecível do site: muda quando o STF ou o STJ se pronunciarem.",
-      "conferido_em": "2026-09-25",
+      "conferido_em": "2026-10-26",
       "cadencia_dias": 45,
       "depende_de": [
         "data/atributos.json",
@@ -164,7 +164,7 @@
     {
       "arquivo": "docs/os-robos.md",
       "sobre": "Como cada robo funciona, com que criterio corta, e o que nenhum deles alcanca. Vigia, Sentinela, Recenseador, Auditor, Arquivista, Cotejador e Relator. Pagina publica, para receber discordancia sobre os criterios.",
-      "conferido_em": "2026-10-25",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         "scripts/robos/vigia/conferir.py",
         "scripts/robos/sentinela/dou_watcher.py",
@@ -204,7 +204,7 @@
     {
       "arquivo": "docs/textos/manifesto-atributo.md",
       "sobre": "Por que a base fala em atributo, e não em benefício: a palavra da concessão descreve um direito com a gramática do favor, e não cobre a metade do catálogo que não favorece ninguém. Posição da equipe; muda se o vocabulário do catálogo mudar.",
-      "conferido_em": "2026-09-25",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         "data/atributos.json",
         "docs/atributos-penais.md"
