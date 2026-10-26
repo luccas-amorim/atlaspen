@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "proposito": "Divergências de moldura entre o compilado do Planalto e a compilação da Câmara (normas.leg.br) cujo motivo já foi lido no texto da lei alteradora. É o irmão de excecoes-cotejo.json: sem a lista, a mesma divergência volta toda semana e o alerta vira ruído.",
+    "regras": [
+      "Casa por `fonte` (id em data/fontes.json), `dispositivo` e as duas molduras, `planalto` e `camara`, escritas como o relatório as escreve. Se uma das compilações mudar, não casa mais.",
+      "Só entra a divergência em que o Planalto está em dia e a Câmara atrasada ou errada, lido na lei alteradora. Se o atrasado é o Planalto, não há exceção: o catálogo segue o Planalto, e o caso vai para a issue até o compilado anotar a lei.",
+      "Toda exceção declara MOTIVO e DATA.",
+      "Exceção que deixa de casar num diploma lido sai com o aviso \"sem efeito\" no relatório: a Câmara atualizou a compilação. Ela sai do arquivo nesse dia."
+    ]
+  },
+  "excecoes": [
+    {
+      "fonte": "idoso-10741",
+      "dispositivo": "Art. 99, caput",
+      "planalto": "reclusão, 24 a 60 meses",
+      "camara": "detenção, 2 a 12 meses",
+      "motivo": "A Lei 15.163/2025, art. 3º, deu nova redação às penas do art. 99 do Estatuto da Pessoa Idosa. O compilado do Planalto anota a lei e traz as penas novas; a compilação da Câmara ainda traz as anteriores.",
+      "data": "2026-10-26"
+    },
+    {
+      "fonte": "idoso-10741",
+      "dispositivo": "Art. 99, § 1º",
+      "planalto": "reclusão, 36 a 84 meses",
+      "camara": "reclusão, 12 a 48 meses",
+      "motivo": "A Lei 15.163/2025, art. 3º, deu nova redação às penas do art. 99 do Estatuto da Pessoa Idosa. O compilado do Planalto anota a lei e traz as penas novas; a compilação da Câmara ainda traz as anteriores.",
+      "data": "2026-10-26"
+    },
+    {
+      "fonte": "idoso-10741",
+      "dispositivo": "Art. 99, § 2º",
+      "planalto": "reclusão, 96 a 168 meses",
+      "camara": "reclusão, 48 a 144 meses",
+      "motivo": "A Lei 15.163/2025, art. 3º, deu nova redação às penas do art. 99 do Estatuto da Pessoa Idosa. O compilado do Planalto anota a lei e traz as penas novas; a compilação da Câmara ainda traz as anteriores.",
+      "data": "2026-10-26"
+    }
+  ]
+}
