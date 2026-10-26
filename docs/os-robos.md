@@ -9,7 +9,7 @@ Um catálogo de direito penal envelhece sozinho. A lei muda toda semana, e a
 defasagem não avisa: um registro errado tem a mesma aparência de um registro
 certo. A resposta do projeto a isso são **rotinas automáticas** que rodam toda
 segunda-feira, às 5h de Brasília, cada uma vigiando uma coisa diferente. Hoje são
-sete, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
+oito, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
 abrir a execução.
 
 Esta página existe para que você possa **discordar dos critérios**. Todos eles
@@ -19,10 +19,10 @@ largo demais, [abra uma issue](https://github.com/luccas-amorim/atlaspen/issues)
 o tipo de retorno que mais serve ao catálogo.
 
 :::note[Determinístico, sem IA]
-Nenhum dos sete usa modelo de linguagem. São expressões regulares e comparação
+Nenhum dos oito usa modelo de linguagem. São expressões regulares e comparação
 de texto, lidas contra o texto **compilado** oficial do `planalto.gov.br`. O
-Cotejador lê também o Senado e o normas.leg.br, e o Relator, o Banco Nacional de
-Precedentes do CNJ, mas só para perguntar: nada que vem de lá escreve no catálogo. Onde não há certeza, o resultado é uma **pergunta
+Cotejador lê também o Senado e o normas.leg.br; o Relator, o Banco Nacional de
+Precedentes do CNJ; o Curador, o repositório ctresb/leis — mas só para perguntar: nada que vem de lá escreve no catálogo. Onde não há certeza, o resultado é uma **pergunta
 para leitura humana**, nunca uma alteração automática do dado.
 :::
 
@@ -37,10 +37,11 @@ para leitura humana**, nunca uma alteração automática do dado.
 | **Recenseador** | Existe lei penal que ninguém leu? | Todas as leis do ano, uma a uma (mensal) |
 | **Cotejador** | O compilado do Planalto está em dia? | O registro do Senado e a compilação da Câmara |
 | **Relator** | O STF ou o STJ decidiram algo sobre a lei que vigiamos? | O Banco Nacional de Precedentes do CNJ |
+| **Curador** | Existe lei penal antiga que o projeto nunca leu? | Toda a legislação federal desde 1889, no ctresb/leis, confirmada no Planalto (mensal) |
 
 Sentinela, Arquivista e Relator correm em paralelo com o Vigia; Auditor e Cotejador esperam
-por ele, porque leem as páginas que ele baixou. O Recenseador roda uma vez por mês,
-na primeira semana. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se
+por ele, porque leem as páginas que ele baixou. O Recenseador e o Curador rodam uma
+vez por mês, na primeira semana. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se
 todos se calarem, a rodada deixa só o carimbo de que a conferência aconteceu.
 
 :::caution[Robô que quebra não se cala]
@@ -239,6 +240,53 @@ fonte seria produzir exatamente o silêncio que ele existe para quebrar. Até
 "nada a relatar"; e conexão perdida contava como número vazio, encerrando a
 varredura como se o ano tivesse acabado. Agora varredura incompleta tem código
 próprio e vira aviso na issue.
+:::
+
+---
+
+## Curador — a lei que ninguém leu, desde 1889
+
+O Recenseador varre o ano corrente; a legislação penal brasileira tem quase dois
+séculos. Existe tipo em lei esparsa antiga que o catálogo nunca viu, e existe tipo
+revogado sem que ninguém percebesse. O Curador lê **toda lei ordinária, decreto-lei e
+lei complementar desde 1889** e aponta as que cominam pena e que o projeto não
+conhece — nem em `data/fontes.json`, nem no inventário de diplomas, nem no acervo.
+
+**O ctresb aponta, o Planalto confirma.** Baixar 30 mil páginas do Planalto levaria
+mais de dez horas, e o endereço de uma lei antiga muda conforme a época. Por isso a
+triagem roda no repositório [ctresb/leis](https://github.com/ctresb/leis), que tem a
+legislação federal convertida para Markdown, e só a lei em que ele acha pena é aberta
+no Planalto. Lá, a página só vale se o cabeçalho declara o mesmo número e o mesmo ano:
+a Lei 4.242 existe em 1921 e em 1963, e o endereço que responde é o da de 1963.
+
+**A pena própria, não a citada.** Quase toda lei que altera o Código Penal traz
+"Pena –" dentro do texto que dá a ele, entre aspas. Essa pena é de um diploma que o
+Vigia já lê, e o Curador a descarta. A lei antiga que escreve "incorrerá na pena de
+prisão cellular" também conta, mas só antes de 1941: o critério do Sentinela e do
+Recenseador não reconhece essa redação, e não deve — "pena de multa" também é sanção
+administrativa moderna.
+
+**O que o Planalto diz vira um estado.** Pena de prisão vigente: candidata a
+`data/fontes.json`, com aviso quando a lei é anterior ao Código Penal de 1940, que
+pode tê-la revogado tacitamente sem que a página diga. Revogada, ou só com a pena
+riscada: candidata ao acervo. Sem página no Planalto: pede juízo. Só multa ou sanção
+administrativa: lista curta, de baixa prioridade. A lei que altera um diploma que o
+projeto já vigia sai à parte, porque a pena dela é, quase sempre, a do texto que dá a ele.
+
+Na varredura única, em 26/10/2026, o Curador triou **28.994** normas e apontou **209**
+com pena própria que o projeto não conhecia. No Planalto, 59 tinham pena de prisão
+vigente, 40 estavam revogadas, 1 só com a pena riscada, 35 sem prisão, 14 sem pena, e
+60 não tinham página. Entre as de pena vigente estavam a Lei 7.853/89 (crimes contra a
+pessoa com deficiência), a Lei 10.300/01 (minas terrestres) e a Lei Complementar
+105/01 (sigilo bancário). O estado fica em `data/curadoria.json`: todo mês, o Curador
+relê só os anos que o ctresb mudou e reconfere no Planalto o que venceu 180 dias.
+
+:::caution[O que o ctresb não tem, o Curador não triou]
+Contra a contagem do Senado, ano a ano, o ctresb tem quase tudo: 16.379 das 16.427
+leis ordinárias, 12.376 dos 12.378 decretos-lei. Mas não tem nenhum dos **8.193
+decretos** dos governos provisórios (1889–1891 e 1930–1934), que tinham força de
+lei — o Código Penal de 1890 é o Decreto 847. É a lacuna que o relatório declara toda
+vez, com os números.
 :::
 
 ---
@@ -474,6 +522,7 @@ scripts/robos/
   arquivista/    verificar_documentacao
   cotejador/     frescor · textos · vetos · ctresb · historico
   relator/       decisoes
+  curador/       triagem · varrer · confirmar · curar
   fontes/        rede · senado · normas · ctresb · cnj      (o transporte: toda requisição passa por aqui)
   proponente/    propor · corrigir · criar        (não é robô: é quem abre o PR — ver acima)
 ```
@@ -511,19 +560,15 @@ do CNJ não guarda nenhum precedente. E continua sem robô a jurisprudência que
 precedente qualificado: o acórdão comum, que só a pesquisa de cada tribunal alcança.
 Está no [README](https://github.com/luccas-amorim/atlaspen/blob/main/README.md#o-que-falta).
 
-**O tipo penal antigo que nunca foi cadastrado, e o que morreu sem aviso.** O
-Recenseador varre o ano corrente; a legislação penal brasileira tem quase dois
-séculos. Existe tipo em lei esparsa antiga que o catálogo nunca viu, e existe tipo
-que foi revogado sem que ninguém percebesse — e este segundo é pior, porque um crime
-revogado que continua publicado afirma que a conduta é punível quando ela não é. O
-**Curador** é o robô previsto para isso, e está no
-[README](https://github.com/luccas-amorim/atlaspen/blob/main/README.md#o-que-falta), junto com os
-tribunais.
+**O decreto com força de lei dos governos provisórios.** O Curador lê a lei antiga
+que o ctresb/leis tem, e o ctresb não tem os decretos de 1889–1891 e 1930–1934 — o
+Código Penal de 1890 é um deles. São 8.193 pelo Senado, e nenhum robô os triou.
 
 **Revogação tácita.** Lei posterior que regula inteiramente a matéria revoga a
 anterior sem dizê-lo (LINDB, art. 2º, §1º), e não há sinal textual para isso. A
 Lei 7.802/89 foi inteiramente revogada pela Lei 14.785/2023, e a página da lei
-antiga não anuncia isso em lugar nenhum. Depois da LC 107/2001, que exige cláusula
+antiga, quando o caso foi descoberto, não anunciava isso em lugar nenhum — em
+26/10/2026 já anuncia. Depois da LC 107/2001, que exige cláusula
 de revogação expressa, o caso virou defeito de técnica legislativa em vez de
 regra — mas continua invisível a um robô, e por isso é limite declarado, não
 problema perseguido.
@@ -531,6 +576,6 @@ problema perseguido.
 **Lei estadual e municipal.** Não existem em matéria penal: a competência é
 privativa da União (art. 22, I, da Constituição). Por isso a Seção 1 basta.
 
-**O juízo jurídico.** Nenhum dos cinco decide se um dispositivo é crime
+**O juízo jurídico.** Nenhum deles decide se um dispositivo é crime
 autônomo, se a hediondez alcança um tipo militar por identidade, ou se um nome
 está errado. Eles apontam. Quem decide assina.
