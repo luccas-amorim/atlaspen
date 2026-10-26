@@ -54,7 +54,7 @@ concurrency:
 #   arquivista   — saúde da prosa: documento vencido ou que fala de algo que mudou
 #   cotejador    — segunda leitura: o compilado anota as leis que o Senado
 #                  registra? Lê os snapshots do vigia, e só pergunta
-#   relator      — o que o STF decidiu na semana sobre a lei vigiada, lido no
+#   relator      — o que o STF e o STJ decidiram na semana sobre a lei vigiada, lido no
 #                  Banco Nacional de Precedentes do CNJ
 #   triagem      — junta os relatórios e abre a issue da semana
 #
@@ -301,11 +301,11 @@ jobs:
 
   # ── relator ──────────────────────────────────────────────────────────────
   # A decisão de tribunal não passa pelo DOU, e até 25/10/2026 nenhum robô a
-  # via. Este lê no CNJ os precedentes do STF atualizados na semana e separa os
-  # que tocam diploma vigiado. Não depende do vigia: a chave de cada registro
+  # via. Este lê no CNJ os precedentes do STF e do STJ atualizados na semana e
+  # separa os que tocam diploma vigiado, registro do catálogo ou atributo penal. Não depende do vigia: a chave de cada registro
   # vem de static/data/crimes.json. Só aponta; o CNJ fora do ar sai 2.
   relator:
-    name: Relator — o que o STF decidiu sobre a lei vigiada?
+    name: Relator — o que o STF e o STJ decidiram sobre a lei vigiada?
     runs-on: ubuntu-latest
     continue-on-error: true
     outputs:

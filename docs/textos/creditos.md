@@ -72,7 +72,7 @@ O texto que vale é o compilado do Planalto (`planalto.gov.br`). Desde outubro d
 [API de Dados Abertos do Senado Federal](https://legis.senado.leg.br/dadosabertos/api-docs/swagger-ui/index.html)
 e o portal [normas.leg.br](https://normas.leg.br), do Congresso Nacional, cujo
 conteúdo está sob a licença CC BY 4.0. O Relator lê os precedentes do Supremo
-Tribunal Federal no [Banco Nacional de Precedentes](https://pangeabnp.pdpj.jus.br) do
+Tribunal Federal e do Superior Tribunal de Justiça no [Banco Nacional de Precedentes](https://pangeabnp.pdpj.jus.br) do
 Conselho Nacional de Justiça. Nada que vem dessas fontes escreve no catálogo; o
 critério está em [Os robôs](os-robos).
 
