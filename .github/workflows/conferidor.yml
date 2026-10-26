@@ -428,16 +428,27 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Data de BRASÍLIA, como o relatório: às 21h do dia 31 já é dia 1º em
-          # UTC, e a issue saía datada de amanhã.
-          HOJE="$(TZ=America/Sao_Paulo date +%Y-%m-%d)"
+          # Cada relatório é procurado pelo NOME, sem a data. Aqui só chegam os
+          # desta rodada (crawler/relatorios é ignorado pelo git e vem vazio do
+          # checkout), e cada robô data o seu pelo relógio de Brasília na hora
+          # em que roda. A rodada manual de 25/10/2026 começou às 23h41 e a
+          # triagem rodou depois da meia-noite: procurou relatórios de 26/10,
+          # achou os de 25, e a issue #51 saiu sem tribunais, cotejos e DOU.
+          # Sai 0 sempre: o shell do passo roda com -e, e o relatório que não
+          # veio não pode derrubar a issue dos que vieram.
+          ler() { for f in "$@"; do [ -f "$f" ] && cat "$f" && echo; done; return 0; }
+          R=crawler/relatorios
+          D='[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
+          # A data do título é a do primeiro relatório datado — o dia em que a
+          # rodada começou —, e a de Brasília agora só se nenhum veio.
+          HOJE="$(ls $R/$D*.md $R/*-$D.md 2>/dev/null | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | sort | head -1)"
+          [ -n "$HOJE" ] || HOJE="$(TZ=America/Sao_Paulo date +%Y-%m-%d)"
           # O RESUMO, e nao o relatorio completo: o corpo da issue tem teto
           # de 65.536 caracteres, e o despejo dos registros que a lei nao
           # comina empurrava para fora justamente o que pede acao. Id por id
           # continua no artifact, que a primeira linha do corpo nomeia.
-          RELATORIO="crawler/relatorios/$HOJE-resumo.md"
-          [ -f "$RELATORIO" ] || RELATORIO="crawler/relatorios/$HOJE.md"
-          DOU="crawler/relatorios/dou-$HOJE.md"
+          RESUMOS="$(ls $R/$D-resumo.md 2>/dev/null || true)"
+          [ -n "$RESUMOS" ] || RESUMOS="$(ls $R/$D.md 2>/dev/null || true)"
           {
             echo "Rodada automática do conferidor contra o texto compilado do Planalto."
             echo
@@ -448,23 +459,16 @@ jobs:
             echo
             echo "---"
             echo
-            [ -f "crawler/relatorios/quebrados.md" ] && cat "crawler/relatorios/quebrados.md" && echo
-            [ -f "$RELATORIO" ] && cat "$RELATORIO"
-            echo
-            [ -f "$DOU" ] && cat "$DOU"
-            echo
-            [ -f "crawler/relatorios/auditoria-$HOJE.md" ] && cat "crawler/relatorios/auditoria-$HOJE.md"
-            echo
-            [ -f "crawler/relatorios/documentacao.md" ] && cat "crawler/relatorios/documentacao.md"
-            echo
-            for COTEJO in crawler/relatorios/cotejo-*-"$HOJE".md; do
-              [ -f "$COTEJO" ] && cat "$COTEJO" && echo
-            done
-            [ -f "crawler/relatorios/tribunais-$HOJE.md" ] && cat "crawler/relatorios/tribunais-$HOJE.md" && echo
+            ler $R/quebrados.md
+            ler $RESUMOS
+            ler $R/dou-$D.md
+            ler $R/auditoria-$D.md
+            ler $R/documentacao.md
+            ler $R/cotejo-*-$D.md
+            ler $R/tribunais-$D.md
             # O Recenseador entrava no código da issue e não no corpo: com 3,
             # a issue abria sem dizer que lei ler.
-            [ -f "crawler/relatorios/leis-do-ano-$(TZ=America/Sao_Paulo date +%Y).md" ] \
-              && cat "crawler/relatorios/leis-do-ano-$(TZ=America/Sao_Paulo date +%Y).md"
+            ler $R/leis-do-ano-[0-9][0-9][0-9][0-9].md
             echo
           } > corpo.md
           # O corpo da issue tem limite de 65.536 caracteres.
