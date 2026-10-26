@@ -100,7 +100,7 @@ jobs:
 
       - name: Guardar relatório e snapshots
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: conferidor-${{ github.run_number }}
           path: |
@@ -151,7 +151,7 @@ jobs:
 
       - name: Guardar o relatório do DOU
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: sentinela-${{ github.run_number }}
           path: crawler/relatorios/
@@ -179,7 +179,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Recuperar os snapshots da rodada
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: conferidor-${{ github.run_number }}
           path: crawler/
@@ -191,7 +191,7 @@ jobs:
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório da auditoria
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: auditor-${{ github.run_number }}
           path: crawler/relatorios/auditoria-*.md
@@ -228,7 +228,7 @@ jobs:
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório da documentação
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: arquivista-${{ github.run_number }}
           path: crawler/relatorios/documentacao.md
@@ -262,7 +262,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Recuperar os snapshots da rodada
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: conferidor-${{ github.run_number }}
           path: crawler/
@@ -298,7 +298,7 @@ jobs:
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório do cotejo
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: cotejador-${{ github.run_number }}
           path: crawler/relatorios/cotejo-*
@@ -329,7 +329,7 @@ jobs:
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório dos tribunais
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: relator-${{ github.run_number }}
           path: crawler/relatorios/tribunais-*
@@ -398,7 +398,7 @@ jobs:
           fi
       - name: Guardar o relatório e o estado
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: curador-${{ github.run_number }}
           path: |
@@ -425,7 +425,7 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Recuperar os relatórios dos robôs
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           pattern: '*-${{ github.run_number }}'
           merge-multiple: true
@@ -667,7 +667,7 @@ jobs:
       # O differ lê os snapshots baixados no job anterior.
       - name: Recuperar os snapshots da rodada
         if: steps.app.outputs.token != ''
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: conferidor-${{ github.run_number }}
           path: crawler/

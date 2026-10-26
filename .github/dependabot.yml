@@ -1,0 +1,54 @@
+# O atualizador de dependências (decisão de 26/10/2026).
+#
+# Toda quarta de manhã, fora do dia da rodada do Conferidor (segunda), o
+# Dependabot abre PR com o que saiu de novo. As atualizações menores e de
+# correção vêm AGRUPADAS — um PR por família, para não virar enxurrada —, e
+# cada versão maior vem sozinha, porque é a que pode quebrar: a do
+# github-script v9, por exemplo, deixou de aceitar require('@actions/github').
+# O PR passa pela CI como qualquer outro; o merge continua sendo de gente.
+#
+# Python fica de fora porque não há o que acompanhar: a CI instala `pytest` e
+# `openpyxl` sem versão fixa, e eles já vêm sempre na mais nova. Se um dia
+# entrar um requirements.txt com versões fixas, ele ganha um bloco `pip` aqui.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: wednesday
+      time: "06:00"
+      timezone: America/Sao_Paulo
+    commit-message:
+      prefix: ci
+      include: scope
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: wednesday
+      time: "06:00"
+      timezone: America/Sao_Paulo
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope
+    groups:
+      astro:
+        patterns: ["astro", "@astrojs/*"]
+        update-types: [minor, patch]
+      react:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
+        update-types: [minor, patch]
+      desenvolvimento:
+        dependency-type: development
+        update-types: [minor, patch]
+      demais:
+        dependency-type: production
+        update-types: [minor, patch]
