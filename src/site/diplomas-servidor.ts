@@ -13,6 +13,8 @@ export interface Diploma {
   norma: string;
   situacao: string;
   fonte_url?: string;
+  /** De onde vem o texto quando não é o compilado do Planalto ("normas.leg.br"). */
+  fonte_texto?: string;
   rotulos_catalogo?: string[];
   norma_revogadora?: string;
   /** Perda de vigência dos dispositivos penais do diploma (AAAA-MM-DD). */
