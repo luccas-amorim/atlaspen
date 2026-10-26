@@ -2,8 +2,8 @@
 id: completude
 title: Completude do catálogo
 sidebar_position: 2
-gerado_em: '2026-10-25'
-commit: '96a4873ee48b'
+gerado_em: '2026-10-26'
+commit: '53b6ed2b9d24'
 ---
 
 {/* GERADO AUTOMATICAMENTE por scripts/gerar_completude.py — não edite à mão. */}
@@ -13,14 +13,14 @@ commit: '96a4873ee48b'
 :::note[Página gerada]
 Este acompanhamento é derivado de `data/diplomas.json` (o denominador da
 conferência do catálogo) e de
-`data/crimes.json` (o catálogo), gerado em 2026-10-25 a partir do commit `96a4873ee48b`. Para atualizá-lo:
+`data/crimes.json` (o catálogo), gerado em 2026-10-26 a partir do commit `53b6ed2b9d24`. Para atualizá-lo:
 `python scripts/gerar_completude.py`.
 :::
 
 | Indicador | Valor |
 |---|---|
-| Tipos penais catalogados | **1531** |
-| Diplomas com tipo penal vigente | 61 |
+| Tipos penais catalogados | **1547** |
+| Diplomas com tipo penal vigente | 69 |
 | Diplomas revogados/não recepcionados | [14](/acervo) |
 
 ## Índice por diploma
@@ -29,7 +29,7 @@ conferência do catálogo) e de
 **concluído ❓** — a conferência dispositivo a dispositivo não localizou nenhum preceito faltante após as revisões. Não é uma garantia: o denominador real (quantos tipos a lei comporta) não é conhecido com certeza, então este estado é **passível de erro** e pode voltar a "em coleta" se uma revisão futura encontrar algo. **em coleta** — há preceitos sabidamente faltando. **não iniciado** — nenhum tipo reunido ainda. A pergunta — quantos tipos penais existem — é a que abre a [História do projeto](/projeto).
 :::
 
-Todos os 61 diplomas com tipo penal vigente estão concluídos: a conferência dispositivo a dispositivo não localizou preceito faltante.
+Todos os 69 diplomas com tipo penal vigente estão concluídos: a conferência dispositivo a dispositivo não localizou preceito faltante.
 
 | Diploma | Tipos coletados | Situação |
 |---|---:|---|
@@ -60,6 +60,7 @@ Todos os 61 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Organizações criminosas | 8 | concluído ❓ |
 | Serviços postais (crimes) | 8 | concluído ❓ |
 | Contravenções de preconceito | 7 | concluído ❓ |
+| Pessoa com deficiência — apoio e ação civil pública (crimes do art. 8º) | 7 | concluído ❓ |
 | Lei de Biossegurança (crimes) | 6 | concluído ❓ |
 | Tortura | 6 | concluído ❓ |
 | Antiterrorismo | 6 | concluído ❓ |
@@ -81,6 +82,8 @@ Todos os 61 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Interceptação telefônica (crimes) | 2 | concluído ❓ |
 | Crimes de prefeitos e vereadores | 2 | concluído ❓ |
 | Direito agrário (crimes) | 2 | concluído ❓ |
+| Lei do Sigilo Bancário (crime do art. 10) | 2 | concluído ❓ |
+| Armas químicas (crimes do art. 4º) | 2 | concluído ❓ |
 | Condomínios e incorporações (crimes) | 1 | concluído ❓ |
 | Lei Maria da Penha (crime do art. 24-A) | 1 | concluído ❓ |
 | Lei Geral de Telecomunicações (crime do art. 183) | 1 | concluído ❓ |
@@ -94,6 +97,11 @@ Todos os 61 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Lei de Inelegibilidades (crime do art. 25) | 1 | concluído ❓ |
 | Discriminação de pessoas com HIV/aids | 1 | concluído ❓ |
 | Estatuto da Advocacia (crime do art. 7º-B) | 1 | concluído ❓ |
+| Minas terrestres antipessoal (crime do art. 2º) | 1 | concluído ❓ |
+| Topografia de circuito integrado (crime do art. 54) | 1 | concluído ❓ |
+| Escuta protegida de criança e adolescente (crime do art. 24) | 1 | concluído ❓ |
+| Empresa Simples de Crédito (crime do art. 9º) | 1 | concluído ❓ |
+| Estatuto da Segurança Privada (crime do art. 50) | 1 | concluído ❓ |
 
 A lista completa dos tipos já reunidos, com o texto de cada um, está na [busca por tipo penal](/tipos).
 
