@@ -1372,6 +1372,13 @@
    "caminho": "federal/decretos-lei/1939/del-1164-1939-03-18.md",
    "chave": "del-1164-1939",
    "ementa": "Dispõe sôbre as concessões de terras e vias de comunicação na faixa da   fronteira, bem como sôbre as indústrias aí situadas.",
+   "lexml": {
+    "amostra": "Pena de apreensão dos exemplares e fechamento da tipografia e prisão celular do responsáveis por um a três meses",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/e64a7fc2-0fbd-49ca-abd5-b33a0155ea8e/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1388,6 +1395,13 @@
    "caminho": "federal/decretos-lei/1939/del-1191-1939-04-04.md",
    "chave": "del-1191-1939",
    "ementa": "Dispõe sobre o monopólio postal da União e estabelece penas a serem   aplicadas aos contraventores do transporte e da distribuição da correspondência.",
+   "lexml": {
+    "amostra": "penas – De seis meses a um ano de prisão celular e multa de 3:000$000 a 20:000$000, aos donos, gerentes, sócios solidários ou membros da diretoria da empresa infrat",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/a7f1388a-cdc3-45d2-984a-ef491c08699e/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1420,6 +1434,13 @@
    "caminho": "federal/decretos-lei/1939/del-1391-1939-06-29.md",
    "chave": "del-1391-1939",
    "ementa": "Dispõe sobre a cobrança do imposto de renda relativo a juros de apólices   ao portador, estaduais e municipais, prêmios de loterias ou sorteios e   vencimentos dos funcionários públicos estaduais e municipais.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/0a6d3050-6d11-477a-a60f-fccbdd1a803f/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1436,6 +1457,13 @@
    "caminho": "federal/decretos-lei/1939/del-1404-1939-07-06.md",
    "chave": "del-1404-1939",
    "ementa": "Modifica o art. 7º, n.º 16, do Regulamento baixado pelo Decreto-Lei n.º   739, de 24 de setembro de 1938, que estabelece a incidência do imposto de   consumo sobre artefatos de tecidos e peles.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/7e8ee349-c799-42da-8bc9-fb1667b37732/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1516,6 +1544,13 @@
    "caminho": "federal/decretos-lei/1939/del-1628-1939-09-26.md",
    "chave": "del-1628-1939",
    "ementa": "Dispõe sobre a concessão de diárias a funcionários e extranumerários.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e5d16842-83a8-4237-bcd2-93a6732836f6/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1532,6 +1567,13 @@
    "caminho": "federal/decretos-lei/1939/del-1641-1939-09-29.md",
    "chave": "del-1641-1939",
    "ementa": "Dispõe sobre a criação o funcionamento da Comissão de Defesa da Economia   Nacional.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/717ff1de-8f87-4955-8f73-6df504e0f37b/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1564,6 +1606,13 @@
    "caminho": "federal/decretos-lei/1939/del-1687-1939-10-17.md",
    "chave": "del-1687-1939",
    "ementa": "Determina as zonas interditadas à navegação aérea e dá outras   providências.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/bea8a123-753e-4f15-a0d6-90353b113260/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1596,6 +1645,13 @@
    "caminho": "federal/decretos-lei/1939/del-1768-1939-11-11.md",
    "chave": "del-1768-1939",
    "ementa": "Estabelece penalidades para as infrações do Código de Caça.",
+   "lexml": {
+    "amostra": "so, à cassação de licença para caçar, à apreensão e perda das armas e instrumentos venatórios e dos animais caçados e à pena pecuniária conversível, no caso de segunda infração, em prisão celular, na forma dos arts",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/d93f3add-e9d3-49e3-b189-3dc1e667191b/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1644,6 +1700,13 @@
    "caminho": "federal/decretos-lei/1940/del-2035-1940-02-27.md",
    "chave": "del-2035-1940",
    "ementa": "Dispõe sobre a organização da Justiça do Distrito Federal.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/20f05d0e-7d86-475d-8931-de2c11d35e77/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1660,6 +1723,13 @@
    "caminho": "federal/decretos-lei/1940/del-2049-1940-02-29.md",
    "chave": "del-2049-1940",
    "ementa": "Dispõe sobre os emolumentos e taxas relativas a serviços executados ou   fiscalizados pela Secretaria Geral de Viação e Obras da Prefeitura do Distrito   Federal.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/35656f9a-e718-4d29-9337-f3e17b68599b/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1692,6 +1762,13 @@
    "caminho": "federal/decretos-lei/1940/del-2084-1940-03-08.md",
    "chave": "del-2084-1940",
    "ementa": "Sujeita a registo a autorização para o exercício da respectiva atividade   os organizadores, mediante taxas, de cadastros de comerciantes e industriais.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e135251a-33f9-4b56-9443-5483202bdf31/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1740,6 +1817,13 @@
    "caminho": "federal/decretos-lei/1940/del-2506-1940-08-20.md",
    "chave": "del-2506-1940",
    "ementa": "Regimento de Custas da Justiça do Distrito Federal.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/54f4d350-4959-4125-8e68-65b12531eae1/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1756,6 +1840,13 @@
    "caminho": "federal/decretos-lei/1940/del-2524-1940-08-23.md",
    "chave": "del-2524-1940",
    "ementa": "Modifica o art. 3º do Decreto-Lei nº 869, de 18 de novembro de 1938.",
+   "lexml": {
+    "amostra": "869, de 18 de novembro de 1938, serão punidos com a pena de prisão celular de 1 a 6 meses e multa de 500$0 a 10:000$0, tendo-se em vista, para a aplicação da multa, somente as condições econômicas do réu",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/112f6438-fee5-49a6-b810-e0413c81d086/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1772,6 +1863,13 @@
    "caminho": "federal/decretos-lei/1938/del-281-1938-02-18.md",
    "chave": "del-281-1938",
    "ementa": "Sujeita ao registro industrial do Departamento Nacional da Indústria e   Comércio todas as firmas e empresas industriais, e dá outras providências.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ffad9c33-db99-459f-98ef-5a58c2ef282f/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1788,6 +1886,13 @@
    "caminho": "federal/decretos-lei/1941/del-2980-1941-01-24.md",
    "chave": "del-2980-1941",
    "ementa": "Consolida as disposições sobre o serviço de loterias e dá outras   providências.",
+   "lexml": {
+    "amostra": "3º, Penas: de 1 a 4 anos de prisão celular, multa de 5:000$0 a 10:000$0, alem de perda para a Fazenda Nacional de todos os aparelhos de extração, mobiliário, utensílios",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/7841e624-169b-4e2f-b05d-62d95018cf12/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1820,6 +1925,13 @@
    "caminho": "federal/decretos-lei/1941/del-3366-1941-06-25.md",
    "chave": "del-3366-1941",
    "ementa": "Dispõe sobre a execução dos serviços de transporte coletivos no Município   de São Paulo e dá outras providências.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/8447ae34-a6af-4c07-bb98-e10264096ea6/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1836,6 +1948,13 @@
    "caminho": "federal/decretos-lei/1938/del-351-1938-03-24.md",
    "chave": "del-351-1938",
    "ementa": "Dispõe sobre a arrecadação dos impostos devidos à Fazenda do Distrito   Federal nos inventários e outros procedimentos judiciais.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fc9d098c-2502-4c7e-be20-b70fbc798fa6/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1868,6 +1987,13 @@
    "caminho": "federal/decretos-lei/1937/del-37-1937-12-02.md",
    "chave": "del-37-1937",
    "ementa": "Dispõe sobre partidos políticos.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/b81368f9-6a5b-464c-b30f-cd90e4e494e6/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1932,6 +2058,13 @@
    "caminho": "federal/decretos-lei/1938/del-392-1938-04-27.md",
    "chave": "del-392-1938",
    "ementa": "Regula a expulsão de estrangeiros.",
+   "lexml": {
+    "amostra": "que regressar ao território nacional antes de revogada a expulsão ficará, pela simples verificação do fato, sujeito à, pena de dois a quatro anos de prisão celular, cumprida a qual será novamente expulso",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/e4065429-dffe-4812-99d9-4ba66a44d2f3/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -1964,6 +2097,13 @@
    "caminho": "federal/decretos-lei/1941/del-3971-1941-12-24.md",
    "chave": "del-3971-1941",
    "ementa": "Dispõe sobre o cumprimento de penas do Distrito Federal.",
+   "lexml": {
+    "amostra": "1º As penas de reclusão e de detenção, assegurada a separação entre reclusos e detentos, serão cumpridas na Casa de Correção, que passa a denominar-se Penitenciária Centr",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/b4fba51d-18fc-465a-995b-5f69a2f8d72d/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2044,6 +2184,10 @@
    "caminho": "federal/decretos-lei/1942/del-4599-1942-08-20.md",
    "chave": "del-4599-1942",
    "ementa": "Autoriza o Departamento Federal de Compras a requisitar material necessario ao serviço publico, e dá outras providencias.",
+   "lexml": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_texto"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2092,6 +2236,13 @@
    "caminho": "federal/decretos-lei/1938/del-479-1938-06-08.md",
    "chave": "del-479-1938",
    "ementa": "Dispõe sobre a expulsão de estrangeiros.",
+   "lexml": {
+    "amostra": "que regressar ao território nacional antes de revogada a expulsão, ficará, pela simples verificação do fato, sujeito à pena de dois a quatro anos de prisão celular, cumprida a qual será novamente expulso",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/eee2bf48-5710-4171-8ad7-b91d8b28690c/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2124,6 +2275,13 @@
    "caminho": "federal/decretos-lei/1942/del-4828-1942-10-13.md",
    "chave": "del-4828-1942",
    "ementa": "Coordena os meios e órgãos de divulgação e publicidade existentes no país   e dá outras providências.",
+   "lexml": {
+    "amostra": "766, de 1 de outubro de 1942, na parte aplicável, e, quando neste não estiver prevista, com a pena de reclusão de três meses a três anos e multa até 20:000$0",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/fc9a8890-3f2b-4050-8e58-ba4779648836/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2156,6 +2314,13 @@
    "caminho": "federal/decretos-lei/1943/del-5353-1943-03-29.md",
    "chave": "del-5353-1943",
    "ementa": "Dispõe sobre a aplicação de legislação penal militar ao pessoal marítimo,   durante os contratos de trabalho e dá outras providências.",
+   "lexml": {
+    "amostra": "Pena : reclusão, de seis meses a dois anos",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/1e4d15d6-33c2-4732-8253-747c92a6a093/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2220,6 +2385,13 @@
    "caminho": "federal/decretos-lei/1937/del-65-1937-12-14.md",
    "chave": "del-65-1937",
    "ementa": "Dispõe sobre o recolhimento das contribuiçoes devidas por empregados aos   Institutos e Caixas de Aposentadorias e Pensões.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/8f46cd16-1066-4753-848b-48493501cac5/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2236,6 +2408,13 @@
    "caminho": "federal/decretos-lei/1944/del-6739-1944-07-26.md",
    "chave": "del-6739-1944",
    "ementa": "Dispõe sobre a locação de imóveis.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ebbb7ad2-5670-46f2-86d1-f508d06cd352/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2300,6 +2479,10 @@
    "caminho": "federal/decretos-lei/1945/del-7675-1945-06-26.md",
    "chave": "del-7675-1945",
    "ementa": "Reorganiza o Tribunal Marítimo Administrativo e dá outras providências.",
+   "lexml": {
+    "conferido_em": "2026-10-26",
+    "estado": "sem_texto"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2364,6 +2547,13 @@
    "caminho": "federal/decretos-lei/1938/del-803-1938-10-24.md",
    "chave": "del-803-1938",
    "ementa": "Cria o cargo de Corregedor na Justiça do Distrito Federal, e dá outras   providências.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/0b6f8b90-3fcd-407b-8702-2ca9cd2b361e/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2396,6 +2586,13 @@
    "caminho": "federal/decretos-lei/1938/del-854-1938-11-12.md",
    "chave": "del-854-1938",
    "ementa": "Dispõe sobre o serviço de loterias e dá outras providências.",
+   "lexml": {
+    "amostra": "Penas: de 1 a 4 anos de prisão celular, multa de 5:000$000 a 10:000$000, alem de perda para o Fazenda Nacional de todos os aparelhos de extração, mobiliário, utensí",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/cd8a7f84-b1fe-4b95-9c2e-c72c643303bf/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2412,6 +2609,13 @@
    "caminho": "federal/decretos-lei/1938/del-869-1938-11-18.md",
    "chave": "del-869-1938",
    "ementa": "Define os crimes contra a economia popular sua guarda e seu emprego.",
+   "lexml": {
+    "amostra": "Pena: prisão celular de 2 a 10 anos e multa de 10:000$000 a 50:000$000",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/ef5ba127-dc5d-410c-b1eb-85bf3930b736/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2444,6 +2648,13 @@
    "caminho": "federal/decretos-lei/1938/del-910-1938-11-30.md",
    "chave": "del-910-1938",
    "ementa": "Dispõe sobre a duração e condições do trabalho em empresas jornalísticas.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/201a6933-8e3d-42cc-9820-bd180903efeb/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2460,6 +2671,13 @@
    "caminho": "federal/decretos-lei/1938/del-921-1938-12-01.md",
    "chave": "del-921-1938",
    "ementa": "Cria taxa de inspeção sanitária a que ficam sujeitos os estabelecimentos   que abatem animais para os mercados insterestadual e internacional e manipulam   ou por qualquer forma, industrializam produtos ou sub-produtos de origem animal.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1798d3f5-06f0-4b22-be9c-8d47c79ce4c9/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2492,6 +2710,13 @@
    "caminho": "federal/decretos-lei/1937/del-96-1937-12-22.md",
    "chave": "del-96-1937",
    "ementa": "Dispõe sobre a administração do Distrito Federal.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f02bb90d-b3de-4266-8be3-f7eae8a2a9ec/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2556,6 +2781,13 @@
    "caminho": "federal/leis-complementares/1970/lcp-5-1970-04-29.md",
    "chave": "lcp-5-1970",
    "ementa": "Estabelece, de acordo com a Emenda Constitucional nº 1, de 17 de outubro de 1969, art. 151 e seu parágrafo único, casos de inelegibilidades, e dá outras providências .",
+   "lexml": {
+    "amostra": "Pena - detenção de 6 (seis) meses a 2 (dois) anos e multa de 20 (vinte) a 50 (cinqüenta) vezes o maior salário mínimo vigente no País",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/bb5227dc-e609-4f81-9b1b-da9b0d2b1911/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -2904,6 +3136,13 @@
    "caminho": "federal/leis-ordinarias/1904/lei-1269-1904-11-15.md",
    "chave": "lei-1269-1904",
    "ementa": "Reforma a legislação eleitoral, e dá outras providencias",
+   "lexml": {
+    "amostra": "Pena – prisão por dois a quatro mezes",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/02165d07-d01e-4c7d-964b-67af76aafc95/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3126,6 +3365,13 @@
    "caminho": "federal/leis-ordinarias/1906/lei-1616-1906-12-30.md",
    "chave": "lei-1616-1906",
    "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brazil para o exercicio de 1907, e dá outras providencias.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/839851ae-be34-4113-86d1-1c7f4850b98d/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3142,6 +3388,13 @@
    "caminho": "federal/leis-ordinarias/1907/lei-1785-1907-11-28.md",
    "chave": "lei-1785-1907",
    "ementa": "Estabelece penas para o crime de peculato, e dá outras providencias.",
+   "lexml": {
+    "amostra": "o ou o deposito, em razão de seu cargo, quer este seja gratuito ou remunerado, quer seja temporario ou permanente, será punido: a) si o prejuízo verificado fôr inferior a 10:000$, com 2 a 6 annos de prisão cellular, perda do emprego, com inhabilitação para exercer qualquer funcçã",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/4cfc501a-534c-4001-a325-74328306bed0/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3190,6 +3443,13 @@
    "caminho": "federal/leis-ordinarias/1936/lei-196-1936-01-18.md",
    "chave": "lei-196-1936",
    "ementa": "Institue a Lei Organica para o Districto Federal",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/8d19279e-90e3-4709-8ef2-8b94d37af94d/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3206,6 +3466,13 @@
    "caminho": "federal/leis-ordinarias/1908/lei-2024-1908-12-17.md",
    "chave": "lei-2024-1908",
    "ementa": "Reforma a lei sobre fallencias",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/903acbac-337f-4022-b544-5b2d2e0897d4/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3238,6 +3505,13 @@
    "caminho": "federal/leis-ordinarias/1910/lei-2321-1910-12-30.md",
    "chave": "lei-2321-1910",
    "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brazil para o exercicio de 1911 e dá outras providencias.",
+   "lexml": {
+    "amostra": "Com as penas de dous a seis mezes de prisão cellular e multa de 500$ a 2:000$, além da inutilização dos bilhetes, registros e apparelhos de sorteio e de perda em favor da",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/1afc300c-8918-4351-8232-95d23f7a15cf/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3254,6 +3528,13 @@
    "caminho": "federal/leis-ordinarias/1911/lei-2416-1911-06-28.md",
    "chave": "lei-2416-1911",
    "ementa": "Regula a extradição de nacionaes e estrangeiros e o processo e julgamento   dos mesmos, quando, fóra do paiz, perpetrarem algum dos crimes mencionados nesta   lei",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/32bf99ec-5c11-4977-8e26-b6b1ccd86779/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3286,6 +3567,13 @@
    "caminho": "federal/leis-ordinarias/1936/lei-264-1936-10-05.md",
    "chave": "lei-264-1936",
    "ementa": "Regula o horario de   trabalho nos serviços publicos",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/3638bac4-fa17-4a5d-bb4a-c101e6fbef41/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3318,6 +3606,13 @@
    "caminho": "federal/leis-ordinarias/1915/lei-2924-1915-01-05.md",
    "chave": "lei-2924-1915",
    "ementa": "Fixa a Despeza Geral da Republica dos Estados Unidos do Brazil para o axercicio de 1915.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/875c91c6-b1e0-403f-8ef6-5e04bc62f51a/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3350,6 +3645,13 @@
    "caminho": "federal/leis-ordinarias/1915/lei-2992-1915-09-25.md",
    "chave": "lei-2992-1915",
    "ementa": "Modifica os arts. 266, 277 e 278 do Codigo Penal",
+   "lexml": {
+    "amostra": "Pena – de prisão cellular por um a tres annos",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/a271060c-715b-4211-81c3-0c786b74df20/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3382,6 +3684,13 @@
    "caminho": "federal/leis-ordinarias/1916/lei-3139-1916-08-02.md",
    "chave": "lei-3139-1916",
    "ementa": "Prescreve o modo por que deve ser feito o alistamento eleitoral e dá outras providencias",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/96730902-0f27-4ec2-bffc-f542cf535b17/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3398,6 +3707,13 @@
    "caminho": "federal/leis-ordinarias/1916/lei-3208-1916-12-27.md",
    "chave": "lei-3208-1916",
    "ementa": "Regula o processo eleitoral e dá outras providencias",
+   "lexml": {
+    "amostra": "Pena: prisão por dous a quatro mezes",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/1d8233ed-5683-43d0-a06e-6845426145c8/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3430,6 +3746,13 @@
    "caminho": "federal/leis-ordinarias/1892/lei-35-1892-01-26.md",
    "chave": "lei-35-1892",
    "ementa": "Estabelece o processo para as eleições federais,",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/153c8345-0ac7-4afa-81a5-d99aa4a70fd7/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3462,6 +3785,13 @@
    "caminho": "federal/leis-ordinarias/1937/lei-379-1937-01-16.md",
    "chave": "lei-379-1937",
    "ementa": "Regula o casamento religioso para os effeitos civis.",
+   "lexml": {
+    "amostra": "§ 4º Decidindo a impugnação nos termos do § 3º, o juiz poderá impor, desde logo, a pena de multa de 100$ a 500$, ou de prisão simples por 10 a 80 dias, a quem a tiver oferecido falsa ou dolosamente",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/83ff08a8-e002-4325-8334-e632550dd50a/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3510,6 +3840,13 @@
    "caminho": "federal/leis-ordinarias/1937/lei-388-1937-02-03.md",
    "chave": "lei-388-1937",
    "ementa": "Regula os fretes marítimos para o exterior.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/661c356e-df57-47f0-b911-7fe0b5dc4f91/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3670,6 +4007,13 @@
    "caminho": "federal/leis-ordinarias/1898/lei-496-1898-08-01.md",
    "chave": "lei-496-1898",
    "ementa": "Define e garante os direitos autoraes",
+   "lexml": {
+    "amostra": "a, scientifica ou artistica, do nome de um autor ou de qualquer signal por elle adoptado para designar suas obras, será punida com a prisão cellular de seis mezes a um anno e multa de 500$ a 1:000$, sendo tambem a obra apprehendida",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/98389fba-f5e0-4589-9a70-282fa4624ec0/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3750,6 +4094,13 @@
    "caminho": "federal/leis-ordinarias/1898/lei-559-1898-12-31.md",
    "chave": "lei-559-1898",
    "ementa": "Orça receita geral da Republica dos Estados Unidos do   Brazil para o exercicio de 1899, e dá outras providencias.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/23600818-17d3-4b13-a14e-b54dfd9b85ef/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3849,6 +4200,13 @@
    "caminho": "federal/leis-ordinarias/1899/lei-628-1899-10-28.md",
    "chave": "lei-628-1899",
    "ementa": "Amplia a acção penal por denuncia do Ministerio Publico, e dá outras providencias.",
+   "lexml": {
+    "amostra": "367 do Codigo Penal é punida com prisão cellular por um a tres mezes, além da pena estatuida no mesmo artigo",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/867c984c-0988-4e8e-adf1-cbd07096c02d/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -3982,6 +4340,13 @@
    "caminho": "federal/leis-ordinarias/1900/lei-741-1900-12-26.md",
    "chave": "lei-741-1900",
    "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brasil para o exercicio de 1901, e dá outras providencias.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/8f6fe022-b50a-4c8e-8ede-500b59e5b933/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4049,6 +4414,13 @@
    "caminho": "federal/leis-ordinarias/1989/lei-7925-1989-12-12.md",
    "chave": "lei-7925-1989",
    "ementa": "Autoriza o Poder Executivo a abrir, ao Orçamento Fiscal da União, créditos adicionais até o limite de NCz$ 5.960.646.387,00, para os fins que especifica, e dá outras providências.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/7e0fcdfa-3f3e-4789-a01f-0a3fc48f85d6/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4081,6 +4453,13 @@
    "caminho": "federal/leis-ordinarias/1892/lei-85-1892-09-20.md",
    "chave": "lei-85-1892",
    "ementa": "Estabelece a organização municipal do Districto Federal.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/746364ca-877f-4678-8ee2-16a4f343ec7d/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4097,6 +4476,13 @@
    "caminho": "federal/leis-ordinarias/1902/lei-859-1902-08-16.md",
    "chave": "lei-859-1902",
    "ementa": "Reforma a lei sobre fallencias",
+   "lexml": {
+    "amostra": "§ 2º O fallido será obrigado a apresentar em juizo, dentro de 24 horas, sob pena de prisão por 30 dias, a lista de seus 10 maiores credores",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/71e6f6be-57aa-42c0-926c-834cca368438/texto",
+    "versao": "Intermediate"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4129,6 +4515,13 @@
    "caminho": "federal/leis-ordinarias/1993/lei-8635-1993-03-16.md",
    "chave": "lei-8635-1993",
    "ementa": "Dá nova redação ao art. 184 do Código Penal.",
+   "lexml": {
+    "amostra": "Pena - reclusão, de um a quatro anos, e multa, de Cr$ 10",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/a2f007cd-5725-4e77-b852-fbf2fbaf063b/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4148,6 +4541,13 @@
    "caminho": "federal/leis-ordinarias/1993/lei-8683-1993-07-15.md",
    "chave": "lei-8683-1993",
    "ementa": "Dá nova redação ao art. 206 do Decreto-Lei n° 2.848, de 7 de dezembro   de 1940 -Código Penal.",
+   "lexml": {
+    "amostra": "Pena: detenção, de um a três anos e multa",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/d42a53d0-d7d8-4cdc-b784-9ad1dcc39863/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4196,6 +4596,13 @@
    "caminho": "federal/leis-ordinarias/1994/lei-8969-1994-12-28.md",
    "chave": "lei-8969-1994",
    "ementa": "Altera dispositivos da Lei nº 2.180, de 5 de fevereiro de 1954, que dispõe   sobre o Tribunal Marítimo.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/db891359-bf8f-4c29-bcc2-25be160f0509/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {
@@ -4247,6 +4654,13 @@
    "caminho": "federal/leis-ordinarias/1998/lei-9733-1998-12-11.md",
    "chave": "lei-9733-1998",
    "ementa": "Abre ao Orçamento de Investimento, em favor de diversas empresas estatais, crédito suplementar até o limite de R$ 57.197.301,00, para os fins que especifica.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ef7762f4-7491-438c-9f09-75404a5006a6/texto",
+    "versao": "Original"
+   },
    "pena_citada": false,
    "pena_propria": true,
    "planalto": {

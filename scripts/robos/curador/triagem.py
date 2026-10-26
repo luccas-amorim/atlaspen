@@ -38,7 +38,8 @@ PASTAS = {"lei": "federal/leis-ordinarias", "del": "federal/decretos-lei",
 ANO_DA_FORMA_ANTIGA = 1941
 
 FORMA_ANTIGA = re.compile(
-    r"incorrer[áa]o?\s+n[ao]s?\s+penas?\s+de|"
+    # "incorrerá" e "incorrerão": o plural ficou de fora até 26/10/2026.
+    r"incorrer(?:[áa]|[ãa]o)\s+n[ao]s?\s+penas?\s+de|"
     r"\bpenas?\s*(?:de|:)?\s*(?:pris[ãa]o|reclus[ãa]o|deten[çc][ãa]o|degredo|desterro|gal[ée]s)|"
     r"pris[ãa]o\s+cell?ular|"
     r"ser[áa]o?\s+punid[oa]s?\s+com\s+(?:a\s+)?(?:pena|pris[ãa]o|multa)",

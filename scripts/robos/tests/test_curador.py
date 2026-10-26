@@ -59,6 +59,9 @@ class TestTriagem:
         corpo = "Art. 2º Incorrerá na pena de prisão cellular por um a seis mezes quem..."
         antiga = triagem.triar("federal/leis-ordinarias/1921/lei-4242-1921-01-05.md", md(4242, 1921, corpo))
         assert antiga.pena_propria
+        plural = triagem.triar("federal/leis-ordinarias/1921/lei-4243-1921-01-05.md",
+                               md(4243, 1921, "Os infractores incorrerão nas penas de prisão por oito dias."))
+        assert plural.pena_propria
         moderna = triagem.triar("federal/leis-ordinarias/1990/lei-8000-1990-01-01.md",
                                 md(8000, 1990, "O infrator incorrerá na pena de multa de cem reais."))
         assert not moderna.pena_propria       # "pena de multa" moderna é sanção administrativa

@@ -289,6 +289,12 @@ lei — o Código Penal de 1890 é o Decreto 847. É a lacuna que o relatório d
 vez, com os números.
 :::
 
+Para essas lacunas há uma terceira leitura, sob demanda: o texto do
+[normas.leg.br](https://normas.leg.br), o portal do Congresso, que a própria API marca
+como sem valor legal oficial. Por decisão de 26/10/2026, ele pode sustentar um registro
+do **acervo** quando o Planalto não tem a norma — e o registro diz de onde veio. O
+catálogo ativo continua só com o Planalto.
+
 ---
 
 ## Cotejador — a segunda leitura
