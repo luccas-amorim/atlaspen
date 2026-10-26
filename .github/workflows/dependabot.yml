@@ -1,0 +1,103 @@
+name: Dependabot
+
+# O merge das atualizações menores (decisão de 26/10/2026).
+#
+# O Dependabot abre os PRs (.github/dependabot.yml). As atualizações menores e de
+# correção — minor e patch, que vêm agrupadas por família — entram sozinhas
+# quando a CI passa. A versão MAIOR, que vem sozinha, continua esperando gente
+# ler as notas de versão antes do merge.
+#
+# A régua não é o nome do grupo nem o título do PR: é o `update-type` que o
+# próprio Dependabot escreve na mensagem do commit, um por dependência. Basta um
+# semver-major, ou um tipo que não se leia, para o PR ficar para gente. Também
+# fica para gente o PR em que alguém empurrou commit por cima do Dependabot, e o
+# que está em conflito (o Dependabot rebaseia sozinho).
+#
+# O merge sai com o token do app de automação, que é ator de bypass do ruleset
+# da main — a revisão de code owner é o que o auto-merge dispensa, e a CI verde
+# é conferida aqui, no commit exato que entra — e que, ao contrário do
+# GITHUB_TOKEN, dispara os workflows do push na main (CI, deploy, release).
+#
+# Três gatilhos: o fim da CI, que é o caminho rápido; uma varredura diária, que
+# pega o que o primeiro perdeu (um run iniciado pelo Dependabot pode chegar sem
+# os secrets); e o disparo à mão.
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+  schedule:
+    - cron: '0 13 * * *'   # 10h em Brasília
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: escreve-na-main
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    if: >-
+      github.event_name != 'workflow_run'
+      || (github.event.workflow_run.event == 'pull_request'
+          && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    # O Environment é a trava SERVER-SIDE dos secrets do app (o mesmo desenho do
+    # regen-data.yml): só a main recebe a chave.
+    environment: automacao
+    steps:
+      - name: Token do app de automação
+        id: app
+        if: vars.APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Sem app, sem merge
+        if: steps.app.outputs.token == ''
+        run: echo "::warning::Sem o token do app de automação — os PRs do Dependabot esperam o merge de gente."
+
+      - name: Merge das atualizações menores com a CI verde
+        if: steps.app.outputs.token != ''
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          R: ${{ github.repository }}
+          # O check que o ruleset da main exige.
+          CHECK: 'Typecheck, verificação e build'
+        run: |
+          set -euo pipefail
+          check=$(jq -rn --arg c "$CHECK" '$c | @uri')
+          gh pr list --repo "$R" --author app/dependabot --state open \
+              --json number,headRefOid,mergeable \
+              --jq '.[] | "\(.number) \(.headRefOid) \(.mergeable)"' |
+          while read -r n sha mergeable; do
+            if [ "$mergeable" != "MERGEABLE" ]; then
+              echo "#$n: $mergeable — o Dependabot rebaseia, ou gente resolve."
+              continue
+            fi
+            autor=$(gh api "repos/$R/commits/$sha" --jq '.author.login // ""')
+            if [ "$autor" != "dependabot[bot]" ]; then
+              echo "#$n: o último commit é de $autor, não do Dependabot — fica para gente."
+              continue
+            fi
+            tipos=$(gh api "repos/$R/commits/$sha" --jq '.commit.message' \
+                      | sed -n 's/^ *update-type: *//p' | sort -u | tr '\n' ' ')
+            if [ -z "$tipos" ] || printf '%s\n' $tipos | grep -qvE '^version-update:semver-(minor|patch)$'; then
+              echo "#$n: ${tipos:-sem update-type} — fica para gente ler as notas de versão."
+              continue
+            fi
+            ci=$(gh api "repos/$R/commits/$sha/check-runs?check_name=$check" \
+                   --jq '[.check_runs[].conclusion] | if length == 0 then "ausente"
+                         elif all(. == "success") then "success" else "pendente ou falhou" end')
+            if [ "$ci" != "success" ]; then
+              echo "#$n: CI $ci — espera."
+              continue
+            fi
+            if gh api -X PUT "repos/$R/pulls/$n/merge" -f merge_method=merge -f sha="$sha" >/dev/null; then
+              echo "::notice::#$n entrou: $tipos"
+            else
+              echo "::warning::#$n: o merge foi recusado — fica para gente."
+            fi
+          done
