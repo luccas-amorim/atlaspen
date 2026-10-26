@@ -25108,5 +25108,21 @@
     "violencia": "Não",
     "grave_ameaca": "Não",
     "obs": "1-4 anos detenção + multa. Sem autorização do titular, reproduzir, importar, vender, manter em estoque ou distribuir, para fins comerciais, topografia protegida ou circuito integrado que a incorpore. O caput do art. 54 define o crime e não comina pena. §2º: +1/3 a 1/2 se o agente é ou foi representante, mandatário, preposto, sócio ou empregado do titular ou do licenciado, ou se reincidente."
+  },
+  {
+    "id": 1551,
+    "lei": "Lei 9.112/95",
+    "artigo": "Art. 7º",
+    "crime": "Concorrência para a exportação irregular de bens sensíveis",
+    "pena_min": 12,
+    "pena_max": 48,
+    "tipo_pena": "Reclusão",
+    "acao": "Pública Incondicionada",
+    "hediondo": "Não",
+    "elemento": "Doloso",
+    "tentativa": "Sim",
+    "violencia": "Não",
+    "grave_ameaca": "Não",
+    "obs": "1-4 anos reclusão. As pessoas físicas que, direta ou indiretamente, por ação ou omissão, concorrerem para o descumprimento da Lei 9.112/95. Norma penal em branco: o descumprimento é a exportação, sem a autorização prévia do art. 3º, de bem das Listas de Bens Sensíveis (de uso duplo, nuclear, químico ou biológico) ou de serviço vinculado a ele. As penalidades do art. 6º são administrativas."
   }
 ]

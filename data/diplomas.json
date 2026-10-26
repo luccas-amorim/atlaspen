@@ -4,7 +4,7 @@
     "gerado_por": "scripts/inventario_diplomas.py",
     "unidade": "preceito secundário: cada cominação de pena vigente no texto compilado do Planalto. Tipos do catálogo desdobram incisos e condutas, então tipos_catalogados pode legitimamente exceder preceitos_esperados.",
     "fonte": "Textos compilados oficiais de planalto.gov.br (ccivil_03), texto vigente (revogações riscadas excluídas), conferidos em 2026-07-19.",
-    "total_preceitos_esperados": 1180
+    "total_preceitos_esperados": 1181
   },
   "diplomas": [
     {
@@ -1494,6 +1494,21 @@
       "data_revogacao_nota": "O Código Penal de 1969 nunca entrou em vigor. O art. 407 o fazia vigorar em 1º/01/1970; as Leis 5.573/1969, 5.597/1970, 5.749/1971 e 5.857/1972 adiaram a data para 1º/08/1970, 1º/01/1972, 1º/01/1973 e 1º/01/1974; a Lei 6.016/1973 o alterou; e a Lei 6.063/1974 condicionou a vigência à do novo Código de Processo Penal, que não veio. A Lei 6.578/1978, em vigor na publicação (DOU de 13/10/1978), revogou o código e as Leis 6.016/1973 e 6.063/1974. A data acima é a da revogação, não a de uma perda de vigência que não houve.",
       "preceitos_esperados": 0,
       "tipos_catalogados": 0
+    },
+    {
+      "id": "lei9112",
+      "nome": "Exportação de bens sensíveis (crime do art. 7º)",
+      "norma": "Lei nº 9.112, de 10 de outubro de 1995",
+      "situacao": "vigente",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l9112.htm",
+      "conferido_em": "2026-10-26",
+      "artigos_penais": "arts. 7",
+      "preceitos_medidos": 1,
+      "preceitos_esperados": 1,
+      "tipos_catalogados": 1,
+      "rotulos_catalogo": [
+        "Lei 9.112/95"
+      ]
     }
   ],
   "excluidos": [

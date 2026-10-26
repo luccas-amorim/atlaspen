@@ -644,6 +644,13 @@ META: dict[str, dict] = {
         "faixas": [[50, 50]],
         "rotulos": ["Lei 14.967/24"],
     },
+    "lei9112": {
+        "nome": "Exportação de bens sensíveis (crime do art. 7º)",
+        "norma": "Lei nº 9.112, de 10 de outubro de 1995",
+        "url": "leis/l9112.htm",
+        "faixas": [[7, 7]],
+        "rotulos": ["Lei 9.112/95"],
+    },
     "lei7347": {
         "nome": "Ação civil pública (crime do art. 10)",
         "norma": "Lei nº 7.347, de 24 de julho de 1985",

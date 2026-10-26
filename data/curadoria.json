@@ -4256,22 +4256,6 @@
    "titulo": "Lei nº 9.100 de 29/09/1995",
    "urn": "urn:lex:br:federal:lei:1995-09-29;9100"
   },
-  "lei-9112-1995": {
-   "caminho": "federal/leis-ordinarias/1995/lei-9112-1995-10-10.md",
-   "chave": "lei-9112-1995",
-   "ementa": "Dispõe sobre a exportação de bens sensíveis e serviços diretamente vinculados.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9112.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 9.112 de 10/10/1995",
-   "urn": "urn:lex:br:federal:lei:1995-10-10;9112"
-  },
   "lei-9127-1995": {
    "altera": [
     "del-2848-1940"

@@ -703,6 +703,15 @@
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11484compilado.htm",
       "urn": "urn:lex:br:federal:lei:2007-05-31;11484",
       "sentinela": "15.503"
+    },
+    {
+      "id": "bens-sensiveis-9112",
+      "rotulos": [
+        "Lei 9.112/95"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9112.htm",
+      "urn": "urn:lex:br:federal:lei:1995-10-10;9112",
+      "sentinela": "2.229-43"
     }
   ]
 }
