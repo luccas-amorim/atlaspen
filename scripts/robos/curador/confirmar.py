@@ -129,9 +129,27 @@ _PRIVATIVA = re.compile(
     r"pena\s*[-–—:]\s*pris[ãa]o", re.I)
 
 
+_ART_1 = re.compile(r"\bArt\s*\.?\s*1\s*[º°o.]", re.I)
+
+
+def topo(vigente: str) -> str:
+    """O que vem antes do art. 1º: o cabeçalho, o banner e a ementa.
+
+    O `nucleo/revogacao.py` olha os primeiros 3.000 caracteres, e na lei de
+    preâmbulo curto isso já é articulado. Na primeira varredura, em 26/10/2026,
+    a anotação "(Revogado pela Medida Provisória nº 2.216-37, de 2001)" de um
+    inciso do art. 1º da Lei 9.112/95, que está em vigor, fez a lei inteira sair
+    como revogada — e o mesmo com a Lei 5.474/68 (Duplicatas) e o DL 2.627/40.
+    Sem art. 1º reconhecível, fica a janela do núcleo. Medir no texto COM o
+    riscado: o art. 1º do DL 2.627/40 está riscado, e no texto vigente ele não
+    existe para marcar onde o topo acaba."""
+    m = _ART_1.search(vigente)
+    return vigente[:m.start()] if m and m.start() < revogacao.TOPO_CHARS else vigente
+
+
 def classificar(html: str, ano: int) -> tuple[str, str | None]:
     vigente = _texto(html, sem_riscado=True)
-    rev = revogacao.detectar(vigente)
+    rev = revogacao.detectar(topo(_texto(html, sem_riscado=False)))
     if rev.revogado:
         return "revogada", rev.indicio
     if _tem_pena(vigente, ano):
