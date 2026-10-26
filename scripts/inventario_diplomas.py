@@ -473,6 +473,17 @@ META: dict[str, dict] = {
             "motivo": "Nenhum crime vigente: os três da lei foram revogados — o art. 34, §1º, pela Lei 13.506/2017; o art. 38, §7º, pela LC 105/2001; e o art. 44, §7º, pela Lei 13.506/2017. O diploma fica no inventário porque o acervo o usa para nomear o dispositivo revogado (conferido em 20/09/2026).",
         },
     },
+    "dl2627": {
+        "nome": "Sociedades por ações de 1940 (crimes revogados)",
+        "norma": "Decreto-Lei nº 2.627, de 26 de setembro de 1940",
+        "url": "decreto-lei/del2627.htm",
+        "faixas": [[168, 171]],
+        "rotulos": [],
+        "ajuste": {
+            "esperados": 0,
+            "motivo": "Nenhum crime vigente: a Lei 6.404/1976, art. 300, revogou o decreto-lei com exceção dos arts. 59 a 73, e com ele os crimes dos arts. 168, 169 e 171; o art. 170 já deixara de ser crime em 1941 (Decreto-Lei 3.391). O diploma fica no inventário porque o acervo o usa para nomear o dispositivo revogado (conferido em 26/10/2026).",
+        },
+    },
     "lei5553": {
         "nome": "Retenção de documentos",
         "norma": "Lei nº 5.553, de 6 de dezembro de 1968",
@@ -1001,6 +1012,16 @@ META: dict[str, dict] = {
         "revogadora": "Lei nº 6.578/1978, art. 1º",
         "data_revogacao": "1978-10-13",
         "data_revogacao_nota": "O Código Penal de 1969 nunca entrou em vigor. O art. 407 o fazia vigorar em 1º/01/1970; as Leis 5.573/1969, 5.597/1970, 5.749/1971 e 5.857/1972 adiaram a data para 1º/08/1970, 1º/01/1972, 1º/01/1973 e 1º/01/1974; a Lei 6.016/1973 o alterou; e a Lei 6.063/1974 condicionou a vigência à do novo Código de Processo Penal, que não veio. A Lei 6.578/1978, em vigor na publicação (DOU de 13/10/1978), revogou o código e as Leis 6.016/1973 e 6.063/1974. A data acima é a da revogação, não a de uma perda de vigência que não houve.",
+        "rotulos": [],
+    },
+    "dl7903": {
+        "nome": "Código da Propriedade Industrial de 1945",
+        "norma": "Decreto-Lei nº 7.903, de 27 de agosto de 1945",
+        "url": "decreto-lei/1937-1946/Del7903.htm",
+        "situacao": "revogado",
+        "revogadora": "Lei nº 9.279/1996, art. 244 (arts. 169 a 189); o restante, pela Lei nº 5.772/1971",
+        "data_revogacao": "1997-05-15",
+        "data_revogacao_nota": "A Lei 5.772/1971 (Código da Propriedade Industrial), em vigor na data da publicação (DOU de 31/12/1971), substituiu o decreto-lei e manteve, no art. 128, os crimes e o processo dos arts. 169 a 189 \"até que entre em vigor o Código Penal (Decreto-Lei n. 1.004, de 21 de outubro de 1969)\" — que nunca vigorou. Esses artigos ficaram em vigor até a Lei 9.279/1996, art. 244, que entrou em vigor um ano depois de publicada (DOU de 15/05/1996). A Lei 8.401/1992 ainda acrescentara ao art. 178 o inciso XIII, a venda, a locação ou o uso de obra audiovisual com violação do direito autoral.",
         "rotulos": [],
     },
 }
