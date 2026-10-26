@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -46,6 +47,15 @@ RECONFERIR_DIAS = 180
 ORCAMENTO = 300             # leis confirmadas no Planalto por rodada mensal
 A_MOSTRAR = 40              # por seção, no corpo da issue
 LEITURA = ("pena_vigente", "revogada", "pena_riscada", "sem_pagina")
+# O Código Penal entrou em vigor em 1º/01/1942, com a LCP. A lei anterior com
+# pena no texto e sem revogação anunciada pode ter sido revogada tacitamente — e
+# o Planalto não anuncia a revogação tácita.
+ANO_DO_CP = 1942
+# A lei que altera um diploma que o projeto já vigia traz, na página antiga do
+# Planalto, o texto novo SEM aspas curvas — a Lei 6.416/77 ("Altera dispositivos
+# do Código Penal") saiu como pena vigente na primeira varredura.
+_ALTERA = re.compile(r"^\s*(?:altera|acrescenta|acresce|d[áa]\s+nova\s+reda[çc][ãa]o|introduz\s+altera|"
+                     r"modifica|revoga|inclui|insere)", re.I)
 _SENADO = {"lei": "LEI", "del": "DEL", "lcp": "LCP"}
 # Os decretos com força de lei dos governos provisórios, que o ctresb não tem.
 GOVERNOS_PROVISORIOS = list(range(1889, 1892)) + list(range(1930, 1935))
@@ -88,9 +98,10 @@ def a_confirmar(estado: dict, dia: date, orcamento: int) -> list[str]:
 
 
 def rodar_confirmacoes(estado: dict, chaves: list[str], dia: date, conf=confirmar.confirmar
-                       ) -> tuple[list[str], list[str]]:
-    """(as que mudaram de estado, os avisos). Planalto fora do ar não vira estado."""
-    mudaram, avisos, quedas = [], [], 0
+                       ) -> tuple[list[str], list[str], list[str]]:
+    """(as confirmadas pela primeira vez, as que mudaram de estado, os avisos).
+    Planalto fora do ar não vira estado."""
+    primeiras, mudaram, avisos, quedas = [], [], [], 0
     for c in chaves:
         registro = estado["apontadas"][c]
         antes = (registro.get("planalto") or {}).get("estado")
@@ -104,9 +115,21 @@ def rodar_confirmacoes(estado: dict, chaves: list[str], dia: date, conf=confirma
                 break
             continue
         quedas = 0
-        if antes and antes != registro["planalto"]["estado"]:
+        if not antes:
+            primeiras.append(c)
+        elif antes != registro["planalto"]["estado"]:
             mudaram.append(c)
-    return mudaram, avisos
+    return primeiras, mudaram, avisos
+
+
+def marcar_alteradoras(estado: dict, conhecidos: dict[str, str]) -> None:
+    """`altera`: os diplomas conhecidos que a ementa diz alterar."""
+    for a in (estado.get("apontadas") or {}).values():
+        alvos = sorted(triagem.chaves_da_norma(a.get("ementa") or "") & set(conhecidos))
+        if _ALTERA.search(a.get("ementa") or "") and alvos:
+            a["altera"] = alvos
+        else:
+            a.pop("altera", None)
 
 
 def contar_senado(estado: dict, avisos: list[str]) -> None:
@@ -137,6 +160,7 @@ def lacunas(estado: dict) -> list[tuple[str, str, int, int]]:
 
 
 _NOME = {"lei": "Lei", "del": "Decreto-Lei", "lcp": "Lei Complementar"}
+_PLURAL = {"lei": "Leis", "del": "Decretos-lei", "lcp": "Leis complementares"}
 
 
 def rotulo(c: str) -> str:
@@ -175,12 +199,31 @@ def montar_relatorio(estado: dict, novas: list[str], mudaram: list[str], avisos:
             L.append(f"- _e mais {len(chaves) - A_MOSTRAR}, em `data/curadoria.json`._")
         L.append("")
 
-    def de(estados, chaves):
-        return [c for c in chaves if (apontadas[c].get("planalto") or {}).get("estado") in estados]
-    secao("Novas com pena vigente no Planalto — candidatas a `data/fontes.json`", de({"pena_vigente"}, novas))
-    secao("Novas revogadas — candidatas ao acervo", de({"revogada", "pena_riscada"}, novas))
-    secao("Novas sem página no Planalto — pedem juízo", de({"sem_pagina"}, novas))
+    def linhas(titulo, chaves):
+        if not chaves:
+            return
+        L.extend([f"### {titulo}", "", ", ".join(rotulo(c) for c in chaves[:3 * A_MOSTRAR])
+                  + (f" _e mais {len(chaves) - 3 * A_MOSTRAR}._" if len(chaves) > 3 * A_MOSTRAR else ""), ""])
+
+    def de(estados, chaves, alteradora=False):
+        return [c for c in chaves if (apontadas[c].get("planalto") or {}).get("estado") in estados
+                and bool(apontadas[c].get("altera")) == alteradora]
+
+    def ano(c):
+        return int(c.rsplit("-", 1)[1])
+    vigentes = de({"pena_vigente"}, novas)
+    secao(f"Novas com pena de prisão vigente, desde {ANO_DO_CP} — candidatas a `data/fontes.json`",
+          [c for c in vigentes if ano(c) >= ANO_DO_CP])
+    secao(f"Novas com pena de prisão vigente, anteriores a {ANO_DO_CP} — podem ter sido revogadas tacitamente "
+          "pelo Código Penal e pela LCP, que o Planalto não anuncia", [c for c in vigentes if ano(c) < ANO_DO_CP])
+    secao("Novas revogadas — candidatas ao acervo", de({"revogada", "pena_riscada"}, novas)
+          + de({"revogada", "pena_riscada"}, novas, alteradora=True))
+    secao("Novas sem página no Planalto — pedem juízo", de({"sem_pagina"}, novas) + de({"sem_pagina"}, novas, True))
     secao("Mudaram de estado desde a última conferência", mudaram)
+    linhas("Alteram diploma que o projeto já vigia — a pena é provavelmente a do texto que dão a ele",
+           de({"pena_vigente"}, novas, alteradora=True))
+    linhas("Pena sem prisão — multa, sanção administrativa, ou a palavra na prosa",
+           de({"sem_prisao"}, novas) + de({"sem_prisao"}, novas, True))
 
     gaps = lacunas(estado)
     if gaps:
@@ -190,7 +233,7 @@ def montar_relatorio(estado: dict, novas: list[str], mudaram: list[str], avisos:
         faltam = sum(n - tem for _, _, tem, n in gaps)
         L.append(f"**{faltam}** normas em **{len(gaps)}** anos. Os maiores buracos:")
         for especie, ano, tem, n in sorted(gaps, key=lambda g: g[2] - g[3])[:15]:
-            L.append(f"- {_NOME.get(especie, 'Decreto')}s de {ano}: {tem} no ctresb, {n} no Senado")
+            L.append(f"- {_PLURAL.get(especie, 'Decretos')} de {ano}: {tem} no ctresb, {n} no Senado")
         L.append("")
     if avisos:
         L += ["### Não deu para ler", ""] + [f"- {x}" for x in avisos[:20]]
@@ -204,7 +247,8 @@ def codigo_de_saida(novas: list[str], mudaram: list[str], estado: dict, lido: bo
     if not lido:
         return 2
     apontadas = estado.get("apontadas") or {}
-    if mudaram or any((apontadas[c].get("planalto") or {}).get("estado") in LEITURA for c in novas):
+    if mudaram or any((apontadas[c].get("planalto") or {}).get("estado") in LEITURA
+                      and not apontadas[c].get("altera") for c in novas):
         return 3
     return 0
 
@@ -228,19 +272,22 @@ def main() -> int:
     lido = True
     try:
         commit = ctresb.commit_atual()
-        achadas, avisos_v = varrer.varrer(estado, conhecidos, commit, progresso=lambda m: None)
+        _, avisos_v = varrer.varrer(estado, conhecidos, commit, progresso=lambda m: None)
         avisos += avisos_v
     except (FalhaDeRede, ValueError, KeyError) as e:
         avisos.append(f"o ctresb/leis não pôde ser lido: {e}")
-        achadas, lido = {}, False
+        lido = False
     # A lei que entrou no projeto depois de apontada sai da lista.
     for c in [c for c in estado.get("apontadas") or {} if c in conhecidos]:
         del estado["apontadas"][c]
-    novas = sorted(achadas)
+    # "Nova" é a lei que o Planalto confirmou pela primeira vez nesta rodada: a
+    # triagem pode ter apontado numa rodada sem Planalto.
+    novas: list[str] = []
     mudaram: list[str] = []
     if not args.sem_planalto:
-        mudaram, avisos_c = rodar_confirmacoes(estado, a_confirmar(estado, dia, args.orcamento), dia)
+        novas, mudaram, avisos_c = rodar_confirmacoes(estado, a_confirmar(estado, dia, args.orcamento), dia)
         avisos += avisos_c
+    marcar_alteradoras(estado, conhecidos)
     if not args.sem_senado:
         contar_senado(estado, avisos)
     gravar(estado, caminho)

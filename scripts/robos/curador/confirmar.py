@@ -6,13 +6,15 @@ Planalto e deixa o compilado oficial decidir. Nenhuma das duas fichas que temos
 (Senado, normas.leg.br) traz o link, e o endereço muda conforme a época — então
 o Curador tenta, em ordem, os endereços que o Planalto usa para cada período, e
 só aceita a página cujo cabeçalho declara o MESMO número e o MESMO ano: a Lei
-4.242 existe em 1921 e em 1963, e as duas respondem em `leis/l4242.htm`?
-Não — uma só responde ali, e é preciso saber qual.
+4.242 existe em 1921 e em 1963, e `leis/l4242.htm` é a de 1963 — a de 1921
+não tem página.
 
-O que a página diz vira um de cinco estados:
+O que a página diz vira um de seis estados:
 
-- `pena_vigente` — o texto não riscado comina pena: candidato ao catálogo, ou a
-  `data/fontes.json` se for diploma novo.
+- `pena_vigente` — o texto não riscado comina pena privativa de liberdade:
+  candidato a `data/fontes.json`.
+- `sem_prisao` — comina só multa ou sanção administrativa, ou a palavra "pena"
+  está na prosa: lista curta, de baixa prioridade.
 - `revogada` — o topo anuncia a revogação do diploma inteiro: candidato ao
   acervo.
 - `pena_riscada` — só o texto riscado comina pena: candidato ao acervo, como
@@ -62,14 +64,21 @@ def enderecos(especie: str, n: int, ano: int) -> list[str]:
     m = _milhar(n)
     if ano >= 2007:
         ini = 2007 + ((ano - 2007) // 4) * 4
-        return [f"_ato{ini}-{ini + 3}/{ano}/lei/l{n}.htm", f"_ato{ini}-{ini + 3}/{ano}/lei/L{n}.htm"]
+        pasta = f"_ato{ini}-{ini + 3}/{ano}/lei"
+        return [f"{pasta}/l{n}.htm", f"{pasta}/L{n}.htm", f"{pasta}/l{m}.htm"]
     if ano >= 2004:
-        return [f"_ato2004-2006/{ano}/lei/l{n}.htm", f"_ato2004-2006/{ano}/lei/L{n}.htm"]
+        return [f"_ato2004-2006/{ano}/lei/l{n}.htm", f"_ato2004-2006/{ano}/lei/L{n}.htm",
+                f"_ato2004-2006/{ano}/lei/l{m}.htm"]
     if ano >= 2002:
         return [f"leis/{ano}/L{n}.htm", f"leis/{ano}/L{m}.htm", f"leis/{ano}/l{n}.htm"]
     if ano == 2001:
         return [f"leis/leis_2001/l{n}.htm", f"leis/leis_2001/L{n}.htm"]
     base = [f"leis/l{n}.htm", f"leis/L{n}.htm"]
+    # A Lei 6.620/78 (Segurança Nacional) só responde em `leis/1970-1979/`.
+    if ano >= 1980 and ano <= 1988:
+        return base + [f"leis/1980-1988/L{n}.htm", f"leis/1980-1988/l{n}.htm"]
+    if ano >= 1970 and ano <= 1979:
+        return base + [f"leis/1970-1979/L{n}.htm", f"leis/1970-1979/l{n}.htm"]
     if ano >= 1950:
         return base + [f"leis/1950-1969/l{n}.htm", f"leis/1950-1969/L{n}.htm"]
     if ano >= 1930:
@@ -109,13 +118,25 @@ def _tem_pena(texto: str, ano: int) -> bool:
     return comina_pena(propria) or (ano < triagem.ANO_DA_FORMA_ANTIGA and bool(triagem.FORMA_ANTIGA.search(propria)))
 
 
+# A pena que tira a liberdade. Na primeira varredura, em 26/10/2026, 50 das 89
+# leis com "pena" no texto vigente só tinham multa ou sanção administrativa — a
+# CLT, os decretos-lei fiscais dos anos 1940, a Política Nacional de Turismo
+# ("Pena - multa e interdição do local") — ou a palavra na prosa da ementa
+# ("modifica a pena cominada"). O catálogo é de tipos penais; o crime punido só
+# com multa existe, e por isso essas não somem: vão para `sem_prisao`.
+_PRIVATIVA = re.compile(
+    r"reclus[ãa]o|deten[çc][ãa]o|pris[ãa]o\s+(?:simples|cell?ular|com\s+trabalho|de\s+\d|por\s+\d)|"
+    r"pena\s*[-–—:]\s*pris[ãa]o", re.I)
+
+
 def classificar(html: str, ano: int) -> tuple[str, str | None]:
     vigente = _texto(html, sem_riscado=True)
     rev = revogacao.detectar(vigente)
     if rev.revogado:
         return "revogada", rev.indicio
     if _tem_pena(vigente, ano):
-        return "pena_vigente", None
+        propria = triagem._CITACAO.sub(" ", vigente)
+        return ("pena_vigente" if _PRIVATIVA.search(propria) else "sem_prisao"), None
     if _tem_pena(_texto(html, sem_riscado=False), ano):
         return "pena_riscada", None
     return "sem_pena", None

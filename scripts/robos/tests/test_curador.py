@@ -82,6 +82,8 @@ class TestConfirmacao:
         assert "decreto-lei/Del0201.htm" in confirmar.enderecos("del", 201, 1967)
         assert confirmar.enderecos("lei", 15400, 2026)[0] == "_ato2023-2026/2026/lei/l15400.htm"
         assert "leis/lim/LIM3353.htm" in confirmar.enderecos("lei", 3353, 1888)
+        assert "leis/1970-1979/L6620.htm" in confirmar.enderecos("lei", 6620, 1978)
+        assert "_ato2004-2006/2004/lei/l10.886.htm" in confirmar.enderecos("lei", 10886, 2004)
 
     def test_cabecalho_confere_ano_e_numero(self):
         t = "Casa Civil LEI Nº 1.521, DE 26 DE DEZEMBRO DE 1951. Altera dispositivos"
@@ -171,8 +173,9 @@ class TestCurar:
                 raise FalhaDeRede(c, 2, TimeoutError())
             return {"estado": "revogada", "url": "u", "indicio": "Revogada pela Lei nº 1.802, de 1953",
                     "conferido_em": dia.isoformat()}
-        mudaram, avisos = curar.rodar_confirmacoes(estado, ["lei-38-1935", "lei-91-1936"], date(2026, 10, 26), conf)
-        assert mudaram == ["lei-38-1935"] and "não respondeu" in avisos[0]
+        primeiras, mudaram, avisos = curar.rodar_confirmacoes(estado, ["lei-38-1935", "lei-91-1936"],
+                                                             date(2026, 10, 26), conf)
+        assert primeiras == [] and mudaram == ["lei-38-1935"] and "não respondeu" in avisos[0]
         assert "planalto" not in estado["apontadas"]["lei-91-1936"]        # queda não vira estado
 
     def test_lacunas_e_relatorio(self):
@@ -180,7 +183,7 @@ class TestCurar:
         estado = self._estado()
         assert curar.lacunas(estado) == [("lei", "1936", 171, 200), ("dec", "1931", 0, 1328)]
         texto = curar.montar_relatorio(estado, ["lei-38-1935"], [], [], date(2026, 10, 26))
-        assert "**Lei nº 38/1935** — pena vigente" in texto and "candidatas a `data/fontes.json`" in texto
+        assert "**Lei nº 38/1935** — pena vigente" in texto and "anteriores a 1942" in texto
         assert "Decretos de 1931: 0 no ctresb, 1328 no Senado" in texto
 
     def test_codigos(self):
@@ -205,3 +208,33 @@ def test_tres_anos_sem_leitura_encerram_a_especie(monkeypatch):
     novos, avisos = varrer.varrer(estado, {}, "c0", especies=("lei",), progresso=lambda m: None)
     assert chamados == ["1950", "1951", "1952"] and "anos seguidos sem leitura" in avisos[-1]
     assert estado["anos"]["lei"] == {}        # nada lido, nada gravado: a próxima rodada relê
+
+
+def test_primeira_confirmacao_e_alteradora():
+    from curador import curar
+    estado = {"apontadas": {
+        "lei-6416-1977": {"caminho": "c", "ementa": "Altera dispositivos do Código Penal (Decreto-lei nº 2.848, "
+                                                    "de 7 de dezembro de 1940)."},
+        "lei-7653-1988": {"caminho": "c", "ementa": "Altera a redação dos arts. 18 e 27 da Lei nº 5.197, de 03 de "
+                                                    "janeiro de 1967."},
+        "lei-9966-2000": {"caminho": "c", "ementa": "Dispõe sobre a poluição por óleo."}}}
+    conf = lambda c, dia: {"estado": "pena_vigente", "url": "u", "indicio": None, "conferido_em": "2026-10-26"}
+    primeiras, mudaram, _ = curar.rodar_confirmacoes(estado, sorted(estado["apontadas"]), date(2026, 10, 26), conf)
+    assert primeiras == sorted(estado["apontadas"]) and mudaram == []
+    curar.marcar_alteradoras(estado, {"del-2848-1940": "fontes.json (cp)"})
+    assert estado["apontadas"]["lei-6416-1977"]["altera"] == ["del-2848-1940"]
+    assert "altera" not in estado["apontadas"]["lei-7653-1988"]      # a Lei 5.197/67 o projeto não vigia
+    texto = curar.montar_relatorio(estado, primeiras, [], [], date(2026, 10, 26))
+    assert "Alteram diploma que o projeto já vigia" in texto and "Lei nº 6.416/1977" in texto
+    assert "desde 1942 — candidatas" in texto and "**Lei nº 9.966/2000**" in texto
+    # A alteradora não abre issue sozinha.
+    assert curar.codigo_de_saida(["lei-6416-1977"], [], estado, True) == 0
+    assert curar.codigo_de_saida(["lei-9966-2000"], [], estado, True) == 3
+
+
+def test_so_multa_e_sem_prisao():
+    pagina = _pagina("LEI Nº 11.771, DE 17 DE SETEMBRO DE 2008.",
+                     "<p>Pena - multa e interdição do local e atividade.</p>")
+    r = confirmar.confirmar("lei-11771-2008", obter={confirmar.PLANALTO + "_ato2007-2010/2008/lei/l11771.htm": pagina}.get,
+                            pausa=0)
+    assert r["estado"] == "sem_prisao"
