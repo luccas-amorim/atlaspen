@@ -637,6 +637,20 @@
       "retirado": null,
       "data_revogacao": "1977-02-15",
       "texto_original": "Art. 171. Incorrem na pena de seis meses a dois anos de prisão celular os acionistas que, para, obterem vantagem para si ou para outrem, negociarem o voto nas deliberações da assembléia geral."
+    },
+    {
+      "id": "lei2321-31",
+      "dispositivo": "Lei 2.321/1910, art. 31",
+      "nome": "Loteria ou rifa não autorizada",
+      "diploma": "lei2321",
+      "artigos": ["lei2321-31"],
+      "categoria": "revogado",
+      "o_que_houve": "Revogado pelo Decreto 21.143/1932, art. 1º, que revogou toda a legislação existente sobre loterias, federais ou estaduais; a loteria não autorizada continuou proibida pelo próprio decreto (art. 17). O decreto entrou em vigor na data da publicação (DOU de 16/03/1932) para as loterias estaduais não registradas e em 1º/07/1932 para as registradas (art. 16); para o resto não fixou data, e a data fica em aberto. Pena: prisão celular de dois a seis meses e multa para quem fazia, vendia ou extraía a loteria, só multa para o apostador e para quem a anunciava, em dobro na reincidência; o art. 32 estendia a pena às casas e sociedades que explorassem jogos de azar. O texto vai do caput ao §6º: os §§7º a 12 tratam dos contratos das loterias.",
+      "normas": [{"norma": "Decreto 21.143/1932", "ano": 1932}],
+      "caso": false,
+      "retirado": null,
+      "data_revogacao": null,
+      "texto_original": "Art. 31. Constitue jogo prohibido a loteria ou rifa de qualquer especie não autorizada nesta lei.\n§ 1º Considera-se loteria ou rifa:\nI. Qualquer operação, sob qualquer denominação, em que se faça depender da sorte, qualquer que seja o processo de sorteio, a obtenção de um premio em dinheiro ou em bens moveis ou immoveis.\nII. A venda de bens, mercadorias ou objectos de qualquer natureza, por meio de sorte, qualquer que seja o processo de sorteios, ainda que, por successivas extracções todos os jogadores, mediante pagamentos totaes ou parciaes, possam receber identico ou diverso premio.\n§ 2º Entre os processos de sorteio a que se refere o n. I do paragrapho antecedente estão comprehendidos os symbolos, as figuras e as vistas cinematographicas.\n§ 3º E' tambem jogo prohibido qualquer loteria ou rifa que corra annexa a outra loteria autorizada.\n§ 4º Serão punidos:\nI. Com as penas de dous a seis mezes de prisão cellular e multa de 500$ a 2:000$, além da inutilização dos bilhetes, registros e apparelhos de sorteio e de perda em favor da Nação de todos os bens e valores sobre que versar a loteria ou rifa, não autorizada nesta lei.\na) os autores, emprehendedores ou agentes de loterias ou rifa;\nb) os que distribuirem ou venderem bilhetes ou por qualquer outro modo tomarem parte em qualquer operação de taes loterias ou rifas, salvo o disposto no n. II;\nc) os que promoverem seu curso ou extracção.\nII. Com as penas de multa de 200$ a 500$000:\na) os que intervierem em taes loterias ou rifas sómente com o intuito de obter o premio promettido;\nb) os gerentes ou administradores de jornaes ou officinas typographicas, os impressores de listas avulsas e os que por qualquer outra fórma publicarem ou fizerem publicar programmas e avisos de loterias ou rifas, não permittidas, resultados de sua extracção ou logares onde se realizam as respectivas operações.\n§ 5º Em caso de reincidencia as penas deste artigo serão applicadas em dobro.\n§ 6º E' prohibida a Introducção ou venda de bilhetes de loteria ou rifa estrangeira, bem como a de bilhetes de loterias concessão estadual, fóra do territorio dos Estados que tiverem feito as concessões ou contractos.\nAos infractores applicar-se-ha a pena do art. 31, n. I, § 4º."
     }
   ]
 }

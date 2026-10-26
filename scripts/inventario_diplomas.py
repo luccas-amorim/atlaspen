@@ -1185,6 +1185,47 @@ META: dict[str, dict] = {
         "data_revogacao_nota": "A LC 64/1990 entrou em vigor na data da publicação (DOU de 21/05/1990).",
         "rotulos": [],
     },
+    "dl1768": {
+        "nome": "Penalidades do Código de Caça (1939)",
+        "norma": "Decreto-Lei nº 1.768, de 11 de novembro de 1939",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto.lei:1939-11-11;1768",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "revogado",
+        "revogadora": "Decreto-Lei nº 5.894/1943, art. 2º",
+        "data_revogacao": None,
+        "data_revogacao_nota": "O decreto-lei fazia contravenção as infrações do Código de Caça de 1939, punidas com multa conversível em prisão celular, até sessenta dias, na segunda infração (arts. 1º e 10). O Decreto-Lei 5.894/1943, o novo Código de Caça, revogou-o no art. 2º e não tem cláusula de vigência: valem os 45 dias da Lei de Introdução, contados da publicação (DOU de 23/10/1943, o que dá 07/12/1943) ou da retificação (DOU de 01/11/1943, 16/12/1943), conforme a retificação conte como nova publicação do texto (art. 1º, §3º). A data fica em aberto.",
+        "rotulos": [],
+    },
+    "dl5353": {
+        "nome": "Crimes do pessoal marítimo (1943)",
+        "norma": "Decreto-Lei nº 5.353, de 29 de março de 1943",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto.lei:1943-03-29;5353",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "revogado",
+        "revogadora": "Decreto-Lei nº 9.490/1946, art. 1º",
+        "data_revogacao": "1946-08-21",
+        "data_revogacao_nota": "O Decreto-Lei 9.490/1946 citou o DL 5.353 com a data errada, 29 de maio, e não tem cláusula de vigência. O Decreto-Lei 9.611/1946 retificou a data para 29 de março, \"cuja vigência será a partir da data da publicação do presente\" (DOU de 21/08/1946). Revogado o decreto-lei, voltou a valer, para os mesmos casos, o Regulamento das Capitanias de Portos.",
+        "rotulos": [],
+    },
+    # Lei de orçamento com um crime dentro: só o art. 31 saiu de vigência, e é
+    # ele que o acervo registra. Fica como os outros diplomas que só nomeiam
+    # dispositivo revogado (lei4595, dl2627), sem medir o texto, que é do
+    # normas.leg.br.
+    "lei2321": {
+        "nome": "Receita da União para 1911 (crime revogado)",
+        "norma": "Lei nº 2.321, de 30 de dezembro de 1910",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:lei:1910-12-30;2321",
+        "fonte_texto": "normas.leg.br",
+        "faixas": [[31, 31]],
+        "rotulos": [],
+        "ajuste": {
+            "esperados": 0,
+            "motivo": "Nenhum crime vigente: o art. 31, que punia a loteria ou rifa não autorizada, caiu com toda a legislação sobre loterias que o Decreto 21.143/1932, art. 1º, revogou. O resto da lei é o orçamento da receita de 1911, e o inventário não afirma nada sobre a vigência dele: o diploma fica aqui porque o acervo o usa para nomear o dispositivo revogado (conferido em 26/10/2026).",
+        },
+    },
 }
 
 # Diplomas considerados e deliberadamente fora do denominador.
@@ -1231,6 +1272,8 @@ def baixar(cache: Path, apenas: set[str] | None = None) -> None:
     cache.mkdir(parents=True, exist_ok=True)
     for slug, meta in META.items():
         if apenas and slug not in apenas:
+            continue
+        if meta.get("fonte_texto"):
             continue
         destino = cache / f"{slug}.html"
         if destino.exists() and destino.stat().st_size > 1000:
@@ -1360,8 +1403,13 @@ def montar(cache: Path) -> dict:
                 item["data_revogacao_nota"] = meta["data_revogacao_nota"]
             item["preceitos_esperados"] = 0
         else:
-            arquivo = cache / f"{slug}.html"
-            medido = extrair(_decodificar(arquivo.read_bytes()), meta["faixas"])
+            # O texto fora do Planalto não se mede: o diploma só nomeia dispositivo
+            # revogado do acervo, e o ajuste diz que não há preceito vigente.
+            if meta.get("fonte_texto"):
+                medido = {"artigos": [], "preceitos": 0}
+            else:
+                arquivo = cache / f"{slug}.html"
+                medido = extrair(_decodificar(arquivo.read_bytes()), meta["faixas"])
             item["artigos_penais"] = _intervalos(medido["artigos"]) if medido["artigos"] else "—"
             item["preceitos_medidos"] = medido["preceitos"]
             ajuste = meta.get("ajuste")

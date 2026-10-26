@@ -1595,29 +1595,6 @@
    "titulo": "Decreto-Lei nº 1.713 de 28/10/1939",
    "urn": "urn:lex:br:federal:decreto.lei:1939-10-28;1713"
   },
-  "del-1768-1939": {
-   "caminho": "federal/decretos-lei/1939/del-1768-1939-11-11.md",
-   "chave": "del-1768-1939",
-   "ementa": "Estabelece penalidades para as infrações do Código de Caça.",
-   "lexml": {
-    "amostra": "so, à cassação de licença para caçar, à apreensão e perda das armas e instrumentos venatórios e dos animais caçados e à pena pecuniária conversível, no caso de segunda infração, em prisão celular, na forma dos arts",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/d93f3add-e9d3-49e3-b189-3dc1e667191b/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 1.768 de 11/11/1939",
-   "urn": "urn:lex:br:federal:decreto.lei:1939-11-11;1768"
-  },
   "del-1831-1939": {
    "caminho": "federal/decretos-lei/1939/del-1831-1939-12-04.md",
    "chave": "del-1831-1939",
@@ -2194,29 +2171,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 483 de 08/06/1938",
    "urn": "urn:lex:br:federal:decreto.lei:1938-06-08;483"
-  },
-  "del-5353-1943": {
-   "caminho": "federal/decretos-lei/1943/del-5353-1943-03-29.md",
-   "chave": "del-5353-1943",
-   "ementa": "Dispõe sobre a aplicação de legislação penal militar ao pessoal marítimo,   durante os contratos de trabalho e dá outras providências.",
-   "lexml": {
-    "amostra": "Pena : reclusão, de seis meses a dois anos",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1e4d15d6-33c2-4732-8253-747c92a6a093/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 5.353 de 29/03/1943",
-   "urn": "urn:lex:br:federal:decreto.lei:1943-03-29;5353"
   },
   "del-5452-1943": {
    "caminho": "federal/decretos-lei/1943/del-5452-1943-05-01.md",
@@ -3270,29 +3224,6 @@
    "revogada": false,
    "titulo": "Lei nº 2.180 de 05/02/1954",
    "urn": "urn:lex:br:federal:lei:1954-02-05;2180"
-  },
-  "lei-2321-1910": {
-   "caminho": "federal/leis-ordinarias/1910/lei-2321-1910-12-30.md",
-   "chave": "lei-2321-1910",
-   "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brazil para o exercicio de 1911 e dá outras providencias.",
-   "lexml": {
-    "amostra": "Com as penas de dous a seis mezes de prisão cellular e multa de 500$ a 2:000$, além da inutilização dos bilhetes, registros e apparelhos de sorteio e de perda em favor da",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1afc300c-8918-4351-8232-95d23f7a15cf/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 2.321 de 30/12/1910",
-   "urn": "urn:lex:br:federal:lei:1910-12-30;2321"
   },
   "lei-2416-1911": {
    "caminho": "federal/leis-ordinarias/1911/lei-2416-1911-06-28.md",
