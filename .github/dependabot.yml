@@ -39,6 +39,14 @@ updates:
       prefix: chore
       prefix-development: chore
       include: scope
+    # Os tipos do Node acompanham o Node em que o projeto roda — o 24, de
+    # `node-version` nos workflows —, não o mais novo publicado. Na primeira
+    # rodada, em 26/10/2026, o Dependabot propôs o @types/node 26 (#61), e o
+    # typecheck deixou de reconhecer Array.prototype.at em três arquivos.
+    # Quando os workflows subirem de Node, sobe este teto junto.
+    ignore:
+      - dependency-name: "@types/node"
+        versions: [">=25"]
     groups:
       astro:
         patterns: ["astro", "@astrojs/*"]
