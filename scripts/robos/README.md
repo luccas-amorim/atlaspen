@@ -13,8 +13,8 @@ segura, o achado vira pergunta na issue em vez de virar dado.
 
 Desde 25/10/2026 há uma **segunda leitura**: o Senado (API de Dados Abertos) e o
 normas.leg.br dizem o que mudou em cada diploma e como a Câmara compila o mesmo
-texto; desde a mesma data, o Banco Nacional de Precedentes do CNJ diz o que o STF
-decidiu na semana. Elas apontam e nunca escrevem — o plano e as decisões estão em
+texto; desde a mesma data, o Banco Nacional de Precedentes do CNJ diz o que o STF e o
+STJ decidiram na semana. Elas apontam e nunca escrevem — o plano e as decisões estão em
 `.superpowers/planos/2026-10-25-fontes-abertas-e-acervo.md`.
 
 ## As fontes (`fontes/`)
@@ -28,7 +28,7 @@ decodifica o que é seu.
 | `senado.py` | A ficha de uma norma (por tipo/número/ano, URN ou código), com as normas posteriores que a tocaram — da união de `vides` e `disps`, porque as duas não chegam sempre juntas — e as anteriores que ela revogou; a lista de leis do ano; os vetos do ano. Traduz a notação do Senado para a chave do histórico. |
 | `normas.py` | A ficha JSON-LD do normas.leg.br e o texto de cada versão (`Original`, `Current`). |
 | `ctresb.py` | Os commits do ctresb/leis por caminho, pela API do GitHub. Só observação. |
-| `cnj.py` | Os precedentes do STF no Banco Nacional de Precedentes do CNJ (POST com filtro JSON): os atualizados desde uma data — que só funciona como `dd/mm/aaaa` — e um precedente por número. Oficial e incompleto. |
+| `cnj.py` | Os precedentes do STF e do STJ no Banco Nacional de Precedentes do CNJ (POST com filtro JSON; os tipos de cada tribunal em `CONSULTAS`): os atualizados desde uma data — que só funciona como `dd/mm/aaaa` — e um precedente por número, com a situação ("Cancelado", "Revisado"…) e o texto sem HTML. Oficial e incompleto; do STM, vazio. |
 
 ## Os módulos
 
@@ -54,7 +54,7 @@ decodifica o que é seu.
 | `cotejador/textos.py` | A moldura de cada dispositivo no Planalto contra a da compilação da Câmara (normas.leg.br), com o mesmo `parsear` e o mesmo `pena_parser`. |
 | `cotejador/vetos.py` | Os vetos do ano a matérias que citam diploma vigiado, e quais ainda tramitam. Só informa. |
 | `cotejador/ctresb.py` | O que mudou na semana nos `scripts/` do ctresb/leis, na jurisprudência do STF e do STJ que ele reúne e nos arquivos dos nossos diplomas. Só informa. |
-| `relator/decisoes.py` | O Relator: os precedentes do STF atualizados na semana que tocam diploma vigiado — pelo ato impugnado codificado (controle concentrado) ou pela citação no texto (repercussão geral) —, com a natureza lida do texto como pista e os registros do catálogo tocados. Sai com 3 quando há o que ler, 2 quando o CNJ não respondeu. Não escreve no catálogo. |
+| `relator/decisoes.py` | O Relator: os precedentes do STF e do STJ atualizados na semana que tocam diploma vigiado — pelo ato impugnado codificado (controle concentrado) ou pela citação, pelo nome ou pela sigla no texto (tema e súmula) —, com a natureza como pista (a situação da súmula e do tema primeiro, o texto depois), os registros do catálogo e os atributos penais tocados. Súmula penal que muda de alcance sem citar diploma também entra. Cada tribunal é lido à parte. Sai com 3 quando há o que ler, 2 quando o CNJ não respondeu. Não escreve no catálogo. |
 | `cotejador/historico.py` | Sob demanda: `data/historico-legislativo.json` contra o registro do Senado, nos dois sentidos. |
 | `acervo/candidatos.py` | Sob demanda: os dispositivos revogados dos compilados e os diplomas revogados no todo que o acervo ainda não tem, cada um com o nível de prova de que era crime (pena no compilado, pena no original, pede juízo). **Não escreve no acervo.** |
 | `excecoes.json` | O que já foi julgado e decidido na conferência de PENAS. Sem isso o relatório repetiria para sempre os mesmos achados. |

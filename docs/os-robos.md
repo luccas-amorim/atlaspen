@@ -36,7 +36,7 @@ para leitura humana**, nunca uma alteração automática do dado.
 | **Arquivista** | A prosa ainda descreve o sistema? | A documentação, contra os arquivos de que ela fala |
 | **Recenseador** | Existe lei penal que ninguém leu? | Todas as leis do ano, uma a uma (mensal) |
 | **Cotejador** | O compilado do Planalto está em dia? | O registro do Senado e a compilação da Câmara |
-| **Relator** | O STF decidiu algo sobre a lei que vigiamos? | O Banco Nacional de Precedentes do CNJ |
+| **Relator** | O STF ou o STJ decidiram algo sobre a lei que vigiamos? | O Banco Nacional de Precedentes do CNJ |
 
 Sentinela, Arquivista e Relator correm em paralelo com o Vigia; Auditor e Cotejador esperam
 por ele, porque leem as páginas que ele baixou. O Recenseador roda uma vez por mês,
@@ -287,25 +287,41 @@ que ele reúne: pista para o Relator, nunca decisão lida.
 
 ---
 
-## Relator — o que o Supremo decidiu na semana
+## Relator — o que o STF e o STJ decidiram na semana
 
 A decisão de tribunal muda o catálogo com a força de uma lei, e não passa pelo Diário
 Oficial da União. O Relator lê, toda semana, no
 [Banco Nacional de Precedentes](https://pangeabnp.pdpj.jus.br) do CNJ, os precedentes
-do STF atualizados nos últimos oito dias — controle concentrado (ADI, ADPF, ADC, ADO)
-e temas de repercussão geral — e separa os que tocam um diploma vigiado.
+atualizados nos últimos oito dias e separa os que tocam um diploma vigiado:
+
+- do **STF**, o controle concentrado (ADI, ADPF, ADC, ADO), os temas de repercussão
+  geral, as súmulas e as súmulas vinculantes;
+- do **STJ**, as súmulas, os temas dos recursos repetitivos e os incidentes de
+  assunção de competência. A controvérsia, que é só a proposta de afetar um tema, fica
+  de fora.
 
 **Como ele sabe que a decisão toca a lei.** No controle concentrado, o CNJ codifica o
 ato impugnado: `LEG-FED DEL-002848 ANO-1940 ART-00331` é o art. 331 do Código Penal. No
-tema de repercussão geral não há código, e o diploma sai do texto da questão e da tese
-— pela citação ("Decreto-lei 3.688/1941") ou pelo nome ("Lei de Contravenções Penais"),
-e o artigo, do "art. N" que vem logo antes.
+tema e na súmula não há código, e o diploma sai do texto — pela citação ("Decreto-lei
+3.688/1941"), pelo nome ("Lei de Contravenções Penais") ou pela sigla com que o STJ
+escreve ("art. 155, § 4º, do CP") —, e o artigo, do "art. N" que vem logo antes. O
+artigo leva ao registro do catálogo e também ao **atributo penal**: cada atributo
+declara o dispositivo em que se apoia, e a remição é o art. 126 da Lei de Execução
+Penal.
 
-**O que pede leitura.** A decisão cujo texto fala em não recepção, inconstitucionalidade
-ou interpretação conforme, e a que toca registro do catálogo, seja qual for. A natureza
-é pista lida do texto, não classificação: a ementa da ADPF 338, que julgou constitucional
-o aumento do art. 141, II, do Código Penal, cita a inconstitucionalidade que foi pedida
-e sai marcada por ela. Por isso o Relator aponta, e quem assina lê o acórdão.
+**O que pede leitura.** Na súmula e no tema, a situação que o CNJ registra fala
+primeiro: súmula cancelada, superada ou alterada, e tese revisada. Tema cancelado não
+conta — é afetação desfeita, sem tese. Depois, a decisão cujo texto fala em não
+recepção, inconstitucionalidade ou interpretação conforme, e a que toca registro do
+catálogo ou atributo, seja qual for. A natureza é pista lida do texto, não
+classificação: a ementa da ADPF 338, que julgou constitucional o aumento do art. 141,
+II, do Código Penal, cita a inconstitucionalidade que foi pedida e sai marcada por ela.
+Por isso o Relator aponta, e quem assina lê o acórdão.
+
+**A súmula que não cita a lei.** "No crime de roubo, a intimidação feita com arma de
+brinquedo autoriza o aumento da pena" — a Súmula 174 do STJ, que o banco registra como cancelada — não
+nomeia diploma nem artigo. Súmula ou tese que muda de alcance e fala de crime, pena ou
+punibilidade pede leitura mesmo sem diploma identificado.
 
 :::caution[Oficial, e incompleto]
 O banco do CNJ é a fonte oficial dos precedentes qualificados, e não tem tudo. Medido em
@@ -315,7 +331,9 @@ prova nada.
 :::
 
 Na primeira rodada, em 25/10/2026, a semana trouxe 14 precedentes do STF e nenhum sobre
-lei vigiada. Na janela de um ano, 50 tocavam diploma vigiado, e o Tema 113 — o art. 25
+lei vigiada. Lido também o STJ, a mesma semana trouxe 23 precedentes dele, e o Tema 1270
+dos repetitivos — a remição proporcional da pena pela aprovação parcial no Enem — tocou o
+atributo remição, que não fala do Enem. Na janela de um ano, 50 tocavam diploma vigiado, e o Tema 113 — o art. 25
 da Lei de Contravenções Penais, não recepcionado — apontou o registro 766, que já
 trazia a vigência encerrada em 05/10/1988 e já estava no acervo. A ADI 7555, que esta página dava como o exemplo
 da lacuna que nenhum robô via, está no banco, e o Relator a aponta com os registros do
@@ -486,10 +504,11 @@ inconstitucionalidade não é ato normativo do Diário Oficial, Seção 1 — é
 Diário da Justiça. E altera o catálogo com a mesma força de uma lei revogadora: a ADI
 7555 tornou inconstitucional o §3º do art. 232 do Código Penal Militar e deslocou o
 estupro de vulnerável praticado por militar para o art. 217-A do Código Penal. O
-Relator vê o STF no que o banco do CNJ
-tem, e o banco não tem tudo. Continuam sem robô o **STJ**, cuja súmula muda a leitura
-de tipo e de atributo, e o **STM**, que é quem julga os registros do Código Penal
-Militar — hoje o segundo maior diploma do catálogo (ver [Completude](./completude.md)).
+Relator vê o STF e o STJ no que o banco do CNJ tem, e o banco não tem tudo. Continua
+sem robô o **STM**, que é quem julga os registros do Código Penal Militar — hoje o
+segundo maior diploma do catálogo (ver [Completude](./completude.md)) — e de quem o banco
+do CNJ não guarda nenhum precedente. E continua sem robô a jurisprudência que não é
+precedente qualificado: o acórdão comum, que só a pesquisa de cada tribunal alcança.
 Está no [README](https://github.com/luccas-amorim/atlaspen/blob/main/README.md#o-que-falta).
 
 **O tipo penal antigo que nunca foi cadastrado, e o que morreu sem aviso.** O

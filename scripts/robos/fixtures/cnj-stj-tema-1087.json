@@ -1,0 +1,36 @@
+{
+ "aggsEspecies": null,
+ "aggsOrgaos": null,
+ "posicao_final": 1,
+ "posicao_inicial": 1,
+ "resultados": [
+  {
+   "id": "stj-rr-1087",
+   "nr": 1087,
+   "orgao": "STJ",
+   "processosParadigma": [
+    {
+     "classe": 30,
+     "link": "https://processo.stj.jus.br/processo/pesquisa/?termo=202002014981&aplicacao=processos.ea&tipoPesquisa=tipoPesquisaGenerica&chkordem=DESC&chkMorto=MORTO",
+     "numero": "00012697320158260673"
+    },
+    {
+     "classe": 30,
+     "link": "https://processo.stj.jus.br/processo/pesquisa/?termo=202002133733&aplicacao=processos.ea&tipoPesquisa=tipoPesquisaGenerica&chkordem=DESC&chkMorto=MORTO",
+     "numero": "00208997920178190014"
+    },
+    {
+     "classe": 30,
+     "link": "https://processo.stj.jus.br/processo/pesquisa/?termo=202002140433&aplicacao=processos.ea&tipoPesquisa=tipoPesquisaGenerica&chkordem=DESC&chkMorto=MORTO",
+     "numero": "15004694020188260616"
+    }
+   ],
+   "questao": "\"(im)possibilidade de a causa de aumento prevista no § 1° do art. 155 do Código Penal (prática do crime de furto no período noturno) incidir tanto no crime de furto simples (caput) quanto na sua forma qualificada (§ 4°)\".",
+   "situacao": "Acórdão Publicado (RE Pendente)",
+   "tese": "<p>A causa de aumento prevista no § 1° do art. 155 do Código Penal (prática do crime de furto no período noturno) não incide no crime de furto na sua forma qualificada (§ 4°).</p>",
+   "tipo": "RR",
+   "ultimaAtualizacao": "10/11/2025"
+  }
+ ],
+ "total": 1
+}
