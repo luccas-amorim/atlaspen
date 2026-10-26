@@ -163,7 +163,7 @@
     },
     {
       "arquivo": "docs/os-robos.md",
-      "sobre": "Como cada robo funciona, com que criterio corta, e o que nenhum deles alcanca. Vigia, Sentinela, Recenseador, Auditor, Arquivista, Cotejador e Relator. Pagina publica, para receber discordancia sobre os criterios.",
+      "sobre": "Como cada robo funciona, com que criterio corta, e o que nenhum deles alcanca. Vigia, Sentinela, Recenseador, Auditor, Arquivista, Cotejador, Relator e Curador. Pagina publica, para receber discordancia sobre os criterios.",
       "conferido_em": "2026-10-26",
       "depende_de": [
         "scripts/robos/vigia/conferir.py",
@@ -177,6 +177,8 @@
         "scripts/robos/fontes/senado.py",
         "scripts/robos/fontes/cnj.py",
         "scripts/robos/relator/decisoes.py",
+        "scripts/robos/curador/curar.py",
+        "scripts/robos/curador/confirmar.py",
         "scripts/robos/cotejador/ctresb.py",
         "scripts/robos/vigia/cobertura-limites.json",
         ".github/workflows/conferidor.yml"

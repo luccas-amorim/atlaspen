@@ -32,6 +32,10 @@ on:
           leva automática trouxe 29 registros que não eram tipos penais)
         type: boolean
         default: false
+      curador:
+        description: 'Rodar o Curador fora da primeira semana do mês'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -56,6 +60,8 @@ concurrency:
 #                  registra? Lê os snapshots do vigia, e só pergunta
 #   relator      — o que o STF e o STJ decidiram na semana sobre a lei vigiada, lido no
 #                  Banco Nacional de Precedentes do CNJ
+#   curador      — mensal: a lei penal antiga que o projeto nunca leu, desde 1889,
+#                  apontada no ctresb/leis e confirmada no Planalto
 #   triagem      — junta os relatórios e abre a issue da semana
 #
 # Documentado para quem lê o site em docs/os-robos.md.
@@ -330,6 +336,77 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
+  # ── curador ──────────────────────────────────────────────────────────────
+  # A lei penal antiga que o projeto nunca leu, e a que morreu sem aviso. Uma
+  # vez por mês, como o Recenseador: relê no ctresb/leis só os anos que mudaram,
+  # confirma no Planalto o que é novo e o que venceu, e grava o estado em
+  # data/curadoria.json direto na main — como o carimbo do vigia, é registro do
+  # que a máquina viu, não proposta de dado. Sem o app, o estado não volta, e a
+  # rodada seguinte daria tudo como novo: por isso ele também vai no artifact.
+  curador:
+    name: Curador — a lei penal antiga que ninguém leu
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    environment: automacao
+    permissions:
+      contents: write
+    outputs:
+      codigo: ${{ steps.curar.outputs.codigo }}
+    steps:
+      - name: Dia do mês em Brasília
+        id: dia
+        run: echo "dia=$(TZ=America/Sao_Paulo date +%-d)" >> "$GITHUB_OUTPUT"
+      - name: Token do app de automação
+        id: app
+        if: (fromJSON(steps.dia.outputs.dia) <= 7 || inputs.curador) && vars.APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+      - uses: actions/checkout@v7
+        if: fromJSON(steps.dia.outputs.dia) <= 7 || inputs.curador
+        with:
+          token: ${{ steps.app.outputs.token || github.token }}
+      - uses: actions/setup-python@v7
+        if: fromJSON(steps.dia.outputs.dia) <= 7 || inputs.curador
+        with:
+          python-version: '3.12'
+      - name: Curar
+        id: curar
+        if: fromJSON(steps.dia.outputs.dia) <= 7 || inputs.curador
+        env:
+          # A API do GitHub lista as pastas do ctresb: sem token, 60 pedidos por
+          # hora, e a leitura usa uns 270.
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          python3 scripts/robos/curador/curar.py > /dev/null
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+      - name: Gravar o estado
+        if: steps.app.outputs.token != ''
+        env:
+          SLUG: ${{ steps.app.outputs.app-slug }}
+        run: |
+          if [ -n "$(git status --porcelain data/curadoria.json)" ]; then
+            git config user.name "${SLUG:-atlaspen-automacao}[bot]"
+            git config user.email "${SLUG:-atlaspen-automacao}[bot]@users.noreply.github.com"
+            git add data/curadoria.json
+            git commit -m "chore(curadoria): o estado do Curador [skip ci]"
+            git push
+          else
+            echo "Estado inalterado."
+          fi
+      - name: Guardar o relatório e o estado
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: curador-${{ github.run_number }}
+          path: |
+            crawler/relatorios/curadoria-*
+            data/curadoria.json
+          if-no-files-found: ignore
+          retention-days: 30
+
   # ── triagem ──────────────────────────────────────────────────────────────
   # A issue é o canal: chega sozinha, tem histórico e permite discutir cada
   # achado em linha. Uma issue por rodada, para que a semana seja unidade de
@@ -337,7 +414,7 @@ jobs:
   # produziram — e por isso roda mesmo se algum deles falhar.
   triagem:
     name: Triagem — a issue da semana
-    needs: [vigia, sentinela, auditor, arquivista, cotejador, relator]
+    needs: [vigia, sentinela, auditor, arquivista, cotejador, relator, curador]
     if: always()
     runs-on: ubuntu-latest
     permissions:
@@ -382,6 +459,7 @@ jobs:
           COTEJADOR_VETOS: ${{ needs.cotejador.outputs.vetos }}
           COTEJADOR_CTRESB: ${{ needs.cotejador.outputs.ctresb }}
           RELATOR: ${{ needs.relator.outputs.codigo }}
+          CURADOR: ${{ needs.curador.outputs.codigo }}
           EXECUCAO: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           : > quebrados.md
@@ -403,6 +481,8 @@ jobs:
           avaliar "Cotejador (vetos)" "$COTEJADOR_VETOS"
           avaliar "Cotejador (ctresb/leis)" "$COTEJADOR_CTRESB"
           avaliar "Relator" "$RELATOR"
+          # O Curador, como o Recenseador, só roda na primeira semana do mês.
+          [ -n "$CURADOR" ] && avaliar "Curador" "$CURADOR"
           if [ -s quebrados.md ]; then
             {
               echo "## Robôs que não terminaram"
@@ -424,6 +504,7 @@ jobs:
           || needs.cotejador.outputs.codigo == '3'
           || needs.cotejador.outputs.textos == '3'
           || needs.relator.outputs.codigo == '3'
+          || needs.curador.outputs.codigo == '3'
           || steps.quebrados.outputs.houve == '1'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -466,6 +547,7 @@ jobs:
             ler $R/documentacao.md
             ler $R/cotejo-*-$D.md
             ler $R/tribunais-$D.md
+            ler $R/curadoria-$D.md
             # O Recenseador entrava no código da issue e não no corpo: com 3,
             # a issue abria sem dizer que lei ler.
             ler $R/leis-do-ano-[0-9][0-9][0-9][0-9].md
@@ -508,6 +590,7 @@ jobs:
           && needs.cotejador.outputs.codigo != '3'
           && needs.cotejador.outputs.textos != '3'
           && needs.relator.outputs.codigo != '3'
+          && needs.curador.outputs.codigo != '3'
           && steps.quebrados.outputs.houve != '1'
         run: echo "Catálogo em dia com o texto compilado e nada penal no DOU."
 

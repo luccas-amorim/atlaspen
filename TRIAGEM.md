@@ -18,8 +18,8 @@ A rodada automática acontece **toda segunda-feira, 05:00 de Brasília**
 semanal* ▸ **Run workflow**. Ela produz, no máximo, **três coisas**: um commit, uma issue
 e um pull request.
 
-São **oito robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
-qual falhou sem que você precise abrir o passo. Seis conferem, e desses quatro correm
+São **nove robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
+qual falhou sem que você precise abrir o passo. Sete conferem, e desses cinco correm
 em paralelo: auditor e cotejador esperam, porque leem as páginas que o vigia baixou.
 Os dois últimos entregam — a triagem abre a issue, o proponente abre o PR.
 
@@ -32,6 +32,7 @@ Os dois últimos entregam — a triagem abre a issue, o proponente abre o PR.
 | **arquivista** | Saúde da prosa: documento vencido ou cuja dependência mudou | Não |
 | **cotejador** | A segunda leitura (desde 25/10/2026): o compilado anota as leis que o Senado registra? A moldura do Planalto é a da Câmara? Mais os vetos do ano e o que mudou no ctresb/leis, que só informam | Não: o Senado fora do ar não pode calar a rodada |
 | **relator** | O que o STF e o STJ decidiram na semana sobre diploma vigiado, lido no Banco Nacional de Precedentes do CNJ (desde 25/10/2026) | Não: o CNJ fora do ar entra em "Robôs que não terminaram" |
+| **curador** | Uma vez por mês, a lei penal antiga que o projeto nunca leu, desde 1889: apontada no ctresb/leis, confirmada no Planalto, com o estado gravado em `data/curadoria.json` direto na `main` (desde 26/10/2026) | Não: e sem o app de automação, o estado vai só no artifact |
 | **triagem** | Junta os relatórios e abre a issue | — |
 | **proponente** | Transforma em PR o que é leitura direta — moldura, sentinela defasada e modificador de escopo declarado —, e escreve a nota quando a lei é recente | Não: só roda se houver o que propor |
 
@@ -101,6 +102,7 @@ Os blocos, na ordem em que aparecem — o que pede ação primeiro:
 | **Molduras Planalto × Câmara** | Dispositivo cuja pena difere entre o compilado do Planalto e a compilação da Câmara (normas.leg.br) | Abrir as duas no dispositivo. O catálogo segue o Planalto; a divergência diz que uma das duas está atrasada |
 | **Vetos e ctresb/leis** | Vetos do ano a leis que mexem em diploma vigiado (os que ainda tramitam podem cair) e o que mudou no ctresb/leis — no código, nos arquivos dos nossos diplomas e, desde 25/10/2026, na jurisprudência do STF e do STJ | Nada, em regra: só informam, e nunca abrem issue sozinhos |
 | **Tribunais** | Precedente do STF ou do STJ atualizado na semana que toca diploma vigiado. Sobe para leitura a súmula cancelada, superada ou alterada, a tese revisada, o que fala em não recepção, inconstitucionalidade ou interpretação conforme, e o que toca registro do catálogo ou atributo penal; o resto fica numa linha. Cada seção mostra até 40; o resto está no JSON do artifact. Desde 25/10/2026 | Ler o acórdão ou o enunciado no portal do tribunal, não o resumo do CNJ: a natureza que o relatório mostra é pista lida do texto. Se a decisão retira o dispositivo, o registro ganha `vigencia_ate` e vai para o acervo; se modula o alcance, a ressalva vai para o `obs` ou para `data/avisos.json`; se toca atributo, o requisito ou a vedação vai para `data/atributos.json`, com a fonte. Nada disso o robô faz |
+| **Curador** | Na primeira semana do mês, as leis antigas confirmadas pela primeira vez no Planalto, e as que mudaram de estado: pena de prisão vigente (desde 1942, e antes, com o aviso da revogação tácita), revogadas, sem página. À parte, em uma linha, as que alteram diploma vigiado e as que só têm multa ou sanção administrativa | Pena vigente: abrir o Planalto e decidir se o diploma entra em `data/fontes.json`. Revogada: candidata ao acervo, conferida no texto riscado. Sem página: procurar o texto em outra fonte oficial. O robô não escreve em nenhum dos três |
 | **Leis do ano** | Na primeira semana do mês, o relatório do Recenseador — antes ele decidia se a issue abria e não entrava no corpo | Ler as ementas. Varredura incompleta (aviso) quer dizer que a janela do falso negativo continua aberta |
 
 **Fechar a issue significa "triado"** — não "resolvido". O que virar tarefa vira commit ou

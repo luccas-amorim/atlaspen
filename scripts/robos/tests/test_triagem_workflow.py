@@ -56,9 +56,10 @@ def test_rodada_que_vira_a_meia_noite(tmp_path):
         "documentacao.md": "DOCS\n", "cotejo-frescor-2026-10-25.md": "FRESCOR\n",
         "cotejo-textos-2026-10-25.md": "TEXTOS\n", "tribunais-2026-10-26.md": "TRIBUNAIS\n",
         "quebrados.md": "QUEBRADOS\n", "leis-do-ano-2026.md": "LEIS\n",
+        "curadoria-2026-10-25.md": "CURADOR\n",
     })
     for marca in ("RESUMO-VIGIA", "DOU", "AUDITORIA", "DOCS", "FRESCOR", "TEXTOS", "TRIBUNAIS",
-                  "QUEBRADOS", "LEIS"):
+                  "QUEBRADOS", "LEIS", "CURADOR"):
         assert marca in corpo, marca
     assert "COMPLETO-VIGIA" not in corpo          # o completo só entra sem resumo
     assert titulo == "2026-10-25"                  # o dia em que a rodada começou
