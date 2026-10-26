@@ -58,7 +58,7 @@
     {
       "arquivo": "docs/metodologia.md",
       "sobre": "A página dos princípios: unidade de análise, os três compromissos (descrever, calar o que não se sabe, fonte compilada), as quatro camadas de dado e como os atributos são calculados.",
-      "conferido_em": "2026-10-25",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         "scripts/transform_data.py",
         "scripts/catalogo",
@@ -121,7 +121,7 @@
     {
       "arquivo": ".superpowers/specs/2026-09-10-modelo-atributos.md",
       "sobre": "Estudo do modelo de dados dos atributos penais (frente 5): achados conferidos no compilado, esquema de atributos.json e do histórico legislativo, os três pilotos e o plano do PR da migração.",
-      "conferido_em": "2026-10-25",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         "src/lib/atributos",
         "data/fontes.json",
@@ -215,7 +215,7 @@
     {
       "arquivo": "AUDITORIA.md",
       "sobre": "O metodo da auditoria por amostra, registrado ANTES do sorteio: estratos, tamanho, semente, dupla conferencia e o que conta como erro. E pre-registro, e por isso e publico e datado -- o valor dele esta em ter sido escrito antes de olhar o resultado. Muda so se o desenho da amostra mudar, e a mudanca tem de ser datada. Nao depende de data/conferencia.json: o documento cita o estado dele NUMA DATA (pre-registro), e o carimbo semanal do robo o altera toda segunda -- a dependencia fazia o aviso disparar para sempre (retirada em 28/09/2026).",
-      "conferido_em": "2026-10-25",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         "data/crimes.json"
       ]

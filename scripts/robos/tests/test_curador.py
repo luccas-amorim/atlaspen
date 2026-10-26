@@ -238,3 +238,33 @@ def test_so_multa_e_sem_prisao():
     r = confirmar.confirmar("lei-11771-2008", obter={confirmar.PLANALTO + "_ato2007-2010/2008/lei/l11771.htm": pagina}.get,
                             pausa=0)
     assert r["estado"] == "sem_prisao"
+
+
+class TestTopo:
+    def test_anotacao_de_inciso_nao_revoga_a_lei(self):
+        # Lei 9.112/95: o banner "revogado" era de um inciso do art. 1º.
+        corpo = ("<p>Art. 1º Para os fins desta Lei:</p><p>I - bens sensíveis; (Revogado pela Medida Provisória "
+                 "nº 2.216-37, de 2001)</p><p>Art. 7º Pena - reclusão, de um a quatro anos.</p>")
+        paginas = {confirmar.PLANALTO + "leis/l9112.htm": _pagina("LEI Nº 9.112, DE 10 DE OUTUBRO DE 1995.", corpo)}
+        assert confirmar.confirmar("lei-9112-1995", obter=paginas.get, pausa=0)["estado"] == "pena_vigente"
+
+    def test_banner_antes_do_art_1_revoga(self):
+        corpo = ("<p>Revogado pela Lei nº 6.620, de 1978</p><p>Define os crimes.</p>"
+                 "<p>Art . 1º Constitui crime... Pena: reclusão, de 8 a 20 anos.</p>")
+        paginas = {confirmar.PLANALTO + "decreto-lei/del975.htm":
+                   _pagina("DECRETO-LEI Nº 975, DE 20 DE OUTUBRO DE 1969.", corpo)}
+        r = confirmar.confirmar("del-975-1969", obter=paginas.get, pausa=0)
+        assert r["estado"] == "revogada" and "6.620" in r["indicio"]
+
+    def test_sem_art_1_reconhecivel_fica_a_janela_do_nucleo(self):
+        assert confirmar.topo("Revogado pela Lei nº 1, de 1900 e mais nada") == \
+            "Revogado pela Lei nº 1, de 1900 e mais nada"
+
+
+def test_art_1_riscado_ainda_marca_o_topo():
+    # DL 2.627/40: o art. 1º está riscado, e a anotação dele não revoga o decreto.
+    corpo = ("<p><strike>Art. 1º A sociedade anônima... (Revogado pela Lei nº 6.404, de 1976)</strike></p>"
+             "<p>Art. 168. Incorrerão na pena de prisão celular por um a quatro anos...</p>")
+    paginas = {confirmar.PLANALTO + "decreto-lei/del2627.htm":
+               _pagina("DECRETO-LEI Nº 2.627, DE 26 DE SETEMBRO DE 1940.", corpo)}
+    assert confirmar.confirmar("del-2627-1940", obter=paginas.get, pausa=0)["estado"] != "revogada"
