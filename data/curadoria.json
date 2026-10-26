@@ -1368,52 +1368,6 @@
    "titulo": "Decreto-Lei nº 1.064 de 24/10/1969",
    "urn": "urn:lex:br:federal:decreto.lei:1969-10-24;1064"
   },
-  "del-1164-1939": {
-   "caminho": "federal/decretos-lei/1939/del-1164-1939-03-18.md",
-   "chave": "del-1164-1939",
-   "ementa": "Dispõe sôbre as concessões de terras e vias de comunicação na faixa da   fronteira, bem como sôbre as indústrias aí situadas.",
-   "lexml": {
-    "amostra": "Pena de apreensão dos exemplares e fechamento da tipografia e prisão celular do responsáveis por um a três meses",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/e64a7fc2-0fbd-49ca-abd5-b33a0155ea8e/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 1.164 de 18/03/1939",
-   "urn": "urn:lex:br:federal:decreto.lei:1939-03-18;1164"
-  },
-  "del-1191-1939": {
-   "caminho": "federal/decretos-lei/1939/del-1191-1939-04-04.md",
-   "chave": "del-1191-1939",
-   "ementa": "Dispõe sobre o monopólio postal da União e estabelece penas a serem   aplicadas aos contraventores do transporte e da distribuição da correspondência.",
-   "lexml": {
-    "amostra": "penas – De seis meses a um ano de prisão celular e multa de 3:000$000 a 20:000$000, aos donos, gerentes, sócios solidários ou membros da diretoria da empresa infrat",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/a7f1388a-cdc3-45d2-984a-ef491c08699e/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": true,
-   "titulo": "Decreto-Lei nº 1.191 de 04/04/1939",
-   "urn": "urn:lex:br:federal:decreto.lei:1939-04-04;1191"
-  },
   "del-1237-1939": {
    "caminho": "federal/decretos-lei/1939/del-1237-1939-05-02.md",
    "chave": "del-1237-1939",
@@ -1641,29 +1595,6 @@
    "titulo": "Decreto-Lei nº 1.713 de 28/10/1939",
    "urn": "urn:lex:br:federal:decreto.lei:1939-10-28;1713"
   },
-  "del-1768-1939": {
-   "caminho": "federal/decretos-lei/1939/del-1768-1939-11-11.md",
-   "chave": "del-1768-1939",
-   "ementa": "Estabelece penalidades para as infrações do Código de Caça.",
-   "lexml": {
-    "amostra": "so, à cassação de licença para caçar, à apreensão e perda das armas e instrumentos venatórios e dos animais caçados e à pena pecuniária conversível, no caso de segunda infração, em prisão celular, na forma dos arts",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/d93f3add-e9d3-49e3-b189-3dc1e667191b/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 1.768 de 11/11/1939",
-   "urn": "urn:lex:br:federal:decreto.lei:1939-11-11;1768"
-  },
   "del-1831-1939": {
    "caminho": "federal/decretos-lei/1939/del-1831-1939-12-04.md",
    "chave": "del-1831-1939",
@@ -1882,29 +1813,6 @@
    "titulo": "Decreto-Lei nº 281 de 18/02/1938",
    "urn": "urn:lex:br:federal:decreto.lei:1938-02-18;281"
   },
-  "del-2980-1941": {
-   "caminho": "federal/decretos-lei/1941/del-2980-1941-01-24.md",
-   "chave": "del-2980-1941",
-   "ementa": "Consolida as disposições sobre o serviço de loterias e dá outras   providências.",
-   "lexml": {
-    "amostra": "3º, Penas: de 1 a 4 anos de prisão celular, multa de 5:000$0 a 10:000$0, alem de perda para a Fazenda Nacional de todos os aparelhos de extração, mobiliário, utensílios",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/7841e624-169b-4e2f-b05d-62d95018cf12/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 2.980 de 24/01/1941",
-   "urn": "urn:lex:br:federal:decreto.lei:1941-01-24;2980"
-  },
   "del-301-1938": {
    "caminho": "federal/decretos-lei/1938/del-301-1938-02-24.md",
    "chave": "del-301-1938",
@@ -2053,29 +1961,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 3.914 de 09/12/1941",
    "urn": "urn:lex:br:federal:decreto.lei:1941-12-09;3914"
-  },
-  "del-392-1938": {
-   "caminho": "federal/decretos-lei/1938/del-392-1938-04-27.md",
-   "chave": "del-392-1938",
-   "ementa": "Regula a expulsão de estrangeiros.",
-   "lexml": {
-    "amostra": "que regressar ao território nacional antes de revogada a expulsão ficará, pela simples verificação do fato, sujeito à, pena de dois a quatro anos de prisão celular, cumprida a qual será novamente expulso",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/e4065429-dffe-4812-99d9-4ba66a44d2f3/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 392 de 27/04/1938",
-   "urn": "urn:lex:br:federal:decreto.lei:1938-04-27;392"
   },
   "del-394-1938": {
    "caminho": "federal/decretos-lei/1938/del-394-1938-04-28.md",
@@ -2232,29 +2117,6 @@
    "titulo": "Decreto-Lei nº 4.766 de 01/10/1942",
    "urn": "urn:lex:br:federal:decreto.lei:1942-10-01;4766"
   },
-  "del-479-1938": {
-   "caminho": "federal/decretos-lei/1938/del-479-1938-06-08.md",
-   "chave": "del-479-1938",
-   "ementa": "Dispõe sobre a expulsão de estrangeiros.",
-   "lexml": {
-    "amostra": "que regressar ao território nacional antes de revogada a expulsão, ficará, pela simples verificação do fato, sujeito à pena de dois a quatro anos de prisão celular, cumprida a qual será novamente expulso",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/eee2bf48-5710-4171-8ad7-b91d8b28690c/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 479 de 08/06/1938",
-   "urn": "urn:lex:br:federal:decreto.lei:1938-06-08;479"
-  },
   "del-4812-1942": {
    "caminho": "federal/decretos-lei/1942/del-4812-1942-10-08.md",
    "chave": "del-4812-1942",
@@ -2309,29 +2171,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 483 de 08/06/1938",
    "urn": "urn:lex:br:federal:decreto.lei:1938-06-08;483"
-  },
-  "del-5353-1943": {
-   "caminho": "federal/decretos-lei/1943/del-5353-1943-03-29.md",
-   "chave": "del-5353-1943",
-   "ementa": "Dispõe sobre a aplicação de legislação penal militar ao pessoal marítimo,   durante os contratos de trabalho e dá outras providências.",
-   "lexml": {
-    "amostra": "Pena : reclusão, de seis meses a dois anos",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1e4d15d6-33c2-4732-8253-747c92a6a093/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 5.353 de 29/03/1943",
-   "urn": "urn:lex:br:federal:decreto.lei:1943-03-29;5353"
   },
   "del-5452-1943": {
    "caminho": "federal/decretos-lei/1943/del-5452-1943-05-01.md",
@@ -2582,52 +2421,6 @@
    "titulo": "Decreto-Lei nº 8.527 de 31/12/1945",
    "urn": "urn:lex:br:federal:decreto.lei:1945-12-31;8527"
   },
-  "del-854-1938": {
-   "caminho": "federal/decretos-lei/1938/del-854-1938-11-12.md",
-   "chave": "del-854-1938",
-   "ementa": "Dispõe sobre o serviço de loterias e dá outras providências.",
-   "lexml": {
-    "amostra": "Penas: de 1 a 4 anos de prisão celular, multa de 5:000$000 a 10:000$000, alem de perda para o Fazenda Nacional de todos os aparelhos de extração, mobiliário, utensí",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/cd8a7f84-b1fe-4b95-9c2e-c72c643303bf/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 854 de 12/11/1938",
-   "urn": "urn:lex:br:federal:decreto.lei:1938-11-12;854"
-  },
-  "del-869-1938": {
-   "caminho": "federal/decretos-lei/1938/del-869-1938-11-18.md",
-   "chave": "del-869-1938",
-   "ementa": "Define os crimes contra a economia popular sua guarda e seu emprego.",
-   "lexml": {
-    "amostra": "Pena: prisão celular de 2 a 10 anos e multa de 10:000$000 a 50:000$000",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/ef5ba127-dc5d-410c-b1eb-85bf3930b736/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 869 de 18/11/1938",
-   "urn": "urn:lex:br:federal:decreto.lei:1938-11-18;869"
-  },
   "del-891-1938": {
    "caminho": "federal/decretos-lei/1938/del-891-1938-11-25.md",
    "chave": "del-891-1938",
@@ -2776,29 +2569,6 @@
    "revogada": false,
    "titulo": "Lei Complementar nº 35 de 14/03/1979",
    "urn": "urn:lex:br:federal:lei.complementar:1979-03-14;35"
-  },
-  "lcp-5-1970": {
-   "caminho": "federal/leis-complementares/1970/lcp-5-1970-04-29.md",
-   "chave": "lcp-5-1970",
-   "ementa": "Estabelece, de acordo com a Emenda Constitucional nº 1, de 17 de outubro de 1969, art. 151 e seu parágrafo único, casos de inelegibilidades, e dá outras providências .",
-   "lexml": {
-    "amostra": "Pena - detenção de 6 (seis) meses a 2 (dois) anos e multa de 20 (vinte) a 50 (cinqüenta) vezes o maior salário mínimo vigente no País",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/bb5227dc-e609-4f81-9b1b-da9b0d2b1911/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei Complementar nº 5 de 29/04/1970",
-   "urn": "urn:lex:br:federal:lei.complementar:1970-04-29;5"
   },
   "lei-10224-2001": {
    "altera": [
@@ -3132,29 +2902,6 @@
    "titulo": "Lei nº 12.683 de 09/07/2012",
    "urn": "urn:lex:br:federal:lei:2012-07-09;12683"
   },
-  "lei-1269-1904": {
-   "caminho": "federal/leis-ordinarias/1904/lei-1269-1904-11-15.md",
-   "chave": "lei-1269-1904",
-   "ementa": "Reforma a legislação eleitoral, e dá outras providencias",
-   "lexml": {
-    "amostra": "Pena – prisão por dois a quatro mezes",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/02165d07-d01e-4c7d-964b-67af76aafc95/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 1.269 de 15/11/1904",
-   "urn": "urn:lex:br:federal:lei:1904-11-15;1269"
-  },
   "lei-12720-2012": {
    "caminho": "federal/leis-ordinarias/2012/lei-12720-2012-09-27.md",
    "chave": "lei-12720-2012",
@@ -3384,29 +3131,6 @@
    "titulo": "Lei nº 1.616 de 30/12/1906",
    "urn": "urn:lex:br:federal:lei:1906-12-30;1616"
   },
-  "lei-1785-1907": {
-   "caminho": "federal/leis-ordinarias/1907/lei-1785-1907-11-28.md",
-   "chave": "lei-1785-1907",
-   "ementa": "Estabelece penas para o crime de peculato, e dá outras providencias.",
-   "lexml": {
-    "amostra": "o ou o deposito, em razão de seu cargo, quer este seja gratuito ou remunerado, quer seja temporario ou permanente, será punido: a) si o prejuízo verificado fôr inferior a 10:000$, com 2 a 6 annos de prisão cellular, perda do emprego, com inhabilitação para exercer qualquer funcçã",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/4cfc501a-534c-4001-a325-74328306bed0/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 1.785 de 28/11/1907",
-   "urn": "urn:lex:br:federal:lei:1907-11-28;1785"
-  },
   "lei-1802-1953": {
    "caminho": "federal/leis-ordinarias/1953/lei-1802-1953-01-05.md",
    "chave": "lei-1802-1953",
@@ -3500,29 +3224,6 @@
    "revogada": false,
    "titulo": "Lei nº 2.180 de 05/02/1954",
    "urn": "urn:lex:br:federal:lei:1954-02-05;2180"
-  },
-  "lei-2321-1910": {
-   "caminho": "federal/leis-ordinarias/1910/lei-2321-1910-12-30.md",
-   "chave": "lei-2321-1910",
-   "ementa": "Orça a receita geral da Republica dos Estados Unidos do Brazil para o exercicio de 1911 e dá outras providencias.",
-   "lexml": {
-    "amostra": "Com as penas de dous a seis mezes de prisão cellular e multa de 500$ a 2:000$, além da inutilização dos bilhetes, registros e apparelhos de sorteio e de perda em favor da",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1afc300c-8918-4351-8232-95d23f7a15cf/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 2.321 de 30/12/1910",
-   "urn": "urn:lex:br:federal:lei:1910-12-30;2321"
   },
   "lei-2416-1911": {
    "caminho": "federal/leis-ordinarias/1911/lei-2416-1911-06-28.md",
@@ -3703,29 +3404,6 @@
    "titulo": "Lei nº 3.139 de 02/08/1916",
    "urn": "urn:lex:br:federal:lei:1916-08-02;3139"
   },
-  "lei-3208-1916": {
-   "caminho": "federal/leis-ordinarias/1916/lei-3208-1916-12-27.md",
-   "chave": "lei-3208-1916",
-   "ementa": "Regula o processo eleitoral e dá outras providencias",
-   "lexml": {
-    "amostra": "Pena: prisão por dous a quatro mezes",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1d8233ed-5683-43d0-a06e-6845426145c8/texto",
-    "versao": "Intermediate"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 3.208 de 27/12/1916",
-   "urn": "urn:lex:br:federal:lei:1916-12-27;3208"
-  },
   "lei-3274-1957": {
    "caminho": "federal/leis-ordinarias/1957/lei-3274-1957-10-02.md",
    "chave": "lei-3274-1957",
@@ -3780,29 +3458,6 @@
    "revogada": false,
    "titulo": "Lei nº 3.750 de 11/04/1960",
    "urn": "urn:lex:br:federal:lei:1960-04-11;3750"
-  },
-  "lei-379-1937": {
-   "caminho": "federal/leis-ordinarias/1937/lei-379-1937-01-16.md",
-   "chave": "lei-379-1937",
-   "ementa": "Regula o casamento religioso para os effeitos civis.",
-   "lexml": {
-    "amostra": "§ 4º Decidindo a impugnação nos termos do § 3º, o juiz poderá impor, desde logo, a pena de multa de 100$ a 500$, ou de prisão simples por 10 a 80 dias, a quem a tiver oferecido falsa ou dolosamente",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/83ff08a8-e002-4325-8334-e632550dd50a/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 379 de 16/01/1937",
-   "urn": "urn:lex:br:federal:lei:1937-01-16;379"
   },
   "lei-3807-1960": {
    "caminho": "federal/leis-ordinarias/1960/lei-3807-1960-08-26.md",
@@ -4002,29 +3657,6 @@
    "revogada": false,
    "titulo": "Lei nº 4.886 de 09/12/1965",
    "urn": "urn:lex:br:federal:lei:1965-12-09;4886"
-  },
-  "lei-496-1898": {
-   "caminho": "federal/leis-ordinarias/1898/lei-496-1898-08-01.md",
-   "chave": "lei-496-1898",
-   "ementa": "Define e garante os direitos autoraes",
-   "lexml": {
-    "amostra": "a, scientifica ou artistica, do nome de um autor ou de qualquer signal por elle adoptado para designar suas obras, será punida com a prisão cellular de seis mezes a um anno e multa de 500$ a 1:000$, sendo tambem a obra apprehendida",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/98389fba-f5e0-4589-9a70-282fa4624ec0/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Lei nº 496 de 01/08/1898",
-   "urn": "urn:lex:br:federal:lei:1898-08-01;496"
   },
   "lei-4961-1966": {
    "caminho": "federal/leis-ordinarias/1966/lei-4961-1966-05-04.md",

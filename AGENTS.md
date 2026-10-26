@@ -144,6 +144,11 @@ pessoa que assina.
   que se sabe e cala o que não se sabe** — moldura condicional, `hediondo_condicao`,
   `acao_condicao`, `pena_por_remissao`, `vigencia_ate` — e a discussão vai para a issue,
   não para o campo. Nunca preencha lacuna com plausibilidade.
+  A issue leva o rótulo **`questão jurídica`** (desde 26/10/2026) e diz quatro coisas: a
+  norma, o que já foi conferido e em que fonte, as hipóteses com a consequência de cada
+  uma para o dado, e o que a fecha. A primeira foi a #71, sobre quando deixou de valer o
+  DL 4.828/1942, que fica fora do acervo até a resposta. A issue fecha com a resposta
+  fundamentada, e o registro que entra por ela cita a issue.
 
 ## Dependências: o Dependabot abre, gente decide
 

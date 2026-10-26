@@ -24,10 +24,30 @@ export interface RegistroAcervo {
   artigos: string[];
   diploma: {id: string; nome: string; norma: string} | null;
   fonteUrl: string | null;
+  /** De onde vem o texto, quando não é o compilado do Planalto ("normas.leg.br"). */
+  fonteTexto: string | null;
   /** Para os diplomas: a data da própria lei, lida de data/diplomas.json. */
   publicacao: {data: string; norma: string} | null;
   dataRevogacao: string | null;
   textoOriginal: string | null;
+}
+
+/**
+ * O rótulo do link da fonte. O texto é o compilado do Planalto, salvo a norma
+ * que o Planalto não tem: aí é o do normas.leg.br, que a própria API marca sem
+ * valor legal oficial — e a tela diz isso (decisão de 26/10/2026).
+ */
+export function rotuloDaFonte(fonteTexto: string | null): string {
+  return fonteTexto === 'normas.leg.br'
+    ? 'texto no normas.leg.br, sem valor legal oficial'
+    : 'texto compilado no Planalto';
+}
+
+/** O aviso do diploma inteiro, cujo texto não cabe na ficha: diz onde ele está. */
+export function avisoDoTextoInteiro(fonteTexto: string | null): string {
+  return fonteTexto === 'normas.leg.br'
+    ? 'Diploma inteiro: o texto está no normas.leg.br, citado nesta ficha — o Planalto não tem a norma, e a cópia do Congresso não tem valor legal oficial.'
+    : 'Diploma inteiro: o texto está na fonte oficial, citada nesta ficha.';
 }
 
 export const ROTULO_CATEGORIA: Record<CategoriaAcervo, string> = {

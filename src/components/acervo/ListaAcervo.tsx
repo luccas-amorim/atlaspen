@@ -10,7 +10,14 @@
 import {useEffect, useState} from 'react';
 import {caminho} from '../../site/url';
 import {normalizar} from '../tipos/filtros';
-import {ROTULO_CATEGORIA, passosDoRegistro, type CategoriaAcervo, type RegistroAcervo} from './tipos';
+import {
+  ROTULO_CATEGORIA,
+  avisoDoTextoInteiro,
+  passosDoRegistro,
+  rotuloDaFonte,
+  type CategoriaAcervo,
+  type RegistroAcervo,
+} from './tipos';
 import s from './acervo.module.css';
 
 interface Props {
@@ -154,7 +161,7 @@ export default function ListaAcervo({registros, ano = null, naUrl = false}: Prop
                       {r.textoOriginal ? (
                         <blockquote className={s.textoOriginal}>{r.textoOriginal}</blockquote>
                       ) : r.tipo === 'diploma' ? (
-                        <p className={s.ausente}>Diploma inteiro: o texto está na fonte oficial, citada nesta ficha.</p>
+                        <p className={s.ausente}>{avisoDoTextoInteiro(r.fonteTexto)}</p>
                       ) : (
                         <p className={s.ausente}>
                           Ainda não transcrito. Entra quando o registro for conferido contra o texto compilado; até lá,
@@ -180,7 +187,7 @@ export default function ListaAcervo({registros, ano = null, naUrl = false}: Prop
                         <a href={caminho(`/acervo/${r.id}`)}>ficha do registro →</a>
                         {r.fonteUrl && (
                           <a href={r.fonteUrl} rel="noopener" target="_blank">
-                            texto compilado no Planalto
+                            {rotuloDaFonte(r.fonteTexto)}
                           </a>
                         )}
                       </span>
