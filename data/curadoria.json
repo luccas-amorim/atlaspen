@@ -4134,6 +4134,2526 @@
   }
  },
  "commit_ctresb": "15eb09b618ff08a38c4dfee06a91bd139d093f5d",
+ "decretos": {
+  "dec-10201-1889": {
+   "chave": "dec-10201-1889",
+   "ementa": "APROVA O REGULAMENTO PARA A EXECUÇÃO DA LEI NÚMERO 3394 DE 24 DE NOVEMBRO DE 1888.",
+   "lexml": {
+    "amostra": "As penas de reprehensão motivada em ordem do dia, impedimento no estabelecimento e prisão simples até oito dias são da competencia do Director",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/0afb38f2-2087-49de-b5d9-aa37c3eff38f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.201 de 09/03/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-03-09;10201"
+  },
+  "dec-10203-1889": {
+   "chave": "dec-10203-1889",
+   "ementa": "APROVA O REGULAMENTO PARA AS ESCOLAS DO EXÉRCITO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/86484bb7-8421-45f6-b6d2-c8ad4761c3df/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.203 de 09/03/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-03-09;10203"
+  },
+  "dec-10222-1889": {
+   "chave": "dec-10222-1889",
+   "ementa": "DÁ NOVO REGULAMENTO PARA O CORPO MILITAR DE POLÍCIA DA CÔRTE.",
+   "lexml": {
+    "amostra": "Os officiaes, quando punidos disciplinarmente com detenção, serão recolhidos ao recinto de uma fortaleza, á sala do estado-maior do corpo ou ao recinto do quartel, conforme a gravidade d",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/30ccef69-42cc-4316-a98f-909f7c0c49ac/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.222 de 05/04/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-04-05;10222"
+  },
+  "dec-10223-1889": {
+   "chave": "dec-10223-1889",
+   "ementa": "DÁ NOVO REGULAMENTO Á CASA DE DETENÇÃO DA CÔRTE.",
+   "lexml": {
+    "amostra": "§ 2º A' execução da pena de prisão simples",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/6c165d8c-0d18-4756-9a8f-b718ae782c54/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.223 de 05/04/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-04-05;10223"
+  },
+  "dec-10257-1889": {
+   "chave": "dec-10257-1889",
+   "ementa": "CONCEDE PERMISSÃO A ALFREDO THEULOT PARA LAVRAR OURO E OUTROS MINERAIS NO LUGAR DENOMINADO LAVRINHAS, MUNICÍPIO DO LIVRAMENTO, PROVÍNCIA DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/613d85c6-4349-4f2b-9893-df9a095496c9/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.257 de 28/06/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-06-28;10257"
+  },
+  "dec-10284-1889": {
+   "chave": "dec-10284-1889",
+   "ementa": "CONCEDE PERMISSÃO AO ENGENHEIRO GUILHERME DE CAPANEMA PARA LAVRAR MINERAIS NA PARTE JÁ EXPLORADA ENTRE OS AFLUENTES DOS RIOS PIRIÁ, NO PARÁ, E TURY-ASSU, NO MARANHÃO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/35cbcd90-e5b5-415d-ab7b-34530b594c24/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.284 de 30/07/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-07-30;10284"
+  },
+  "dec-1030-1890": {
+   "chave": "dec-1030-1890",
+   "ementa": "ORGANIZA A JUSTIÇA NO DISTRITO FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/514ec464-c3aa-4d96-be4d-99fea3ff1e7c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.030 de 14/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-14;1030"
+  },
+  "dec-10319-1889": {
+   "chave": "dec-10319-1889",
+   "ementa": "MANDA EXECUTAR O REGULAMENTO SANITÁRIO INTERNACIONAL PARA A EXECUÇÃO DA CONVENÇÃO SANITÁRIA CELEBRADA ENTRE O BRASIL, A REPÚBLICA ARGENTINA E A REPÚBLICA ORIENTAL DO URUGUAI.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/ac24366a-e973-4c55-9a88-a85148b6a2d7/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.319 de 22/08/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-08-22;10319"
+  },
+  "dec-10356-1889": {
+   "chave": "dec-10356-1889",
+   "ementa": "CONCEDE PERMISSÃO A ALBERTO BIRABEN PARA LAVRAR OURO E OUTROS MINERAIS DE POCONÉ, DA PROVÍNCIA DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/9c34ecd7-c74e-45f8-bbd2-9a7113cd9669/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.356 de 14/09/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-09-14;10356"
+  },
+  "dec-10378-1889": {
+   "chave": "dec-10378-1889",
+   "ementa": "CONCEDE PERMISSÃO A ABE DAWSON E ARTHUR MONTEIRO DE QUEIROZ PARA LAVRAREM OURO NO MUNICÍPIO DE TRÊS CORAÇÕES DO RIO VERDE, PROVÍNCIA DE MINAS GERAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ffd5f1f7-b8e0-4c50-8073-1e70b0409fa0/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.378 de 28/09/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-09-28;10378"
+  },
+  "dec-10386-1889": {
+   "chave": "dec-10386-1889",
+   "ementa": "CONCEDE A AMÉRICO DE CASTRO, OU À COMPANHIA QUE FOR POR ELE ORGANIZADA, DIVERSOS FAVORES RELATIVOS AOS EDIFÍCIOS QUE CONSTRUIR PARA HABITAÇÃO DE OPERÁRIOS E CLASSES POBRES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fc00a7d9-3bf6-4d7e-b44b-9a8180d9e045/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.386 de 05/10/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-10-05;10386"
+  },
+  "dec-10395-1889": {
+   "chave": "dec-10395-1889",
+   "ementa": "CRIA UMA GUARDA CÍVICA PARA AUXILIAR O POLICIAMENTO DA CAPITAL DO IMPÉRIO E DÁ-LHE REGULAMENTO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/489228ad-662e-4397-b788-d0063b49a956/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.395 de 09/10/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-10-09;10395"
+  },
+  "dec-10401-1889": {
+   "chave": "dec-10401-1889",
+   "ementa": "CONCEDE PERMISSÃO A ANTÔNIO FRANCISCO DE AZEREDO E GUILHERME JOSÉ DA COSTA VIANA PARA LAVRAREM OURO E OUTROS MINERAIS NA PROVÍNCIA DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/09229413-93a7-4fc4-8857-942180b820b8/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.401 de 12/10/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-10-12;10401"
+  },
+  "dec-10448-1889": {
+   "chave": "dec-10448-1889",
+   "ementa": "CONCEDE PERMISSÃO A RAYMUNDO NEWTON PARA LAVRAR OURO NA FREGUEZIA DO MORRO VERMELHO, MUNICIPIO DE CAETE, DA PROVINCIA DE MINAS GERAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/86e2c6bf-d390-4846-bc73-07a37841879c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 10.448 de 09/11/1889",
+   "urn": "urn:lex:br:federal:decreto:1889-11-09;10448"
+  },
+  "dec-1052-1890": {
+   "chave": "dec-1052-1890",
+   "ementa": "DÁ NOVO REGULAMENTO AO PROLONGAMENTO DA ESTRADA DE FERRO DA BAHIA AO SÃO FRANCISCO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/13bed5f4-ca4f-471f-b0f6-f7866cfe7245/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.052 de 22/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-22;1052"
+  },
+  "dec-1073-1890": {
+   "chave": "dec-1073-1890",
+   "ementa": "APROVA OS ESTATUTOS DA ESCOLA POLITÉCNICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2a840e30-3c9f-4097-8c21-0d4f47dee3c8/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.073 de 22/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-22;1073"
+  },
+  "dec-1075-1890": {
+   "chave": "dec-1075-1890",
+   "ementa": "APROVA O REGULAMENTO PARA O GINÁSIO NACIONAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/0d2e951b-fe45-482a-82e6-c92b5476538b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.075 de 22/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-22;1075"
+  },
+  "dec-1109-1890": {
+   "chave": "dec-1109-1890",
+   "ementa": "DIVIDE EM SEIS DISTRITOS MARÍTIMOS O LITORAL DA REPÚBLICA DOS ESTADOS UNIDOS DO BRASIL , CRIANDO EM CADA UM DELES UMA INSPETORIA ESPECIAL PARA OS SERVIÇOS DE MELHORAMENTO DOS RESPECTIVOS PORTOS E CANAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5bef4237-6ae7-47b5-bd7a-d345a31ccd2e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.109 de 29/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-29;1109"
+  },
+  "dec-1162-1890": {
+   "chave": "dec-1162-1890",
+   "ementa": "ALTERA A REDAÇÃO DOS ARTIGOS 205 E 206 DO CÓDIGO CRIMINAL.",
+   "lexml": {
+    "amostra": "Penas - de prisão cellular por um a tres mezes e de multa de 200$ a 500$000",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/1be79681-81cf-4264-b684-557752f4d7a7/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.162 de 12/12/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-12-12;1162"
+  },
+  "dec-1184-1890": {
+   "chave": "dec-1184-1890",
+   "ementa": "CONCEDE PERMISSÃO A AGOSTINHO JOSÉ DOS SANTOS E EMÍLIO DINARDO PARA LAVRAREM AS MINAS DE OURO DE MARZAGÃO, NO ESTADO DE MINAS GERAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/919dcc52-2243-400d-a790-cf555e5525a6/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.184 de 19/12/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-12-19;1184"
+  },
+  "dec-1225-1890": {
+   "chave": "dec-1225-1890",
+   "ementa": "APROVA O REGULAMENTO PARA A ESTRADA DE FERRO DE SÃO PAULO E RIO DE JANEIRO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/c3c66790-db30-4d06-94a6-451f14a8cd30/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.225 de 27/12/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-12-27;1225"
+  },
+  "dec-1256-1891": {
+   "chave": "dec-1256-1891",
+   "ementa": "ALTERA O REGULAMENTO DA ESCOLA NAVAL MANDANDO EXECUTAR POR DECRETO 10.201 DE 9 DE MARÇO DE 1889.",
+   "lexml": {
+    "amostra": "As penas de reprehensão motivadas em ordem do dia, impedimento no estabelecimento e prisão simples até oito dias, são de competencia do director",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/dd91266f-d6ea-40b8-aa5d-92d159bd966d/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.256 de 10/01/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-01-10;1256"
+  },
+  "dec-1258-1891": {
+   "chave": "dec-1258-1891",
+   "ementa": "APROVA O REGULAMENTO DA ESCOLA DE MINAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e04d9588-6df6-42cc-b7e7-dc0d6319a0ea/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.258 de 10/01/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-01-10;1258"
+  },
+  "dec-1270-1891": {
+   "chave": "dec-1270-1891",
+   "ementa": "REORGANIZA AS FACULDADES DE MEDICINA DOS ESTADOS DO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/96685395-e48d-4f74-b65e-1c2f5cf26156/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.270 de 10/01/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-01-10;1270"
+  },
+  "dec-128-1934": {
+   "chave": "dec-128-1934",
+   "ementa": "CONCEDE A SOCIEDADE ANÔNIMA U.A. OF BRAZIL, INC. AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/9bfb39df-b945-4c1e-9c65-12d3eae753ec/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 128 de 31/10/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-10-31;128"
+  },
+  "dec-131-1934": {
+   "chave": "dec-131-1934",
+   "ementa": "CONCEDE A COMPANHIA ACUMULADORES PREST-O-LINE AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/038ceccf-582b-4293-9eab-487bc4eddfb8/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 131 de 31/10/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-10-31;131"
+  },
+  "dec-1371-1891": {
+   "chave": "dec-1371-1891",
+   "ementa": "DECLARA QUE O ARQUIPÉLAGO DE FERNANDO DE NORONHA CONTINUA A PERTENCER AO ESTADO DE PERNAMBUCO.",
+   "lexml": {
+    "amostra": "43 do novo Codigo Penal que não admittiu a pena de degredo, e pelas disposições do Titulo VI, capitulos 1º e 2º, e Titulo VII do livro 2º do mesmo Codigo que punem taes criminosos com a prisão cellular",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/a9357373-0329-46f0-9911-c8b6c11c1860/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.371 de 14/02/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-02-14;1371"
+  },
+  "dec-1412-1891": {
+   "chave": "dec-1412-1891",
+   "ementa": "CONCEDE PERMISSÃO A ERNESTO CYBRÃO PARA LAVRAR NITREIRAS EXISTENTES NA BACIA DO RIO DAS CONTAS E NO VALE DO RIO SINCORÁ (BREJO GRANDE), ESTADO DA BAHIA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ef7db87f-9339-420b-b69e-cc4e749decb1/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 1.412 de 21/02/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-02-21;1412"
+  },
+  "dec-143-1890": {
+   "chave": "dec-143-1890",
+   "ementa": "EXTINGUE O CONSERVATORIO DE MÚSICA E CRIA O INSTITUTO NACIONAL DE MÚSICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5b2f1ff6-794d-4c69-b38d-334ad68b1871/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 143 de 12/01/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-01-12;143"
+  },
+  "dec-169-1890": {
+   "chave": "dec-169-1890",
+   "ementa": "CONSTITUE O CONSELHO DE SAÚDE PÚBLICA E REORGANIZA O SERVIÇO SANITÁRIO TERRESTRE DA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2635d69b-78b2-42eb-a87e-55ec4c684dc6/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 169 de 18/01/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-01-18;169"
+  },
+  "dec-18-1891": {
+   "chave": "dec-18-1891",
+   "ementa": "ESTABELECE NOVO CÓDIGO PENAL PARA A ARMADA, DE ACORDO COM O DECRETO DE 14 DE FEVEREIRO DESTE ANO.",
+   "lexml": {
+    "amostra": "A pena de prisão com trabalho será cumprida dentro do recinto da prisão ou fóra, em estabelecimentos navaes, presidios, praças de guerra, ou em obras militares, emqua",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/ecf78e68-bcca-4b9e-af23-4ebb2bd58528/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 18 de 07/03/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-03-07;18"
+  },
+  "dec-184-1934": {
+   "chave": "dec-184-1934",
+   "ementa": "CONCEDE A SULZER FRERES SOCIETE ANONYME, AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/4a397c06-dbe0-48f4-b821-9735f90f7d27/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 184 de 26/12/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-12-26;184"
+  },
+  "dec-19111-1930": {
+   "chave": "dec-19111-1930",
+   "ementa": "CONCEDE Á SOCIEDADE ANONIMA \"J. WALTER THOMPSON COMPANY DO BRASIL\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/d1463c75-e0bc-427e-8cbb-ac9dc71386e2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.111 de 14/02/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-02-14;19111"
+  },
+  "dec-19184-1930": {
+   "chave": "dec-19184-1930",
+   "ementa": "CONCEDE Á SOCIEDADE ANÔNIMA \"BITUMULS OF BRAZIL, INC.\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/3b3bbf6f-cf12-45e1-8d17-a4df7a18a0c2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.184 de 22/04/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-04-22;19184"
+  },
+  "dec-19210-1930": {
+   "chave": "dec-19210-1930",
+   "ementa": "CONCEDE Á SOCIEDADE ANÔNIMA LANCASHIRE GENERAL INVESTMENT COMPANY, LIMITED, AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2e16b342-5385-4399-ab75-d6a4e033685c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.210 de 20/05/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-05-20;19210"
+  },
+  "dec-19257-1930": {
+   "chave": "dec-19257-1930",
+   "ementa": "CONCEDE Á SOCIEDADE ANÔNIMA \"GENERAL MOTORS ACCEPTANCE CORPORATION, SOUTH AMERICA\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f8f5cbf2-500c-4b01-8baa-ddf89a411389/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.257 de 17/06/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-06-17;19257"
+  },
+  "dec-19262-1930": {
+   "chave": "dec-19262-1930",
+   "ementa": "CONCEDE Á \"CASA LÉON WEIL SOCIEDADE ANONIMA COMMERCIAL\" AUTORIZAÇÃO PARA FUNCIONAR NA REPUBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/c670b1e2-5937-4f53-94be-ce6926a50ad0/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.262 de 17/06/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-06-17;19262"
+  },
+  "dec-19286-1930": {
+   "chave": "dec-19286-1930",
+   "ementa": "CONCEDE Á ANGLO-BRAZILIAN PRODUCE COMPANY LIMITED AUTORIZAÇÃO PARA FUNCIONAR NA REPUBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fd7b4618-463c-4c4e-9f8c-7bcba21f9413/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.286 de 22/07/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-07-22;19286"
+  },
+  "dec-19312-1930": {
+   "chave": "dec-19312-1930",
+   "ementa": "CONCEDE A COMPANHIA DE SERVIÇOS PUBLICOS BRASILEIROS (BRAZILIAN PUBLIC SERVICE COMPANY) AUTORIZAÇÃO PARA FUNCIONAR NA REPUBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/cd0960bd-3ca0-404a-a090-eb5c848bb048/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.312 de 26/08/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-08-26;19312"
+  },
+  "dec-19338-1930": {
+   "chave": "dec-19338-1930",
+   "ementa": "CONCEDE Á \"E.C. DE WITT & COMPANY LIMITED\", AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/8b7a18a8-01f3-41b4-bbfd-2c2803cfda99/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.338 de 16/09/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-09-16;19338"
+  },
+  "dec-19341-1930": {
+   "chave": "dec-19341-1930",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"DAGGETT & RAMSDELL\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/9af35dd9-d354-4de1-aed7-819a0745f776/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.341 de 23/09/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-09-23;19341"
+  },
+  "dec-195-1890": {
+   "chave": "dec-195-1890",
+   "ementa": "APROVA OS ESTATUTOS DO MONTE-PIO POPULAR.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/249be471-e94b-49cf-82c7-6fa4010bbbbb/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 195 de 31/01/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-01-31;195"
+  },
+  "dec-19500-1930": {
+   "chave": "dec-19500-1930",
+   "ementa": "CONCEDE À BARCLAY & CO. OF BRAZIL AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/498fbb3b-1fbe-4fb9-98ab-ef14388947a3/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.500 de 17/12/1930",
+   "urn": "urn:lex:br:federal:decreto:1930-12-17;19500"
+  },
+  "dec-19606-1931": {
+   "chave": "dec-19606-1931",
+   "ementa": "DISPÕE SOBRE A PROFISSÃO FARMACEUTICA E SEU EXERCÍCIO NO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f0409916-49c9-4a47-ae78-221dda246a14/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.606 de 19/01/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-01-19;19606"
+  },
+  "dec-19622-1931": {
+   "chave": "dec-19622-1931",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"COMPANHIA ITALIANA DEI CAVI TELEGRAFICI SOTTOMARINI\" AUTORIZAÇÃO PARA CONTINUAR A FUNCIONAR NA REPÚBLICA SOB A DENOMINAÇÃO DE \"COMPANHIA ITALIANA DEI CAVI TELEGRAFICI SOTTOMARINI\" (ITALCABLE).",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/821224b3-6393-44c1-9eea-40f35b38e554/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.622 de 23/01/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-01-23;19622"
+  },
+  "dec-19717-1931": {
+   "chave": "dec-19717-1931",
+   "ementa": "ESTABELECE A AQUISIÇÃO OBRIGATÓRIA DE ÁLCOOL, NA PROPORÇÃO DE 5% DA GASOLINA IMPORTADA, E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": "16 deste decreto, ficam sujeitos a processo criminal, para aplicação da pena de prisão celular por um a quatro anos",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/7a58f2ff-5175-406e-9ece-56e737924fee/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.717 de 20/02/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-02-20;19717"
+  },
+  "dec-19821-1931": {
+   "chave": "dec-19821-1931",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"LES PARFUMS DE CHIMÈNE\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/4df31d6c-14f5-4ae0-9925-688278631d7a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.821 de 01/04/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-04-01;19821"
+  },
+  "dec-19835-1931": {
+   "chave": "dec-19835-1931",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"THE AMAZON CORPORATION\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/02ee658c-618d-4361-a4a6-e8a1aa565e0a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.835 de 08/04/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-04-08;19835"
+  },
+  "dec-19876-1931": {
+   "chave": "dec-19876-1931",
+   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO PARA O ARQUIVO DA MARINHA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ed6e38d4-cff9-4a48-b8d7-7f4e7a98c8cf/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.876 de 16/04/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-04-16;19876"
+  },
+  "dec-19877-1931": {
+   "chave": "dec-19877-1931",
+   "ementa": "DÁ NOVO REGULAMENTO À ESCOLA NAVAL.",
+   "lexml": {
+    "amostra": "as penas, de prisão, porem, acarretarão á perda de pontos, de acordo com o seguinte critério: e a cada dia de prisão simples corresponderá a perda de meio ponto, e a c",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/aeb57723-554a-45a2-a900-7c36847cfca4/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.877 de 16/04/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-04-16;19877"
+  },
+  "dec-19899-1931": {
+   "chave": "dec-19899-1931",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA STANDARD BRANDS OF BRAZIL, INC., AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f39ddd82-c9a6-40ee-8a95-a29b737347c2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.899 de 22/04/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-04-22;19899"
+  },
+  "dec-19955-1931": {
+   "chave": "dec-19955-1931",
+   "ementa": "CONCEDE À COMPANHIA EXPLORADORA DE MINAS, INC.,AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/28a92e96-feed-421d-b724-b9f6e43c76a9/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.955 de 06/05/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-05-06;19955"
+  },
+  "dec-19975-1931": {
+   "chave": "dec-19975-1931",
+   "ementa": "APROVA O REGULAMENTO DA SECRETARIA DE ESTADO DOS NEGÓCIOS DO TRABALHO, INDÚSTRIA E COMÉRCIO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1d95ea31-af0a-42dd-8827-951302967eb0/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 19.975 de 12/05/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-05-12;19975"
+  },
+  "dec-20163-1931": {
+   "chave": "dec-20163-1931",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"WAYNE COMPANY, SOCIEDADE ANONIMA, COMERCIAL E INDUSTRIAL\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/8175b609-d41a-433e-820f-d47f10339e48/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.163 de 01/07/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-07-01;20163"
+  },
+  "dec-20377-1931": {
+   "chave": "dec-20377-1931",
+   "ementa": "APROVA A REGULAMENTAÇÃO DO EXERCÍCIO DA PROFISSÃO FARMACÊUTICA NO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1c8b65d6-1c59-45d4-aca9-d38cefa803fd/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.377 de 08/09/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-09-08;20377"
+  },
+  "dec-20560-1931": {
+   "chave": "dec-20560-1931",
+   "ementa": "APROVA O REGULAMENTO DA ESTRADA DE FERRO CENTRAL DO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/df7e470a-eea0-481d-a316-61e7f627373b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.560 de 23/10/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-10-23;20560"
+  },
+  "dec-20668-1931": {
+   "chave": "dec-20668-1931",
+   "ementa": "CONCEDE AUTORIZAÇÃO A SOCIEDADE ANONIMA THE RIO DE JANEIRO CITY IMPROVEMENTS COMPANY LIMITED PARA CONTINUAR A FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/54a827d1-75c2-45b7-8e10-d07049c511c6/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.668 de 17/11/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-11-17;20668"
+  },
+  "dec-20691-1931": {
+   "chave": "dec-20691-1931",
+   "ementa": "DISPÕE SOBRE O REGISTRO DE DADOS E CARACTERÍSTICAS REFERENTES A ANIMAIS, ARREIAMENTOS, VIATURAS DE TRAÇÃO ANIMAL E AUTOMÓVEL, EMBARCAÇÕES E AVIÕES EXISTENTES EM CADA MUNICÍPIO E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/9ebbbbdc-21b4-4558-9d54-89c5d53a7d01/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.691 de 19/11/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-11-19;20691"
+  },
+  "dec-20749-1931": {
+   "chave": "dec-20749-1931",
+   "ementa": "CONCEDE A HOULDER BROTHERS & CO. ( BRASIL) LIMITED, AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/7aacdf9d-693c-43f8-889e-198da51977f2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.749 de 02/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-02;20749"
+  },
+  "dec-20754-1931": {
+   "chave": "dec-20754-1931",
+   "ementa": "APROVA O PLANO DE UNIFORMES DOS OFICIAIS E PRAÇAS DO EXERCITO ATIVO, E DA OUTRAS PROVIDENCIAS.",
+   "lexml": {
+    "amostra": "6º As infrações das disposições desta lei são punidas com multa de 100$0 a 1:000$0 e com a pena de prisão simples, de um a seis meses, para casos individuais, e de 1:000$0 a 10:000$0, para coletividades",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/490c320a-5783-445c-af5b-8cd3899ace4e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.754 de 04/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-04;20754"
+  },
+  "dec-20784-1931": {
+   "chave": "dec-20784-1931",
+   "ementa": "APROVA O REGULAMENTO DA ORDEM DOS ADVOGADOS BRASILEIROS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/6284cd74-ac2c-412b-a149-7894f1deb858/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.784 de 14/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-14;20784"
+  },
+  "dec-20851-1931": {
+   "chave": "dec-20851-1931",
+   "ementa": "CONCEDE À \"ANSALDO, SOCIETÁ ANÔNIMA\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1db9900b-7d4d-44bf-9207-d7c70c5a1df2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.851 de 23/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-23;20851"
+  },
+  "dec-20862-1931": {
+   "chave": "dec-20862-1931",
+   "ementa": "REGULA O EXERCICIO DA ODONTOLOGIA PELOS DENTISTAS PRATICOS, DE ACORDO COM O PARAGRAFO UNICO, DO ARTIGO 314 DO DECRETO 19.852, DE 11 DE ABRIL DE 1931.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/51f36465-4cc3-4a28-9d4e-26ad061b7ae1/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.862 de 28/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-28;20862"
+  },
+  "dec-20865-1931": {
+   "chave": "dec-20865-1931",
+   "ementa": "APROVA OS REGULAMENTOS DA FACULDADE DE MEDICINA, DA ESCOLA POLITÉCNICA E DA ESCOLA DE MINAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/04c5f0d8-0cb5-48e0-806b-c536017b0365/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.865 de 28/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-28;20865"
+  },
+  "dec-20881-1931": {
+   "chave": "dec-20881-1931",
+   "ementa": "DÁ NOVO REGULAMENTO À JUNTA DOS CORRETORES DE MERCADORIAS DO DISTRITO FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/82b21836-84d7-40bd-8b0d-341e138ea89a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.881 de 30/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-30;20881"
+  },
+  "dec-20892-1931": {
+   "chave": "dec-20892-1931",
+   "ementa": "DISPÕE SOBRE O PRIVILÉGIO ABSOLUTO DA MARINHA DE GUERRA NACIONAL QUANTO AOS PLANOS DE UNIFORME ADOTADOS PARA O SEU PESSOAL.",
+   "lexml": {
+    "amostra": "5º As infrações das disposições deste decreto são punidas com multa de 100$ a 1 :00$0, e com pena de prisão simples , de um a seis meses, para casos individuais, e de 1:000$ a 10:000$ para coletividades",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/22661b09-8ce4-419c-a868-286f899cd121/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.892 de 31/12/1931",
+   "urn": "urn:lex:br:federal:decreto:1931-12-31;20892"
+  },
+  "dec-20930-1932": {
+   "chave": "dec-20930-1932",
+   "ementa": "FISCALIZA O EMPREGO E O COMÉRCIO DAS SUBSTÂNCIAS TÓXICAS ENTORPECENTES, REGULA A SUA ENTRADA NO PAÍS DE ACORDO COM A SOLICITAÇÃO DO COMITÊ CENTRAL PERMANENTE DO ÓPIO DA LIGA NAÇÕES, E ESTABELECE PENAS.",
+   "lexml": {
+    "amostra": "Penas: De um a cinco anos de prisão celular e multa de 1:000$0 a 5:000$0",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/7666149e-9161-453c-853e-33b82486456b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.930 de 11/01/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-01-11;20930"
+  },
+  "dec-20931-1932": {
+   "chave": "dec-20931-1932",
+   "ementa": "REGULA E FISCALIZA O EXERCÍCIO DA MEDICINA, DA ODONTOLOGIA, DA MEDICINA VETERINÁRIA E DAS PROFISSÕES DE FARMACÊUTICO, PARTEIRA E ENFERMEIRA, NO BRASIL, E ESTABELECE PENAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/85b8537a-041b-4702-9cc3-8a8a8ffee341/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.931 de 11/01/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-01-11;20931"
+  },
+  "dec-20979-1932": {
+   "chave": "dec-20979-1932",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"AUTOMATIC TELEPHONES LIMITATED OF BRAZIL\", AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f89ffc6b-b571-4b88-a491-72af7a465de3/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 20.979 de 20/01/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-01-20;20979"
+  },
+  "dec-21073-1932": {
+   "chave": "dec-21073-1932",
+   "ementa": "REGULA O EXERCÍCIO DA ODONTOLOGIA PELOS DENTISTAS PRÁTICOS NO DISTRITO FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/4e8ef813-5fed-4880-a2d1-25168650a4e9/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.073 de 22/02/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-02-22;21073"
+  },
+  "dec-21076-1932": {
+   "chave": "dec-21076-1932",
+   "ementa": "DECRETA O CÓDIGO ELEITORAL.",
+   "lexml": {
+    "amostra": "Pena – três meses a um ano de prisão celular",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/028b4792-b86c-40fd-a28f-e58d97b1337a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.076 de 24/02/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-02-24;21076"
+  },
+  "dec-21114-1932": {
+   "chave": "dec-21114-1932",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"COLD STORAGE TRANSPORTATION COMPANY OF BRAZIL\", AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f6477ef5-5a4b-4ac9-96ac-5391d2e02a6c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.114 de 02/03/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-03-02;21114"
+  },
+  "dec-21143-1932": {
+   "chave": "dec-21143-1932",
+   "ementa": "REGULA A EXTRAÇÃO DE LOTERIAS.",
+   "lexml": {
+    "amostra": "§ 2º Penas: de seis meses a um ano de prisão celular e multa de dez a cinqüenta contos de réis aos empreendedores ou banqueiros",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/ce7eb6b4-1a49-424c-ad7b-c66a267e52cb/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.143 de 10/03/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-03-10;21143"
+  },
+  "dec-213-1891": {
+   "chave": "dec-213-1891",
+   "ementa": "CONCEDE AO VISCONDE DUPRAT E AOS CIDADÃOS ALFREDO DE BARROS E HENRIQUE DAS CHAGAS ANDRADE, OU A COMPANHIA QUE FOR POR ELES ORGANIZADA, DIVERSOS FAVORES RELATIVAMENTE AOS EDIFÍCIOS QUE CONSTRUIREM PARA HABITAÇÃO DE OPERÁRIOS E CLASSES POBRES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/066f9fcb-9a92-47f1-9e76-1cc60f54d4e9/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 213 de 02/05/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-05-02;213"
+  },
+  "dec-21317-1932": {
+   "chave": "dec-21317-1932",
+   "ementa": "APROVA O REGULAMENTO DA CONTADORIA CENTRAL FERROVIÁRIA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e8409899-9c51-46f1-8f2b-1466a5b4b5a1/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.317 de 25/04/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-04-25;21317"
+  },
+  "dec-21333-1932": {
+   "chave": "dec-21333-1932",
+   "ementa": "DÁ NOVO REGULAMENTO ÀS PROMOÇÕES DOS OFICIAIS DA ARMADA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5f88e85a-3845-40db-8b49-3f1c00520d1a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.333 de 28/04/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-04-28;21333"
+  },
+  "dec-21353-1932": {
+   "chave": "dec-21353-1932",
+   "ementa": "APROVA O REGULAMENTO DA INSPETORIA DO ENSINO PROFISSIONAL TECNICO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/a7d34890-1e25-4488-8a35-ac3f9de60570/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.353 de 03/05/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-05-03;21353"
+  },
+  "dec-21362-1932": {
+   "chave": "dec-21362-1932",
+   "ementa": "CONCEDE A SOCIEDADE ANONIMA J. C. ENO (BRASIL), LIMITED, AUTORIZAÇÃO PARA FUNCIONAR NA REPUBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/6c488200-4d23-43f3-b271-fafd5fe92c21/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.362 de 04/05/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-05-04;21362"
+  },
+  "dec-21417a-1932": {
+   "chave": "dec-21417a-1932",
+   "ementa": "REGULA AS CONDIÇÕES DO TRABALHO DAS MULHERES NOS ESTABELECIMENTOS INDUSTRIAIS E COMERCIAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/db1e6520-daed-40fe-9d26-79b60daca17d/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.417-A de 17/05/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-05-17;21417-a"
+  },
+  "dec-21434-1932": {
+   "chave": "dec-21434-1932",
+   "ementa": "APROVA O REGULAMENTO DO SERVIÇO DE PROFILAXIA DA FEBRE AMARELA NO BRASIL.",
+   "lexml": {
+    "amostra": "4º Quem se opuser, embaraçar ou dificultar, de qualquer forma, a ação sanitária definida neste regulamento, incorrerá na multa de 100$0 a 1:000$0, dobrada nas reincidências, ou na pena de prisão de 3 a 30 dias",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/ba903acf-dbd0-44b8-ab5c-3d1ca454505b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.434 de 23/05/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-05-23;21434"
+  },
+  "dec-21504-1932": {
+   "chave": "dec-21504-1932",
+   "ementa": "CONCEDE A GASTÃO DE ALMEIDA E SILVA, MARIO DE ALMEIDA E SILVA E HERDEIROS DE DAGOBERTO DE ALMEIDA E SILVA, CONCESSIONÁRIOS DA ESTRADA DE FERRO NORTE-SUL DE SÃO PAULO, AUTORIZAÇÃO PARA A CONSTRUÇÃO E EXPLORAÇÃO DE UM PORTO EM CANANÉIA, NO ESTADO DE SÃO PAULO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fd40b2af-bfca-4365-928a-f33d735ef9c3/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.504 de 10/06/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-06-10;21504"
+  },
+  "dec-21518-1932": {
+   "chave": "dec-21518-1932",
+   "ementa": "APROVA O NOVO REGULAMENTO DO INSTITUTO SETE DE SETEMBRO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/c372682d-6c06-49ab-9c3b-a16a1882fb85/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.518 de 13/06/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-06-13;21518"
+  },
+  "dec-21580-1932": {
+   "chave": "dec-21580-1932",
+   "ementa": "ALTERA E REGULAMENTA O DECRETO 21.175, DE 21 DE MARÇO DE 1932, QUE INSTITUE A CARTEIRA PROFISSIONAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/83d83e7c-e10f-474a-92ce-a6f8efaf4271/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.580 de 29/06/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-06-29;21580"
+  },
+  "dec-21609-1932": {
+   "chave": "dec-21609-1932",
+   "ementa": "ESTABELECE PENAS DISCIPLINARES PARA FUNCIONÁRIOS DA JUSTIÇA FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ea6298a6-a445-4b8e-80e1-38031b2fd2d5/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.609 de 11/07/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-07-11;21609"
+  },
+  "dec-21654-1932": {
+   "chave": "dec-21654-1932",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA NORTH AND SOUTH AMERICAN PRODUCTS, INC., AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/eb93df5e-8e58-4986-a283-778ed4f4d4f8/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.654 de 20/07/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-07-20;21654"
+  },
+  "dec-21701-1932": {
+   "chave": "dec-21701-1932",
+   "ementa": "APROVA O REGULAMENTO PARA EXECUÇÃO DE DECRETO 19.881 DE 17 DE ABRIL DE 1932.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5e64d941-42b7-4fc5-a7db-7f92727d6c15/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.701 de 03/08/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-08-03;21701"
+  },
+  "dec-21974-1932": {
+   "chave": "dec-21974-1932",
+   "ementa": "CRIA A RECEBEDORIA FEDERAL EM SÃO PAULO, NA CAPITAL DO MESMO ESTADO, E REGULA SEUS SERVIÇOS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/28eff68a-d9e5-428a-9c61-e0a978317621/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.974 de 17/10/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-10-17;21974"
+  },
+  "dec-21981-1932": {
+   "chave": "dec-21981-1932",
+   "ementa": "REGULA A PROFISSÃO DE LEILOEIRO NO TERRITÓRIO DA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/67dfcf33-3268-40e6-b42a-078b99063460/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 21.981 de 19/10/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-10-19;21981"
+  },
+  "dec-22061-1932": {
+   "chave": "dec-22061-1932",
+   "ementa": "APROVA O REGULAMENTO PARA FISCALIZAÇÃO E COBRANÇA DO IMPOSTO PROPORCIONAL SOBRE AS VENDAS MERCANTIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/026b5d37-ab95-4828-ad2f-9bdf668f9994/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.061 de 09/11/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-11-09;22061"
+  },
+  "dec-22104-1932": {
+   "chave": "dec-22104-1932",
+   "ementa": "DÁ NOVO REGULAMENTO AO EXERCÍCIO DO CARGO DE DESPACHANTES ADUANEIROS E SEUS AJUDANTES NAS ALFÂNDEGAS E MESAS DE RENDAS DA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fdbe3ee1-3317-4cbc-ab53-ed6ce8625455/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.104 de 17/11/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-11-17;22104"
+  },
+  "dec-22206-1932": {
+   "chave": "dec-22206-1932",
+   "ementa": "ESTABELECE MEDIDAS PARA COIBIR AS FRAUDES E PUNIR AS INFRAÇÕES NA COLHEITA, BENEFICIAMENTO CLASSIFICAÇÃO, ACONDICIONAMENTO, TRANSPORTE E EMBARQUE DE FRUTAS, E DISPÕE SOBRE A SEDE DOS INSPETORES GERAIS, AJUDANTES E AUXILIARES AGRONOMOS DA SEÇÃO DE FRUTICULTURA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fb75b908-00ed-4b12-9f70-c882b0fe6802/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.206 de 13/12/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-12-13;22206"
+  },
+  "dec-22222-1932": {
+   "chave": "dec-22222-1932",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"SQUIER INTERNATIONAL CORPORATION\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1483d2eb-fb4e-41aa-ab0c-52bf419ccd58/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.222 de 14/12/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-12-14;22222"
+  },
+  "dec-22239-1932": {
+   "chave": "dec-22239-1932",
+   "ementa": "REFORMA AS DIPOSIÇÕES DO DECRETO LEGISLATIVO 1.637, DE 5 DE JANEIRO DE 1907, NA PARTE REFERENTE ÀS SOCIEDADES COOPERATIVAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ab9d75d4-6d8a-456b-b90c-d5593b4d1c3f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.239 de 19/12/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-12-19;22239"
+  },
+  "dec-22262-1932": {
+   "chave": "dec-22262-1932",
+   "ementa": "MODIFICA AS TAXAS DO IMPOSTO DE CONSUMO E DA OUTRAS PROVIDENCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2c7f3a7b-637e-46f4-8209-9855dc948adb/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.262 de 26/12/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-12-26;22262"
+  },
+  "dec-22279-1932": {
+   "chave": "dec-22279-1932",
+   "ementa": "RETIFICA O DECRETO 22.023, DE 27 DE OUTUBRO DE 1932, QUE ALTEROU A REDAÇÃO DE ALGUNS ARTIGOS, PARÁGRAFOS E ALÍNEAS DO REGULEMANTO VIGENTE DA ESCOLA NAVAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/4553f4d6-b0fe-42db-9877-25c12ff2ecd2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.279 de 29/12/1932",
+   "urn": "urn:lex:br:federal:decreto:1932-12-29;22279"
+  },
+  "dec-22400-1933": {
+   "chave": "dec-22400-1933",
+   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO PARA AS ESCOLAS DE APRENDIZES MARINHEIROS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/24344802-1966-4150-9b50-3172997ec2a2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.400 de 26/01/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-01-26;22400"
+  },
+  "dec-22478-1933": {
+   "chave": "dec-22478-1933",
+   "ementa": "APROVA E MANDA OBSERVAR A CONSOLIDAÇÃO DOS DISPOSITIVOS REGULAMENTARES DA ORDEM DOS ADVOGADOS DO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/7a97f53b-61c5-47be-a026-9decb26cc173/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.478 de 20/02/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-02-20;22478"
+  },
+  "dec-22587-1933": {
+   "chave": "dec-22587-1933",
+   "ementa": "APROVA O REGULAMENTO PARA A POLICIA MILITAR DO DISTRITO FEDERAL.",
+   "lexml": {
+    "amostra": "São penas disciplinares: a) para oficiais – repreensão, detenção ou prisão até 30 dias",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/b0d26c8a-f115-48d7-81b3-724d6256a34e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.587 de 28/03/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-03-28;22587"
+  },
+  "dec-22717-1933": {
+   "chave": "dec-22717-1933",
+   "ementa": "APROVA O NOVO REGULAMENTO SOBRE FATURAS CONSULARES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ea2f411f-a9f8-4926-9be4-7ee633b5f818/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.717 de 16/05/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-05-16;22717"
+  },
+  "dec-22796-1933": {
+   "chave": "dec-22796-1933",
+   "ementa": "PUNE OS FALSIFICADORES E FRAUDES DE GÊNEROS ALIMENTÍCIOS E REVOGA O DECRETO NÚMERO 19.604, DE 19 DE JANEIRO DE 1931.",
+   "lexml": {
+    "amostra": "Penas: De um a três anos de prisão celular",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/8d3d5f33-39e4-4ba0-8fba-b27fc51b6270/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.796 de 01/06/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-06-01;22796"
+  },
+  "dec-22872-1933": {
+   "chave": "dec-22872-1933",
+   "ementa": "CRIA O INSTITUTO DE APOSENTADORIA E PENSÕES DOS MARÍTIMOS, REGULA O SEU FUNCIONAMENTO, E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/75ad2bda-06f6-40ef-952d-d6d5ed77a099/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.872 de 29/06/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-06-29;22872"
+  },
+  "dec-22916-1933": {
+   "chave": "dec-22916-1933",
+   "ementa": "APROVA O REGULAMENTO PARA OS SERVIÇOS DE FISCALIZAÇÃO DAS TORREFAÇÕES E MOAGENS DE CAFE E DO CONSUMO DESTE PRODUTO E DA OUTRAS PROVIDENCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2f58a8ed-5ff8-4a07-9a13-8f2f1cf97c10/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.916 de 11/07/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-07-11;22916"
+  },
+  "dec-22955-1933": {
+   "chave": "dec-22955-1933",
+   "ementa": "MODIFICA O DECRETO NÚMERO 22.262, DE 28 DE DEZEMBRO DE 1932, E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/87e3084b-9864-4c7e-bc8d-450085434c18/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 22.955 de 19/07/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-07-19;22955"
+  },
+  "dec-23125-1933": {
+   "chave": "dec-23125-1933",
+   "ementa": "LEI DO SERVIÇO MILITAR.",
+   "lexml": {
+    "amostra": "Pena de prisão com trabalho de um a três anos e multa de 100$ a 1:000$000",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/1e501dd5-bda5-4273-aac1-47ee619f1b6b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.125 de 21/08/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-08-21;23125"
+  },
+  "dec-23133-1933": {
+   "chave": "dec-23133-1933",
+   "ementa": "REGULA O EXERCÍO DA PROFISSÃO VETERINÁRIA NO BRASIL E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5c8ce09c-7d49-4576-8b54-540f5907ff45/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.133 de 09/09/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-09-09;23133"
+  },
+  "dec-23152-1933": {
+   "chave": "dec-23152-1933",
+   "ementa": "REGULA A DURAÇÃO DO TRABALHO DOS EMPREGADOS EM CASAS DE DIVERSÕES E ESTABELECIMENTOS CONEXOS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/190b7996-b26c-4511-b67c-d1100f8be90c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.152 de 15/09/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-09-15;23152"
+  },
+  "dec-23172-1933": {
+   "chave": "dec-23172-1933",
+   "ementa": "DISPÕE SOBRE A ORGANIZAÇÃO DA ESCOLA NAVAL DE QUÍMICA; APROVA E MANDA EXECUTAR O RESPECTIVO REGULAMENTO, E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1b79013c-4a04-4406-a6c8-8be41b7c209d/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.172 de 29/09/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-09-29;23172"
+  },
+  "dec-23331-1933": {
+   "chave": "dec-23331-1933",
+   "ementa": "CONCEDE Á SOCIEDADE ANÔNIMA NEBIOLO AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/74a50b2e-3982-4ba6-a4fe-02e510ab35fb/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.331 de 08/11/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-11-08;23331"
+  },
+  "dec-23567-1933": {
+   "chave": "dec-23567-1933",
+   "ementa": "APROVA O NOVO REGULAMENTO DA SECRETARIA DE ESTADO DOS NEGÓCIOS DO TRABALHO, INDÚSTRIA E COMÉRCIO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/cbe996db-8a58-4d34-8358-2b9ba61d129f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.567 de 08/12/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-12-08;23567"
+  },
+  "dec-23609-1933": {
+   "chave": "dec-23609-1933",
+   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO DA FACULDADE DE DIREITO DA UNIVERSIDADE DO RIO DE JANEIRO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/417f535f-1dfb-4683-85d6-b9ce1ce14991/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.609 de 20/12/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-12-20;23609"
+  },
+  "dec-23661-1933": {
+   "chave": "dec-23661-1933",
+   "ementa": "ALTERA OS PRAZOS ESTABELECIDOS PARA COBRANÇA DE VÁRIOS IMPOSTOS E TAXAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/a2a2f6da-9eee-4e20-bd76-b612a250a45a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.661 de 29/12/1933",
+   "urn": "urn:lex:br:federal:decreto:1933-12-29;23661"
+  },
+  "dec-23672-1934": {
+   "chave": "dec-23672-1934",
+   "ementa": "APROVA O CÓDIGO DE CAÇA E PESCA QUE COM ESTE BAIXA.",
+   "lexml": {
+    "amostra": "A infracção é crime, ou contravenção, e será punida com prisão, detenção e multa, conjuncta ou separadamente, a criterio do juiz ou da autoridade administrativa julgadora, de modo que a pena seja, tanto quanto",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/31418598-d4ca-4452-9609-d88236428ffb/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.672 de 02/01/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-01-02;23672"
+  },
+  "dec-23756-1934": {
+   "chave": "dec-23756-1934",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA LATIN AMERICAN PUBLICITY SERVICE LIMITED AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/22363f7a-c512-4d8b-84a2-ab661c6c633f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.756 de 17/01/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-01-17;23756"
+  },
+  "dec-23766-1934": {
+   "chave": "dec-23766-1934",
+   "ementa": "REGULA A DURAÇÃO DO TRABALHO DOS EMPREGADOS EM TRANSPORTES TERRESTRES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/1f3b217c-991e-4ece-a054-fe43096fe837/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.766 de 18/01/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-01-18;23766"
+  },
+  "dec-23793-1934": {
+   "chave": "dec-23793-1934",
+   "ementa": "APROVA O CÓDIGO FLORESTAL.",
+   "lexml": {
+    "amostra": "A infracção florestal é crime, ou contravenção, e será punido com prisão, detenção e multa, conjuncta ou separadamente, a criterio do juiz, de modo que a pena seja, tanto quanto possivel, individualizada",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/8ccde9aa-7415-4f0e-9cb6-d3152484b8e0/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.793 de 23/01/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-01-23;23793"
+  },
+  "dec-23857-1934": {
+   "chave": "dec-23857-1934",
+   "ementa": "CRIA A ESCOLA NACIONAL DE AGRONOMIA, APROVA O RESPECTIVO REGULAMENTO E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/cc543582-2ae0-4c28-be7c-0e81246781de/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.857 de 08/02/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-02-08;23857"
+  },
+  "dec-23858-1934": {
+   "chave": "dec-23858-1934",
+   "ementa": "CRIA A ESCOLA NACIONAL DE VETERINÁRIA, APROVA O RESPECTIVO REGULAMENTO E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/45700e32-1bb7-4b2a-87ab-ed4d22434d2a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.858 de 08/02/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-02-08;23858"
+  },
+  "dec-23938-1934": {
+   "chave": "dec-23938-1934",
+   "ementa": "APROVA O REGULAMENTO QUE MODIFCA O EXPEDIDO PELO DECRETO 22.916, DE 11 DE JULHO DE 1933.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/15816c8b-3b05-4d71-bc9a-a451cff90c56/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.938 de 28/02/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-02-28;23938"
+  },
+  "dec-23994-1934": {
+   "chave": "dec-23994-1934",
+   "ementa": "APROVA O REGULAMENTO DA ESCOLA MILITAR.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/1df7acf2-a7eb-420c-b4ef-84b7982b0f5d/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.994 de 13/03/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-03-13;23994"
+  },
+  "dec-23997-1934": {
+   "chave": "dec-23997-1934",
+   "ementa": "PROMULGA O TRATADO DE EXTRADIÇÃO ENTRE O BRASIL E A SUÍÇA, FIRMADO NO RIO DE JANEIRO, D.F., A 23 DE JULHO DE 1932.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/58d796f4-4922-4cce-9f6f-4eab755f802b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 23.997 de 13/03/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-03-13;23997"
+  },
+  "dec-24030-1934": {
+   "chave": "dec-24030-1934",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"AIR FRANCE\" AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f62cca10-ae66-465c-89da-31687ad3d48f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.030 de 22/03/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-03-22;24030"
+  },
+  "dec-24113-1934": {
+   "chave": "dec-24113-1934",
+   "ementa": "APROVA OS REGULAMENTOS PARA OS SERVIÇOS DIPLOMÁTICO E CONSULAR.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/d953b183-a23d-40dd-8c32-82bcd2dcd69b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.113 de 12/04/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-04-12;24113"
+  },
+  "dec-24153-1934": {
+   "chave": "dec-24153-1934",
+   "ementa": "APROVA O REGIMENTO DE CUSTAS PARA A JUSTIÇA LOCAL DO DISTRITO FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/b83583b7-1a28-4145-9eed-1271fb5943a8/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.153 de 23/04/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-04-23;24153"
+  },
+  "dec-24239-1934": {
+   "chave": "dec-24239-1934",
+   "ementa": "PROMULGA A LEI ORGÂNICA DOS SERVIÇOS DIPLOMÁTICO E CONSULAR.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/6b844a6a-fc2a-4dc6-b8da-ab7f5491f87a/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.239 de 15/05/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-05-15;24239"
+  },
+  "dec-24288-1934": {
+   "chave": "dec-24288-1934",
+   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO PARA AS CAPITANIAS DOS PORTOS.",
+   "lexml": {
+    "amostra": "O infrator incorrerá na multa de 20$000 a 100$000 e na detenção da embarcação, até que seja preenchida esta exigência",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/117c97be-e028-4e4d-bc63-71db1f412bd2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.288 de 24/05/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-05-24;24288"
+  },
+  "dec-243-1890": {
+   "chave": "dec-243-1890",
+   "ementa": "CONCEDE PERMISSÃO A D. ELMIRA REVERBEL DE LIMA, VIUVA DO BRIGADEIRO MANOEL LUCAS DE LIMA, PARA LVRAR CARVÃO DE PEDRA NO ESTADO DO RIO GRANDE DO SUL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/c31043e4-8d03-45b6-ab4a-d5578c4a0106/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 243 de 04/03/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-03-04;243"
+  },
+  "dec-24368-1934": {
+   "chave": "dec-24368-1934",
+   "ementa": "ESTABELECE NOVAS PENAS PARA A INFRAÇÃO PREVISTA NO ARTIGO 8 DO DECRETO 21.143, DE 10 DE MARÇO DE 1932.",
+   "lexml": {
+    "amostra": "1º É de ação pública, inafiançável e punível com seis meses a dois anos de prisão celular, além das outras penas já estabelecidas, a infração prevista no art",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/b68b9444-6f9d-4eea-8510-4880a8ef54f2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.368 de 09/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-09;24368"
+  },
+  "dec-24482-1934": {
+   "chave": "dec-24482-1934",
+   "ementa": "CONCEDE À SOCIEDADE ANÔNIMA COLUMBIA PICTURES OF BRAZIL, INC. AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5d248612-5ac5-457f-a955-8aa058bf69d7/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.482 de 27/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-27;24482"
+  },
+  "dec-24492-1934": {
+   "chave": "dec-24492-1934",
+   "ementa": "BAIXA INSTRUÇÕES SOBRE O DECRETO NÚMERO 20.931. DE 11 DE JANEIRO DE 1932, NA PARTE RELATIVA A VENDA DE LENTES DE GRAU.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/76d8b429-c974-46af-97af-9218be6bb811/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.492 de 28/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-28;24492"
+  },
+  "dec-24500-1934": {
+   "chave": "dec-24500-1934",
+   "ementa": "APROVA NOVO REGULAMENTO PARA A IMPRESA NACIONAL E ABRE O CRÉDITO NECESSÁRIO À SUA EXECUÇÃO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/a301f31d-10b8-4099-b2f6-38f47ab672fb/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.500 de 29/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-29;24500"
+  },
+  "dec-24502-1934": {
+   "chave": "dec-24502-1934",
+   "ementa": "APROVA O REGULAMENTO PARA EXECUÇÃO DOS SERVIÇOS DAS COLETORIAS FEDERAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/9297d150-ea40-4258-a5ef-a20fac2889ba/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.502 de 29/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-29;24502"
+  },
+  "dec-24505-1934": {
+   "chave": "dec-24505-1934",
+   "ementa": "MODIFICA OS ARTIGOS 1,3,5,14,22,25,26 E 58, DO DECRETO 20.930, DE 11 DE JANEIRO DE 1932.",
+   "lexml": {
+    "amostra": "Penas: de um a cinco annos de prisão cellular e multa de 1:000$ a 5:000$000",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/6c19617b-44f5-42b9-bdfa-6b4483062413/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.505 de 29/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-29;24505"
+  },
+  "dec-24507-1934": {
+   "chave": "dec-24507-1934",
+   "ementa": "APROVA O REGULAMENTO PARA A COMISSÃO DE PATENTES DE DESENHO OU MODELO INDUSTRIAL, PARA O REGISTRO DO NOME COMERCIAL E DO TÍTULO DE ESTABELECIMENTOS E PARA A REPRESSÃO À CONCORRÊNCIA DESLEAL, E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": "A responsabilidade por acto de concurrencia desleal, promovida ex-officio ou pela parte lesada, será punida : 1º, com as penas de prisão cellular por tres a seis mezes e multa de 500$000 (quinhentos mil réis) a 5:000$000 (cinco contos de réis), em favor do prejudica",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/589ca8b3-3028-4831-8b54-9ac976e172c7/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.507 de 29/06/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-06-29;24507"
+  },
+  "dec-24562-1934": {
+   "chave": "dec-24562-1934",
+   "ementa": "REGULA A DURAÇÃO E CONDIÇÕES DO TRABALHO DOS EMPREGADOS NA INDÚSTRIA FRIGORÍFICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/aecd6ef1-3a94-4af5-a733-b5d783a66d5c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.562 de 03/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-03;24562"
+  },
+  "dec-24585-1934": {
+   "chave": "dec-24585-1934",
+   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO DO TRIBUNAL MARÍTIMO ADMINISTRATIVO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2675a122-e58c-492b-8dad-c744d1a85596/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.585 de 05/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-05;24585"
+  },
+  "dec-24637-1934": {
+   "chave": "dec-24637-1934",
+   "ementa": "ESTABELECE SOB NOVOS MOLDES AS OBRIGAÇÕES RESULTANTES DOS ACIDENTES DO TRABALHO, E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/4d203cfd-980b-4704-bc5a-435782392bd0/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.637 de 10/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-10;24637"
+  },
+  "dec-24645-1934": {
+   "chave": "dec-24645-1934",
+   "ementa": "ESTABELECE MEDIDAS DE PROTEÇÃO AOS ANIMAIS.",
+   "lexml": {
+    "amostra": "2º Aquele que, em lugar público ou privado, aplicar ou fizer aplicar maus tratos aos animais, incorrerá em multa de 20$000 a 500$000 e na pena de prisão celular de 2 a 15 dias, quer o delinquêntes seja ou não o respectivo proprietário, sem prejuízo da ação civil",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/9d0094ed-7c51-4712-88ea-8195daa56a1c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.645 de 10/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-10;24645"
+  },
+  "dec-24647-1934": {
+   "chave": "dec-24647-1934",
+   "ementa": "REVOGA O DECRETO NÚMERO 22.239, DE 19 DE DEZEMBRO DE 1932; ESTABELECE BASES, NORMAS E PRINCÍPIOS PARA A COOPERAÇÃO-PROFISSIONAL E PARA A COOPERAÇÃO-SOCIAL; FACULTA AUXÍLIOS DIRETOS E INDIRETOS ÀS COOPERATIVAS; E INSTITUE O PATRIMÔNIO DOS CONSÓRCIOS PROFISSIONAIS-COOPERATIVOS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/d575f803-893b-4ba4-96fd-bb392ef12e8e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.647 de 10/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-10;24647"
+  },
+  "dec-24693-1934": {
+   "chave": "dec-24693-1934",
+   "ementa": "REGULA O EXERCICIO DA PROFISSÃO DE QUIMICO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/126b0143-33b6-428c-915a-4854289371a2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.693 de 12/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-12;24693"
+  },
+  "dec-24732-1934": {
+   "chave": "dec-24732-1934",
+   "ementa": "APROVA O REGULAMENTO PARA CONCESSÃO E CONSUMO DÁGUA NO DISTRITO FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/bd1256c7-96f0-4ead-8712-8a299278ad48/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.732 de 13/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-13;24732"
+  },
+  "dec-24776-1934": {
+   "chave": "dec-24776-1934",
+   "ementa": "REGULA A LIBERDADE DE IMPRENSA E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": "pena – prisão celular por um a quatro anos e multa de 300$ a 6:000$000",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/a43b986e-f5bf-481a-9ed3-5e413ba157ce/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 24.776 de 14/07/1934",
+   "urn": "urn:lex:br:federal:decreto:1934-07-14;24776"
+  },
+  "dec-259-1890": {
+   "chave": "dec-259-1890",
+   "ementa": "CONCEDE PERMISSÃO A JOÃO MARIA MOUSSIER E CORNELIO DE LACERDA PARA LAVRAREM OURO E OUTROS MINERAIS NO MUNICIPIO DE SÃO LOURENÇO DE MANHUASSÚ, ESTADO DE MINAS GERAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/3dde4979-e1c2-4a8e-8c02-ddef4d1f0901/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 259 de 13/03/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-03-13;259"
+  },
+  "dec-271-1890": {
+   "chave": "dec-271-1890",
+   "ementa": "MANDA EXECUTAR O REGULAMENTO PARA O CORPO DE PRÁTICOS DO ESTUÁRIO DO RIO DA PRATA E SEUS AFLUENTES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/b2e2c069-0fb8-478b-9a5e-7bf89daf228f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 271 de 18/03/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-03-18;271"
+  },
+  "dec-323-1890": {
+   "chave": "dec-323-1890",
+   "ementa": "CONCEDE PERMISSÃO AO ENGENHEIRO MARTINIANO DA FONSECA REIS BRANDÃO PARA LAVRAR OURO E OUTROS MINERAIS EM TERRENO DE SUA PROPRIEDADE, NO ESTADO DE MINAS GERAIS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fcf64f89-b2a5-45aa-b0a9-62be936b9de7/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 323 de 12/04/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-04-12;323"
+  },
+  "dec-324-1891": {
+   "chave": "dec-324-1891",
+   "ementa": "CONCEDE AUTORIZAÇÃO AO DR. NEMESIO DO REGO QUADROS E OUTRO PARA ORGANIZAREM UMA SOCIEDADE ANÔNIMA SOB A DENOMINAÇÃO DE COMPANHIA PORVIR FLUMININSE.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/5ca300b5-0844-43ec-8e52-a34736f8eb07/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 324 de 16/05/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-05-16;324"
+  },
+  "dec-330-1890": {
+   "chave": "dec-330-1890",
+   "ementa": "PROMULGA O REGULAMENTO QUE REORGANIZA O ENSINO NAS ESCOLAS DO EXÉRCITO.",
+   "lexml": {
+    "amostra": "O commandante da escola é revestido da jurisdicção necessaria para impor, correccional ou administrativamente, as penas de reprehensão simples ou em ordem do dia da escola, e suspensão ou prisão de 1 a 15 dias, aos empregados sobre os quaes não houver disposição especial a esse",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/16a18c21-bf44-4f93-bbe4-c3b695e1050e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 330 de 12/04/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-04-12;330"
+  },
+  "dec-372a-1890": {
+   "chave": "dec-372a-1890",
+   "ementa": "DÁ REGULAMENTO PARA A REPARTIÇÃO GERAL DOS TELÉGRAFOS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/fd6d8e77-8fc9-4b34-ba1f-8ef3074b72d3/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 372-A de 02/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-02;372-a"
+  },
+  "dec-389-1891": {
+   "chave": "dec-389-1891",
+   "ementa": "ESTABELECE AS GRATIFICAÇÕES QUE COMPETEM AOS OFICIAIS DO CORPO DA ARMADA E DAS CLASSES ANEXAS PELAS DIVERSAS COMISSÕES NO DESEMPENHO DO SERVIÇO QUE LHES CABE, DE HARMONIA COM O ARTIGO 85 DA CONSTITUIÇÃO FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/086f75c1-4b05-4ec6-8369-9c070a3e5e35/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 389 de 13/06/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-06-13;389"
+  },
+  "dec-406-1890": {
+   "chave": "dec-406-1890",
+   "ementa": "DÁ NOVO REGULAMENTO Á ESTRADA DE FERRO CENTRAL DO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ddd1bd90-f4c1-409c-9838-5b2adc291aaa/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 406 de 17/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-17;406"
+  },
+  "dec-407-1890": {
+   "chave": "dec-407-1890",
+   "ementa": "APROVA O REGULAMENTO PARA A ESCOLA NORMAL DA CAPITAL FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/62a711d8-24a3-43e7-a819-2dfd0a21f38f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 407 de 17/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-17;407"
+  },
+  "dec-408-1890": {
+   "chave": "dec-408-1890",
+   "ementa": "APROVA O REGULAMENTO PARA O INSTITUTO NACIONAL DOS CEGOS.",
+   "lexml": {
+    "amostra": "Quando for condemnado ás penas de galés ou prisão com trabalho ou pelos crimes de que trata o n",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/37f39526-c93d-4cc3-ae95-449931792e41/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 408 de 17/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-17;408"
+  },
+  "dec-429-1890": {
+   "chave": "dec-429-1890",
+   "ementa": "DÁ NOVO REGULAMENTO PARA O HOSPITAL DE MARINHA DO RIO DE JANEIRO, EM SUBSTITUIÇÃO AO QUE BAIXOU COM O DECRETO 1.104 DE 3 DE JANEIRO DE 1853.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/3107e768-6521-4402-ac36-f41f1e205fd3/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 429 de 29/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-29;429"
+  },
+  "dec-434-1891": {
+   "chave": "dec-434-1891",
+   "ementa": "CONSOLIDA AS DISPOSIÇÕES LEGISLATIVAS E REGULAMENTARES SOBRE AS SOCIEDADES ANÔNIMAS.",
+   "lexml": {
+    "amostra": "Incorrerão nas penas de prisão cellular por um a quatro annos e multa de 100$ a 500$000: 1º Os administradores de sociedades ou companhias anonymas que, por conta dellas, comprare",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/8d5b95a7-3af8-44ef-a830-00e6c7be4b3e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 434 de 04/07/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-07-04;434"
+  },
+  "dec-441-1890": {
+   "chave": "dec-441-1890",
+   "ementa": "APROVA A POSTURA DA INTENDÊNCIA MUNICIPAL SOBRE JOGOS E BRINQUEDOS QUE POSSAM EMBARAÇAR O FUNCIONAMENTO DAS LINHAS TELEFÔNICAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/0aa7947b-e74d-4f54-97bb-e81bbf6e363f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 441 de 31/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-31;441"
+  },
+  "dec-451b-1890": {
+   "chave": "dec-451b-1890",
+   "ementa": "ESTABELECE O REGISTRO E TRANSMISSÃO DE IMÓVEIS PELO SISTEMA TORRENS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/b25138a5-275d-41ef-8dc6-2205840e313d/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 451-B de 31/05/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-05-31;451-b"
+  },
+  "dec-453-1891": {
+   "chave": "dec-453-1891",
+   "ementa": "CONCEDE À COMPANHIA BOULEVARD BANDEIRA JÚNIOR  AUTORIZAÇÃO PARA FUNCIONAR.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/cddb0fa7-eaf0-4918-bdf6-7470118f9962/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 453 de 24/07/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-07-24;453"
+  },
+  "dec-509-1890": {
+   "chave": "dec-509-1890",
+   "ementa": "CRIA O CÓDIGO DISCIPLINAR PARA A ARMADA.",
+   "lexml": {
+    "amostra": "Esta pena póde tambem ser applicada, como accessoria, ás praças impedidas nos navios ou estabelecimento, e ainda ás que estiverem cumprindo o castigo de prisão simples",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/528fc971-9750-4162-a554-3bc9afbbcd53/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 509 de 21/06/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-06-21;509"
+  },
+  "dec-603-1891": {
+   "chave": "dec-603-1891",
+   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO DAS COMPANHIAS OU SOCIEDADES ANÔNIMAS.",
+   "lexml": {
+    "amostra": "Incorrerão nas penas de prisão cellular por um a quatro annos e na multa de 100$ a 500$000: I",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/138f83c4-72d1-4f36-affe-7bf501d8d346/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 603 de 20/10/1891",
+   "urn": "urn:lex:br:federal:decreto:1891-10-20;603"
+  },
+  "dec-607-1890": {
+   "chave": "dec-607-1890",
+   "ementa": "DÁ NOVO REGULAMENTO A ESTRADA DE FERRO DE BATURITÉ.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/07b9ee33-e537-4c77-a3b5-74a5bdfa9ff5/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 607 de 26/07/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-07-26;607"
+  },
+  "dec-658-1890": {
+   "chave": "dec-658-1890",
+   "ementa": "DÁ NOVO REGULAMENTO AO ASILO DE MENINOS DESVALIDOS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e197c28d-24a3-4ea2-beea-0e2d9699514b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 658 de 12/08/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-08-12;658"
+  },
+  "dec-670-1890": {
+   "chave": "dec-670-1890",
+   "ementa": "CONCEDE PERMISSÃO A TITO LÍVIO MARTINS PARA A LAVRA DE PETRÓLEO E OUTROS MINERAIS NO MUNICÍPIO DE TATUÍ, ESTADO DE SÃO PAULO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/895e9682-0d87-4802-ba21-3a702dee7d23/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 670 de 18/08/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-08-18;670"
+  },
+  "dec-691-1890": {
+   "chave": "dec-691-1890",
+   "ementa": "DÁ NOVO REGULAMENTO Á ESTRADA DE FERRO DE PORTO ALEGRE A URUGUAIANA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/d2ed1f8a-afd2-47d4-8910-6b4e24c2697b/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 691 de 28/08/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-08-28;691"
+  },
+  "dec-713-1890": {
+   "chave": "dec-713-1890",
+   "ementa": "DÁ NOVO REGULAMENTO Á PARTE EM CONSTRUÇÃO DA ESTRADA DE FERRO CENTRAL DO BRASIL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/db6af56e-a36e-412d-8cc0-5f3de157d8de/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 713 de 02/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-02;713"
+  },
+  "dec-716-1890": {
+   "chave": "dec-716-1890",
+   "ementa": "CONCEDE PERMISSÃO A CHARLES H. WARD PARA LAVRAR OURO E OUTROS MINERAIS NO MUNICÍPIO DE POCONÉ, ESTADO DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ebef3ead-e646-4f33-8378-526f51d130b3/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 716 de 05/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-05;716"
+  },
+  "dec-717-1890": {
+   "chave": "dec-717-1890",
+   "ementa": "CONCEDE PERMISSÃO A CHARLES H. WARD PARA LAVRAR OURO E OUTROS MINERAIS NO MUNICÍPIO DO LIVRAMENTO, ESTADO DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2c12f6e7-7c00-4b57-adeb-404713f36622/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 717 de 05/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-05;717"
+  },
+  "dec-719-1890": {
+   "chave": "dec-719-1890",
+   "ementa": "CONCEDE PERMISSÃO A CHARLES H. WARD PARA LAVRAR OURO E OUTRO MINERAIS NO MUNICÍPIO DE CUIABÁ, ESTADO DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/0331d6d8-b467-4d34-bebe-046923b3d4b4/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 719 de 05/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-05;719"
+  },
+  "dec-721-1890": {
+   "chave": "dec-721-1890",
+   "ementa": "DÁ NOVO REGULAMENTO ÁS ESTRADAS DE FERRO CENTRAL E SUL DE PERNAMBUCO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/a388e8bf-d5da-4b03-9baf-818f09024eff/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 721 de 06/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-06;721"
+  },
+  "dec-722-1890": {
+   "chave": "dec-722-1890",
+   "ementa": "DETERMINA QUE SEJAM REMETIDOS TRIMENSALMENTE Á DIRETORIA GERAL DE ESTATÍSTICA MAPAS DOS NASCIMENTOS, CASAMENTOS E ÓBITOS REGISTRADOS NA CONFORMIDADE DAS DISPOSIÇÕES EM VIGOR.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e13166dc-501e-45e9-9bb3-b8c916050323/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 722 de 06/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-06;722"
+  },
+  "dec-751-1890": {
+   "chave": "dec-751-1890",
+   "ementa": "DECLARA ORGANIZADA A COMISSÃO DAS OBRAS DA BARRA E DO PORTO DO RIO GRANDE DO SUL, NO ESTADO DO MESMO NOME, E EXTINTA A COMISSÃO DE MELHORAMENTOS DA BARRA DO MESMO ESTADO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/2f4f9736-211b-4804-ae4b-a89ed55d1289/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 751 de 13/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-13;751"
+  },
+  "dec-774-1890": {
+   "chave": "dec-774-1890",
+   "ementa": "DECLARA ABOLIDA A PENA DE GALÉS, REDUZ A 30 ANOS AS PENAS PERPÉTUAS, MANDA COMPUTAR A PRISÃO PREVENTIVA NA EXECUÇÃO, E ESTABELECE A PRESCRIÇÃO DAS PENAS.",
+   "lexml": {
+    "amostra": "1º E' abolida desde já a pena de galés, e substituida pela prisão com trabalho durante o mesmo numero de annos, si for temporaria, ou durante 30 annos, si for perpetua a comminada na lei an",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/69a6f3c3-0de3-4390-bd2f-729203d94a47/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 774 de 20/09/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-09-20;774"
+  },
+  "dec-808-1890": {
+   "chave": "dec-808-1890",
+   "ementa": "ORGANIZA A INSPECTORIA DOS PORTOS E OBRAS PÚBLICAS FEDERAIS NO ESTADO DE PERNAMBUCO E DECLARA EXTINTA A COMISSÃO DE CONSERVAÇÃO DOS PORTOS E OBRAS PÚBLICAS GERAIS DO MESMO ESTADO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/40548d9a-4704-490c-82dd-e82b3e2154fc/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 808 de 04/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-04;808"
+  },
+  "dec-843-1890": {
+   "chave": "dec-843-1890",
+   "ementa": "CONCEDE AO BANCO DOS OPERÁRIOS DIVERSOS FAVORES RELATIVAMENTE AOS EDIFÍCIOS QUE CONSTRUIR PARA HABITAÇÃO DE OPERÁRIOS E CLASSES POBRES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/62ffcb14-db2f-402f-929f-a11f317e93b0/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 843 de 11/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-11;843"
+  },
+  "dec-847-1890": {
+   "chave": "dec-847-1890",
+   "ementa": "PROMULGA O CÓDIGO PENAL.",
+   "lexml": {
+    "amostra": "Não será punida a tentativa de contravenção e nem a de crime ao qual não esteja imposta maior pena que a de um mez de prisão cellular",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/dfedbba3-748f-47ad-b35b-61d0f802f4d7/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 847 de 11/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-11;847"
+  },
+  "dec-848-1890": {
+   "chave": "dec-848-1890",
+   "ementa": "ORGANIZA A JUSTIÇA FEDERAL.",
+   "lexml": {
+    "amostra": "O protesto por novo julgamento será admittido, com exclusão de outro recurso, nos processos em que a sentença impuzer pena de prisão cellular por trinta annos, ou banimento",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/962491fc-75f0-4a60-b4da-16cfbcff2a4c/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 848 de 11/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-11;848"
+  },
+  "dec-868-1890": {
+   "chave": "dec-868-1890",
+   "ementa": "CONCEDE PERMISSÃO AO BACHAREL JOÃO CÂNDIDO MURTINHO, PARA LABRAR OURO E OUTROS MINERAIS NO ESTADO DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/3dae51e2-889c-4a48-894e-af73a1d90fbd/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 868 de 17/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-17;868"
+  },
+  "dec-882-1890": {
+   "chave": "dec-882-1890",
+   "ementa": "ELEVA A FIANÇA DOS CORRETORES DE FUNDOS PÚBLICOS E DÁ OUTRAS PROVIDÊNCIAS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/b2f8d5f6-fb57-498d-a11f-bf9602b4d593/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 882 de 18/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-18;882"
+  },
+  "dec-894-1890": {
+   "chave": "dec-894-1890",
+   "ementa": "CONCEDE À COMPANHIA NACIONAL DE CONSTRUÇÕES DIVERSOS FAVORES RELATIVAMENTE AOS EDIFÍCIOS QUE CONSTRUIR PARA HABITAÇÃO DE OPERÁRIOS E CLASSE POBRES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/f77a1c0a-620f-4b59-a5d9-d64ab6ba9087/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 894 de 18/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-18;894"
+  },
+  "dec-895-1890": {
+   "chave": "dec-895-1890",
+   "ementa": "CONCEDE Á COMPANHIA TÉCNICO-CONSTRUTORA DIVERSOS FAVORES RELATIVAMENTE AOS EDIFÍCIOS QUE CONSTRUIR PARA HABITAÇÃO DE OPERÁRIOS CLASSES POBRES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e0be1847-f74f-4018-a629-f52e44e7f229/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 895 de 18/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-18;895"
+  },
+  "dec-903-1890": {
+   "chave": "dec-903-1890",
+   "ementa": "CONCEDE PERMISSÃO A JOSÉ PAULO RIBEIRO DE ALMEIDA PARA LABRAR OURO E OUTROS MINERAIS NO ESTADO DE MATO GROSSO.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/ce41a418-546c-4bfb-a5be-34e6f7bb8600/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 903 de 18/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-18;903"
+  },
+  "dec-914a-1890": {
+   "chave": "dec-914a-1890",
+   "ementa": "PUBLICA A CONSTITUIÇÃO DOS ESTADOS UNIDOS DO BRASIL, SUBMETIDA  PELO GOVERNO PROVISÓRIO AO CONGRESSO CONSTITUINTE.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/c818c72a-ae80-40de-9035-d15fe937cccf/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 914-A de 23/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-23;914-a"
+  },
+  "dec-917-1890": {
+   "chave": "dec-917-1890",
+   "ementa": "REFORMA O CÓDIGO COMERCIAL NA PARTE III.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e6bb429b-cb8a-49db-9963-84c23e8fccc2/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 917 de 24/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-24;917"
+  },
+  "dec-934-1890": {
+   "chave": "dec-934-1890",
+   "ementa": "DÁ NOVO REGULAMENTO AO INSTITUTO NACIONAL DE MÚSICA.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e1c6da17-60cc-499c-9a41-d049378d7d06/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 934 de 24/10/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-10-24;934"
+  },
+  "dec-946a-1890": {
+   "chave": "dec-946a-1890",
+   "ementa": "APROVA AS INSTRUÇÕES REGULANDO O ABONO DE VENCIMENTOS MILITARES.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/e7bc9d7d-8569-40cd-a119-71cd14de989f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 946-A de 01/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-01;946-a"
+  },
+  "dec-949-1890": {
+   "chave": "dec-949-1890",
+   "ementa": "ESTABELECE  UM CÓDIGO PENAL PARA  A ARMADA.",
+   "lexml": {
+    "amostra": "A pena de prisão com trabalho será cumprida dentro do recinto da prisão ou fóra, em estabelecimentos navaes, presidios, praças de guerra, ou em obras militares, emqua",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/3b8727e4-c98c-45ce-8edc-6ee88a1202dd/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 949 de 05/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-05;949"
+  },
+  "dec-955a-1890": {
+   "chave": "dec-955a-1890",
+   "ementa": "PROMULGA O REGULAMENTO PARA EXECUÇÃO DO DECRETO NÚMERO 451 B. DE 31 DE MAIO  DO CORRENTE ANNO, QUE ESTABELECEU O REGISTRO E TRANSMISSÃO DE IMÓVEIS PELO  SYSTEMA TORRENS.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/24dbc8cc-943c-472d-b134-035bc1213917/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 955-A de 05/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-05;955-a"
+  },
+  "dec-958-1890": {
+   "chave": "dec-958-1890",
+   "ementa": "DÁ REGULAMENTO PARA A BRIGADA POLICIAL DA CAPITAL FEDERAL.",
+   "lexml": {
+    "amostra": "Os officiaes, quando punidos disciplinarmente com detenção, serão recolhidos ao recinto de uma fortaleza, á sala do estado-maior do corpo ou ao recinto do quartel, conforme a gravidade d",
+    "conferido_em": "2026-10-26",
+    "estado": "pena_privativa",
+    "url_texto": "https://normas.leg.br/api/public/binario/4fb69677-a88b-43a0-8856-afade1274a4e/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 958 de 06/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-06;958"
+  },
+  "dec-967-1890": {
+   "chave": "dec-967-1890",
+   "ementa": "DÁ NOVO REGULAMENTO A INSPETORIA GERAL DA ILUMINAÇÃO DA CAPITAL FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/3c72e7cc-37df-49bc-8032-1f0a281dab8f/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 967 de 08/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-08;967"
+  },
+  "dec-982-1890": {
+   "chave": "dec-982-1890",
+   "ementa": "ALTERA O REGULAMENTO DA ESCOLA NORMAL DA  CAPITAL FEDERAL.",
+   "lexml": {
+    "amostra": null,
+    "conferido_em": "2026-10-26",
+    "estado": "sem_prisao",
+    "url_texto": "https://normas.leg.br/api/public/binario/980e32a0-1343-4b9f-8d0c-50ffb3a31a55/texto",
+    "versao": "Original"
+   },
+   "nome": "Decreto nº 982 de 08/11/1890",
+   "urn": "urn:lex:br:federal:decreto:1890-11-08;982"
+  }
+ },
+ "lexml_anos": {
+  "1889": {
+   "completo": true,
+   "decretos": 329,
+   "nao_lidos": 0,
+   "pena_privativa": 4,
+   "sem_pena": 310,
+   "sem_prisao": 9,
+   "sem_texto": 6
+  },
+  "1890": {
+   "completo": true,
+   "decretos": 1205,
+   "nao_lidos": 0,
+   "pena_privativa": 13,
+   "sem_pena": 1141,
+   "sem_prisao": 41,
+   "sem_texto": 10
+  },
+  "1891": {
+   "completo": true,
+   "decretos": 934,
+   "nao_lidos": 0,
+   "pena_privativa": 5,
+   "sem_pena": 921,
+   "sem_prisao": 7,
+   "sem_texto": 1
+  },
+  "1930": {
+   "completo": true,
+   "decretos": 481,
+   "nao_lidos": 0,
+   "pena_privativa": 0,
+   "sem_pena": 468,
+   "sem_prisao": 10,
+   "sem_texto": 3
+  },
+  "1931": {
+   "completo": true,
+   "decretos": 1328,
+   "nao_lidos": 0,
+   "pena_privativa": 4,
+   "sem_pena": 1293,
+   "sem_prisao": 19,
+   "sem_texto": 12
+  },
+  "1932": {
+   "completo": false,
+   "decretos": 1379,
+   "nao_lidos": 1,
+   "pena_privativa": 4,
+   "sem_pena": 1346,
+   "sem_prisao": 24,
+   "sem_texto": 4
+  },
+  "1933": {
+   "completo": true,
+   "decretos": 1233,
+   "nao_lidos": 0,
+   "pena_privativa": 4,
+   "sem_pena": 1202,
+   "sem_prisao": 12,
+   "sem_texto": 15
+  },
+  "1934": {
+   "completo": true,
+   "decretos": 1304,
+   "nao_lidos": 0,
+   "pena_privativa": 11,
+   "sem_pena": 1192,
+   "sem_prisao": 21,
+   "sem_texto": 80
+  }
+ },
  "senado": {
   "dec": {
    "1889": 329,
