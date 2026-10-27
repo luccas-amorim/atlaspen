@@ -178,6 +178,10 @@
   color: var(--cor-origem);
 }
 
+.tag_vigencia_encerrada {
+  color: var(--cor-tinta-media);
+}
+
 .seta {
   grid-area: seta;
   font-size: 1.25rem;

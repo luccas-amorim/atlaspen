@@ -7,7 +7,7 @@
 // preenchidos por plausibilidade.
 import Base from '../../layouts/Base.astro';
 import {registrosDoAcervo, ROTULO_CATEGORIA, type RegistroAcervo} from '../../site/acervo-servidor';
-import {avisoDoTextoInteiro, passosDoRegistro, rotuloDaFonte} from '../../components/acervo/tipos';
+import {anoDaSaida, avisoDoTextoInteiro, passosDoRegistro, rotuloDaFonte} from '../../components/acervo/tipos';
 import {caminho} from '../../site/url';
 import s from '../../components/acervo/acervo.module.css';
 
@@ -17,7 +17,7 @@ export function getStaticPaths() {
 
 const {r} = Astro.props as {r: RegistroAcervo};
 const passos = passosDoRegistro(r);
-const anoDaSaida = r.normas.find((n) => n.ano !== null)?.ano ?? null;
+const anoSaida = r.normas.map((n) => anoDaSaida(r, n)).find((a) => a !== null) ?? null;
 const selo = r.categoria === 'vetado' ? 'NUNCA VIGOROU' : 'NÃO VIGENTE';
 ---
 
@@ -130,7 +130,7 @@ const selo = r.categoria === 'vetado' ? 'NUNCA VIGOROU' : 'NÃO VIGENTE';
               </a>
             )
           }
-          {anoDaSaida && <a href={caminho(`/acervo?ano=${anoDaSaida}#linha-do-tempo`)}>{anoDaSaida} na linha do tempo</a>}
+          {anoSaida && <a href={caminho(`/acervo?ano=${anoSaida}#linha-do-tempo`)}>{anoSaida} na linha do tempo</a>}
           <a href={caminho('/acervo')}>todo o acervo</a>
         </p>
       </div>
@@ -235,6 +235,9 @@ const selo = r.categoria === 'vetado' ? 'NUNCA VIGOROU' : 'NÃO VIGENTE';
   }
   .selo-nao_recepcionado {
     color: var(--cor-origem);
+  }
+  .selo-vigencia_encerrada {
+    color: var(--cor-tinta-media);
   }
   .corpo {
     display: flex;

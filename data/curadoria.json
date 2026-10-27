@@ -1336,22 +1336,6 @@
    "titulo": "Decreto-Lei nº 1.003 de 21/10/1969",
    "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1003"
   },
-  "del-1063-1969": {
-   "caminho": "federal/decretos-lei/1969/del-1063-1969-10-21.md",
-   "chave": "del-1063-1969",
-   "ementa": "Estabelece, de acordo com a Emenda Constitucional nº 1, de 17 de outubro   de 1969, casos de inelegibilidades e dá outras providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1063.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 1.063 de 21/10/1969",
-   "urn": "urn:lex:br:federal:decreto.lei:1969-10-21;1063"
-  },
   "del-1064-1969": {
    "caminho": "federal/decretos-lei/1969/del-1064-1969-10-24.md",
    "chave": "del-1064-1969",
@@ -2085,22 +2069,6 @@
    "titulo": "Decreto-Lei nº 47 de 18/11/1966",
    "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;47"
   },
-  "del-4766-1942": {
-   "caminho": "federal/decretos-lei/1942/del-4766-1942-10-01.md",
-   "chave": "del-4766-1942",
-   "ementa": "Define crimes militares e contra a segurança do Estado, e dá outras   prividências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4766.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 4.766 de 01/10/1942",
-   "urn": "urn:lex:br:federal:decreto.lei:1942-10-01;4766"
-  },
   "del-4812-1942": {
    "caminho": "federal/decretos-lei/1942/del-4812-1942-10-08.md",
    "chave": "del-4812-1942",
@@ -2188,22 +2156,6 @@
    "titulo": "Decreto-Lei nº 56 de 18/11/1966",
    "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;56"
   },
-  "del-6227-1944": {
-   "caminho": "federal/decretos-lei/1944/del-6227-1944-01-24.md",
-   "chave": "del-6227-1944",
-   "ementa": "Institui o código penal militar.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del6227.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 6.227 de 24/01/1944",
-   "urn": "urn:lex:br:federal:decreto.lei:1944-01-24;6227"
-  },
   "del-65-1937": {
    "caminho": "federal/decretos-lei/1937/del-65-1937-12-14.md",
    "chave": "del-65-1937",
@@ -2281,22 +2233,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 739 de 24/09/1938",
    "urn": "urn:lex:br:federal:decreto.lei:1938-09-24;739"
-  },
-  "del-7586-1945": {
-   "caminho": "federal/decretos-lei/1945/del-7586-1945-05-28.md",
-   "chave": "del-7586-1945",
-   "ementa": "Regula, em todo país, o alistamento eleitoral e a eleições a que se refere o artigo 4º da Lei Constitucional n. 9, de 28 de fevereiro de 1945.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del7586.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 7.586 de 28/05/1945",
-   "urn": "urn:lex:br:federal:decreto.lei:1945-05-28;7586"
   },
   "del-7675-1945": {
    "caminho": "federal/decretos-lei/1945/del-7675-1945-06-26.md",
@@ -2404,22 +2340,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 8.527 de 31/12/1945",
    "urn": "urn:lex:br:federal:decreto.lei:1945-12-31;8527"
-  },
-  "del-891-1938": {
-   "caminho": "federal/decretos-lei/1938/del-891-1938-11-25.md",
-   "chave": "del-891-1938",
-   "ementa": "Aprova a Lei de Fiscalização de Entorpecentes.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del0891.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 891 de 25/11/1938",
-   "urn": "urn:lex:br:federal:decreto.lei:1938-11-25;891"
   },
   "del-910-1938": {
    "caminho": "federal/decretos-lei/1938/del-910-1938-11-30.md",
@@ -2851,22 +2771,6 @@
    "titulo": "Lei nº 12.653 de 28/05/2012",
    "urn": "urn:lex:br:federal:lei:2012-05-28;12653"
   },
-  "lei-12663-2012": {
-   "caminho": "federal/leis-ordinarias/2012/lei-12663-2012-06-05.md",
-   "chave": "lei-12663-2012",
-   "ementa": "Dispõe sobre as medidas relativas à Copa das Confederações FIFA 2013, à Copa do Mundo FIFA 2014 e à Jornada Mundial da Juventude - 2013, que serão realizadas no Brasil; altera as Leis nºs 6.815, de 19 de agosto de 1980, e 10.671, de 15 de maio de 2003; e estabelece concessão de prêmio e de auxílio e",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12663.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 12.663 de 05/06/2012",
-   "urn": "urn:lex:br:federal:lei:2012-06-05;12663"
-  },
   "lei-12683-2012": {
    "altera": [
     "lei-9613-1998"
@@ -3024,22 +2928,6 @@
    "titulo": "Lei nº 13.106 de 17/03/2015",
    "urn": "urn:lex:br:federal:lei:2015-03-17;13106"
   },
-  "lei-13284-2016": {
-   "caminho": "federal/leis-ordinarias/2016/lei-13284-2016-05-10.md",
-   "chave": "lei-13284-2016",
-   "ementa": "Dispõe sobre as medidas relativas aos Jogos Olímpicos e Paraolímpicos de 2016 e aos eventos relacionados, que serão realizados no Brasil; e altera a Lei nº 12.035, de 1º de outubro de 2009, que \\\"institui o Ato Olímpico, no âmbito da administração pública federal\\\", e a Lei nº 12.780, de 9 de janeir",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13284.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 13.284 de 10/05/2016",
-   "urn": "urn:lex:br:federal:lei:2016-05-10;13284"
-  },
   "lei-13301-2016": {
    "caminho": "federal/leis-ordinarias/2016/lei-13301-2016-06-27.md",
    "chave": "lei-13301-2016",
@@ -3114,38 +3002,6 @@
    "revogada": false,
    "titulo": "Lei nº 1.616 de 30/12/1906",
    "urn": "urn:lex:br:federal:lei:1906-12-30;1616"
-  },
-  "lei-1802-1953": {
-   "caminho": "federal/leis-ordinarias/1953/lei-1802-1953-01-05.md",
-   "chave": "lei-1802-1953",
-   "ementa": "Define os crimes contra o Estado e a Ordem Política e Social, e dá outras providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l1802.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 1.802 de 05/01/1953",
-   "urn": "urn:lex:br:federal:lei:1953-01-05;1802"
-  },
-  "lei-187-1936": {
-   "caminho": "federal/leis-ordinarias/1936/lei-187-1936-01-15.md",
-   "chave": "lei-187-1936",
-   "ementa": "Dispõe sobre as duplicatas e contas assignadas.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/1930-1949/l187.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 187 de 15/01/1936",
-   "urn": "urn:lex:br:federal:lei:1936-01-15;187"
   },
   "lei-196-1936": {
    "caminho": "federal/leis-ordinarias/1936/lei-196-1936-01-18.md",
@@ -3231,22 +3087,6 @@
    "revogada": false,
    "titulo": "Lei nº 2.416 de 28/06/1911",
    "urn": "urn:lex:br:federal:lei:1911-06-28;2416"
-  },
-  "lei-2550-1955": {
-   "caminho": "federal/leis-ordinarias/1955/lei-2550-1955-07-25.md",
-   "chave": "lei-2550-1955",
-   "ementa": "Altera dispositivos do Código Eleitoral e dá outras providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l2550.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 2.550 de 25/07/1955",
-   "urn": "urn:lex:br:federal:lei:1955-07-25;2550"
   },
   "lei-264-1936": {
    "caminho": "federal/leis-ordinarias/1936/lei-264-1936-10-05.md",
@@ -3593,38 +3433,6 @@
    "revogada": false,
    "titulo": "Lei nº 4.680 de 18/06/1965",
    "urn": "urn:lex:br:federal:lei:1965-06-18;4680"
-  },
-  "lei-4738-1965": {
-   "caminho": "federal/leis-ordinarias/1965/lei-4738-1965-07-15.md",
-   "chave": "lei-4738-1965",
-   "ementa": "Estabelece novos casos de inelegibilidades, com fundamento no art. 2º da Emenda Constitucional número 14.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4738.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 4.738 de 15/07/1965",
-   "urn": "urn:lex:br:federal:lei:1965-07-15;4738"
-  },
-  "lei-48-1935": {
-   "caminho": "federal/leis-ordinarias/1935/lei-48-1935-05-04.md",
-   "chave": "lei-48-1935",
-   "ementa": "Modifica o Código Eleitoral.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/1930-1949/L0048.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 48 de 04/05/1935",
-   "urn": "urn:lex:br:federal:lei:1935-05-04;48"
   },
   "lei-4886-1965": {
    "caminho": "federal/leis-ordinarias/1965/lei-4886-1965-12-09.md",
