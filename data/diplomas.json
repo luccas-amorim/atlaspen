@@ -1684,9 +1684,22 @@
       "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto.lei:1939-04-04;1191",
       "fonte_texto": "normas.leg.br",
       "conferido_em": "2026-10-26",
+      "norma_revogadora": "Decreto-Lei nº 1.681/1939, art. 5º",
+      "data_revogacao": null,
+      "data_revogacao_nota": "O Decreto-Lei 1.681/1939 revogou o DL 1.191 expressamente (art. 5º) e passou a dispor sobre o monopólio postal e os contraventores dele. Não tem cláusula de vigência, e foi publicado no DOU de 16/10/1939, antes da Lei de Introdução de 1942: valia a Introdução ao Código Civil de 1916 (art. 2º), que escalonava a obrigatoriedade por região — três dias depois da publicação no Distrito Federal, quinze no Estado do Rio, trinta nos Estados marítimos e em Minas Gerais, cem nos demais. A data fica em aberto.",
+      "preceitos_esperados": 0,
+      "tipos_catalogados": 0
+    },
+    {
+      "id": "dl1681",
+      "nome": "Monopólio postal (1939, segundo decreto-lei)",
+      "norma": "Decreto-Lei nº 1.681, de 13 de outubro de 1939",
+      "situacao": "revogado",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del1681.htm",
+      "conferido_em": "2026-10-26",
       "norma_revogadora": "Lei nº 6.538/1978, por revogação tácita",
       "data_revogacao": "1978-06-23",
-      "data_revogacao_nota": "A Lei 6.538/1978 regulou inteiramente os serviços postais e o crime contra o monopólio postal da União (art. 42), sem citar o DL 1.191/1939, e entrou em vigor na data da publicação (DOU de 23/06/1978). É revogação tácita (Lei de Introdução às Normas do Direito Brasileiro, art. 2º, §1º).",
+      "data_revogacao_nota": "O decreto-lei chamava de contraventores quem violasse o monopólio postal ou fizesse contrabando postal, e os punia com prisão celular (art. 4º). A Lei 6.538/1978 regulou inteiramente os serviços postais e o crime contra o monopólio postal da União (art. 42), sem citar o DL 1.681/1939, e entrou em vigor na data da publicação (DOU de 23/06/1978). É revogação tácita (Lei de Introdução às Normas do Direito Brasileiro, art. 2º, §1º).",
       "preceitos_esperados": 0,
       "tipos_catalogados": 0
     },
