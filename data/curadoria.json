@@ -4369,19 +4369,6 @@
    "nome": "Decreto nº 1.109 de 29/11/1890",
    "urn": "urn:lex:br:federal:decreto:1890-11-29;1109"
   },
-  "dec-1162-1890": {
-   "chave": "dec-1162-1890",
-   "ementa": "ALTERA A REDAÇÃO DOS ARTIGOS 205 E 206 DO CÓDIGO CRIMINAL.",
-   "lexml": {
-    "amostra": "Penas - de prisão cellular por um a tres mezes e de multa de 200$ a 500$000",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1be79681-81cf-4264-b684-557752f4d7a7/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 1.162 de 12/12/1890",
-   "urn": "urn:lex:br:federal:decreto:1890-12-12;1162"
-  },
   "dec-1184-1890": {
    "chave": "dec-1184-1890",
    "ementa": "CONCEDE PERMISSÃO A AGOSTINHO JOSÉ DOS SANTOS E EMÍLIO DINARDO PARA LAVRAREM AS MINAS DE OURO DE MARZAGÃO, NO ESTADO DE MINAS GERAIS.",
@@ -4524,19 +4511,6 @@
    },
    "nome": "Decreto nº 169 de 18/01/1890",
    "urn": "urn:lex:br:federal:decreto:1890-01-18;169"
-  },
-  "dec-18-1891": {
-   "chave": "dec-18-1891",
-   "ementa": "ESTABELECE NOVO CÓDIGO PENAL PARA A ARMADA, DE ACORDO COM O DECRETO DE 14 DE FEVEREIRO DESTE ANO.",
-   "lexml": {
-    "amostra": "A pena de prisão com trabalho será cumprida dentro do recinto da prisão ou fóra, em estabelecimentos navaes, presidios, praças de guerra, ou em obras militares, emqua",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/ecf78e68-bcca-4b9e-af23-4ebb2bd58528/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 18 de 07/03/1891",
-   "urn": "urn:lex:br:federal:decreto:1891-03-07;18"
   },
   "dec-184-1934": {
    "chave": "dec-184-1934",
@@ -4719,19 +4693,6 @@
    },
    "nome": "Decreto nº 19.622 de 23/01/1931",
    "urn": "urn:lex:br:federal:decreto:1931-01-23;19622"
-  },
-  "dec-19717-1931": {
-   "chave": "dec-19717-1931",
-   "ementa": "ESTABELECE A AQUISIÇÃO OBRIGATÓRIA DE ÁLCOOL, NA PROPORÇÃO DE 5% DA GASOLINA IMPORTADA, E DÁ OUTRAS PROVIDÊNCIAS.",
-   "lexml": {
-    "amostra": "16 deste decreto, ficam sujeitos a processo criminal, para aplicação da pena de prisão celular por um a quatro anos",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/7a58f2ff-5175-406e-9ece-56e737924fee/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 19.717 de 20/02/1931",
-   "urn": "urn:lex:br:federal:decreto:1931-02-20;19717"
   },
   "dec-19821-1931": {
    "chave": "dec-19821-1931",
@@ -4993,19 +4954,6 @@
    "nome": "Decreto nº 20.892 de 31/12/1931",
    "urn": "urn:lex:br:federal:decreto:1931-12-31;20892"
   },
-  "dec-20930-1932": {
-   "chave": "dec-20930-1932",
-   "ementa": "FISCALIZA O EMPREGO E O COMÉRCIO DAS SUBSTÂNCIAS TÓXICAS ENTORPECENTES, REGULA A SUA ENTRADA NO PAÍS DE ACORDO COM A SOLICITAÇÃO DO COMITÊ CENTRAL PERMANENTE DO ÓPIO DA LIGA NAÇÕES, E ESTABELECE PENAS.",
-   "lexml": {
-    "amostra": "Penas: De um a cinco anos de prisão celular e multa de 1:000$0 a 5:000$0",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/7666149e-9161-453c-853e-33b82486456b/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 20.930 de 11/01/1932",
-   "urn": "urn:lex:br:federal:decreto:1932-01-11;20930"
-  },
   "dec-20931-1932": {
    "chave": "dec-20931-1932",
    "ementa": "REGULA E FISCALIZA O EXERCÍCIO DA MEDICINA, DA ODONTOLOGIA, DA MEDICINA VETERINÁRIA E DAS PROFISSÕES DE FARMACÊUTICO, PARTEIRA E ENFERMEIRA, NO BRASIL, E ESTABELECE PENAS.",
@@ -5045,19 +4993,6 @@
    "nome": "Decreto nº 21.073 de 22/02/1932",
    "urn": "urn:lex:br:federal:decreto:1932-02-22;21073"
   },
-  "dec-21076-1932": {
-   "chave": "dec-21076-1932",
-   "ementa": "DECRETA O CÓDIGO ELEITORAL.",
-   "lexml": {
-    "amostra": "Pena – três meses a um ano de prisão celular",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/028b4792-b86c-40fd-a28f-e58d97b1337a/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 21.076 de 24/02/1932",
-   "urn": "urn:lex:br:federal:decreto:1932-02-24;21076"
-  },
   "dec-21114-1932": {
    "chave": "dec-21114-1932",
    "ementa": "CONCEDE À SOCIEDADE ANÔNIMA \"COLD STORAGE TRANSPORTATION COMPANY OF BRAZIL\", AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
@@ -5070,19 +5005,6 @@
    },
    "nome": "Decreto nº 21.114 de 02/03/1932",
    "urn": "urn:lex:br:federal:decreto:1932-03-02;21114"
-  },
-  "dec-21143-1932": {
-   "chave": "dec-21143-1932",
-   "ementa": "REGULA A EXTRAÇÃO DE LOTERIAS.",
-   "lexml": {
-    "amostra": "§ 2º Penas: de seis meses a um ano de prisão celular e multa de dez a cinqüenta contos de réis aos empreendedores ou banqueiros",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/ce7eb6b4-1a49-424c-ad7b-c66a267e52cb/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 21.143 de 10/03/1932",
-   "urn": "urn:lex:br:federal:decreto:1932-03-10;21143"
   },
   "dec-213-1891": {
    "chave": "dec-213-1891",
@@ -5422,19 +5344,6 @@
    "nome": "Decreto nº 22.717 de 16/05/1933",
    "urn": "urn:lex:br:federal:decreto:1933-05-16;22717"
   },
-  "dec-22796-1933": {
-   "chave": "dec-22796-1933",
-   "ementa": "PUNE OS FALSIFICADORES E FRAUDES DE GÊNEROS ALIMENTÍCIOS E REVOGA O DECRETO NÚMERO 19.604, DE 19 DE JANEIRO DE 1931.",
-   "lexml": {
-    "amostra": "Penas: De um a três anos de prisão celular",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/8d3d5f33-39e4-4ba0-8fba-b27fc51b6270/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 22.796 de 01/06/1933",
-   "urn": "urn:lex:br:federal:decreto:1933-06-01;22796"
-  },
   "dec-22872-1933": {
    "chave": "dec-22872-1933",
    "ementa": "CRIA O INSTITUTO DE APOSENTADORIA E PENSÕES DOS MARÍTIMOS, REGULA O SEU FUNCIONAMENTO, E DÁ OUTRAS PROVIDÊNCIAS.",
@@ -5578,19 +5487,6 @@
    "nome": "Decreto nº 23.661 de 29/12/1933",
    "urn": "urn:lex:br:federal:decreto:1933-12-29;23661"
   },
-  "dec-23672-1934": {
-   "chave": "dec-23672-1934",
-   "ementa": "APROVA O CÓDIGO DE CAÇA E PESCA QUE COM ESTE BAIXA.",
-   "lexml": {
-    "amostra": "A infracção é crime, ou contravenção, e será punida com prisão, detenção e multa, conjuncta ou separadamente, a criterio do juiz ou da autoridade administrativa julgadora, de modo que a pena seja, tanto quanto",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/31418598-d4ca-4452-9609-d88236428ffb/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 23.672 de 02/01/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-01-02;23672"
-  },
   "dec-23756-1934": {
    "chave": "dec-23756-1934",
    "ementa": "CONCEDE À SOCIEDADE ANÔNIMA LATIN AMERICAN PUBLICITY SERVICE LIMITED AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
@@ -5616,19 +5512,6 @@
    },
    "nome": "Decreto nº 23.766 de 18/01/1934",
    "urn": "urn:lex:br:federal:decreto:1934-01-18;23766"
-  },
-  "dec-23793-1934": {
-   "chave": "dec-23793-1934",
-   "ementa": "APROVA O CÓDIGO FLORESTAL.",
-   "lexml": {
-    "amostra": "A infracção florestal é crime, ou contravenção, e será punido com prisão, detenção e multa, conjuncta ou separadamente, a criterio do juiz, de modo que a pena seja, tanto quanto possivel, individualizada",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/8ccde9aa-7415-4f0e-9cb6-d3152484b8e0/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 23.793 de 23/01/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-01-23;23793"
   },
   "dec-23857-1934": {
    "chave": "dec-23857-1934",
@@ -5773,19 +5656,6 @@
    "nome": "Decreto nº 243 de 04/03/1890",
    "urn": "urn:lex:br:federal:decreto:1890-03-04;243"
   },
-  "dec-24368-1934": {
-   "chave": "dec-24368-1934",
-   "ementa": "ESTABELECE NOVAS PENAS PARA A INFRAÇÃO PREVISTA NO ARTIGO 8 DO DECRETO 21.143, DE 10 DE MARÇO DE 1932.",
-   "lexml": {
-    "amostra": "1º É de ação pública, inafiançável e punível com seis meses a dois anos de prisão celular, além das outras penas já estabelecidas, a infração prevista no art",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/b68b9444-6f9d-4eea-8510-4880a8ef54f2/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 24.368 de 09/06/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-06-09;24368"
-  },
   "dec-24482-1934": {
    "chave": "dec-24482-1934",
    "ementa": "CONCEDE À SOCIEDADE ANÔNIMA COLUMBIA PICTURES OF BRAZIL, INC. AUTORIZAÇÃO PARA FUNCIONAR NA REPÚBLICA.",
@@ -5838,32 +5708,6 @@
    "nome": "Decreto nº 24.502 de 29/06/1934",
    "urn": "urn:lex:br:federal:decreto:1934-06-29;24502"
   },
-  "dec-24505-1934": {
-   "chave": "dec-24505-1934",
-   "ementa": "MODIFICA OS ARTIGOS 1,3,5,14,22,25,26 E 58, DO DECRETO 20.930, DE 11 DE JANEIRO DE 1932.",
-   "lexml": {
-    "amostra": "Penas: de um a cinco annos de prisão cellular e multa de 1:000$ a 5:000$000",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/6c19617b-44f5-42b9-bdfa-6b4483062413/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 24.505 de 29/06/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-06-29;24505"
-  },
-  "dec-24507-1934": {
-   "chave": "dec-24507-1934",
-   "ementa": "APROVA O REGULAMENTO PARA A COMISSÃO DE PATENTES DE DESENHO OU MODELO INDUSTRIAL, PARA O REGISTRO DO NOME COMERCIAL E DO TÍTULO DE ESTABELECIMENTOS E PARA A REPRESSÃO À CONCORRÊNCIA DESLEAL, E DÁ OUTRAS PROVIDÊNCIAS.",
-   "lexml": {
-    "amostra": "A responsabilidade por acto de concurrencia desleal, promovida ex-officio ou pela parte lesada, será punida : 1º, com as penas de prisão cellular por tres a seis mezes e multa de 500$000 (quinhentos mil réis) a 5:000$000 (cinco contos de réis), em favor do prejudica",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/589ca8b3-3028-4831-8b54-9ac976e172c7/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 24.507 de 29/06/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-06-29;24507"
-  },
   "dec-24562-1934": {
    "chave": "dec-24562-1934",
    "ementa": "REGULA A DURAÇÃO E CONDIÇÕES DO TRABALHO DOS EMPREGADOS NA INDÚSTRIA FRIGORÍFICA.",
@@ -5903,19 +5747,6 @@
    "nome": "Decreto nº 24.637 de 10/07/1934",
    "urn": "urn:lex:br:federal:decreto:1934-07-10;24637"
   },
-  "dec-24645-1934": {
-   "chave": "dec-24645-1934",
-   "ementa": "ESTABELECE MEDIDAS DE PROTEÇÃO AOS ANIMAIS.",
-   "lexml": {
-    "amostra": "2º Aquele que, em lugar público ou privado, aplicar ou fizer aplicar maus tratos aos animais, incorrerá em multa de 20$000 a 500$000 e na pena de prisão celular de 2 a 15 dias, quer o delinquêntes seja ou não o respectivo proprietário, sem prejuízo da ação civil",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/9d0094ed-7c51-4712-88ea-8195daa56a1c/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 24.645 de 10/07/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-07-10;24645"
-  },
   "dec-24647-1934": {
    "chave": "dec-24647-1934",
    "ementa": "REVOGA O DECRETO NÚMERO 22.239, DE 19 DE DEZEMBRO DE 1932; ESTABELECE BASES, NORMAS E PRINCÍPIOS PARA A COOPERAÇÃO-PROFISSIONAL E PARA A COOPERAÇÃO-SOCIAL; FACULTA AUXÍLIOS DIRETOS E INDIRETOS ÀS COOPERATIVAS; E INSTITUE O PATRIMÔNIO DOS CONSÓRCIOS PROFISSIONAIS-COOPERATIVOS.",
@@ -5954,19 +5785,6 @@
    },
    "nome": "Decreto nº 24.732 de 13/07/1934",
    "urn": "urn:lex:br:federal:decreto:1934-07-13;24732"
-  },
-  "dec-24776-1934": {
-   "chave": "dec-24776-1934",
-   "ementa": "REGULA A LIBERDADE DE IMPRENSA E DÁ OUTRAS PROVIDÊNCIAS.",
-   "lexml": {
-    "amostra": "pena – prisão celular por um a quatro anos e multa de 300$ a 6:000$000",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/a43b986e-f5bf-481a-9ed3-5e413ba157ce/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 24.776 de 14/07/1934",
-   "urn": "urn:lex:br:federal:decreto:1934-07-14;24776"
   },
   "dec-259-1890": {
    "chave": "dec-259-1890",
@@ -6111,19 +5929,6 @@
    "nome": "Decreto nº 429 de 29/05/1890",
    "urn": "urn:lex:br:federal:decreto:1890-05-29;429"
   },
-  "dec-434-1891": {
-   "chave": "dec-434-1891",
-   "ementa": "CONSOLIDA AS DISPOSIÇÕES LEGISLATIVAS E REGULAMENTARES SOBRE AS SOCIEDADES ANÔNIMAS.",
-   "lexml": {
-    "amostra": "Incorrerão nas penas de prisão cellular por um a quatro annos e multa de 100$ a 500$000: 1º Os administradores de sociedades ou companhias anonymas que, por conta dellas, comprare",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/8d5b95a7-3af8-44ef-a830-00e6c7be4b3e/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 434 de 04/07/1891",
-   "urn": "urn:lex:br:federal:decreto:1891-07-04;434"
-  },
   "dec-441-1890": {
    "chave": "dec-441-1890",
    "ementa": "APROVA A POSTURA DA INTENDÊNCIA MUNICIPAL SOBRE JOGOS E BRINQUEDOS QUE POSSAM EMBARAÇAR O FUNCIONAMENTO DAS LINHAS TELEFÔNICAS.",
@@ -6175,19 +5980,6 @@
    },
    "nome": "Decreto nº 509 de 21/06/1890",
    "urn": "urn:lex:br:federal:decreto:1890-06-21;509"
-  },
-  "dec-603-1891": {
-   "chave": "dec-603-1891",
-   "ementa": "APROVA E MANDA EXECUTAR O REGULAMENTO DAS COMPANHIAS OU SOCIEDADES ANÔNIMAS.",
-   "lexml": {
-    "amostra": "Incorrerão nas penas de prisão cellular por um a quatro annos e na multa de 100$ a 500$000: I",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/138f83c4-72d1-4f36-affe-7bf501d8d346/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 603 de 20/10/1891",
-   "urn": "urn:lex:br:federal:decreto:1891-10-20;603"
   },
   "dec-607-1890": {
    "chave": "dec-607-1890",
@@ -6371,19 +6163,6 @@
    "nome": "Decreto nº 843 de 11/10/1890",
    "urn": "urn:lex:br:federal:decreto:1890-10-11;843"
   },
-  "dec-847-1890": {
-   "chave": "dec-847-1890",
-   "ementa": "PROMULGA O CÓDIGO PENAL.",
-   "lexml": {
-    "amostra": "Não será punida a tentativa de contravenção e nem a de crime ao qual não esteja imposta maior pena que a de um mez de prisão cellular",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/dfedbba3-748f-47ad-b35b-61d0f802f4d7/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 847 de 11/10/1890",
-   "urn": "urn:lex:br:federal:decreto:1890-10-11;847"
-  },
   "dec-848-1890": {
    "chave": "dec-848-1890",
    "ementa": "ORGANIZA A JUSTIÇA FEDERAL.",
@@ -6513,19 +6292,6 @@
    },
    "nome": "Decreto nº 946-A de 01/11/1890",
    "urn": "urn:lex:br:federal:decreto:1890-11-01;946-a"
-  },
-  "dec-949-1890": {
-   "chave": "dec-949-1890",
-   "ementa": "ESTABELECE  UM CÓDIGO PENAL PARA  A ARMADA.",
-   "lexml": {
-    "amostra": "A pena de prisão com trabalho será cumprida dentro do recinto da prisão ou fóra, em estabelecimentos navaes, presidios, praças de guerra, ou em obras militares, emqua",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/3b8727e4-c98c-45ce-8edc-6ee88a1202dd/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 949 de 05/11/1890",
-   "urn": "urn:lex:br:federal:decreto:1890-11-05;949"
   },
   "dec-955a-1890": {
    "chave": "dec-955a-1890",

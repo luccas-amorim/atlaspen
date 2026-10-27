@@ -153,14 +153,19 @@ pessoa que assina.
   - Lei especial cujo crime o Código Penal de 1940 tipificou — o reingresso do expulso
     (art. 338), a duplicata simulada (art. 172), os entorpecentes (art. 281) — perde a
     parte penal em 01/01/1942, pelo art. 360 do CP. A nota diz o artigo do CP e quem
-    revogou o resto do diploma.
+    revogou o resto do diploma. Vale também para a contravenção que a LCP de 1941
+    tipificou, em vigor na mesma data (os maus-tratos a animais, art. 64; decisão de
+    27/10/2026).
   - O tipo de lei temporária cujo prazo a própria lei fixou (a Copa de 2014, as
     Olimpíadas de 2016) entra na categoria `vigencia_encerrada`, com o último dia do
     prazo. A lei de eficácia esgotada sem prazo escrito — as leis de uma eleição só —
     não entra: dizer que ela se esgotou é juízo.
   Revogação tácita pede busca da revogadora **intermediária**: o DL 1.191/1939 entrou
   no acervo como revogado em 1978, e o DL 1.681/1939 o revogara expressamente seis
-  meses depois de editado.
+  meses depois de editado. E os decretos de 1991 que o Planalto anota como revogadores
+  de decretos do Governo Provisório (o Decreto 11/1991 e os sem número): quando são a
+  única revogadora achada, o registro segue a anotação e a nota diz que se discute se
+  um decreto simples podia revogar um decreto com força de lei (decisão de 27/10/2026).
 
 ## Dependências: o Dependabot abre, gente decide
 
