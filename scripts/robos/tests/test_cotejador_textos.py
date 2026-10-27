@@ -53,3 +53,48 @@ def test_camara_sem_compilacao_nao_e_silencio(tmp_path):
     (tmp_path / "cp" / "2026-10-25.html").write_text(PLANALTO, encoding="utf-8")
     v = textos.rodar([{"id": "cp", "urn": "urn:x"}], tmp_path, ler_camara=lambda urn: None)
     assert "motivo" in v[0] and textos.codigo_de_saida(v) == 2
+
+
+# A Câmara atrasada no art. 122, julgada: sai da conta, fica no relatório.
+JULGADA = {"fonte": "cp", "dispositivo": "Art. 122, caput", "planalto": "reclusão, 6 a 24 meses",
+           "camara": "reclusão, 12 a 36 meses", "motivo": "A Câmara não anota a lei nova.", "data": "2026-10-26"}
+
+
+def test_divergencia_julgada_sai_da_conta_e_fica_no_relatorio(tmp_path):
+    (tmp_path / "cp").mkdir()
+    (tmp_path / "cp" / "2026-10-25.html").write_text(PLANALTO, encoding="utf-8")
+    v = textos.rodar([{"id": "cp", "urn": "urn:x"}], tmp_path, ler_camara=lambda urn: CAMARA,
+                     excecoes=[JULGADA])
+    assert v[0]["comparacao"]["divergentes"] == []
+    assert [j["dispositivo"] for j in v[0]["comparacao"]["julgadas"]] == ["Art. 122, caput"]
+    sem_efeito = textos.excecoes_sem_efeito(v, [JULGADA])
+    assert sem_efeito == [] and textos.codigo_de_saida(v, sem_efeito) == 0
+    texto = textos.montar_relatorio(v, __import__("datetime").date(2026, 10, 26), sem_efeito)
+    assert "### Já julgadas — 1" in texto and "A Câmara não anota a lei nova." in texto
+
+
+def test_excecao_que_nao_casa_mais_e_sem_efeito(tmp_path):
+    # A Câmara atualizou: as molduras conferem, e a exceção já não descreve nada.
+    (tmp_path / "cp").mkdir()
+    (tmp_path / "cp" / "2026-10-25.html").write_text(PLANALTO, encoding="utf-8")
+    v = textos.rodar([{"id": "cp", "urn": "urn:x"}], tmp_path, ler_camara=lambda urn: PLANALTO,
+                     excecoes=[JULGADA])
+    sem_efeito = textos.excecoes_sem_efeito(v, [JULGADA])
+    assert sem_efeito == [JULGADA] and textos.codigo_de_saida(v, sem_efeito) == 3
+    assert "retirar de `excecoes-textos.json`" in textos.montar_relatorio(
+        v, __import__("datetime").date(2026, 10, 26), sem_efeito)
+
+
+def test_excecao_casa_pelas_duas_molduras(tmp_path):
+    # Mesma divergência, outra moldura na Câmara: é caso novo, e volta a ser pergunta.
+    (tmp_path / "cp").mkdir()
+    (tmp_path / "cp" / "2026-10-25.html").write_text(PLANALTO, encoding="utf-8")
+    outra = {**JULGADA, "camara": "reclusão, 12 a 48 meses"}
+    v = textos.rodar([{"id": "cp", "urn": "urn:x"}], tmp_path, ler_camara=lambda urn: CAMARA,
+                     excecoes=[outra])
+    assert len(v[0]["comparacao"]["divergentes"]) == 1 and textos.codigo_de_saida(v) == 3
+
+
+def test_excecoes_do_repositorio_sao_bem_formadas():
+    for e in textos.carregar_excecoes():
+        assert {"fonte", "dispositivo", "planalto", "camara", "motivo", "data"} <= set(e)

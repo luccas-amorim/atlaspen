@@ -16,8 +16,13 @@ Uso:
     python scripts/robos/cotejador/textos.py                  # snapshots do Vigia
     python scripts/robos/cotejador/textos.py --fonte cp --fonte lcp
 
-Saídas: 0 = as molduras conferem; 3 = há divergência ou diploma não lido;
-2 = nada pôde ser lido.
+A divergência já julgada — a Câmara atrasada numa lei que o Planalto anota —
+vai para `excecoes-textos.json` e sai da conta, mas não do relatório. Ela casa
+pelas duas molduras como o relatório as escreve: quando uma das compilações
+muda, deixa de casar e o relatório manda retirá-la.
+
+Saídas: 0 = as molduras conferem; 3 = há divergência, diploma não lido ou
+exceção sem efeito; 2 = nada pôde ser lido.
 """
 from __future__ import annotations
 
@@ -40,6 +45,7 @@ from pena_parser import ler_pena  # noqa: E402
 FONTES = RAIZ / "data" / "fontes.json"
 SNAPSHOTS = RAIZ / "crawler" / "snapshots"
 RELATORIOS = RAIZ / "crawler" / "relatorios"
+EXCECOES = Path(__file__).resolve().parent / "excecoes-textos.json"
 
 
 def molduras(documento: str) -> dict[str, dict]:
@@ -77,16 +83,63 @@ def _moldura_humana(m: dict) -> str:
     return f"{m['tipo']}, {m['min']:g} a {m['max']:g} meses"
 
 
-def montar_relatorio(vereditos: list[dict], dia) -> str:
+# ── As exceções julgadas ────────────────────────────────────────────────────
+def carregar_excecoes(caminho: Path = EXCECOES) -> list[dict]:
+    if not caminho.exists():
+        return []
+    return json.loads(caminho.read_text(encoding="utf-8")).get("excecoes") or []
+
+
+def _excecao_de(fonte: str, d: dict, excecoes: list[dict]) -> dict | None:
+    for e in excecoes:
+        if (e.get("fonte") == fonte and e.get("dispositivo") == d["dispositivo"]
+                and e.get("planalto") == _moldura_humana(d["planalto"])
+                and e.get("camara") == _moldura_humana(d["camara"])):
+            return e
+    return None
+
+
+def separar_julgadas(fonte: str, comparacao: dict, excecoes: list[dict]) -> dict:
+    """Tira das divergências as que casam com exceção julgada, e as guarda à parte."""
+    abertas, julgadas = [], []
+    for d in comparacao["divergentes"]:
+        e = _excecao_de(fonte, d, excecoes)
+        if e:
+            julgadas.append({**d, "motivo": e.get("motivo"), "data": e.get("data")})
+        else:
+            abertas.append(d)
+    return {**comparacao, "divergentes": abertas, "julgadas": julgadas}
+
+
+def excecoes_sem_efeito(vereditos: list[dict], excecoes: list[dict]) -> list[dict]:
+    """As exceções de um diploma lido que não casaram com nenhuma divergência.
+
+    A Câmara atualizou a compilação, ou o Planalto mudou: a exceção já não
+    descreve o que as páginas dizem, e calaria o próximo caso parecido."""
+    lidos = {v["id"]: v for v in vereditos if "comparacao" in v}
+    saida = []
+    for e in excecoes:
+        v = lidos.get(e.get("fonte"))
+        if v is None:
+            continue
+        if not any(j["dispositivo"] == e.get("dispositivo") for j in v["comparacao"].get("julgadas", [])):
+            saida.append(e)
+    return saida
+
+
+def montar_relatorio(vereditos: list[dict], dia, sem_efeito: list[dict] | None = None) -> str:
     lidos = [v for v in vereditos if "comparacao" in v]
     div = [v for v in lidos if v["comparacao"]["divergentes"]]
     total = sum(v["comparacao"]["conferem"] for v in lidos)
     so_pl = sum(v["comparacao"]["so_planalto"] for v in lidos)
     so_cd = sum(v["comparacao"]["so_camara"] for v in lidos)
+    julgadas = [(v["id"], j) for v in lidos for j in v["comparacao"].get("julgadas", [])]
     L = [f"## Cotejo de textos — a moldura do Planalto e a da Câmara — {dia.isoformat()}", "",
          f"**{len(lidos)}** diplomas lidos nas duas compilações; **{total}** molduras conferem; "
          f"**{sum(len(v['comparacao']['divergentes']) for v in div)}** divergem, em "
-         f"**{len(div)}** diploma(s). Fora da comparação, porque só uma das páginas tem o "
+         f"**{len(div)}** diploma(s)"
+         + (f", e **{len(julgadas)}** divergência(s) já julgada(s)" if julgadas else "")
+         + f". Fora da comparação, porque só uma das páginas tem o "
          f"dispositivo com pena legível: **{so_pl}** só no Planalto, **{so_cd}** só na Câmara.", "",
          "> As duas compilações valem igual — nenhuma é o DOU —, e o catálogo segue o Planalto. "
          "Divergência é pergunta: abra as duas páginas no dispositivo e veja qual está em dia.", ""]
@@ -96,21 +149,35 @@ def montar_relatorio(vereditos: list[dict], dia) -> str:
             L.append(f"- {d['dispositivo']}: Planalto **{_moldura_humana(d['planalto'])}**; "
                      f"Câmara **{_moldura_humana(d['camara'])}**")
         L.append("")
+    if julgadas:
+        L += [f"### Já julgadas — {len(julgadas)}", "",
+              "> Divergências cujo motivo já foi lido no texto da lei alteradora "
+              "(`scripts/robos/cotejador/excecoes-textos.json`). Ficam visíveis: uma dispensa "
+              "que ninguém vê é indistinguível de um achado que nunca apareceu.", ""]
+        L += [f"- `{fid}` — {j['dispositivo']}: Planalto **{_moldura_humana(j['planalto'])}**; "
+              f"Câmara **{_moldura_humana(j['camara'])}**. {j['motivo']}" for fid, j in julgadas]
+        L.append("")
+    if sem_efeito:
+        L += ["### Exceções sem efeito — retirar de `excecoes-textos.json`", "",
+              "> A divergência julgada não aparece mais como foi escrita: uma das compilações mudou.", ""]
+        L += [f"- `{e.get('fonte')}` — {e.get('dispositivo')} (julgada em {e.get('data')})" for e in sem_efeito]
+        L.append("")
     nao = [v for v in vereditos if "motivo" in v]
     if nao:
         L += ["### Não deu para cotejar", ""] + [f"- `{v['id']}` — {v['motivo']}" for v in nao] + [""]
     return "\n".join(L) + "\n"
 
 
-def codigo_de_saida(vereditos: list[dict]) -> int:
+def codigo_de_saida(vereditos: list[dict], sem_efeito: list[dict] | None = None) -> int:
     if vereditos and all("motivo" in v for v in vereditos):
         return 2
-    if any("motivo" in v or v["comparacao"]["divergentes"] for v in vereditos):
+    if any("motivo" in v or v["comparacao"]["divergentes"] for v in vereditos) or sem_efeito:
         return 3
     return 0
 
 
-def rodar(fontes: list[dict], snapshots: Path, ler_camara=None) -> list[dict]:
+def rodar(fontes: list[dict], snapshots: Path, ler_camara=None,
+          excecoes: list[dict] | None = None) -> list[dict]:
     def camara_padrao(urn):
         f = normas.ficha(urn)
         v = f.versao("Current") if f else None
@@ -133,7 +200,8 @@ def rodar(fontes: list[dict], snapshots: Path, ler_camara=None) -> list[dict]:
         if not html:
             vereditos.append({"id": f["id"], "motivo": "o normas.leg.br não tem a compilação vigente"})
             continue
-        vereditos.append({"id": f["id"], "comparacao": comparar(planalto, molduras(html))})
+        comparacao = comparar(planalto, molduras(html))
+        vereditos.append({"id": f["id"], "comparacao": separar_julgadas(f["id"], comparacao, excecoes or [])})
     return vereditos
 
 
@@ -149,15 +217,17 @@ def main() -> int:
     if args.fonte:
         fontes = [f for f in fontes if f["id"] in set(args.fonte)]
     dia = hoje()
-    vereditos = rodar(fontes, Path(args.snapshots))
-    relatorio = montar_relatorio(vereditos, dia)
+    excecoes = carregar_excecoes()
+    vereditos = rodar(fontes, Path(args.snapshots), excecoes=excecoes)
+    sem_efeito = excecoes_sem_efeito(vereditos, excecoes)
+    relatorio = montar_relatorio(vereditos, dia, sem_efeito)
     destino = Path(args.saida)
     destino.mkdir(parents=True, exist_ok=True)
     (destino / f"cotejo-textos-{dia.isoformat()}.md").write_text(relatorio, encoding="utf-8")
     (destino / f"cotejo-textos-{dia.isoformat()}.json").write_text(
         json.dumps(vereditos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(relatorio)
-    return codigo_de_saida(vereditos)
+    return codigo_de_saida(vereditos, sem_efeito)
 
 
 if __name__ == "__main__":

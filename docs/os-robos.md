@@ -313,7 +313,9 @@ A que não aparece vira pergunta, com prioridade para a que toca registro do cat
 **A moldura do Planalto é a da Câmara?** O normas.leg.br, do Congresso, serve a
 compilação vigente que a Câmara mantém — outra equipe compilando o mesmo texto legal.
 O Cotejador lê a pena de cada dispositivo nas duas, com o mesmo leitor que o catálogo
-usa, e acusa onde discordam.
+usa, e acusa onde discordam. Quando a leitura da lei alteradora mostra que a Câmara
+está atrasada, a divergência é julgada e sai da conta — mas continua no relatório, e
+volta a ser pergunta no dia em que uma das duas compilações mudar.
 
 **Vetos que ainda podem cair.** Veto derrubado muda o texto meses depois da sanção.
 O Cotejador lista os vetos do ano a leis que mexem em diploma vigiado e diz quais
