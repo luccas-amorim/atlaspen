@@ -5,7 +5,9 @@
 # correção vêm AGRUPADAS — um PR por família, para não virar enxurrada —, e
 # cada versão maior vem sozinha, porque é a que pode quebrar: a do
 # github-script v9, por exemplo, deixou de aceitar require('@actions/github').
-# O PR passa pela CI como qualquer outro; o merge continua sendo de gente.
+# O PR passa pela CI como qualquer outro. Com a CI verde, o minor e o patch
+# entram sozinhos (.github/workflows/dependabot.yml); o merge da versão maior
+# continua sendo de gente.
 #
 # Python fica de fora porque não há o que acompanhar: a CI instala `pytest` e
 # `openpyxl` sem versão fixa, e eles já vêm sempre na mais nova. Se um dia

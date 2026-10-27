@@ -133,7 +133,7 @@
     {
       "arquivo": "scripts/robos/README.md",
       "sobre": "O pipeline de conferência: módulos, o que o robô faz e não faz, e as armadilhas com teste.",
-      "conferido_em": "2026-10-01",
+      "conferido_em": "2026-10-26",
       "depende_de": [
         "scripts/robos/vigia/conferir.py",
         "scripts/robos/proponente/propor.py",

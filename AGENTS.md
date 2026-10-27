@@ -167,14 +167,18 @@ pessoa que assina.
   única revogadora achada, o registro segue a anotação e a nota diz que se discute se
   um decreto simples podia revogar um decreto com força de lei (decisão de 27/10/2026).
 
-## Dependências: o Dependabot abre, gente decide
+## Dependências: o Dependabot abre, a versão maior espera gente
 
 Desde 26/10/2026, `.github/dependabot.yml` abre PR toda quarta com as atualizações das
-GitHub Actions e do npm. As menores vêm agrupadas por família; cada versão **maior** vem
-sozinha, e é a que pede leitura das notas de versão antes do merge — a do `github-script`
-v9 deixou de aceitar `require('@actions/github')`, a do `download-artifact` v8 passou a
-recusar artifact com hash divergente. O PR de dependência passa pela mesma verificação de
-qualquer outro, e não gera nota no feed.
+GitHub Actions e do npm. As menores vêm agrupadas por família e **entram sozinhas** quando
+a CI passa: o `.github/workflows/dependabot.yml` lê o `update-type` que o Dependabot
+escreve no commit e faz o merge com o token do app só se todos forem minor ou patch. Cada
+versão **maior** vem sozinha, fica fora do auto-merge e pede leitura das notas de versão
+antes do merge — a do `github-script` v9 deixou de aceitar `require('@actions/github')`, a
+do `download-artifact` v8 passou a recusar artifact com hash divergente. Também fica para
+gente o PR em conflito (o Dependabot rebaseia sozinho) e aquele em que alguém empurrou
+commit por cima do robô. O PR de dependência passa pela mesma verificação de qualquer
+outro, e não gera nota no feed.
 
 Trabalhe em branch própria, commits pequenos e descritivos; **não faça push nem abra PR sem
 o usuário pedir**.
