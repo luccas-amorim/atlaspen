@@ -214,13 +214,6 @@ Cada um com plano, financiamento e pessoas próprias. A ordem é de exequibilida
 | **Curador** | Desde 26/10/2026 o **Curador** (`scripts/robos/curador/`) lê, no ctresb/leis, toda lei ordinária, decreto-lei e lei complementar desde 1889, aponta as que cominam pena e que o projeto não conhece, e o Planalto confirma; o estado fica em `data/curadoria.json`. A varredura única apontou 209 — 59 com pena de prisão vigente, 40 revogadas —, e foram lidas até 26/10/2026: oito tipos entraram no catálogo, os diplomas revogados entraram no acervo, inclusive os que só o normas.leg.br guarda, e o que pede juízo virou issue com o rótulo `questão jurídica`. Em 26/10/2026 o `curador/lexml.py --decretos` leu no normas.leg.br os 8.193 decretos com força de lei dos governos provisórios (1889–1891, 1930–1934), que o ctresb não tem: 45 trazem pena privativa no texto, 15 entraram no acervo em 27/10/2026, e os uniformes militares de 1931 e a Lei do Serviço Militar de 1933 viraram issue. Os outros que seguem no estado são, em geral, regulamentos com pena disciplinar ou atos que só mencionam a pena. As penas de transição da Lei de Introdução do CP (DL 3.914/1941, arts. 2º a 6º) entraram no acervo em 27/10/2026, e o regulamento da febre amarela de 1932 virou issue. Segue em aberto um decreto de 1932 que não respondeu na varredura. |
 | **Usabilidade, processo penal, plataforma de pesquisa** | Ganhos de uso, extensão ao que rege os atributos na prática, e exportação para pesquisa empírica. |
 
-### Dívida técnica
-
-Não há dívida técnica declarada em aberto. As oito que este README carregava foram
-fechadas em 25/09/2026 (o histórico do repositório conta cada uma); a próxima que aparecer
-vira issue com o rótulo `dívida técnica`, e volta a ser listada aqui só se ficar meses sem
-dono — porque dívida não declarada vira surpresa.
-
 ## Documentação
 
 Publicada no próprio site, em [`/projeto`](https://atlaspen.com.br/projeto).
@@ -236,26 +229,6 @@ O que existe só no repositório fica fora dele: os documentos de operação fic
 ([`AGENTS.md`](AGENTS.md), [`TRIAGEM.md`](TRIAGEM.md), [`AUDITORIA.md`](AUDITORIA.md)) e os
 planos e specs do desenvolvimento em `.superpowers/`, que é diretório de ferramenta, como
 `.github/`.
-
-## Autoria
-
-O AtlasPen é desenvolvido pela **Equipe AtlasPen**. Quem faz o quê — desenvolvimento,
-pesquisa e colaboração acadêmica — está em
-[Autoria e créditos](https://atlaspen.com.br/projeto/creditos).
-
-O projeto tem como **antecedente de pesquisa** o SISPENAS, concebido em 2008 pelas
-professoras **Maíra Rocha Machado** e **Marta Rodriguez de Assis Machado** (Direito GV/FGV),
-em pesquisa vinculada a edital da Secretaria de Assuntos Legislativos do Ministério da
-Justiça. A intuição de cruzar tipos e atributos penais, e de medir o efeito de uma mudança
-legislativa sobre o conjunto, vem de lá:
-
-> MACHADO, Maíra Rocha; MACHADO, Marta Rodriguez de Assis (coord.). **SISPENAS: Sistema de
-> Consulta sobre Crimes, Penas e Alternativas à Prisão**. Revista Jurídica, Brasília, v. 10,
-> n. 90, ed. esp., p. 1-26, abr./maio 2008. (Íntegra em
-> [`static/artigos/`](./static/artigos/machado-machado-2008-sispenas-rev-juridica-90.pdf).)
-
-O AtlasPen é obra nova, escrita para a lei vigente. A história completa está em
-[O projeto](https://atlaspen.com.br/projeto).
 
 ## Licença
 
