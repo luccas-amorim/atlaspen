@@ -1365,6 +1365,17 @@ META: dict[str, dict] = {
             "motivo": "Nenhum crime vigente: os tipos penais do Capítulo II (arts. 17 a 20) tiveram vigência até 31/12/2016, prazo que a própria lei fixou (art. 23). O diploma fica no inventário porque o acervo o usa para nomear os tipos de vigência encerrada (conferido em 26/10/2026).",
         },
     },
+    "dl3914": {
+        "nome": "Lei de Introdução do Código Penal (penas de transição)",
+        "norma": "Decreto-Lei nº 3.914, de 9 de dezembro de 1941",
+        "url": "decreto-lei/del3914.htm",
+        "faixas": [[2, 6]],
+        "rotulos": [],
+        "ajuste": {
+            "esperados": 0,
+            "motivo": "Nenhum crime vigente: os arts. 2º a 6º davam pena aos crimes de falência e convertiam em contravenção os crimes dos códigos florestal, de pesca e de caça da época; caíram com as leis que regularam cada matéria depois (o acervo diz quais). O Planalto publica o decreto-lei sem anotação de revogação e não risca esses artigos; o diploma fica no inventário porque o acervo o usa para nomear os dispositivos revogados (conferido em 27/10/2026).",
+        },
+    },
     # Os decretos dos governos provisórios (1889–1891, 1930–1934), lidos pelo
     # `curador/lexml.py --decretos` (decisões de 27/10/2026). O texto é o do
     # Planalto quando ele tem a página; senão, o do normas.leg.br, marcado.
@@ -1510,8 +1521,8 @@ META: dict[str, dict] = {
         "fonte_texto": "normas.leg.br",
         "situacao": "revogado",
         "revogadora": "Lei nº 4.771/1965 (Código Florestal), art. 50",
-        "data_revogacao": "1966-01-14",
-        "data_revogacao_nota": "O Código Florestal de 1965 revogou o de 1934 expressamente (art. 50) e entrou em vigor 120 dias depois da publicação (DOU de 16/09/1965). Desde 1942, os crimes do código de 1934 que o Código Penal não compreendia eram contravenções (Lei de Introdução do CP, arts. 3º e 4º).",
+        "data_revogacao": None,
+        "data_revogacao_nota": "O Código Florestal de 1965 revogou o de 1934 expressamente (art. 50) e entrou em vigor 120 dias depois da publicação, feita no DOU de 16/09/1965 e retificada em 28/09/1965. A data é 14/01 ou 26/01/1966, conforme a retificação conte como nova publicação (Lei de Introdução, art. 1º, §3º), e fica em aberto. Desde 1942, os crimes do código de 1934 que o Código Penal não compreendia eram contravenções (Lei de Introdução do CP, arts. 3º e 4º).",
         "rotulos": [],
     },
     "dec24507": {
