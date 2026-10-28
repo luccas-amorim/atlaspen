@@ -6393,11 +6393,11 @@
    "sem_texto": 12
   },
   "1932": {
-   "completo": false,
+   "completo": true,
    "decretos": 1379,
-   "nao_lidos": 1,
+   "nao_lidos": 0,
    "pena_privativa": 4,
-   "sem_pena": 1346,
+   "sem_pena": 1347,
    "sem_prisao": 24,
    "sem_texto": 4
   },
