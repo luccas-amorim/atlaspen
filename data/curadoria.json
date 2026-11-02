@@ -1736,6 +1736,9 @@
    "urn": "urn:lex:br:federal:decreto.lei:1940-08-20;2506"
   },
   "del-2524-1940": {
+   "altera": [
+    "del-869-1938"
+   ],
    "caminho": "federal/decretos-lei/1940/del-2524-1940-08-23.md",
    "chave": "del-2524-1940",
    "ementa": "Modifica o art. 3º do Decreto-Lei nº 869, de 18 de novembro de 1938.",
@@ -1913,22 +1916,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 385 de 26/12/1968",
    "urn": "urn:lex:br:federal:decreto.lei:1968-12-26;385"
-  },
-  "del-3914-1941": {
-   "caminho": "federal/decretos-lei/1941/del-3914-1941-12-09.md",
-   "chave": "del-3914-1941",
-   "ementa": "Lei de introdução do Código Penal (decreto-lei nº 2.848, de 7-12-940) e da Lei das Contravenções Penais (decreto-lei nº 3.688, de 3 de outubro de 1941).",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3914.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 3.914 de 09/12/1941",
-   "urn": "urn:lex:br:federal:decreto.lei:1941-12-09;3914"
   },
   "del-394-1938": {
    "caminho": "federal/decretos-lei/1938/del-394-1938-04-28.md",
@@ -4133,7 +4120,7 @@
    "urn": "urn:lex:br:federal:lei:2000-06-06;9974"
   }
  },
- "commit_ctresb": "15eb09b618ff08a38c4dfee06a91bd139d093f5d",
+ "commit_ctresb": "b14530bdf1d0c0ba4cabafd3dd956beadf087cc9",
  "decretos": {
   "dec-10201-1889": {
    "chave": "dec-10201-1889",
