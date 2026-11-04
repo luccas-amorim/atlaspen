@@ -25,12 +25,23 @@ rodava `baixar.py --todas` à mão recebia código de saída 2, mas o snapshot r
 já estava no lugar do bom, e a rodada seguinte comparava o catálogo com ele. O
 `.part` fica no diretório para diagnóstico e não casa com `*.html`.
 
+**Bloqueio não é sentinela.** Em 31/10/2026 o firewall da Presidência passou a
+responder aos runners do GitHub com uma página "Acesso Negado!" de 814 bytes,
+com HTTP 200, no lugar de cada compilado. As 77 fontes reprovaram por "sentinela
+ausente", e a issue do ensaio mandou conferir a sentinela e a URL de cada uma,
+quando nada nelas tinha mudado: o bloqueado era o IP de quem baixava. A página
+de bloqueio agora é reconhecida, nunca é promovida (nem em fonte sem sentinela),
+sai com o código que o Planalto pede para o desbloqueio e, depois de
+`BLOQUEIOS_SEGUIDOS` em sequência, encerra a rodada: insistir contra um
+firewall só alonga o bloqueio.
+
 Uso:
     python scripts/robos/nucleo/baixar.py --todas
     python scripts/robos/nucleo/baixar.py --fonte cp --fonte cpm
     python scripts/robos/nucleo/baixar.py --listar
 
-Saídas: 0 = tudo certo; 2 = alguma fonte falhou (rede, HTTP ou sentinela).
+Saídas: 0 = tudo certo; 2 = alguma fonte falhou (rede, HTTP, bloqueio ou
+sentinela).
 """
 from __future__ import annotations
 
@@ -66,6 +77,14 @@ REDE = Rede({
     "Accept": "text/html,application/xhtml+xml",
     "Accept-Language": "pt-BR,pt;q=0.9",
 }, tentativas=TENTATIVAS, timeout=TIMEOUT_S, espera=lambda n: 2 * n)
+
+# A página de bloqueio do firewall da Presidência. A marca é o endereço para o
+# qual ela manda o código, em ASCII, para não depender da decodificação.
+MARCA_BLOQUEIO = "bloqueio.de.aplicacoes@presidencia.gov.br"
+CODIGO_BLOQUEIO = re.compile(r"c\S{0,2}digo\s+(\d+)", re.I)
+# Bloqueios seguidos que encerram a rodada. O de 31/10/2026 pegou todas as
+# fontes; o terceiro em sequência já não é página de uma lei só.
+BLOQUEIOS_SEGUIDOS = 3
 
 
 def decodificar(bruto: bytes) -> tuple[str, str]:
@@ -103,6 +122,17 @@ def normalizar(texto: str) -> str:
     return re.sub(r"\s+", " ", t)
 
 
+def bloqueio(plano: str) -> str | None:
+    """O código do bloqueio, se a página é a do firewall; senão None.
+
+    Página de bloqueio sem código legível devolve "" (é bloqueio do mesmo jeito).
+    """
+    if MARCA_BLOQUEIO not in plano.lower():
+        return None
+    m = CODIGO_BLOQUEIO.search(plano)
+    return m.group(1) if m else ""
+
+
 def buscar(url: str) -> bytes:
     """GET com UA de navegador, com repetição e espera progressiva.
 
@@ -119,7 +149,11 @@ def baixar_fonte(fonte: dict, destino: Path) -> dict:
     plano = normalizar(texto)
 
     sentinela = fonte.get("sentinela") or ""
-    ok = sentinela.lower() in plano.lower() if sentinela else True
+    bloqueada = bloqueio(plano)
+    sentinela_ok = sentinela.lower() in plano.lower() if sentinela else True
+    # Fonte sem sentinela não tem o que conferir, mas página de bloqueio não é
+    # lei, e não pode ocupar o caminho canônico.
+    ok = sentinela_ok and bloqueada is None
 
     dir_fonte = destino / fonte["id"]
     dir_fonte.mkdir(parents=True, exist_ok=True)
@@ -140,6 +174,9 @@ def baixar_fonte(fonte: dict, destino: Path) -> dict:
         "sha256": hashlib.sha256(bruto).hexdigest(),
         "sentinela": sentinela,
         "sentinela_ok": ok,
+        # O código que o Planalto pede no e-mail de desbloqueio; None se a
+        # página não é a de bloqueio.
+        "bloqueio": bloqueada,
         # O nome do arquivo que FICOU: o `.html` promovido, ou o `.part`
         # rejeitado, para que o meta nunca aponte para um snapshot que não existe.
         "arquivo": arquivo.name if ok else parcial.name,
@@ -174,24 +211,47 @@ def main() -> int:
 
     destino = Path(args.saida)
     falhas: list[tuple[str, str]] = []
+    codigos: list[str] = []
+    seguidos = 0
     for i, f in enumerate(alvo, 1):
         try:
             meta = baixar_fonte(f, destino)
         except Exception as e:                     # rede, HTTP, gravação
             falhas.append((f["id"], str(e)))
             print(f"[{i:2d}/{len(alvo)}] ✗ {f['id']:28s} {e}")
+            seguidos = 0
         else:
-            if meta["sentinela_ok"]:
+            if meta["bloqueio"] is not None:
+                codigos.append(meta["bloqueio"])
+                motivo = f"bloqueado pelo Planalto (código {meta['bloqueio'] or '?'})"
+                falhas.append((f["id"], motivo))
+                print(f"[{i:2d}/{len(alvo)}] ✗ {f['id']:28s} {motivo}")
+                seguidos += 1
+            elif meta["sentinela_ok"]:
                 print(f"[{i:2d}/{len(alvo)}] ✓ {f['id']:28s} "
                       f"{meta['bytes_origem']:8d}B  {meta['codificacao']}")
+                seguidos = 0
             else:
                 falhas.append((f["id"], f"sentinela ausente: {meta['sentinela']!r}"))
                 print(f"[{i:2d}/{len(alvo)}] ✗ {f['id']:28s} "
                       f"sentinela ausente: {meta['sentinela']!r} ({meta['codificacao']})")
+                seguidos = 0
+        if seguidos >= BLOQUEIOS_SEGUIDOS and i < len(alvo):
+            for resto in alvo[i:]:
+                falhas.append((resto["id"], "não tentada: o Planalto bloqueou as anteriores"))
+            print(f"\n{seguidos} bloqueios seguidos: as {len(alvo) - i} fontes restantes "
+                  "não foram tentadas.")
+            break
         if i < len(alvo):
             time.sleep(CORTESIA_S)
 
     print(f"\n{len(alvo) - len(falhas)}/{len(alvo)} fontes íntegras.")
+    if codigos:
+        exemplo = next((c for c in codigos if c), "")
+        print(f"BLOQUEIO: o Planalto devolveu a página \"Acesso Negado\" em {len(codigos)} "
+              "requisição(ões). Não é sentinela nem URL: é o IP de quem baixou. "
+              f"O desbloqueio se pede a {MARCA_BLOQUEIO}"
+              + (f", com o código {exemplo} no assunto." if exemplo else "."))
     if falhas:
         print("Falhas:")
         for fid, motivo in falhas:

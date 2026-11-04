@@ -78,17 +78,38 @@ jobs:
         run: |
           HOJE="$(TZ=America/Sao_Paulo date +%Y-%m-%d)"
           TITULO="Fontes: falha no ensaio de $HOJE"
+          # O placar e o diagnóstico vêm antes da lista, e a lista vem inteira.
+          # Até 04/11/2026 o corpo era o `tail -n 40` da saída: na issue #96 as
+          # 77 fontes tinham falhado, e o corte mostrou 40 linhas de "sentinela
+          # ausente" sem o "0/77" que dizia que era tudo, nem a causa — o
+          # firewall da Presidência bloqueando o runner.
           {
             echo "O ensaio de sexta-feira não conseguiu baixar todas as fontes."
             echo "**A rodada de segunda-feira vai falhar** se isto não for resolvido:"
             echo "o \`vigia\` sai com erro e os outros três robôs dependem dele."
             echo
-            echo "Cada linha \`✗\` abaixo é uma fonte de \`data/fontes.json\`."
-            echo "Se a página mudou de forma, o que mudou é a \`sentinela\`; se o"
-            echo "diploma foi recompilado noutra URL, o que mudou é a \`url\`."
+            grep -E '^[0-9]+/[0-9]+ fontes íntegras' saida.txt | sed 's/^/**/; s/$/**/' || true
+            echo
+            if grep -q '^BLOQUEIO:' saida.txt; then
+              echo "> [!WARNING]"
+              echo "> $(grep '^BLOQUEIO:' saida.txt | sed 's/^BLOQUEIO: //')"
+              echo
+              echo "Nada em \`data/fontes.json\` resolve isto. Antes de mexer em"
+              echo "sentinela ou URL, confira se a mesma fonte baixa de outra máquina:"
+              echo "\`python scripts/robos/nucleo/baixar.py --fonte cp\`."
+            else
+              echo "Cada linha \`✗\` abaixo é uma fonte de \`data/fontes.json\`."
+              echo "Se a página mudou de forma, o que mudou é a \`sentinela\`; se o"
+              echo "diploma foi recompilado noutra URL, o que mudou é a \`url\`."
+            fi
             echo
             echo '```'
-            tail -n 40 saida.txt
+            if grep -q '^Falhas:$' saida.txt; then
+              sed -n '/^Falhas:$/,$p' saida.txt
+            else
+              # Sem a lista, o script caiu antes do fim: o rabo da saída é o erro.
+              tail -n 40 saida.txt
+            fi
             echo '```'
           } > corpo.md
 
