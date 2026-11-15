@@ -51,10 +51,66 @@ não terminaram*. Há três saídas, da mais leve à mais pesada:
 2. **Pedir o desbloqueio** a `bloqueio.de.aplicacoes@presidencia.gov.br`, com o
    código que a página de bloqueio mostra. Os runners trocam de endereço a cada
    execução, então o pedido tem de ser por faixa ou por agente, e pode não vingar.
-3. **Um runner próprio** (`runs-on: self-hosted`) numa máquina que o Planalto
-   atende. Resolve de vez, e custa manter a máquina ligada no dia 1º. Em repositório
-   público, runner próprio só com aprovação manual de workflow de quem não é
-   colaborador.
+3. **Um runner próprio**, numa máquina dedicada e numa rede que o Planalto atende.
+   É a saída escolhida em 15/11/2026, e os workflows já estão prontos para ela: o
+   passo a passo está logo abaixo.
+
+### O runner do Planalto
+
+O vigia, a sentinela, o curador e o ensaio das fontes rodam na máquina que a
+variável de repositório `RUNNER_PLANALTO` nomear. **Sem a variável, tudo roda no
+GitHub, como antes** — ligar e desligar o runner próprio é criar ou apagar a
+variável, sem commit.
+
+**A máquina.** Um aparelho só para isso — mini PC ou Raspberry Pi —, com Ubuntu
+Server LTS, ligado na internet de casa. Não o computador de trabalho: o runner
+executa o que o workflow mandar, e não deve ter ao alcance nada além do próprio
+repositório. A carga é desprezível (uns oitenta downloads e poucos minutos de
+Python, duas vezes por mês); o que importa é ficar ligada.
+
+**Antes de registrar o runner, a trava.** Repositório público com runner próprio
+exige aprovação manual de TODO workflow vindo de fork (hoje a regra só pega quem
+contribui pela primeira vez). É configuração de segurança, e quem muda é o
+mantenedor, uma vez:
+
+```bash
+gh api --method PUT repos/luccas-amorim/atlaspen/actions/permissions/fork-pr-contributor-approval -f approval_policy=all_external_contributors
+```
+
+**Instalar.** Na máquina, com um usuário comum criado só para o runner (sem
+`sudo`): em *Settings ▸ Actions ▸ Runners ▸ New self-hosted runner* o GitHub dá os
+comandos de download e o token, que vale uma hora. Na configuração, o rótulo é o
+que interessa:
+
+```bash
+./config.sh --url https://github.com/luccas-amorim/atlaspen --token <o token da página> --name planalto-casa --labels planalto
+sudo ./svc.sh install <usuário do runner>
+sudo ./svc.sh start
+```
+
+O serviço sobe sozinho quando a máquina liga, e o runner se atualiza sozinho.
+
+**Ligar.** Com o runner aparecendo como *Idle* na página, crie a variável:
+
+```bash
+gh variable set RUNNER_PLANALTO --body planalto
+```
+
+e teste com Actions ▸ *Fontes — ensaio da rodada* ▸ **Run workflow**: tem de sair
+`79/79 fontes íntegras` (ou quantas forem). Para voltar ao GitHub:
+`gh variable delete RUNNER_PLANALTO`.
+
+**O que saber.**
+
+- Job que espera o runner por mais de 24 horas falha. Máquina desligada no dia 27
+  ou no dia 1º aparece na issue como robô que não terminou — e, enquanto espera, a
+  rodada segura a fila dos outros workflows que escrevem na `main`.
+- O curador recebe a chave do app de automação, porque grava o estado na `main`.
+  É mais um motivo para a máquina ser dedicada e a trava dos forks estar ligada.
+- Os workflows que usam o runner só disparam por agenda ou à mão. Um
+  `pull_request` neles abriria a máquina a código de terceiro.
+- Se o Planalto passar a recusar também esse endereço, o `baixar.py` para em três
+  recusas e diz o que veio, como faz hoje.
 
 A rodada automática acontece **no dia 1º de cada mês, 05:00 de Brasília**
 (`.github/workflows/conferidor.yml`), e também sob demanda em Actions ▸ *Conferidor

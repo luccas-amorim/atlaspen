@@ -212,6 +212,13 @@ proxy, de troca de agente para parecer outro cliente, de insistência. A confer�
 roda de uma máquina que o Planalto atende, com os comandos do `TRIAGEM.md`, e o
 desbloqueio se pede a quem bloqueou.
 
+Desde 15/11/2026 os jobs que leem o Planalto (vigia, sentinela, curador e o ensaio
+das fontes) rodam no runner que a variável de repositório `RUNNER_PLANALTO` nomear,
+e em `ubuntu-latest` quando ela não existe. Esses workflows só disparam por agenda
+ou à mão, e é isso que impede um pull request de executar código na máquina do
+mantenedor: **não acrescente `pull_request` nem `pull_request_target` a workflow
+que use o runner próprio**, e não troque o `runs-on` de workflow que rode em PR.
+
 ## Dependências: o Dependabot abre, a versão maior espera gente
 
 Desde 26/10/2026, `.github/dependabot.yml` abre PR com as atualizações das

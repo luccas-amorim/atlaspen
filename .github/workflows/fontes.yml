@@ -40,7 +40,9 @@ concurrency:
 jobs:
   ensaio:
     name: Baixar todas as fontes, e só isso
-    runs-on: ubuntu-latest
+    # A mesma máquina da rodada (ver conferidor.yml): ensaiar de outro endereço
+    # não diria nada sobre o dia 1º.
+    runs-on: ${{ vars.RUNNER_PLANALTO || 'ubuntu-latest' }}
     steps:
       - uses: actions/checkout@v7
 
