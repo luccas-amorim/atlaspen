@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Filtro semanal do Diário Oficial, Seção 1 — sem IA (F7).
+"""Filtro do Diário Oficial, Seção 1, a cada rodada — sem IA (F7).
+
+A rodada é mensal desde 14/11/2026 (era semanal), e a janela padrão passou de 8
+para 35 dias: o mês mais longo e o atraso do cron, com folga.
 
 O conferidor relê os diplomas de `data/fontes.json` e é cego para uma coisa
 só: **lei penal nova e autônoma**, que ainda não está em página nenhuma que ele
@@ -18,7 +21,7 @@ Como funciona, em três passos:
 2. **Triagem em três níveis, pelo PRECEITO SECUNDÁRIO** — a fórmula "Pena -",
    "reclusão, de", "detenção, de". Um ato que fale de pena sem cominar nenhuma
    não cria nem altera crime. Ver `classificar`.
-3. **Saída para leitura humana.** Uma seção na issue semanal. Nada entra em
+3. **Saída para leitura humana.** Uma seção na issue da rodada. Nada entra em
    lugar nenhum automaticamente.
 
 **Falso positivo é aceitável; falso negativo, não.** Uma lei penal nova passar
@@ -426,7 +429,7 @@ def montar_relatorio(candidatas: list[dict], inicio: date, fim: date,
         if nivel == "novo":
             L += ["É o ponto cego do conferidor: crime em página que ninguém vigia. "
                   "Acrescente o diploma em `data/fontes.json` e ele passa a ser "
-                  "conferido toda semana.", ""]
+                  "conferido a cada rodada.", ""]
         else:
             L += ["O conferidor vai ver a mudança na página do diploma na rodada "
                   "seguinte. O que se ganha aqui é a antecedência — e o aviso de que a "
@@ -441,7 +444,7 @@ def montar_relatorio(candidatas: list[dict], inicio: date, fim: date,
                 L.append("- ⚠️ texto integral não pôde ser lido; a triagem usou só a ementa")
             L.append(f"- Ementa: {c['ementa']}")
             if c.get("fonte_proposta"):
-                L += ["- Entrada proposta para `data/fontes.json` (o PR da semana já a "
+                L += ["- Entrada proposta para `data/fontes.json` (o PR da rodada já a "
                       "traz aplicada, para conferir):", "", "```json",
                       json.dumps(c["fonte_proposta"], ensure_ascii=False, indent=2),
                       "```"]
@@ -522,8 +525,8 @@ def main() -> int:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     p = argparse.ArgumentParser(description="Filtra o DOU em busca de lei penal nova.")
     p.add_argument("--data", help="fim da janela (AAAA-MM-DD); padrão: hoje")
-    p.add_argument("--dias", type=int, default=8,
-                   help="tamanho da janela; 8 cobre a semana e o atraso do cron")
+    p.add_argument("--dias", type=int, default=35,
+                   help="tamanho da janela; 35 cobre o mês e o atraso do cron")
     p.add_argument("--saida", default=str(RELATORIOS))
     args = p.parse_args()
 
@@ -537,7 +540,7 @@ def main() -> int:
     (destino / f"dou-{fim.isoformat()}.md").write_text(relatorio, encoding="utf-8")
     (destino / f"dou-{fim.isoformat()}.json").write_text(
         json.dumps(candidatas, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    # O PR da semana lê daqui as entradas de diploma a acrescentar em fontes.json.
+    # O PR da rodada lê daqui as entradas de diploma a acrescentar em fontes.json.
     (destino / "fontes-propostas.json").write_text(
         json.dumps([c["fonte_proposta"] for c in candidatas if c.get("fonte_proposta")],
                    ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -1,20 +1,22 @@
-name: Fontes — ensaio de sexta
+name: Fontes — ensaio da rodada
 
-# Sexta-feira, 23:00 de Brasília. Baixa os ~70 compilados do Planalto exatamente
-# como a rodada de segunda-feira os baixará, e não guarda nada: o que se testa é
+# Dia 27 de cada mês, 23:00 de Brasília — quatro dias antes da rodada do dia 1º.
+# Até 14/11/2026 era toda sexta-feira, véspera da rodada semanal de segunda.
+# Baixa os ~80 compilados do Planalto exatamente como a rodada do dia 1º os
+# baixará, e não guarda o que deu certo: o que se testa é
 # se o download VAI FUNCIONAR, não o conteúdo.
 #
 # Por que não é "atualizar os compilados": o job `vigia` do conferidor já roda
-# `baixar.py --todas` toda segunda, antes de conferir. A rodada de segunda
+# `baixar.py --todas` a cada rodada, antes de conferir. A rodada
 # SEMPRE opera com texto do dia — nunca houve material velho lá. Guardar uma
-# cópia na sexta não a deixaria mais fresca; deixaria menos.
+# cópia do ensaio não a deixaria mais fresca; deixaria menos.
 #
-# O que de fato quebra a segunda-feira é a fonte: o Planalto fora do ar, uma
+# O que de fato quebra a rodada é a fonte: o Planalto fora do ar, uma
 # página que mudou de forma e perdeu a sentinela, uma URL que virou 404 depois
 # de o diploma ser recompilado. Quando isso acontece, `baixar.py` sai com 2 e o
 # `vigia` derruba a rodada inteira — os outros três robôs dependem dele. Achar
-# isso na sexta à noite dá o fim de semana para consertar `data/fontes.json`;
-# achar na segunda é a semana sem conferência.
+# isso no dia 27 dá quatro dias para consertar `data/fontes.json`;
+# achar no dia 1º é o mês sem conferência.
 #
 # A sentinela é a string que prova que a página veio inteira e fresca. Página
 # truncada ou servida de cache velho reprova aqui, em vez de deixar o differ
@@ -22,8 +24,9 @@ name: Fontes — ensaio de sexta
 
 on:
   schedule:
-    # 02:00 UTC de sábado = 23:00 de sexta em Brasília (UTC-3).
-    - cron: '0 2 * * 6'
+    # 02:00 UTC do dia 28 = 23:00 do dia 27 em Brasília (UTC-3). Todo mês tem
+    # dia 28, e fevereiro ainda deixa um dia inteiro antes da rodada.
+    - cron: '0 2 28 * *'
   workflow_dispatch:
 
 permissions:
@@ -55,8 +58,8 @@ jobs:
 
       # Com as páginas na mão, a pergunta do Cotejador sai de graça: o compilado
       # anota as leis que o Senado registra? A resposta vai para o resumo desta
-      # execução, e não para issue — a de segunda faz a mesma pergunta, com as
-      # páginas de segunda. Aqui ela só adianta o que vem.
+      # execução, e não para issue — a rodada faz a mesma pergunta, com as
+      # páginas dela. Aqui ela só adianta o que vem.
       - name: Cotejar o frescor com o Senado
         if: always()
         continue-on-error: true
@@ -67,9 +70,23 @@ jobs:
           cat cotejo/cotejo-frescor-*.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null
           exit 0
 
-      # O snapshot NÃO é guardado. A segunda-feira baixa o seu, e um artifact de
-      # sexta só serviria para alguém, um dia, comparar o catálogo com um texto
-      # de três dias atrás sem perceber.
+      # O snapshot BOM não é guardado. A rodada baixa o seu, e um artifact do
+      # ensaio só serviria para alguém, um dia, comparar o catálogo com um texto
+      # de quatro dias atrás sem perceber. O que se guarda, por sete dias, é só a
+      # página REJEITADA (`.html.part`) e o `meta.json`: em 14/11/2026 as 77
+      # fontes reprovaram com uma página que não era a de bloqueio conhecida, e
+      # sem ela na mão não havia como dizer o que o Planalto tinha devolvido.
+      - name: Guardar as páginas rejeitadas
+        if: steps.baixar.outputs.codigo != '0'
+        uses: actions/upload-artifact@v7
+        with:
+          name: fontes-rejeitadas-${{ github.run_number }}
+          path: |
+            crawler/snapshots/**/*.html.part
+            crawler/snapshots/**/meta.json
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Abrir issue se alguma fonte falhou
         if: steps.baixar.outputs.codigo != '0'
         env:
@@ -84,8 +101,8 @@ jobs:
           # ausente" sem o "0/77" que dizia que era tudo, nem a causa — o
           # firewall da Presidência bloqueando o runner.
           {
-            echo "O ensaio de sexta-feira não conseguiu baixar todas as fontes."
-            echo "**A rodada de segunda-feira vai falhar** se isto não for resolvido:"
+            echo "O ensaio não conseguiu baixar todas as fontes."
+            echo "**A rodada do dia 1º vai falhar** se isto não for resolvido:"
             echo "o \`vigia\` sai com erro e os outros três robôs dependem dele."
             echo
             grep -E '^[0-9]+/[0-9]+ fontes íntegras' saida.txt | sed 's/^/**/; s/$/**/' || true
@@ -113,9 +130,9 @@ jobs:
             echo '```'
           } > corpo.md
 
-          # Uma issue por vez para este assunto: se a de semana passada ainda
+          # Uma issue por vez para este assunto: se a do ensaio anterior ainda
           # está aberta, a fonte continua quebrada e o lugar disso é um
-          # comentário, não uma issue nova toda sexta.
+          # comentário, não uma issue nova a cada ensaio.
           ABERTA="$(gh issue list --repo "$REPO" --label fontes --state open --json number --jq '.[0].number // empty')"
           if [ -n "$ABERTA" ]; then
             gh issue comment "$ABERTA" --repo "$REPO" --body-file corpo.md

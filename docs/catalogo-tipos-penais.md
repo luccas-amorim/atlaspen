@@ -45,7 +45,7 @@ Cada registro tem três grupos de campos, e o grupo diz quem responde por ele:
 - **Derivado** — o que o transformador calcula a cada build: rótulos de pena, menor
   potencial ofensivo, contravenção, multa, hediondez pela tabela curada, remissão de pena,
   duplicatas, vigência.
-- **Conferência** — a trilha de auditoria escrita pela rodada semanal: contra qual página
+- **Conferência** — a trilha de auditoria escrita pela rodada mensal: contra qual página
   o registro foi conferido, quando e com que resultado.
 
 O dicionário completo, campo a campo, é a seção
@@ -140,7 +140,7 @@ cada pendência). O que esta página fixa são as **travas** — o que a CI impe
 | Grafia do dispositivo | O campo `artigo` segue uma forma canônica (`Art. 121, §2º, I`): grafia que a régua não lê reprova, em vez de casar regra nenhuma em silêncio. |
 | Derivado dessincronizado | O `static/data/crimes.json` commitado tem de ser o que a fonte produz. |
 | URN do diploma | Cada diploma de `data/fontes.json` tem a sua URN LexML, bem formada e de um diploma só. É ela que liga o diploma ao registro do Senado e ao normas.leg.br, que os robôs leem para perguntar se o compilado está em dia; URN errada apontaria para outra norma sem quebrar nada. |
-| Divergência com o compilado | Não é trava de build: é achado da rodada semanal, e vira issue. O estado de cada registro está em [`/data/conferencia.json`](pathname:///data/conferencia.json). |
+| Divergência com o compilado | Não é trava de build: é achado da rodada mensal, e vira issue. O estado de cada registro está em [`/data/conferencia.json`](pathname:///data/conferencia.json). |
 
 ### Contradições: zeradas e travadas
 
@@ -172,7 +172,7 @@ entrar**. O catálogo não pode regredir.
   reincidente em crime doloso e reincidente específico). Refatorar o motor sem mudar
   resposta nenhuma é o resultado esperado; mudança de veredito só passa se alguém regravar
   o congelamento e disser por quê.
-- **Conferência semanal contra o Planalto** (`conferidor.yml`): pena, espécie, existência e
+- **Conferência mensal contra o Planalto** (`conferidor.yml`): pena, espécie, existência e
   situação de cada dispositivo, com a cobertura publicada no relatório — ver
   [Os robôs](./os-robos.md).
 

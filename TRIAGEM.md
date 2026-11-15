@@ -1,21 +1,62 @@
-# A segunda-feira do AtlasPen
+# O dia 1º do AtlasPen
 
 Documento interno de operação — não é publicado no site. Responde a uma pergunta:
-**o que chega para mim toda semana, e o que cada coisa exige.**
+**o que chega para mim todo mês, e o que cada coisa exige.**
 
-Na **sexta-feira, 23:00**, um ensaio (`fontes.yml`) baixa os ~70 compilados
-exatamente como a segunda os baixará, e joga fora. Não é para deixar texto
-pronto — a segunda baixa o dela e sempre opera com o do dia. É para descobrir
-na sexta, e não na segunda de manhã, que uma fonte saiu do ar ou mudou de forma
+A rodada é **mensal desde 14/11/2026**. Antes era semanal — o ensaio na sexta, a
+rodada e a faxina na segunda —, e a triagem de três entregas por semana passou a
+pesar mais do que rendia. O que mudou junto, para que nada fique entre uma rodada
+e outra: as janelas de leitura do DOU, dos tribunais e do ctresb foram de 8 para 35
+dias, e a régua da faxina de branches, de 7 e 14 para 30 e 60 dias.
+
+No **dia 27, 23:00**, um ensaio (`fontes.yml`) baixa os ~80 compilados
+exatamente como a rodada os baixará, e joga fora o que deu certo. Não é para deixar texto
+pronto — a rodada baixa o dela e sempre opera com o do dia. É para descobrir
+quatro dias antes, e não no dia 1º de manhã, que uma fonte saiu do ar ou mudou de forma
 e perdeu a sentinela: quando isso acontece, o `vigia` cai e leva com ele os que
 dependem das páginas dele (auditor, cotejador, proponente). Falhou, abre issue com
 rótulo `fontes`; voltou, ela se fecha sozinha. Desde 25/10/2026 o ensaio também
-adianta o cotejo com o Senado, no resumo da execução — sem issue, porque a segunda
+adianta o cotejo com o Senado, no resumo da execução — sem issue, porque a rodada
 faz a mesma pergunta com as páginas dela.
+Quando o ensaio falha, as páginas rejeitadas (`.html.part`) ficam sete dias no
+artifact `fontes-rejeitadas-N`, e cada linha da falha diz o tamanho e o título do
+que veio.
 
-A rodada automática acontece **toda segunda-feira, 05:00 de Brasília**
+### Quando o Planalto recusa o runner
+
+Desde 31/10/2026 o firewall da Presidência recusa os endereços dos runners do
+GitHub: primeiro com a página "Acesso Negado!", depois (14/11/2026) com outra
+página e HTTP 429. Nada em `data/fontes.json` conserta isso, e o robô não insiste:
+três recusas seguidas encerram o download. Enquanto durar, a rodada do GitHub sai
+sem o vigia, o auditor, o cotejador e o proponente, e a issue diz isso em *Robôs que
+não terminaram*. Há três saídas, da mais leve à mais pesada:
+
+1. **Rodar a conferência de uma máquina que o Planalto atende** — a sua. São os
+   mesmos programas, na mesma ordem do workflow, e o resultado é o mesmo:
+
+   ```bash
+   python scripts/robos/nucleo/baixar.py --todas
+   python scripts/robos/vigia/conferir.py --carimbar
+   python scripts/robos/auditor/auditar.py
+   python scripts/robos/cotejador/frescor.py
+   python scripts/robos/cotejador/textos.py
+   python scripts/robos/proponente/propor.py
+   python scripts/transform_data.py --estrito --max-contradicoes=0
+   ```
+
+   Os relatórios saem em `crawler/relatorios/`. O carimbo (`data/conferencia.json`
+   e o derivado) vai num commit, como o do robô. Foi assim a rodada de 14/11/2026.
+2. **Pedir o desbloqueio** a `bloqueio.de.aplicacoes@presidencia.gov.br`, com o
+   código que a página de bloqueio mostra. Os runners trocam de endereço a cada
+   execução, então o pedido tem de ser por faixa ou por agente, e pode não vingar.
+3. **Um runner próprio** (`runs-on: self-hosted`) numa máquina que o Planalto
+   atende. Resolve de vez, e custa manter a máquina ligada no dia 1º. Em repositório
+   público, runner próprio só com aprovação manual de workflow de quem não é
+   colaborador.
+
+A rodada automática acontece **no dia 1º de cada mês, 05:00 de Brasília**
 (`.github/workflows/conferidor.yml`), e também sob demanda em Actions ▸ *Conferidor
-semanal* ▸ **Run workflow**. Ela produz, no máximo, **três coisas**: um commit, uma issue
+mensal* ▸ **Run workflow**. Ela produz, no máximo, **três coisas**: um commit, uma issue
 e um pull request.
 
 São **nove robôs**, e desde 10/08/2026 cada um é um job com nome próprio — o log diz
@@ -26,17 +67,18 @@ Os dois últimos entregam — a triagem abre a issue, o proponente abre o PR.
 | Job | O que vigia | Falha dele derruba a rodada? |
 |---|---|---|
 | **vigia** | A moldura de cada tipo contra o texto compilado do Planalto | Sim — é o único de que os outros dependem |
-| **sentinela** | O DOU da semana, atrás de lei penal nova e autônoma | Não: o in.gov.br fora do ar não pode calar o relatório do catálogo |
-| **recenseador** | Uma vez por mês, todas as leis sancionadas no ano — a defesa contra o falso negativo | Não: roda dentro do job da sentinela |
+| **sentinela** | O DOU do mês (janela de 35 dias), atrás de lei penal nova e autônoma | Não: o in.gov.br fora do ar não pode calar o relatório do catálogo |
+| **recenseador** | A cada rodada agendada, todas as leis sancionadas no ano — a defesa contra o falso negativo | Não: roda dentro do job da sentinela |
 | **auditor** | Hediondez, ação penal, causas de aumento e nome do tipo | Não |
 | **arquivista** | Saúde da prosa: documento vencido ou cuja dependência mudou | Não |
 | **cotejador** | A segunda leitura (desde 25/10/2026): o compilado anota as leis que o Senado registra? A moldura do Planalto é a da Câmara? Mais os vetos do ano e o que mudou no ctresb/leis, que só informam | Não: o Senado fora do ar não pode calar a rodada |
-| **relator** | O que o STF e o STJ decidiram na semana sobre diploma vigiado, lido no Banco Nacional de Precedentes do CNJ (desde 25/10/2026) | Não: o CNJ fora do ar entra em "Robôs que não terminaram" |
-| **curador** | Uma vez por mês, a lei penal antiga que o projeto nunca leu, desde 1889: apontada no ctresb/leis, confirmada no Planalto, com o estado gravado em `data/curadoria.json` direto na `main` (desde 26/10/2026) | Não: e sem o app de automação, o estado vai só no artifact |
+| **relator** | O que o STF e o STJ decidiram no mês (janela de 35 dias) sobre diploma vigiado, lido no Banco Nacional de Precedentes do CNJ (desde 25/10/2026) | Não: o CNJ fora do ar entra em "Robôs que não terminaram" |
+| **curador** | A cada rodada agendada, a lei penal antiga que o projeto nunca leu, desde 1889: apontada no ctresb/leis, confirmada no Planalto, com o estado gravado em `data/curadoria.json` direto na `main` (desde 26/10/2026) | Não: e sem o app de automação, o estado vai só no artifact |
 | **triagem** | Junta os relatórios e abre a issue | — |
 | **proponente** | Transforma em PR o que é leitura direta — moldura, sentinela defasada e modificador de escopo declarado —, e escreve a nota quando a lei é recente | Não: só roda se houver o que propor |
 
-Na **primeira semana de cada mês**, a sentinela roda também a conferência contra a
+Na rodada agendada — e em rodada manual só **na primeira semana do mês** —, a sentinela
+roda também a conferência contra a
 lista de leis sancionadas do ano. É a defesa contra o falso negativo: ela não diz se
 a lei é penal, diz que existe e que o filtro não a examinou. Leitura curta — basta a
 ementa —, e o que criar, agravar ou revogar tipo penal vira entrada em
@@ -53,12 +95,12 @@ o commit do carimbo.
 
 ## 1. Um commit que chega sozinho — nada a fazer
 
-`chore(catalogo): carimbo da conferência semanal`
+`chore(catalogo): carimbo da conferência mensal`
 
 É a trilha de auditoria: `data/conferencia.json` mais o derivado, registrando **quando
 cada tipo penal foi confrontado com a lei** e com que resultado. Vai direto para a `main`
 porque não muda dado nenhum — só anota o que a máquina fez. Se este commit **não** aparecer
-numa semana, a rodada falhou: vale abrir o log em Actions.
+num mês, a rodada falhou: vale abrir o log em Actions.
 
 ## 2. Uma issue — leitura, não ação imediata
 
@@ -66,11 +108,11 @@ Título: `Conferidor: achados de AAAA-MM-DD`, rótulo `conferidor`. A data é a 
 em que a rodada começou, lida dos próprios relatórios: a rodada que atravessa a
 meia-noite não perde, no corpo da issue, os relatórios datados da véspera.
 
-Ela só nasce quando há o que dizer, **é uma só** e **substitui a da semana
-passada** — mas só a que ninguém comentou. O conferidor é SEM ESTADO: re-deriva
+Ela só nasce quando há o que dizer, **é uma só** e **substitui a da rodada
+anterior** — mas só a que ninguém comentou. O conferidor é SEM ESTADO: re-deriva
 tudo a cada rodada, então achado que continua valendo reaparece sozinho na
 issue nova. O que não reaparece é o que uma pessoa escreveu. Issue com
-comentário deixou de ser foto da semana e virou conversa: ela fica aberta,
+comentário deixou de ser foto da rodada e virou conversa: ela fica aberta,
 ganha um ponteiro para a rodada nova, e só se fecha quando a discussão tiver
 destino — um commit, uma exceção julgada, ou uma issue própria. Achado de conferidor é foto de um
 momento: a issue de 21/09/2026 acusou como ausente um artigo do Código
@@ -90,20 +132,20 @@ Os blocos, na ordem em que aparecem — o que pede ação primeiro:
 
 | Bloco | O que é | O que costuma exigir |
 |---|---|---|
-| **Robôs que não terminaram** | Robô que saiu com código que não é 0 nem 3 — exceção, fonte ilegível, job que não chegou ao passo. Desde 25/10/2026 | Abrir o log da execução (o link está no bloco). A pergunta daquele robô ficou sem resposta nesta semana, e o resto da issue não a cobre |
+| **Robôs que não terminaram** | Robô que saiu com código que não é 0 nem 3 — exceção, fonte ilegível, job que não chegou ao passo. Desde 25/10/2026 | Abrir o log da execução (o link está no bloco). A pergunta daquele robô ficou sem resposta nesta rodada, e o resto da issue não a cobre |
 | **Achados de pena** | Moldura ou espécie de pena divergindo do compilado; dispositivo revogado; dispositivo com pena própria ausente do catálogo; linha de pena derivada cuja conta (base × fração da lei) não fecha — `DIVERGENTE-derivada`, desde 28/09/2026 | Ler o artigo no Planalto. O que for mecânico já veio em PR (item 3); o resto é decisão de modelagem |
 | **A lei escreveu a pena e o parser não leu** | Os `ilegivel`: registros em que há moldura no compilado e o `pena_parser` não a extraiu | Ação NOSSA, e o único balde do "sem moldura" que pede alguma. Abrir o dispositivo e ver o que o parser não leu; o número tende a zero. Tem seção própria, no alto, desde 24/09/2026 — antes dividia a tela com 152 registros que estavam certos |
 | **Cobertura** | Quantos registros foram conferidos e, por motivo, quantos não têm moldura própria na lei | Nada, em regra: são limites DECLARADOS, a lei não deixou moldura ali. No corpo da issue vêm como contagem; id por id fica no artifact. Se "não localizado" subir, é sinal de rótulo errado no catálogo ou de mudança na página |
 | **Auditoria de classificação** | Hediondez, ação penal, causas de aumento ausentes e nomes — inclusive o nome que descreve MELHOR outro artigo do mesmo diploma | Juízo jurídico. Hediondez e ação penal já vêm propostas em PR; aumentos e nomes ficam só aqui. `NOME-DE-OUTRO-ARTIGO` pede reconferência da PENA junto com o nome: quando os dois artigos cominam a mesma moldura, a troca é invisível para a conferência |
 | **Já julgado** | Uma linha dizendo quantos achados foram omitidos por decisão anterior | Nada. Se o número subir sem motivo, abrir `scripts/robos/auditor/excecoes-auditoria.json` e conferir se alguma exceção está ampla demais |
 | **Saúde da documentação** | Documento que passou da cadência (90 dias) ou de que algum arquivo dependente mudou depois da última conferência | Reler. Se nada mudar, atualizar `conferido_em` em `data/documentacao.json`; se corrigir, o commit já responde |
-| **DOU da semana** | Atos normativos da Seção 1 triados em três níveis pelo PRECEITO SECUNDÁRIO — quem fala de pena sem cominar nenhuma não cria crime | Ler só os dois primeiros níveis. **Possível tipo penal em diploma não monitorado** é o ponto cego do conferidor, e o PR da semana já traz a entrada de `data/fontes.json` para conferir. **Mexe em diploma que já vigiamos** é antecedência: o conferidor veria na rodada seguinte, mas a `sentinela` daquela fonte talvez precise mudar. Os **descartados** ficam nomeados no fim, uma linha cada, para o corte ser auditável |
+| **DOU do mês** | Atos normativos da Seção 1 triados em três níveis pelo PRECEITO SECUNDÁRIO — quem fala de pena sem cominar nenhuma não cria crime | Ler só os dois primeiros níveis. **Possível tipo penal em diploma não monitorado** é o ponto cego do conferidor, e o PR da rodada já traz a entrada de `data/fontes.json` para conferir. **Mexe em diploma que já vigiamos** é antecedência: o conferidor veria na rodada seguinte, mas a `sentinela` daquela fonte talvez precise mudar. Os **descartados** ficam nomeados no fim, uma linha cada, para o corte ser auditável |
 | **Cotejo com o Senado** | Lei recente que o Senado registra para um diploma vigiado e que a página baixada do Planalto não cita; à parte, as provavelmente superadas por lei posterior no mesmo dispositivo. Desde 25/10/2026 | Abrir o compilado e procurar a lei. Se o Planalto está atrasado, o catálogo pode estar conferido contra texto velho; se o Senado errou, nada a fazer. O que toca registro do catálogo vem primeiro. A lei que não deu redação nova (remissão, suspensão temporária) e por isso não tem o que anotar vira exceção em `scripts/robos/cotejador/excecoes-cotejo.json`, com motivo e data; a exceção que deixa de casar aparece como "sem efeito" e sai |
 | **Molduras Planalto × Câmara** | Dispositivo cuja pena difere entre o compilado do Planalto e a compilação da Câmara (normas.leg.br) | Abrir as duas no dispositivo. O catálogo segue o Planalto; a divergência diz que uma das duas está atrasada. Câmara atrasada, lida na lei alteradora, vai para `scripts/robos/cotejador/excecoes-textos.json`; Planalto atrasado continua na issue |
 | **Vetos e ctresb/leis** | Vetos do ano a leis que mexem em diploma vigiado (os que ainda tramitam podem cair) e o que mudou no ctresb/leis — no código, nos arquivos dos nossos diplomas e, desde 25/10/2026, na jurisprudência do STF e do STJ | Nada, em regra: só informam, e nunca abrem issue sozinhos |
-| **Tribunais** | Precedente do STF ou do STJ atualizado na semana que toca diploma vigiado. Sobe para leitura a súmula cancelada, superada ou alterada, a tese revisada, o que fala em não recepção, inconstitucionalidade ou interpretação conforme, e o que toca registro do catálogo ou atributo penal; o resto fica numa linha. Cada seção mostra até 40; o resto está no JSON do artifact. Desde 25/10/2026 | Ler o acórdão ou o enunciado no portal do tribunal, não o resumo do CNJ: a natureza que o relatório mostra é pista lida do texto. Se a decisão retira o dispositivo, o registro ganha `vigencia_ate` e vai para o acervo; se modula o alcance, a ressalva vai para o `obs` ou para `data/avisos.json`; se toca atributo, o requisito ou a vedação vai para `data/atributos.json`, com a fonte. Nada disso o robô faz |
-| **Curador** | Na primeira semana do mês, as leis antigas confirmadas pela primeira vez no Planalto, e as que mudaram de estado: pena de prisão vigente (desde 1942, e antes, com o aviso da revogação tácita), revogadas, sem página. À parte, em uma linha, as que alteram diploma vigiado e as que só têm multa ou sanção administrativa | Pena vigente: abrir o Planalto e decidir se o diploma entra em `data/fontes.json`. Revogada: candidata ao acervo, conferida no texto riscado. Sem página: procurar o texto em outra fonte oficial. O robô não escreve em nenhum dos três |
-| **Leis do ano** | Na primeira semana do mês, o relatório do Recenseador — antes ele decidia se a issue abria e não entrava no corpo | Ler as ementas. Varredura incompleta (aviso) quer dizer que a janela do falso negativo continua aberta |
+| **Tribunais** | Precedente do STF ou do STJ atualizado no mês que toca diploma vigiado. Sobe para leitura a súmula cancelada, superada ou alterada, a tese revisada, o que fala em não recepção, inconstitucionalidade ou interpretação conforme, e o que toca registro do catálogo ou atributo penal; o resto fica numa linha. Cada seção mostra até 40; o resto está no JSON do artifact. Desde 25/10/2026 | Ler o acórdão ou o enunciado no portal do tribunal, não o resumo do CNJ: a natureza que o relatório mostra é pista lida do texto. Se a decisão retira o dispositivo, o registro ganha `vigencia_ate` e vai para o acervo; se modula o alcance, a ressalva vai para o `obs` ou para `data/avisos.json`; se toca atributo, o requisito ou a vedação vai para `data/atributos.json`, com a fonte. Nada disso o robô faz |
+| **Curador** | Na rodada agendada, as leis antigas confirmadas pela primeira vez no Planalto, e as que mudaram de estado: pena de prisão vigente (desde 1942, e antes, com o aviso da revogação tácita), revogadas, sem página. À parte, em uma linha, as que alteram diploma vigiado e as que só têm multa ou sanção administrativa | Pena vigente: abrir o Planalto e decidir se o diploma entra em `data/fontes.json`. Revogada: candidata ao acervo, conferida no texto riscado. Sem página: procurar o texto em outra fonte oficial. O robô não escreve em nenhum dos três |
+| **Leis do ano** | Na rodada agendada, o relatório do Recenseador — antes ele decidia se a issue abria e não entrava no corpo | Ler as ementas. Varredura incompleta (aviso) quer dizer que a janela do falso negativo continua aberta |
 
 **Fechar a issue significa "triado"** — não "resolvido". O que virar tarefa vira commit ou
 PR próprio.
@@ -159,7 +201,7 @@ como proposta com o fundamento ao lado:
 
 ## O que fica esperando decisão sua, hoje
 
-Registrado aqui para não se perder entre uma semana e outra. Ao resolver, tire da lista.
+Registrado aqui para não se perder entre uma rodada e outra. Ao resolver, tire da lista.
 
 | Pendência | Onde | Por que depende de você |
 |---|---|---|

@@ -315,7 +315,7 @@ def codigo_de_saida(achadas: dict[int, dict], vigiados: set[int], avisos: list[s
 # ── Relatório ───────────────────────────────────────────────────────────────
 def montar_relatorio(ano: int, achadas: dict[int, dict], vigiados: set[int],
                      avisos: list[str], lidas: list[str] | None = None) -> str:
-    L = [f"## Leis de {ano} — o que o filtro semanal não examinou "
+    L = [f"## Leis de {ano} — o que o filtro do DOU não examinou "
          f"— {hoje().isoformat()}", ""]
     if lidas:
         L += ["Listas lidas: " + "; ".join(lidas) + ".", ""]

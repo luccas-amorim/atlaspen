@@ -2,7 +2,7 @@
 """Monta a proposta da rodada: escolhe o diploma, aplica e escreve o PR (F6b).
 
 `corrigir.py` e `criar.py` sabem propor mudanças de UM diploma; este módulo é o
-que falta entre eles e o workflow semanal — decide qual diploma vai na rodada,
+que falta entre eles e o workflow mensal — decide qual diploma vai na rodada,
 aplica as duas coisas na mesma árvore e deixa pronto o corpo do PR com a
 evidência de cada mudança. Depois da v1.0.0, também escreve a entrada de
 changelog e sobe a versão.
@@ -11,7 +11,7 @@ Quatro decisões, todas para que o PR seja revisável por gente:
 
 - **Um diploma por PR.** Revisar pena exige abrir o texto compilado; misturar
   vinte diplomas num PR só produz aprovação no atacado. O escolhido é o de mais
-  propostas, e o próximo vai na semana seguinte.
+  propostas, e o próximo vai na rodada seguinte.
 - **Por padrão, só CORRIGE linha existente.** Criar linha é decidir se o
   dispositivo é crime autônomo, causa de aumento ou nada — e a primeira leva
   automática de linhas novas (F6) trouxe 29 registros que não eram tipos penais
@@ -488,7 +488,7 @@ def corpo_auditoria(propostas: list[dict], versao: str | None, relatorio: str,
               "diploma monitorado cobre. A entrada já vai aplicada em `data/fontes.json`, "
               "com `id` provisório — **confira a URL do compilado e troque o `id` por um "
               "descritivo** antes de aprovar. A partir do merge, o diploma passa a ser "
-              "conferido toda semana.", ""]
+              "conferido a cada rodada.", ""]
         for n in fontes_novas:
             L += [f"- **{n['id']}** — {', '.join(n['rotulos'])}", f"  - <{n['url']}>",
                   f"  - {n['obs']}"]
@@ -788,7 +788,7 @@ def entradas_changelog(escolha: dict, legais: list[dict], versao: str,
         if qtd > 8:
             corpo.append(f"E mais {qtd - 8} dispositivos, na mesma lei.")
         corpo.append(
-            "A conferência é semanal e determinística: baixa o texto compilado, lê as "
+            "A conferência é mensal e determinística: baixa o texto compilado, lê as "
             "molduras e compara com o publicado. A lei que deu a redação vem da anotação "
             "do próprio compilado.")
         resumo = (f"{rotulo}: {_plural(qtd, 'dispositivo', 'dispositivos')} {acao} "

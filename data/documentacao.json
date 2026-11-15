@@ -45,7 +45,7 @@
     },
     {
       "arquivo": "TRIAGEM.md",
-      "sobre": "A segunda-feira do mantenedor: o que a rodada automática produz, o que cada coisa exige e o que espera decisão.",
+      "sobre": "O dia 1º do mantenedor: o que a rodada automática mensal produz, o que cada coisa exige e o que espera decisão.",
       "conferido_em": "2026-10-26",
       "depende_de": [
         ".github/workflows/conferidor.yml",

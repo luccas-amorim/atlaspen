@@ -8,8 +8,12 @@ name: Faxina de branches
 # A régua, contada a partir do ÚLTIMO COMMIT da branch:
 #
 #   mergeada na main ....... apaga na próxima rodada, sem espera
-#   7 dias sem commit ...... marcada como parada
-#   14 dias sem commit ..... apagada
+#   30 dias sem commit ..... marcada como parada
+#   60 dias sem commit ..... apagada
+#
+# A rodada é mensal desde 14/11/2026 (era semanal, com a régua em 7 e 14 dias).
+# A distância entre as duas marcas é o intervalo entre duas rodadas, para que
+# toda branch apareça como parada num relatório antes de ser apagada no seguinte.
 #
 # A marca não se escreve em lugar nenhum, e é de propósito: ela é a própria
 # idade do último commit. Um push zera o relógio, e na rodada seguinte a branch
@@ -36,9 +40,9 @@ name: Faxina de branches
 
 on:
   schedule:
-    # Segunda, 06:00 de Brasília — logo depois do conferidor, para que a issue
-    # da semana e a faxina cheguem juntas.
-    - cron: '0 9 * * 1'
+    # Dia 1º, 06:00 de Brasília — logo depois do conferidor, para que a issue
+    # do mês e a faxina cheguem juntas.
+    - cron: '0 9 1 * *'
   workflow_dispatch:
     inputs:
       ensaio:
@@ -65,8 +69,8 @@ jobs:
         with:
           script: |
             const ENSAIO = process.env.ENSAIO === 'true';
-            const DIAS_PARADA = 7;
-            const DIAS_APAGA = 14;
+            const DIAS_PARADA = 30;
+            const DIAS_APAGA = 60;
 
             // Branches que a faxina não toca, por mais paradas que fiquem.
             // A `main` já está aqui por ser a padrão; estas são as outras.
@@ -78,12 +82,12 @@ jobs:
 
             // Rótulo que não existe faz a chamada devolver 422, e a faxina
             // morreria por causa de uma etiqueta. Criar antes, ignorando o
-            // "já existe", sai mais barato que descobrir isso na segunda-feira.
+            // "já existe", sai mais barato que descobrir isso no dia da rodada.
             const garantirRotulo = (name, color, description) =>
               github.rest.issues.createLabel({owner, repo, name, color, description})
                 .catch(() => {});
             await garantirRotulo('stale', 'BFBFBF',
-              'Sem commit há mais de uma semana. Um push tira o rótulo.');
+              'Sem commit há mais de um mês. Um push tira o rótulo.');
             await garantirRotulo('faxina', 'BFBFBF',
               'Relatório da faxina automática de branches.');
 

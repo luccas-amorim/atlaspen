@@ -1,9 +1,11 @@
 # O conferidor
 
-Toda segunda-feira, 05:00 de Brasília, o repositório se pergunta se o catálogo
-ainda corresponde à lei. Baixa os textos compilados dos diplomas de
+No dia 1º de cada mês, 05:00 de Brasília, o repositório se pergunta se o catálogo
+ainda corresponde à lei. A rodada era semanal, toda segunda-feira, até 14/11/2026;
+passou a mensal por decisão do mantenedor, e as janelas de leitura do DOU, dos
+tribunais e do ctresb cresceram de 8 para 35 dias. Baixa os textos compilados dos diplomas de
 `data/fontes.json`, estrutura cada dispositivo, lê as molduras penais, compara
-com `static/data/crimes.json` e olha o DOU da semana em busca de lei penal nova.
+com `static/data/crimes.json` e olha o DOU do mês em busca de lei penal nova.
 
 O resultado sai em dois canais: **uma issue** com tudo que precisa de gente e,
 quando há correção inequívoca, **um PR** aberto pelo próprio robô.
@@ -14,7 +16,7 @@ segura, o achado vira pergunta na issue em vez de virar dado.
 Desde 25/10/2026 há uma **segunda leitura**: o Senado (API de Dados Abertos) e o
 normas.leg.br dizem o que mudou em cada diploma e como a Câmara compila o mesmo
 texto; desde a mesma data, o Banco Nacional de Precedentes do CNJ diz o que o STF e o
-STJ decidiram na semana. Elas apontam e nunca escrevem — o plano e as decisões estão em
+STJ decidiram no mês. Elas apontam e nunca escrevem — o plano e as decisões estão em
 `.superpowers/planos/2026-10-25-fontes-abertas-e-acervo.md`.
 
 ## As fontes (`fontes/`)
@@ -48,14 +50,14 @@ decodifica o que é seu.
 | `propor.py` | Escolhe o diploma da rodada, aplica e monta o corpo do PR. Quando a mudança vem de lei recente (redação dada, ou dispositivo incluído, por lei deste ano ou do anterior, lido da anotação do compilado), escreve a nota — declarando o `alcance` (`tipo`, `atributo` ou os dois) e dizendo em português a direção da mudança — e sobe o patch da versão; correção de dado não vira nota. |
 | `auditar.py` | Audita os campos que a conferência de penas não alcança: hediondez (contra `data/hediondos.json`), ação penal, causas de aumento ausentes e nomes — inclusive o nome que descreve MELHOR outro artigo do mesmo diploma, ponto cego da conferência de molduras. |
 | `conferir_violencia.py`, `conferir_acao_penal.py` | Os derivadores de `violencia`/`grave_ameaca` e de `acao`, por regra escrita (`scripts/violencia.py`, `scripts/acao_penal.py`). Toda resposta cita o trecho da lei que a decidiu e carrega `fundamento_verificado`: **sem lastro, a derivação não vale** — trecho que o texto não tem zera a resposta, que vai para "pede juízo", e o relatório conta quantas foram zeradas. Não escrevem no catálogo. |
-| `dou_watcher.py` | Filtro semanal da Seção 1 do DOU, para achar lei penal **nova e autônoma**. Só lei ordinária e lei complementar, pela reserva legal — MP, lei delegada, decreto-lei e emenda não criam tipo penal. Baixa o texto INTEGRAL de cada uma — não há mais pré-filtro por vocabulário — e tria em três níveis pelo preceito secundário, que inclui a pena por remissão ("nas mesmas penas", "metade da pena"). O descartado sai nomeado, não some, e o integral fica no JSON da rodada para permitir retriagem quando o critério mudar. |
+| `dou_watcher.py` | Filtro mensal da Seção 1 do DOU, para achar lei penal **nova e autônoma**. Só lei ordinária e lei complementar, pela reserva legal — MP, lei delegada, decreto-lei e emenda não criam tipo penal. Baixa o texto INTEGRAL de cada uma — não há mais pré-filtro por vocabulário — e tria em três níveis pelo preceito secundário, que inclui a pena por remissão ("nas mesmas penas", "metade da pena"). O descartado sai nomeado, não some, e o integral fica no JSON da rodada para permitir retriagem quando o critério mudar. |
 | `leis_do_ano.py` | A defesa contra o falso NEGATIVO. Uma vez por mês, confronta a lista de leis sancionadas do ano (no Planalto, que é a FONTE) com o que o watcher examinou. O que sobra é a lista de leis que ninguém olhou. Não classifica: só aponta. Se a lista não puder ser lida, não afirma nada — reportar zero sem ter lido seria o silêncio que ele existe para quebrar. |
 | `cotejador/frescor.py` | O compilado anota as leis recentes que o Senado registra para o diploma? A que falta vira pergunta, com prioridade para a que toca registro do catálogo; a superada por lei posterior no mesmo dispositivo sai em lista à parte. Lê, pela `urn` de `fontes.json`, a ficha do Senado. |
 | `cotejador/textos.py` | A moldura de cada dispositivo no Planalto contra a da compilação da Câmara (normas.leg.br), com o mesmo `parsear` e o mesmo `pena_parser`. A divergência já julgada sai da conta e fica no relatório. |
 | `cotejador/vetos.py` | Os vetos do ano a matérias que citam diploma vigiado, e quais ainda tramitam. Só informa. |
-| `cotejador/ctresb.py` | O que mudou na semana nos `scripts/` do ctresb/leis, na jurisprudência do STF e do STJ que ele reúne e nos arquivos dos nossos diplomas. Só informa. |
+| `cotejador/ctresb.py` | O que mudou desde a última rodada nos `scripts/` do ctresb/leis, na jurisprudência do STF e do STJ que ele reúne e nos arquivos dos nossos diplomas. Só informa. |
 | `curador/curar.py` | O Curador: toda lei ordinária, decreto-lei e lei complementar desde 1889, triada no ctresb/leis (`triagem.py`, `varrer.py`: a pena própria, não a citada entre aspas; só os anos cuja árvore do git mudou) e confirmada no Planalto (`confirmar.py`: os endereços de cada época, e só vale a página cujo cabeçalho declara o mesmo número e o mesmo ano). Estado em `data/curadoria.json`; a completude contra a contagem do Senado. Sai com 3 quando há lei nova a ler. Não escreve no catálogo nem no acervo. |
-| `relator/decisoes.py` | O Relator: os precedentes do STF e do STJ atualizados na semana que tocam diploma vigiado — pelo ato impugnado codificado (controle concentrado) ou pela citação, pelo nome ou pela sigla no texto (tema e súmula) —, com a natureza como pista (a situação da súmula e do tema primeiro, o texto depois), os registros do catálogo e os atributos penais tocados. Súmula penal que muda de alcance sem citar diploma também entra. Cada tribunal é lido à parte. Sai com 3 quando há o que ler, 2 quando o CNJ não respondeu. Não escreve no catálogo. |
+| `relator/decisoes.py` | O Relator: os precedentes do STF e do STJ atualizados desde a última rodada que tocam diploma vigiado — pelo ato impugnado codificado (controle concentrado) ou pela citação, pelo nome ou pela sigla no texto (tema e súmula) —, com a natureza como pista (a situação da súmula e do tema primeiro, o texto depois), os registros do catálogo e os atributos penais tocados. Súmula penal que muda de alcance sem citar diploma também entra. Cada tribunal é lido à parte. Sai com 3 quando há o que ler, 2 quando o CNJ não respondeu. Não escreve no catálogo. |
 | `cotejador/historico.py` | Sob demanda: `data/historico-legislativo.json` contra o registro do Senado, nos dois sentidos. |
 | `acervo/candidatos.py` | Sob demanda: os dispositivos revogados dos compilados e os diplomas revogados no todo que o acervo ainda não tem, cada um com o nível de prova de que era crime (pena no compilado, pena no original, pede juízo). **Não escreve no acervo.** |
 | `excecoes.json` | O que já foi julgado e decidido na conferência de PENAS. Sem isso o relatório repetiria para sempre os mesmos achados. |
@@ -74,7 +76,7 @@ python scripts/robos/vigia/conferir.py                # relatório de tudo
 python scripts/robos/vigia/conferir.py --carimbar     # + trilha em data/conferencia.json
 python scripts/robos/vigia/conferir.py --atualizar-limites   # regrava a trava de cobertura
 python scripts/robos/proponente/propor.py                  # o PR que sairia (não escreve)
-python scripts/robos/sentinela/dou_watcher.py --dias 8
+python scripts/robos/sentinela/dou_watcher.py --dias 35
 python scripts/robos/recenseador/leis_do_ano.py             # o que o watcher nao viu
 python scripts/robos/cotejador/frescor.py                    # o compilado anota o que o Senado registra?
 python scripts/robos/cotejador/textos.py --fonte cp          # moldura do Planalto x da Câmara
@@ -85,7 +87,7 @@ python scripts/robos/acervo/candidatos.py                    # candidatos ao ace
 python -m pytest scripts/robos/tests            # sem rede, contra fixtures
 ```
 
-O workflow também roda sob demanda: aba **Actions** → "Conferidor semanal" →
+O workflow também roda sob demanda: aba **Actions** → "Conferidor mensal" →
 **Run workflow**, com opção de não abrir PR e de incluir linhas novas.
 
 ## O que o robô faz e o que não faz
