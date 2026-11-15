@@ -214,8 +214,9 @@ desbloqueio se pede a quem bloqueou.
 
 ## Dependências: o Dependabot abre, a versão maior espera gente
 
-Desde 26/10/2026, `.github/dependabot.yml` abre PR toda quarta com as atualizações das
-GitHub Actions e do npm. As menores vêm agrupadas por família e **entram sozinhas** quando
+Desde 26/10/2026, `.github/dependabot.yml` abre PR com as atualizações das
+GitHub Actions e do npm — toda quarta até 15/11/2026, e desde então no dia 3 de cada
+mês, dois dias depois da rodada do conferidor. As menores vêm agrupadas por família e **entram sozinhas** quando
 a CI passa: o `.github/workflows/dependabot.yml` lê o `update-type` que o Dependabot
 escreve no commit e faz o merge com o token do app só se todos forem minor ou patch. Cada
 versão **maior** vem sozinha, fica fora do auto-merge e pede leitura das notas de versão
