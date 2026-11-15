@@ -44,6 +44,14 @@ class TestFracao:
         assert fracao.direcao("a pena é aumentada de 1/3, se o agente não procura diminuir "
                               "as consequências do seu ato") == "aumento"
 
+    def test_acrescida_de_uma_terca_parte_e_aumento(self):
+        """DL 16/1966, art. 3º: "ficará sujeito à pena cominada no art. 1º,
+        acrescida de uma terça parte". A anotação "acrescido pela Lei" não é
+        verbo de aumento."""
+        assert fracao.direcao("ficará sujeito à pena cominada no art. 1º, acrescida de uma "
+                              "terça parte, com abertura obrigatória do competente inquérito") == "aumento"
+        assert fracao.direcao("Parágrafo acrescido pela Lei nº 9.000, de 1995") is None
+
     def test_metade_da_cominada_e_descida(self):
         assert fracao.direcao("Pena: Metade da cominada aos crimes ali previstos.") == "diminuicao"
         assert fracao.direcao("Se o crime for culposo, a pena será reduzida à metade") == "diminuicao"

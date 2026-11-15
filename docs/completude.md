@@ -2,8 +2,8 @@
 id: completude
 title: Completude do catálogo
 sidebar_position: 2
-gerado_em: '2026-10-27'
-commit: '105f9f7b4c69'
+gerado_em: '2026-11-14'
+commit: 'a190d3464cd5'
 ---
 
 {/* GERADO AUTOMATICAMENTE por scripts/gerar_completude.py — não edite à mão. */}
@@ -13,15 +13,15 @@ commit: '105f9f7b4c69'
 :::note[Página gerada]
 Este acompanhamento é derivado de `data/diplomas.json` (o denominador da
 conferência do catálogo) e de
-`data/crimes.json` (o catálogo), gerado em 2026-10-27 a partir do commit `105f9f7b4c69`. Para atualizá-lo:
+`data/crimes.json` (o catálogo), gerado em 2026-11-14 a partir do commit `a190d3464cd5`. Para atualizá-lo:
 `python scripts/gerar_completude.py`.
 :::
 
 | Indicador | Valor |
 |---|---|
-| Tipos penais catalogados | **1548** |
-| Diplomas com tipo penal vigente | 70 |
-| Diplomas revogados/não recepcionados | [70](/acervo) |
+| Tipos penais catalogados | **1558** |
+| Diplomas com tipo penal vigente | 72 |
+| Diplomas revogados/não recepcionados | [75](/acervo) |
 
 ## Índice por diploma
 
@@ -29,7 +29,7 @@ conferência do catálogo) e de
 **concluído ❓** — a conferência dispositivo a dispositivo não localizou nenhum preceito faltante após as revisões. Não é uma garantia: o denominador real (quantos tipos a lei comporta) não é conhecido com certeza, então este estado é **passível de erro** e pode voltar a "em coleta" se uma revisão futura encontrar algo. **em coleta** — há preceitos sabidamente faltando. **não iniciado** — nenhum tipo reunido ainda. A pergunta — quantos tipos penais existem — é a que abre a [História do projeto](/projeto).
 :::
 
-Todos os 70 diplomas com tipo penal vigente estão concluídos: a conferência dispositivo a dispositivo não localizou preceito faltante.
+Todos os 72 diplomas com tipo penal vigente estão concluídos: a conferência dispositivo a dispositivo não localizou preceito faltante.
 
 | Diploma | Tipos coletados | Situação |
 |---|---:|---|
@@ -60,6 +60,7 @@ Todos os 70 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Organizações criminosas | 8 | concluído ❓ |
 | Serviços postais (crimes) | 8 | concluído ❓ |
 | Contravenções de preconceito | 7 | concluído ❓ |
+| Açúcar e álcool clandestinos (crimes dos arts. 1º e 3º) | 7 | concluído ❓ |
 | Pessoa com deficiência — apoio e ação civil pública (crimes do art. 8º) | 7 | concluído ❓ |
 | Lei de Biossegurança (crimes) | 6 | concluído ❓ |
 | Tortura | 6 | concluído ❓ |
@@ -75,6 +76,7 @@ Todos os 70 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Mercado de valores mobiliários (crimes) | 3 | concluído ❓ |
 | Estatuto do Índio (crimes) | 3 | concluído ❓ |
 | Programas de computador (crimes) | 3 | concluído ❓ |
+| Código Brasileiro de Telecomunicações (crimes dos arts. 56 e 70) | 3 | concluído ❓ |
 | Marco Legal do Combate ao Crime Organizado (Lei Antifacção) | 2 | concluído ❓ |
 | Comissões Parlamentares de Inquérito (crimes) | 2 | concluído ❓ |
 | Lei Henry Borel | 2 | concluído ❓ |
@@ -88,7 +90,6 @@ Todos os 70 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Lei Maria da Penha (crime do art. 24-A) | 1 | concluído ❓ |
 | Lei Geral de Telecomunicações (crime do art. 183) | 1 | concluído ❓ |
 | Sonegação fiscal | 1 | concluído ❓ |
-| Código Brasileiro de Telecomunicações (crime do art. 70) | 1 | concluído ❓ |
 | Retenção de documentos | 1 | concluído ❓ |
 | Pesca de cetáceos | 1 | concluído ❓ |
 | Crédito habitacional — SFH (crime do art. 9º) | 1 | concluído ❓ |
@@ -103,6 +104,7 @@ Todos os 70 diplomas com tipo penal vigente estão concluídos: a conferência d
 | Empresa Simples de Crédito (crime do art. 9º) | 1 | concluído ❓ |
 | Estatuto da Segurança Privada (crime do art. 50) | 1 | concluído ❓ |
 | Exportação de bens sensíveis (crime do art. 7º) | 1 | concluído ❓ |
+| Distinção entre brasileiro nato e naturalizado (contravenção do art. 5º) | 1 | concluído ❓ |
 
 A lista completa dos tipos já reunidos, com o texto de cada um, está na [busca por tipo penal](/tipos).
 

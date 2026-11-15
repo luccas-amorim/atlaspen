@@ -833,6 +833,27 @@
       "retirado": null,
       "data_revogacao": null,
       "texto_original": "Art 6º Quem, depois de punido administrativamente por infração da legislação especial sobre a caça, praticar qualquer infração definida na mesma legislação, ficará sujeito à pena de prisão simples, por quinze dias a três meses."
+    },
+    {
+      "id": "del4812-40",
+      "dispositivo": "DL 4.812/42, art. 40",
+      "nome": "Abuso de poder em matéria de requisição (1942)",
+      "diploma": "del4812",
+      "artigos": [
+        "del4812-40"
+      ],
+      "categoria": "revogado",
+      "o_que_houve": "Revogado tacitamente pelo Código Penal Militar de 1969 (Decreto-Lei 1.001/1969), que tipificou o abuso de requisição militar com a mesma conduta e a mesma pena (art. 173: \"Abusar do direito de requisição militar, excedendo os podêres conferidos ou recusando cumprir dever impôsto em lei\", detenção de um a dois anos), revogou as disposições contrárias (art. 409) e entrou em vigor em 1º/01/1970 (art. 410): é a lei que regula inteiramente a matéria (Lei de Introdução às Normas do Direito Brasileiro, art. 2º, §1º). O Código Penal Militar de 1944 já trazia o mesmo tipo (art. 150), mas ressalvou a legislação especial que estendia a lei penal militar, decretada depois da ruptura de relações com a Alemanha, a Itália e o Japão (art. 324), e o decreto-lei, de outubro de 1942, é dessa legislação. O Planalto não anota a revogação nem risca o artigo. Os arts. 39 e 41 do mesmo decreto-lei não têm lei que os revogue; o inventário diz por que não estão no catálogo. Questão respondida na issue #78.",
+      "normas": [
+        {
+          "norma": "Decreto-Lei 1.001/1969 (Código Penal Militar), art. 173",
+          "ano": 1969
+        }
+      ],
+      "caso": false,
+      "retirado": null,
+      "data_revogacao": "1970-01-01",
+      "texto_original": "Art. 40. Toda a autoridade ou pessoa que, em matéria de requisição, abusar dos poderes que lhe forem conferidos ou recusar entregar recibo dos fornecimentos ou serviços prestados ou requisitados, fica sujeita à pena de um a dois anos de prisão e será processada e julgada pela Justiça Militar, por crime previsto no art. 3º do Código Penal Militar."
     }
   ]
 }

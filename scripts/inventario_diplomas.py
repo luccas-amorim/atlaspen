@@ -53,7 +53,9 @@ HOJE = "2026-07-19"
 #              linhas de pena dentro deles — exclui infrações administrativas
 #              ("Pena – multa" do ECA/Estatuto da Pessoa Idosa) e citações de
 #              emenda a outros diplomas no fim das leis
-#   situacao   vigente | revogado | nao_recepcionado
+#   situacao   vigente | revogado | nao_recepcionado | vigencia_encerrada (a lei
+#              excepcional ou temporária que terminou pela condição que ela
+#              mesma escreveu; `revogadora` diz o ato que prova o fim)
 #   ajuste     substitui a contagem automática quando o texto comina pena em
 #              linha corrida ("...punível com detenção de..."), com o motivo
 #   rotulos    valores do campo `lei` em data/crimes.json que pertencem a este
@@ -454,14 +456,14 @@ META: dict[str, dict] = {
                "Lei nº 1.521/1951.",
     },
     "lei4117": {
-        "nome": "Código Brasileiro de Telecomunicações (crime do art. 70)",
+        "nome": "Código Brasileiro de Telecomunicações (crimes dos arts. 56 e 70)",
         "norma": "Lei nº 4.117, de 27 de agosto de 1962",
         "url": "leis/l4117.htm",
-        "faixas": [[70, 70]],
+        "faixas": [[56, 58], [70, 70]],
         "rotulos": ["Lei 4.117/62"],
         "ajuste": {
-            "esperados": 1,
-            "motivo": "O art. 70 comina detenção em linha corrida.",
+            "esperados": 2,
+            "motivo": "O art. 70 comina detenção em linha corrida, e a pena da violação de telecomunicação (art. 56) está no art. 58, II, a, também em linha corrida. Os dois valem pela ressalva do art. 215, I, da Lei 9.472/1997, que revogou o código \"salvo quanto a matéria penal não tratada nesta Lei\" (conferido em 14/11/2026; issue #80).",
         },
     },
     "lei4595": {
@@ -1549,6 +1551,101 @@ META: dict[str, dict] = {
         "data_revogacao_nota": "A Lei de Imprensa de 1953 revogou o decreto expressamente (art. 63) — e o cita como \"de 14 de junho de 1934\"; o decreto é de 14 de julho — e entrou em vigor na data da publicação (art. 62; DOU de 13/11/1953). O Código Penal de 1940 ressalvara os crimes de imprensa (art. 360).",
         "rotulos": [],
     },
+    # As questões jurídicas de 26 e 27/10/2026 (issues #71, #76 a #80, #83, #84 e
+    # #92), respondidas em 14/11/2026: cada nota diz a fonte e cita a issue.
+    "lei6192": {
+        "nome": "Distinção entre brasileiro nato e naturalizado (contravenção do art. 5º)",
+        "norma": "Lei nº 6.192, de 19 de dezembro de 1974",
+        "url": "leis/1970-1979/L6192.htm",
+        "faixas": [[5, 5]],
+        "rotulos": ["Lei 6.192/74"],
+        "ajuste": {
+            "esperados": 1,
+            "motivo": "O art. 5º comina a prisão simples e a multa em linha corrida (conferido em 14/11/2026; issue #77).",
+        },
+    },
+    "del16": {
+        "nome": "Açúcar e álcool clandestinos (crimes dos arts. 1º e 3º)",
+        "norma": "Decreto-Lei nº 16, de 10 de agosto de 1966",
+        "url": "decreto-lei/1965-1988/Del0016.htm",
+        "faixas": [[1, 3]],
+        "rotulos": ["DL 16/66"],
+        "ajuste": {
+            "esperados": 2,
+            "motivo": "O art. 1º comina uma pena só para as seis alíneas, e o art. 3º a aumenta de um terço em linha corrida. A página do Planalto data o decreto-lei de 6 de agosto no cabeçalho; a assinatura, o Decreto-Lei 56/1966 e as fichas da Câmara e do Senado dizem 10 de agosto (conferido em 14/11/2026; issue #76).",
+        },
+    },
+    "del4812": {
+        "nome": "Lei das Requisições (crimes de 1942)",
+        "norma": "Decreto-Lei nº 4.812, de 8 de outubro de 1942",
+        "url": "decreto-lei/1937-1946/Del4812.htm",
+        "faixas": [[39, 41]],
+        "rotulos": [],
+        "ajuste": {
+            "esperados": 0,
+            "motivo": "Nenhum preceito no catálogo. O decreto-lei vigora: o Decreto-Lei 8.090/1945 o declarou insubsistente, o Decreto-Lei 8.158/1945 tornou insubsistente o 8.090, e o Decreto-Lei 9.682/1946 extinguiu a comissão que ele criara. O art. 40 (abuso em matéria de requisição) foi regulado pelo Código Penal Militar de 1969, art. 173, e está no acervo. Os arts. 39 (recusa de requisição, só na vigência de estado de guerra) e 41 (requisição por quem não tem qualidade) não têm lei que os revogue, mas a pena deles não se lê como moldura: o art. 39 comina \"prisão com trabalho\", espécie que a lei penal não tem mais, e o art. 41 remete às penas do \"art. 3º do Código Penal Militar\", que em 1942 era o código de 1891. O catálogo cala o que não se sabe, e o diploma fica no inventário porque o acervo o usa para nomear o dispositivo revogado (conferido em 14/11/2026; issue #78).",
+        },
+    },
+    "del4828": {
+        "nome": "Coordenação da imprensa no estado de guerra (1942)",
+        "norma": "Decreto-Lei nº 4.828, de 13 de outubro de 1942",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto.lei:1942-10-13;4828",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "vigencia_encerrada",
+        "revogadora": "Decreto nº 19.955/1945, que suspendeu o estado de guerra a que o art. 1º do decreto-lei limitava a vigência",
+        "data_revogacao": "1945-11-24",
+        "data_revogacao_nota": "Lei excepcional: o art. 1º coordenava os meios de divulgação \"durante o estado de guerra\", e o art. 5º punia quem se opusesse à execução da lei com as penas do Decreto-Lei 4.766/1942, na parte aplicável, ou com reclusão de três meses a três anos e multa. O estado de guerra, declarado pelo Decreto 10.358, de 31/08/1942, foi suspenso pelo Decreto 19.955, de 16/11/1945, que revogou o Decreto 10.358 (art. 1º) e entrou em vigor na publicação (art. 2º; DOU de 24/11/1945, segundo a Câmara dos Deputados). Nenhuma lei revogou o decreto-lei: a vigência terminou com a condição que ele mesmo escreveu, e o crime do art. 5º, que só punia a oposição a esse regime, terminou com ela; o fato praticado durante a vigência continuou punível (Código Penal, art. 3º). A data acima é a da publicação do decreto de 1945. A Constituição de 1946 vedou depois a censura (art. 141, §5º). O Planalto não tem a norma. Questão respondida na issue #71.",
+        "rotulos": [],
+    },
+    "dec20754": {
+        "nome": "Uniformes do Exército (1931)",
+        "norma": "Decreto nº 20.754, de 4 de dezembro de 1931",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto:1931-12-04;20754",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "revogado",
+        "revogadora": "Decreto de 10 de maio de 1991 (sem número), art. 1º e anexo",
+        "data_revogacao": "1991-05-13",
+        "data_revogacao_nota": "Os arts. 6º e 7º puniam com multa e prisão simples de um a seis meses quem vestisse uniforme do Exército, ou peça que causasse confusão ou semelhança (§1º), o chefe da repartição ou corporação a que ele pertencesse (§2º) e quem vendesse ou fabricasse artigo semelhante (§3º). O decreto está no anexo do Decreto de 10 de maio de 1991, que declarou revogados os decretos ali relacionados e entrou em vigor na publicação (DOU de 13/05/1991); o anexo foi lido na página do Planalto. Se um decreto simples podia revogar um decreto do Governo Provisório, que tinha força de lei, é discutido; o registro segue a única revogadora achada (decisão de 27/10/2026). O uso do uniforme já tinha lei posterior — a Lei das Contravenções Penais, art. 46, em vigor em 1º/01/1942, o Código Penal Militar de 1944, art. 149, parágrafo único, e o de 1969, art. 172 —, mas nenhuma delas alcança o chefe nem quem vende ou fabrica, e por isso a data é a do decreto de 1991. O Planalto não tem página para o decreto de 1931. Questão respondida na issue #83.",
+        "rotulos": [],
+    },
+    "dec20892": {
+        "nome": "Uniformes da Marinha de Guerra (1931)",
+        "norma": "Decreto nº 20.892, de 31 de dezembro de 1931",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto:1931-12-31;20892",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "revogado",
+        "revogadora": "Decreto de 10 de maio de 1991 (sem número), art. 1º e anexo",
+        "data_revogacao": "1991-05-13",
+        "data_revogacao_nota": "Os arts. 5º e 6º puniam com multa e prisão simples de um a seis meses quem vestisse uniforme da Marinha de Guerra, ou peça que causasse confusão ou semelhança (§1º), o chefe da repartição ou corporação a que ele pertencesse (§2º) e quem vendesse ou fabricasse artigo semelhante (§3º); o julgamento era da Justiça Federal. O decreto está no anexo do Decreto de 10 de maio de 1991, que declarou revogados os decretos ali relacionados e entrou em vigor na publicação (DOU de 13/05/1991); o anexo foi lido na página do Planalto. Se um decreto simples podia revogar um decreto do Governo Provisório, que tinha força de lei, é discutido; o registro segue a única revogadora achada (decisão de 27/10/2026). O uso do uniforme já tinha lei posterior — a Lei das Contravenções Penais, art. 46, em vigor em 1º/01/1942, o Código Penal Militar de 1944, art. 149, parágrafo único, e o de 1969, art. 172 —, mas nenhuma delas alcança o chefe nem quem vende ou fabrica, e por isso a data é a do decreto de 1991. O Planalto não tem página para o decreto de 1931. Questão respondida na issue #83.",
+        "rotulos": [],
+    },
+    "dec23125": {
+        "nome": "Lei do Serviço Militar de 1933",
+        "norma": "Decreto nº 23.125, de 21 de agosto de 1933",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto:1933-08-21;23125",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "revogado",
+        "revogadora": "Decreto-Lei nº 1.187/1939 (Lei do Serviço Militar), capítulo XXV, por revogação tácita; o decreto inteiro, pelo Decreto de 10 de maio de 1991",
+        "data_revogacao": "1939-05-03",
+        "data_revogacao_nota": "A lei só entraria em vigor depois de regulamentada (art. 172), e o regulamento não veio: o Decreto 24.710, de 13/07/1934, \"considerando que ainda demorará a regulamentação\", pôs em execução só os arts. 136, 139, 143, 151, 164 e 166, e em 1938 o Decreto-Lei 439 ainda citava o art. 166 como mandado entrar em vigor por aquele decreto. Dos crimes, vigoraram o art. 136 (a pena da insubmissão e das fraudes para fugir ao serviço: prisão com trabalho de quatro meses a um ano) e o art. 139 (falsa declaração, atestado médico falso e uso de caderneta alheia: a mesma prisão e multa); os arts. 137 e 138 (falsificação de documento e fraude no alistamento) nunca entraram em vigor. O Decreto-Lei 1.187/1939 regulou a mesma matéria — a insubmissão no art. 186, as falsas declarações no art. 189 —, e o capítulo das disposições penais dele entrou em vigor na publicação (art. 238; DOU de 03/05/1939), com exceção dos arts. 185 e 191: é revogação tácita (Lei de Introdução às Normas do Direito Brasileiro, art. 2º, §1º). O Decreto 24.710/1934 só tem, nas bases consultadas, a publicação na Coleção das Leis, sem a data do Diário Oficial. O decreto inteiro está no anexo do Decreto de 10 de maio de 1991 (DOU de 13/05/1991), lido na página do Planalto. O Planalto não tem página para o decreto de 1933. Questão respondida na issue #84.",
+        "rotulos": [],
+    },
+    "dec21434": {
+        "nome": "Profilaxia da febre amarela (1932)",
+        "norma": "Decreto nº 21.434, de 23 de maio de 1932",
+        "url": "",
+        "fonte_url": "https://normas.leg.br/?urn=urn:lex:br:federal:decreto:1932-05-23;21434",
+        "fonte_texto": "normas.leg.br",
+        "situacao": "revogado",
+        "revogadora": "Decreto nº 56.759/1965, art. 22",
+        "data_revogacao": "1965-08-24",
+        "data_revogacao_nota": "O art. 4º do regulamento punia com multa, ou com prisão de 3 a 30 dias, quem se opusesse à ação sanitária, a embaraçasse ou a dificultasse. A prisão das infrações sanitárias era pena aplicada por juiz, em processo de contravenção: o Decreto 1.151/1904 as fazia julgar pelo Juízo dos Feitos da Saúde Pública, com \"a marcha do processo e julgamento de contravenções\" (art. 1º, §§12 e 23); o auto de infração do §1º só cuida da multa. O Decreto 56.759, de 20/08/1965, que baixou as normas técnicas da profilaxia da febre amarela, revogou o decreto expressamente (art. 22) e entrou em vigor na publicação (art. 23; DOU de 24/08/1965), remetendo as sanções à legislação em vigor (art. 9º). O decreto de 1932 reaparece no Anexo IV do Decreto 99.678/1990 (art. 4º), lido na página do Planalto: é a revogadora que o Senado e o normas.leg.br apontam, e veio vinte e cinco anos depois da primeira. Se um decreto simples podia revogar um decreto do Governo Provisório, que tinha força de lei, é discutido; o registro segue a revogadora achada (decisão de 27/10/2026). O Código Penal de 1940 pune desde 1º/01/1942 a infração de medida sanitária preventiva (art. 268) e a desobediência (art. 330); se ele já tinha absorvido o art. 4º é juízo que o registro não afirma. O Planalto não tem página para o decreto de 1932. Questão respondida na issue #92.",
+        "rotulos": [],
+    },
 }
 
 # Diplomas considerados e deliberadamente fora do denominador.
@@ -1578,6 +1675,21 @@ EXCLUIDOS = [
               "14.811/2024, Lei nº 14.478/2022 (art. 171-A), Lei nº 13.445/2017 "
               "(art. 232-A do CP)",
      "motivo": "Inserem tipos no CP/CE; contados no diploma hospedeiro."},
+    {"norma": "Decreto-Lei nº 236/1967, Decreto-Lei nº 56/1966",
+     "motivo": "Dão redação a dispositivos de outros diplomas — a Lei nº 4.117/1962 "
+               "(arts. 53, 58 e 70, entre outros) e o Decreto-Lei nº 16/1966 (art. "
+               "1º); os tipos são contados no diploma hospedeiro."},
+    {"norma": "Decreto-Lei nº 4.098/1942 (defesa passiva antiaérea)",
+     "motivo": "Nenhuma lei o revogou — o Decreto-Lei 9.370/1946, que extinguiu o "
+               "Serviço de Defesa Civil, manteve os encargos (art. 2º) — e não há "
+               "decisão sobre a recepção. Fica fora do catálogo porque o preceito não "
+               "se lê como moldura sem afirmar o que a lei não diz: as penas do art. "
+               "10 são multas aplicadas por autoridade administrativa extinta em 1946; "
+               "a prisão só alcança o reincidente do item III e varia conforme o sexo "
+               "(um a três meses para o homem, dez a trinta dias para a mulher); e a "
+               "execução depende de regulamentação (art. 16) e, desde 1946, de "
+               "instruções ministeriais dadas em cada caso. Fica fora do acervo "
+               "porque nada o tirou de vigência (issue #79)."},
 ]
 
 RE_PENA = re.compile(

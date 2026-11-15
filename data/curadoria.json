@@ -1446,22 +1446,6 @@
    "titulo": "Decreto-Lei nº 1.593 de 21/12/1977",
    "urn": "urn:lex:br:federal:decreto.lei:1977-12-21;1593"
   },
-  "del-16-1966": {
-   "caminho": "federal/decretos-lei/1966/del-16-1966-08-10.md",
-   "chave": "del-16-1966",
-   "ementa": "Dispõe sôbre a produção, o comércio e o transporte clandestino de açúcar e   do álcool e dá outras providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del0016.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 16 de 10/08/1966",
-   "urn": "urn:lex:br:federal:decreto.lei:1966-08-10;16"
-  },
   "del-1608-1939": {
    "caminho": "federal/decretos-lei/1939/del-1608-1939-09-18.md",
    "chave": "del-1608-1939",
@@ -1695,22 +1679,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 2.141 de 15/04/1940",
    "urn": "urn:lex:br:federal:decreto.lei:1940-04-15;2141"
-  },
-  "del-236-1967": {
-   "caminho": "federal/decretos-lei/1967/del-236-1967-02-28.md",
-   "chave": "del-236-1967",
-   "ementa": "Complementa e modifica a Lei número 4.117 de 27 de agôsto de 1962.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/Del0236.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 236 de 28/02/1967",
-   "urn": "urn:lex:br:federal:decreto.lei:1967-02-28;236"
   },
   "del-2506-1940": {
    "caminho": "federal/decretos-lei/1940/del-2506-1940-08-20.md",
@@ -1988,22 +1956,6 @@
    "titulo": "Decreto-Lei nº 4.014-A de 13/01/1942",
    "urn": "urn:lex:br:federal:decreto.lei:1942-01-13;4014"
   },
-  "del-4098-1942": {
-   "caminho": "federal/decretos-lei/1942/del-4098-1942-02-06.md",
-   "chave": "del-4098-1942",
-   "ementa": "Define, como encargos necessários à defesa da Pátria, os serviços de   defesa passiva anti-aérea.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4098.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 4.098 de 06/02/1942",
-   "urn": "urn:lex:br:federal:decreto.lei:1942-02-06;4098"
-  },
   "del-4099-1942": {
    "caminho": "federal/decretos-lei/1942/del-4099-1942-02-06.md",
    "chave": "del-4099-1942",
@@ -2056,45 +2008,6 @@
    "titulo": "Decreto-Lei nº 47 de 18/11/1966",
    "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;47"
   },
-  "del-4812-1942": {
-   "caminho": "federal/decretos-lei/1942/del-4812-1942-10-08.md",
-   "chave": "del-4812-1942",
-   "ementa": "Dispõe sobre a requisição de bens imóveis e móveis, necessários às forças armadas e à defesa passiva da população, e dá outras providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/Del4812.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 4.812 de 08/10/1942",
-   "urn": "urn:lex:br:federal:decreto.lei:1942-10-08;4812"
-  },
-  "del-4828-1942": {
-   "caminho": "federal/decretos-lei/1942/del-4828-1942-10-13.md",
-   "chave": "del-4828-1942",
-   "ementa": "Coordena os meios e órgãos de divulgação e publicidade existentes no país   e dá outras providências.",
-   "lexml": {
-    "amostra": "766, de 1 de outubro de 1942, na parte aplicável, e, quando neste não estiver prevista, com a pena de reclusão de três meses a três anos e multa até 20:000$0",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/fc9a8890-3f2b-4050-8e58-ba4779648836/texto",
-    "versao": "Original"
-   },
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "sem_pagina",
-    "indicio": null,
-    "url": null
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 4.828 de 13/10/1942",
-   "urn": "urn:lex:br:federal:decreto.lei:1942-10-13;4828"
-  },
   "del-483-1938": {
    "caminho": "federal/decretos-lei/1938/del-483-1938-06-08.md",
    "chave": "del-483-1938",
@@ -2126,22 +2039,6 @@
    "revogada": false,
    "titulo": "Decreto-Lei nº 5.452 de 01/05/1943",
    "urn": "urn:lex:br:federal:decreto.lei:1943-05-01;5452"
-  },
-  "del-56-1966": {
-   "caminho": "federal/decretos-lei/1966/del-56-1966-11-18.md",
-   "chave": "del-56-1966",
-   "ementa": "Dispõe sobre a arrecadação de taxas pelo Instituto do Açúcar e do Álcool,   a produção, o comércio e o transporte do açúcar e do álcool e dá outras   providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/Del0056.htm"
-   },
-   "revogada": false,
-   "titulo": "Decreto-Lei nº 56 de 18/11/1966",
-   "urn": "urn:lex:br:federal:decreto.lei:1966-11-18;56"
   },
   "del-65-1937": {
    "caminho": "federal/decretos-lei/1937/del-65-1937-12-14.md",
@@ -3591,22 +3488,6 @@
    "titulo": "Lei nº 6.016 de 31/12/1973",
    "urn": "urn:lex:br:federal:lei:1973-12-31;6016"
   },
-  "lei-6192-1974": {
-   "caminho": "federal/leis-ordinarias/1974/lei-6192-1974-12-19.md",
-   "chave": "lei-6192-1974",
-   "ementa": "Dispõe sobre restrições a brasileiros naturalizados, e dá outras   providências.",
-   "pena_citada": false,
-   "pena_propria": true,
-   "planalto": {
-    "conferido_em": "2026-10-26",
-    "estado": "pena_vigente",
-    "indicio": null,
-    "url": "https://www.planalto.gov.br/ccivil_03/leis/1970-1979/L6192.htm"
-   },
-   "revogada": false,
-   "titulo": "Lei nº 6.192 de 19/12/1974",
-   "urn": "urn:lex:br:federal:lei:1974-12-19;6192"
-  },
   "lei-628-1899": {
    "caminho": "federal/leis-ordinarias/1899/lei-628-1899-10-28.md",
    "chave": "lei-628-1899",
@@ -4850,19 +4731,6 @@
    "nome": "Decreto nº 20.749 de 02/12/1931",
    "urn": "urn:lex:br:federal:decreto:1931-12-02;20749"
   },
-  "dec-20754-1931": {
-   "chave": "dec-20754-1931",
-   "ementa": "APROVA O PLANO DE UNIFORMES DOS OFICIAIS E PRAÇAS DO EXERCITO ATIVO, E DA OUTRAS PROVIDENCIAS.",
-   "lexml": {
-    "amostra": "6º As infrações das disposições desta lei são punidas com multa de 100$0 a 1:000$0 e com a pena de prisão simples, de um a seis meses, para casos individuais, e de 1:000$0 a 10:000$0, para coletividades",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/490c320a-5783-445c-af5b-8cd3899ace4e/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 20.754 de 04/12/1931",
-   "urn": "urn:lex:br:federal:decreto:1931-12-04;20754"
-  },
   "dec-20784-1931": {
    "chave": "dec-20784-1931",
    "ementa": "APROVA O REGULAMENTO DA ORDEM DOS ADVOGADOS BRASILEIROS.",
@@ -4927,19 +4795,6 @@
    },
    "nome": "Decreto nº 20.881 de 30/12/1931",
    "urn": "urn:lex:br:federal:decreto:1931-12-30;20881"
-  },
-  "dec-20892-1931": {
-   "chave": "dec-20892-1931",
-   "ementa": "DISPÕE SOBRE O PRIVILÉGIO ABSOLUTO DA MARINHA DE GUERRA NACIONAL QUANTO AOS PLANOS DE UNIFORME ADOTADOS PARA O SEU PESSOAL.",
-   "lexml": {
-    "amostra": "5º As infrações das disposições deste decreto são punidas com multa de 100$ a 1 :00$0, e com pena de prisão simples , de um a seis meses, para casos individuais, e de 1:000$ a 10:000$ para coletividades",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/22661b09-8ce4-419c-a868-286f899cd121/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 20.892 de 31/12/1931",
-   "urn": "urn:lex:br:federal:decreto:1931-12-31;20892"
   },
   "dec-20931-1932": {
    "chave": "dec-20931-1932",
@@ -5070,19 +4925,6 @@
    },
    "nome": "Decreto nº 21.417-A de 17/05/1932",
    "urn": "urn:lex:br:federal:decreto:1932-05-17;21417-a"
-  },
-  "dec-21434-1932": {
-   "chave": "dec-21434-1932",
-   "ementa": "APROVA O REGULAMENTO DO SERVIÇO DE PROFILAXIA DA FEBRE AMARELA NO BRASIL.",
-   "lexml": {
-    "amostra": "4º Quem se opuser, embaraçar ou dificultar, de qualquer forma, a ação sanitária definida neste regulamento, incorrerá na multa de 100$0 a 1:000$0, dobrada nas reincidências, ou na pena de prisão de 3 a 30 dias",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/ba903acf-dbd0-44b8-ab5c-3d1ca454505b/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 21.434 de 23/05/1932",
-   "urn": "urn:lex:br:federal:decreto:1932-05-23;21434"
   },
   "dec-21504-1932": {
    "chave": "dec-21504-1932",
@@ -5369,19 +5211,6 @@
    },
    "nome": "Decreto nº 22.955 de 19/07/1933",
    "urn": "urn:lex:br:federal:decreto:1933-07-19;22955"
-  },
-  "dec-23125-1933": {
-   "chave": "dec-23125-1933",
-   "ementa": "LEI DO SERVIÇO MILITAR.",
-   "lexml": {
-    "amostra": "Pena de prisão com trabalho de um a três anos e multa de 100$ a 1:000$000",
-    "conferido_em": "2026-10-26",
-    "estado": "pena_privativa",
-    "url_texto": "https://normas.leg.br/api/public/binario/1e501dd5-bda5-4273-aac1-47ee619f1b6b/texto",
-    "versao": "Original"
-   },
-   "nome": "Decreto nº 23.125 de 21/08/1933",
-   "urn": "urn:lex:br:federal:decreto:1933-08-21;23125"
   },
   "dec-23133-1933": {
    "chave": "dec-23133-1933",

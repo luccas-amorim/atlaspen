@@ -192,6 +192,16 @@ class TestNome:
             [registro(id=7, artigo="Art. 350", crime="Falsidade ideológica eleitoral")],
             indice)
 
+    def test_cabeca_de_artigo_com_anotacao_nao_e_auditada(self, monkeypatch):
+        """Caso real (DL 16/1966, art. 1º): "Constitui crime:" não descreve
+        conduta — ela está nas alíneas —, e a anotação da redação não pode
+        fazer a cabeça parecer texto bastante para comparar."""
+        indice = self._com("Constitui crime: (Redação dada pelo Decreto-lei nº 56, de 1966)",
+                           monkeypatch)
+        assert not auditar.auditar_nomes(
+            [registro(id=7, artigo="Art. 350", crime="Produção de açúcar em fábrica clandestina")],
+            indice)
+
     def test_paragrafo_qualificado_nao_e_auditado(self, monkeypatch):
         """"Se resulta:" não descreve conduta — comparar produziria acusação
         inútil em todo parágrafo qualificado do catálogo."""
