@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""O Relator: o que o STF e o STJ decidiram, na semana, sobre a lei que vigiamos.
+"""O Relator: o que o STF e o STJ decidiram, desde a última rodada, sobre a lei que vigiamos.
 
 `docs/dados-abertos.md` declarava o limite: "decisão de tribunal superior que
 altere o catálogo — uma ADI que retira dispositivo do ordenamento — não passa
-pelo Diário Oficial e hoje nenhum robô a vê". Este robô vê uma parte dela: toda
-semana, lê no Banco Nacional de Precedentes do CNJ (`fontes/cnj.py`) os
+pelo Diário Oficial e hoje nenhum robô a vê". Este robô vê uma parte dela: a cada
+rodada, lê no Banco Nacional de Precedentes do CNJ (`fontes/cnj.py`) os
 precedentes atualizados na janela — do STF, o controle concentrado (ADI, ADPF,
 ADC, ADO), os temas de repercussão geral, as súmulas e as súmulas vinculantes; do
 STJ, as súmulas, os repetitivos e os IAC (`cnj.CONSULTAS`) — e separa os que
@@ -31,8 +31,8 @@ chegou ao banco, e decisão de outro tribunal — o STM, que julga os registros 
 CPM, não tem nenhum precedente lá.
 
 Uso:
-    python scripts/robos/relator/decisoes.py               # janela de 8 dias
-    python scripts/robos/relator/decisoes.py --dias 30
+    python scripts/robos/relator/decisoes.py               # janela de 35 dias
+    python scripts/robos/relator/decisoes.py --dias 8
 
 Saídas: 0 = nada que mude o alcance da lei vigiada; 3 = há decisão a ler;
 2 = o CNJ não pôde ser lido, para um dos tribunais ou para os dois.
@@ -105,7 +105,7 @@ SITUACOES = {
 ALCANCE = {"não recepção", "inconstitucionalidade", "interpretação conforme",
            "súmula cancelada", "súmula superada", "súmula alterada", "tese revisada"}
 # 20 páginas de 50 (`cnj.atualizados_desde`), por tribunal. A semana traz uma ou
-# duas dezenas; o ano, mais de mil.
+# duas dezenas — o mês, perto de cem —; o ano, mais de mil.
 LIMITE = 1000
 # No corpo da issue, o que pede leitura vai até aqui; o resto fica no JSON do
 # artifact. Uma recarga em massa do CNJ (as 734 súmulas do STF têm todas a mesma
@@ -284,7 +284,7 @@ def codigo_de_saida(achados: list[dict], erros) -> int:
 def main() -> int:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     p = argparse.ArgumentParser(description="O que o STF e o STJ decidiram sobre a lei vigiada.")
-    p.add_argument("--dias", type=int, default=8)
+    p.add_argument("--dias", type=int, default=35)
     p.add_argument("--saida", default=str(RELATORIOS))
     args = p.parse_args()
 

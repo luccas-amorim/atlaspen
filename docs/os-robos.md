@@ -7,8 +7,11 @@ description: Como o AtlasPen descobre que a lei mudou — o que cada robô vigia
 
 Um catálogo de direito penal envelhece sozinho. A lei muda toda semana, e a
 defasagem não avisa: um registro errado tem a mesma aparência de um registro
-certo. A resposta do projeto a isso são **rotinas automáticas** que rodam toda
-segunda-feira, às 5h de Brasília, cada uma vigiando uma coisa diferente. Hoje são
+certo. A resposta do projeto a isso são **rotinas automáticas** que rodam no dia
+1º de cada mês, às 5h de Brasília, cada uma vigiando uma coisa diferente. (Até
+novembro de 2026 a rodada era semanal; passou a mensal, e as janelas de leitura do
+Diário Oficial e dos tribunais cresceram de 8 para 35 dias, para que nada fique
+entre uma rodada e outra.) Hoje são
 oito, e cada uma tem nome próprio — o log diz qual falhou sem que ninguém precise
 abrir a execução.
 
@@ -34,36 +37,46 @@ para leitura humana**, nunca uma alteração automática do dado.
 | **Sentinela** | Nasceu lei penal que ainda não vigiamos? | A Seção 1 do Diário Oficial da União |
 | **Auditor** | Os campos que a pena não alcança estão certos? | Hediondez, ação penal, causas de aumento e nomes |
 | **Arquivista** | A prosa ainda descreve o sistema? | A documentação, contra os arquivos de que ela fala |
-| **Recenseador** | Existe lei penal que ninguém leu? | Todas as leis do ano, uma a uma (mensal) |
+| **Recenseador** | Existe lei penal que ninguém leu? | Todas as leis do ano, uma a uma |
 | **Cotejador** | O compilado do Planalto está em dia? | O registro do Senado e a compilação da Câmara |
 | **Relator** | O STF ou o STJ decidiram algo sobre a lei que vigiamos? | O Banco Nacional de Precedentes do CNJ |
-| **Curador** | Existe lei penal antiga que o projeto nunca leu? | Toda a legislação federal desde 1889, no ctresb/leis, confirmada no Planalto (mensal) |
+| **Curador** | Existe lei penal antiga que o projeto nunca leu? | Toda a legislação federal desde 1889, no ctresb/leis, confirmada no Planalto |
 
 Sentinela, Arquivista e Relator correm em paralelo com o Vigia; Auditor e Cotejador esperam
-por ele, porque leem as páginas que ele baixou. O Recenseador e o Curador rodam uma
-vez por mês, na primeira semana. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se
+por ele, porque leem as páginas que ele baixou. O Recenseador e o Curador rodam em
+toda rodada agendada. Se algum tiver o que dizer, nasce **uma issue por rodada**. Se
 todos se calarem, a rodada deixa só o carimbo de que a conferência aconteceu.
 
 :::caution[Robô que quebra não se cala]
 Cada robô responde com um de dois códigos: nada a dizer, ou achados. Qualquer outro
 — uma exceção, uma fonte ilegível, um job que nem chegou ao passo — quer dizer que
-a pergunta da semana **ficou sem resposta**, e isso também abre a issue, com o robô
+a pergunta da rodada **ficou sem resposta**, e isso também abre a issue, com o robô
 nomeado. Até 25/10/2026 a triagem só olhava os achados: o Arquivista quebrou toda
 semana desde agosto, a rodada de auditoria do Proponente também, e as rodadas de 12
 e 19 de outubro terminaram verdes, sem issue, com dois robôs caídos.
 :::
 
-A issue da semana **substitui a da semana passada**, que é fechada como superada — mas só
+A issue da rodada **substitui a da rodada anterior**, que é fechada como superada — mas só
 a que ninguém comentou. A conferência é sem estado: ela recalcula tudo a cada rodada, então
 achado que continua valendo reaparece sozinho na issue nova. O que não reaparece é o que
-uma pessoa escreveu. Issue com comentário deixou de ser a foto da semana e virou conversa:
+uma pessoa escreveu. Issue com comentário deixou de ser a foto da rodada e virou conversa:
 fica aberta, e só se fecha quando a discussão tiver destino.
 
-Na **sexta-feira anterior**, às 23h, um ensaio baixa os mesmos compilados e joga fora. Não
-é para adiantar trabalho — a segunda baixa os dela e sempre lê o texto do dia. É para
-descobrir com o fim de semana pela frente que uma fonte saiu do ar ou mudou de forma:
+Quatro dias antes, no **dia 27**, às 23h, um ensaio baixa os mesmos compilados e joga fora. Não
+é para adiantar trabalho — a rodada baixa os dela e sempre lê o texto do dia. É para
+descobrir com quatro dias pela frente que uma fonte saiu do ar ou mudou de forma:
 quando isso acontece, o Vigia cai e leva o Auditor com ele; Sentinela e Arquivista
 seguem, porque não dependem do que ele baixou.
+
+:::caution[O Planalto pode recusar quem pede]
+Desde 31/10/2026 o firewall da Presidência recusa os endereços das máquinas do GitHub
+em que a rodada corre — primeiro com uma página de "Acesso Negado", depois com HTTP
+429. O robô não insiste: três recusas seguidas encerram o download, e a issue diz que
+o Vigia, o Auditor e o Cotejador **não terminaram**, em vez de dizer que não há
+achados. Enquanto a recusa durar, a conferência é rodada pelo mantenedor, com os
+mesmos programas, de uma máquina que o Planalto atende; a de 14/11/2026 foi assim, e
+não achou divergência.
+:::
 
 ---
 
@@ -196,7 +209,7 @@ filtro fica auditável. Um corte que apaga o que cortou não pode ser conferido.
 Pela mesma razão, o **dia que não abre sai nomeado**. Se a listagem de um dia do DOU
 não responde, o Sentinela registra o dia e a seção que ficaram sem leitura e segue
 pelos outros; o relatório abre dizendo que a varredura está incompleta. Até
-25/10/2026 uma listagem lenta derrubava o robô inteiro, e a semana toda ficava sem
+25/10/2026 uma listagem lenta derrubava o robô inteiro, e a rodada toda ficava sem
 resposta por causa de um dia.
 
 ---
@@ -208,7 +221,7 @@ uma terceira pergunta, e é a mais desconfortável: **e o que já existia e nunc
 lido?**
 
 O sistema sabe quantos alarmes falsos gera — o descartado do Sentinela sai nomeado
-toda semana. Do inverso não sabia nada. Uma lei penal publicada que o filtro semanal
+a cada rodada. Do inverso não sabia nada. Uma lei penal publicada que o filtro do Diário Oficial
 não pegasse não deixaria rastro em lugar nenhum, e esse é o erro que custa meses de
 catálogo desatualizado justamente porque **não faz barulho**.
 
@@ -343,12 +356,12 @@ que ele reúne: pista para o Relator, nunca decisão lida.
 
 ---
 
-## Relator — o que o STF e o STJ decidiram na semana
+## Relator — o que o STF e o STJ decidiram desde a última rodada
 
 A decisão de tribunal muda o catálogo com a força de uma lei, e não passa pelo Diário
-Oficial da União. O Relator lê, toda semana, no
+Oficial da União. O Relator lê, a cada rodada, no
 [Banco Nacional de Precedentes](https://pangeabnp.pdpj.jus.br) do CNJ, os precedentes
-atualizados nos últimos oito dias e separa os que tocam um diploma vigiado:
+atualizados nos últimos 35 dias e separa os que tocam um diploma vigiado:
 
 - do **STF**, o controle concentrado (ADI, ADPF, ADC, ADO), os temas de repercussão
   geral, as súmulas e as súmulas vinculantes;
@@ -386,7 +399,7 @@ de 2009; a ADPF 291 (Código Penal Militar, art. 235) não está lá. O silênci
 prova nada.
 :::
 
-Na primeira rodada, em 25/10/2026, a semana trouxe 14 precedentes do STF e nenhum sobre
+Na primeira rodada, em 25/10/2026, ainda semanal, a semana trouxe 14 precedentes do STF e nenhum sobre
 lei vigiada. Lido também o STJ, a mesma semana trouxe 23 precedentes dele, e o Tema 1270
 dos repetitivos — a remição proporcional da pena pela aprovação parcial no Enem — tocou o
 atributo remição, que não fala do Enem. Na janela de um ano, 50 tocavam diploma vigiado, e o Tema 113 — o art. 25
@@ -408,7 +421,7 @@ do rol muda: o Auditor guarda uma **digital do art. 1º da Lei 8.072/90** e a
 confere a cada rodada. Foi ela que, em agosto de 2026, avisou que a Lei
 15.487/2026 tinha reescrito o inciso que trata do Estatuto da Criança e do
 Adolescente — de duas hipóteses para catorze. O alarme não diz o que mudou: diz
-que mudou, e manda reler antes de confiar em qualquer outro achado da semana.
+que mudou, e manda reler antes de confiar em qualquer outro achado da rodada.
 
 **Ação penal.** A regra é a pública incondicionada (art. 100 do CP), e a exceção
 está escrita no próprio diploma, em fórmulas reconhecíveis ("somente se procede
@@ -451,7 +464,7 @@ anterior, pendência cuja ação prevista é "nenhuma". Isso aparece no relatór
 um limite que ninguém vê é indistinguível de um achado que nunca apareceu — mas
 não conta como trabalho a fazer, e não abre issue.
 
-A distinção é prática: uma issue que chega toda segunda-feira sem nada dentro
+A distinção é prática: uma issue que chega a cada rodada sem nada dentro
 ensina a não abrir a issue. E é justamente ela o único lugar onde o achado real
 apareceria.
 
@@ -545,7 +558,7 @@ o custo de ceder já foi pago:
   registro passa a existir para um e não para o outro. Foi assim que nasceram artigos
   inexistentes como `Art. 13-O`.
 - **`preceito`** guarda o critério que separa lei que cria crime de lei que fala de
-  pena. O Sentinela aplica-o ao Diário Oficial da semana; o Recenseador, a todas as
+  pena. O Sentinela aplica-o ao Diário Oficial do mês; o Recenseador, a todas as
   leis do ano. Comparar os dois resultados só faz sentido se o critério for um só:
   com duas cópias, uma divergência não distinguiria "a lei mudou" de "os filtros
   discordam".

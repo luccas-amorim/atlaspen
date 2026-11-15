@@ -496,6 +496,20 @@ _VAZIAS = {"artigo", "pessoa", "outrem", "alguem", "alguém", "contra", "mediant
            "quando", "aquele", "sobre", "qualquer", "outro", "outra", "forma"}
 
 
+_ANOTACAO = re.compile(r"\([^)]*\)")
+
+
+def _conduta(texto: str | None) -> str:
+    """O texto do dispositivo sem as anotações do Planalto.
+
+    O art. 1º do Decreto-Lei 16/1966 é "Constitui crime:", e a conduta está nas
+    alíneas. Com a anotação "(Redação dada pelo Decreto-lei nº 56, de 1966)" a
+    cabeça passava dos 60 caracteres, e os seis registros das alíneas eram
+    acusados de nome suspeito contra um texto que não descreve conduta alguma.
+    """
+    return _ANOTACAO.sub("", texto or "").strip()
+
+
 def _radicais(texto: str) -> set[str]:
     """Palavras longas, sem acento, cortadas em quatro letras.
 
@@ -538,7 +552,7 @@ def auditar_nomes(catalogo: list[dict], indice_fontes: dict) -> list[dict]:
         candidatos = []
         for k in chaves:
             d = cache[fid].get(k)
-            if d is None or d.citacao or len((d.texto or "")) < 60:
+            if d is None or d.citacao or len(_conduta(d.texto)) < 60:
                 continue
             candidatos.append(d)
         if not candidatos:
@@ -603,7 +617,7 @@ def auditar_nomes_trocados(catalogo: list[dict], indice_fontes: dict) -> list[di
         # registro nunca conversa com ele — e qualquer caput do diploma pareceria
         # melhor. Comparar parágrafos produzia quarenta acusações inúteis. No
         # "c/c", a exigência vale para os dois lados.
-        if not all(c.endswith("|caput") for c in chaves) or len(proprio.texto or "") < 60:
+        if not all(c.endswith("|caput") for c in chaves) or len(_conduta(proprio.texto)) < 60:
             continue
         nome = _radicais(registro["crime"])
         if len(nome) < 3:

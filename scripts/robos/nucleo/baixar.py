@@ -35,6 +35,15 @@ sai com o código que o Planalto pede para o desbloqueio e, depois de
 `BLOQUEIOS_SEGUIDOS` em sequência, encerra a rodada: insistir contra um
 firewall só alonga o bloqueio.
 
+**A recusa muda de forma.** Em 14/11/2026 o ensaio reprovou as 77 fontes de
+outro jeito: 25 páginas sem sentinela e sem a marca do bloqueio, depois HTTP 429
+em todas as demais — e o robô insistiu até a última, três tentativas em cada.
+Sem a página na mão não houve como dizer o que o Planalto devolvera. Desde
+então a linha da falha traz o tamanho e o título da página recebida, o 403 e o
+429 contam como recusa, a resposta curta demais para ser lei (menos de
+`RESPOSTA_CURTA_B`) também, e `BLOQUEIOS_SEGUIDOS` recusas de qualquer forma,
+em sequência, encerram a rodada.
+
 Uso:
     python scripts/robos/nucleo/baixar.py --todas
     python scripts/robos/nucleo/baixar.py --fonte cp --fonte cpm
@@ -85,6 +94,12 @@ CODIGO_BLOQUEIO = re.compile(r"c\S{0,2}digo\s+(\d+)", re.I)
 # Bloqueios seguidos que encerram a rodada. O de 31/10/2026 pegou todas as
 # fontes; o terceiro em sequência já não é página de uma lei só.
 BLOQUEIOS_SEGUIDOS = 3
+# A resposta que não é lei nenhuma. O menor compilado vigiado passa de 6 KB; a
+# página de bloqueio de 31/10/2026 tinha 814 bytes.
+RESPOSTA_CURTA_B = 2000
+# Os códigos HTTP com que um servidor recusa quem pede, e não o que foi pedido.
+HTTP_DE_RECUSA = (403, 429)
+_TITULO = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
 
 
 def decodificar(bruto: bytes) -> tuple[str, str]:
@@ -133,6 +148,18 @@ def bloqueio(plano: str) -> str | None:
     return m.group(1) if m else ""
 
 
+def titulo(texto: str) -> str:
+    """O `<title>` da página, em uma linha e até 80 caracteres; "" se não há."""
+    m = _TITULO.search(texto[:20000])
+    return normalizar(re.sub(r"<[^>]+>", " ", m.group(1))).strip()[:80] if m else ""
+
+
+def recusa(erro: BaseException) -> int | None:
+    """O código HTTP com que o servidor recusou o pedido (403, 429), ou None."""
+    codigo = getattr(getattr(erro, "causa", None), "code", None)
+    return codigo if codigo in HTTP_DE_RECUSA else None
+
+
 def buscar(url: str) -> bytes:
     """GET com UA de navegador, com repetição e espera progressiva.
 
@@ -177,6 +204,8 @@ def baixar_fonte(fonte: dict, destino: Path) -> dict:
         # O código que o Planalto pede no e-mail de desbloqueio; None se a
         # página não é a de bloqueio.
         "bloqueio": bloqueada,
+        # O que veio, para a página rejeitada que não é a de bloqueio conhecida.
+        "titulo": titulo(texto),
         # O nome do arquivo que FICOU: o `.html` promovido, ou o `.part`
         # rejeitado, para que o meta nunca aponte para um snapshot que não existe.
         "arquivo": arquivo.name if ok else parcial.name,
@@ -212,6 +241,9 @@ def main() -> int:
     destino = Path(args.saida)
     falhas: list[tuple[str, str]] = []
     codigos: list[str] = []
+    # As recusas que não são a página de bloqueio: o HTTP 403 ou 429 e a
+    # resposta curta demais para ser lei.
+    recusas: list[str] = []
     seguidos = 0
     for i, f in enumerate(alvo, 1):
         try:
@@ -219,7 +251,12 @@ def main() -> int:
         except Exception as e:                     # rede, HTTP, gravação
             falhas.append((f["id"], str(e)))
             print(f"[{i:2d}/{len(alvo)}] ✗ {f['id']:28s} {e}")
-            seguidos = 0
+            http = recusa(e)
+            if http:
+                recusas.append(f"HTTP {http}")
+                seguidos += 1
+            else:
+                seguidos = 0
         else:
             if meta["bloqueio"] is not None:
                 codigos.append(meta["bloqueio"])
@@ -232,14 +269,24 @@ def main() -> int:
                       f"{meta['bytes_origem']:8d}B  {meta['codificacao']}")
                 seguidos = 0
             else:
-                falhas.append((f["id"], f"sentinela ausente: {meta['sentinela']!r}"))
-                print(f"[{i:2d}/{len(alvo)}] ✗ {f['id']:28s} "
-                      f"sentinela ausente: {meta['sentinela']!r} ({meta['codificacao']})")
-                seguidos = 0
+                # O tamanho e o título dizem se veio a lei sem a emenda esperada
+                # ou outra página no lugar dela.
+                veio = f"{meta['bytes_origem']} B"
+                if meta["titulo"]:
+                    veio += f", título {meta['titulo']!r}"
+                motivo = f"sentinela ausente: {meta['sentinela']!r} (veio {veio})"
+                falhas.append((f["id"], motivo))
+                print(f"[{i:2d}/{len(alvo)}] ✗ {f['id']:28s} {motivo} ({meta['codificacao']})")
+                if meta["bytes_origem"] < RESPOSTA_CURTA_B:
+                    recusas.append(f"resposta de {meta['bytes_origem']} B sem a lei")
+                    seguidos += 1
+                else:
+                    seguidos = 0
         if seguidos >= BLOQUEIOS_SEGUIDOS and i < len(alvo):
+            verbo = "bloqueou" if codigos and not recusas else "recusou"
             for resto in alvo[i:]:
-                falhas.append((resto["id"], "não tentada: o Planalto bloqueou as anteriores"))
-            print(f"\n{seguidos} bloqueios seguidos: as {len(alvo) - i} fontes restantes "
+                falhas.append((resto["id"], f"não tentada: o Planalto {verbo} as anteriores"))
+            print(f"\n{seguidos} recusas seguidas: as {len(alvo) - i} fontes restantes "
                   "não foram tentadas.")
             break
         if i < len(alvo):
@@ -252,6 +299,12 @@ def main() -> int:
               "requisição(ões). Não é sentinela nem URL: é o IP de quem baixou. "
               f"O desbloqueio se pede a {MARCA_BLOQUEIO}"
               + (f", com o código {exemplo} no assunto." if exemplo else "."))
+    elif len(recusas) >= BLOQUEIOS_SEGUIDOS:
+        formas = ", ".join(f"{recusas.count(r)}× {r}" for r in dict.fromkeys(recusas))
+        print(f"BLOQUEIO: o Planalto recusou {len(recusas)} requisição(ões) sem devolver a lei "
+              f"({formas}). Não é sentinela nem URL de uma fonte: é a resposta que o servidor dá "
+              "ao IP de quem baixou, e as páginas rejeitadas ficam em `.html.part`, com o título "
+              f"no `meta.json`. O desbloqueio se pede a {MARCA_BLOQUEIO}.")
     if falhas:
         print("Falhas:")
         for fid, motivo in falhas:

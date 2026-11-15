@@ -2,7 +2,8 @@
 //
 // Duas fontes, somadas e nunca misturadas com o catálogo vigente:
 //   - data/acervo.json: os dispositivos que saíram de vigência;
-//   - data/diplomas.json: os diplomas inteiros revogados ou não recepcionados.
+//   - data/diplomas.json: os diplomas inteiros revogados, não recepcionados ou de
+//     vigência encerrada.
 // E o eixo: data/marcos.json (constituições e códigos) e o histórico
 // legislativo dos dispositivos citados pelos atributos.
 //
@@ -41,6 +42,21 @@ function anoDaNorma(norma: string): number | null {
   const m = /(?:\/|,\s*|\()((?:18|19|20)\d{2})\b/.exec(norma);
   return m ? Number(m[1]) : null;
 }
+
+// A situação do diploma inteiro, em data/diplomas.json, e a categoria do acervo.
+// `vigencia_encerrada` entrou em 14/11/2026, com o Decreto-Lei 4.828/1942: a lei
+// excepcional que valia "durante o estado de guerra" não foi revogada por lei
+// nenhuma, e chamá-la de revogada seria afirmar o que não houve.
+const CATEGORIA_DO_DIPLOMA: Record<string, CategoriaAcervo> = {
+  revogado: 'revogado',
+  nao_recepcionado: 'nao_recepcionado',
+  vigencia_encerrada: 'vigencia_encerrada',
+};
+const ROTULO_DO_DIPLOMA: Record<string, string> = {
+  revogado: 'Revogado',
+  nao_recepcionado: 'Não recepcionado',
+  vigencia_encerrada: 'Vigência encerrada',
+};
 
 interface RegistroFonte {
   id: string;
@@ -89,8 +105,8 @@ export function registrosDoAcervo(): RegistroAcervo[] {
       tipo: 'diploma',
       nome: d.nome,
       dispositivo: `${d.norma.replace(/, de .*$/, '')} (diploma inteiro)`,
-      categoria: d.situacao === 'nao_recepcionado' ? 'nao_recepcionado' : 'revogado',
-      oQueHouve: `${d.situacao === 'nao_recepcionado' ? 'Não recepcionado' : 'Revogado'} — ${norma}.${
+      categoria: CATEGORIA_DO_DIPLOMA[d.situacao] ?? 'revogado',
+      oQueHouve: `${ROTULO_DO_DIPLOMA[d.situacao] ?? 'Revogado'} — ${norma}.${
         d.data_revogacao_nota ? ` ${d.data_revogacao_nota}` : ''
       }`,
       normas: [{norma, ano: anoDaNorma(norma)}],

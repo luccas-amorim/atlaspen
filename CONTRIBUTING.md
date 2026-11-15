@@ -30,9 +30,10 @@ Súmula 715 do STF). Trocá-la aí seria adulterar a citação.
 A carga inicial veio de uma planilha; a manutenção, hoje, é o **conferidor** — um pipeline
 determinístico, sem IA, descrito em [`scripts/robos/README.md`](scripts/robos/README.md).
 
-1. **Toda segunda-feira, 05:00 de Brasília**, o workflow `conferidor.yml` baixa o texto
+1. **No dia 1º de cada mês, 05:00 de Brasília** (a rodada era semanal até 14/11/2026), o
+   workflow `conferidor.yml` baixa o texto
    compilado dos diplomas de `data/fontes.json`, compara pena a pena com o catálogo e olha
-   os atos normativos da Seção 1 do Diário Oficial da semana. Desde 25/10/2026 pergunta
+   os atos normativos da Seção 1 do Diário Oficial do mês. Desde 25/10/2026 pergunta
    também ao Senado e à compilação da Câmara se o próprio compilado está em dia — só
    pergunta: nada que vem de lá escreve no catálogo.
 2. **O que diverge vira issue.** Cada achado é uma pergunta, não uma conclusão.

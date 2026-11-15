@@ -22,7 +22,7 @@ repositório de uma pessoa só, isso trancaria tudo. O que destrava são os dois
 - **`RepositoryRole 5`**, o papel de administrador. É o mantenedor. Sem ele, o dono do
   projeto precisaria pedir revisão a alguém que talvez ainda não conheça o código.
 - **`Integration 4435955`**, o app de automação. Sem ele, o `regen-data`, o `release` e o
-  carimbo semanal do conferidor param de empurrar para a `main` — e param em silêncio, com
+  carimbo mensal do conferidor param de empurrar para a `main` — e param em silêncio, com
   um erro de permissão no log de um workflow que ninguém abre.
 
 Quem **não** tem bypass é todo o resto. Na prática, hoje: qualquer pessoa que não seja o

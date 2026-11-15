@@ -54,7 +54,7 @@ jobs:
 
       # Parser do conferidor: roda só contra as fixtures congeladas em
       # scripts/robos/fixtures — sem rede, portanto sem depender do Planalto
-      # estar no ar. O download ao vivo é exclusividade do workflow semanal.
+      # estar no ar. O download ao vivo é exclusividade do workflow mensal.
       - name: Testar o parser do conferidor
         run: |
           python3 -m pip install --quiet pytest

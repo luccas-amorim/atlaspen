@@ -1,9 +1,12 @@
-name: Conferidor semanal
+name: Conferidor mensal
 
-# Toda segunda-feira, 05:00 de Brasília, em dois atos:
+# No dia 1º de cada mês, 05:00 de Brasília, em dois atos. Até 14/11/2026 a rodada
+# era semanal, toda segunda-feira; passou a mensal por decisão do mantenedor, e as
+# janelas de leitura (DOU, tribunais, ctresb) cresceram de 8 para 35 dias para que
+# nada fique entre uma rodada e outra:
 #
 #   1. CONFERIR — baixa os textos compilados dos diplomas do catálogo, confronta
-#      com static/data/crimes.json e olha o DOU da semana em busca de lei penal
+#      com static/data/crimes.json e olha o DOU do mês em busca de lei penal
 #      nova. O que sair daí vira UMA ISSUE, para triagem humana.
 #   2. PROPOR — do que é inequívoco, abre UM PR por rodada, de UM diploma, com a
 #      evidência de cada mudança: moldura ou espécie de pena divergente do
@@ -14,12 +17,14 @@ name: Conferidor semanal
 #      sendo decisão de gente.
 #
 # 100% determinístico: sem IA e sem token de modelo. O custo é alguns minutos de
-# Actions por semana.
+# Actions por mês.
 
 on:
   schedule:
-    # UTC. Brasília é UTC-3 fixo desde o fim do horário de verão (2019).
-    - cron: '0 8 * * 1'
+    # UTC. Brasília é UTC-3 fixo desde o fim do horário de verão (2019). Dia do
+    # mês, e não "primeira segunda": no cron, dia do mês e dia da semana juntos
+    # valem como OU, e a rodada correria toda segunda E todo dia 1º.
+    - cron: '0 8 1 * *'
   workflow_dispatch:
     inputs:
       abrir_pr:
@@ -33,7 +38,7 @@ on:
         type: boolean
         default: false
       curador:
-        description: 'Rodar o Curador fora da primeira semana do mês'
+        description: 'Rodar o Curador em rodada manual fora da primeira semana do mês'
         type: boolean
         default: false
 
@@ -45,24 +50,24 @@ concurrency:
   group: escreve-na-main
   cancel-in-progress: false
 
-# A rodada semanal são VÁRIOS robôs, não um. Antes eram passos de um job só, e o
+# A rodada mensal são VÁRIOS robôs, não um. Antes eram passos de um job só, e o
 # log dizia apenas "conferidor falhou" — era preciso abrir a execução para saber
 # qual deles. Agora cada um é um job com nome próprio, e quatro correm em
 # paralelo: só o auditor e o cotejador dependem dos snapshots que o vigia baixa.
 #
 #   vigia        — relê a moldura de cada tipo contra o compilado do Planalto
 #   sentinela    — varre o DOU atrás de lei penal nova e autônoma
-#   recenseador  — mensal, dentro do job da sentinela: baixa TODAS as leis do ano,
+#   recenseador  — dentro do job da sentinela: baixa TODAS as leis do ano,
 #                  uma a uma, atrás da lei penal que ninguém leu
 #   auditor      — hediondez, ação penal e nome do tipo (o que a pena não alcança)
 #   arquivista   — saúde da prosa: documento vencido ou que fala de algo que mudou
 #   cotejador    — segunda leitura: o compilado anota as leis que o Senado
 #                  registra? Lê os snapshots do vigia, e só pergunta
-#   relator      — o que o STF e o STJ decidiram na semana sobre a lei vigiada, lido no
+#   relator      — o que o STF e o STJ decidiram no mês sobre a lei vigiada, lido no
 #                  Banco Nacional de Precedentes do CNJ
-#   curador      — mensal: a lei penal antiga que o projeto nunca leu, desde 1889,
+#   curador      — a lei penal antiga que o projeto nunca leu, desde 1889,
 #                  apontada no ctresb/leis e confirmada no Planalto
-#   triagem      — junta os relatórios e abre a issue da semana
+#   triagem      — junta os relatórios e abre a issue do mês
 #
 # Documentado para quem lê o site em docs/os-robos.md.
 jobs:
@@ -131,14 +136,16 @@ jobs:
         id: dia
         run: echo "dia=$(TZ=America/Sao_Paulo date +%-d)" >> "$GITHUB_OUTPUT"
 
-      - name: Olhar o DOU da semana
+      # 35 dias: o mês mais longo e o atraso do cron, com folga. A janela se
+      # sobrepõe à da rodada anterior de propósito — lei relida não é lei perdida.
+      - name: Olhar o DOU do mês
         id: dou
         run: |
           set +e
-          python3 scripts/robos/sentinela/dou_watcher.py --dias 8 > /dev/null
+          python3 scripts/robos/sentinela/dou_watcher.py --dias 35 > /dev/null
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       # A defesa contra o falso NEGATIVO: o que o filtro NÃO pegou não deixa
-      # rastro em lugar nenhum. Uma vez por mês, a lista de leis sancionadas do
+      # rastro em lugar nenhum. A cada rodada agendada, a lista de leis sancionadas do
       # ano — que é a fonte, não um comentário sobre ela — é confrontada com o
       # que o watcher examinou. O que sobra é a lista de leis que ninguém olhou.
       - name: Recenseador — todas as leis do ano, uma a uma
@@ -294,7 +301,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           set +e
-          python3 scripts/robos/cotejador/ctresb.py > /dev/null
+          python3 scripts/robos/cotejador/ctresb.py --dias 35 > /dev/null
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório do cotejo
         if: always()
@@ -307,7 +314,7 @@ jobs:
 
   # ── relator ──────────────────────────────────────────────────────────────
   # A decisão de tribunal não passa pelo DOU, e até 25/10/2026 nenhum robô a
-  # via. Este lê no CNJ os precedentes do STF e do STJ atualizados na semana e
+  # via. Este lê no CNJ os precedentes do STF e do STJ atualizados no mês e
   # separa os que tocam diploma vigiado, registro do catálogo ou atributo penal. Não depende do vigia: a chave de cada registro
   # vem de static/data/crimes.json. Só aponta; o CNJ fora do ar sai 2.
   relator:
@@ -325,7 +332,7 @@ jobs:
         id: decisoes
         run: |
           set +e
-          python3 scripts/robos/relator/decisoes.py > /dev/null
+          python3 scripts/robos/relator/decisoes.py --dias 35 > /dev/null
           echo "codigo=$?" >> "$GITHUB_OUTPUT"
       - name: Guardar o relatório dos tribunais
         if: always()
@@ -337,8 +344,8 @@ jobs:
           retention-days: 30
 
   # ── curador ──────────────────────────────────────────────────────────────
-  # A lei penal antiga que o projeto nunca leu, e a que morreu sem aviso. Uma
-  # vez por mês, como o Recenseador: relê no ctresb/leis só os anos que mudaram,
+  # A lei penal antiga que o projeto nunca leu, e a que morreu sem aviso. A
+  # cada rodada agendada, como o Recenseador: relê no ctresb/leis só os anos que mudaram,
   # confirma no Planalto o que é novo e o que venceu, e grava o estado em
   # data/curadoria.json direto na main — como o carimbo do vigia, é registro do
   # que a máquina viu, não proposta de dado. Sem o app, o estado não volta, e a
@@ -409,11 +416,11 @@ jobs:
 
   # ── triagem ──────────────────────────────────────────────────────────────
   # A issue é o canal: chega sozinha, tem histórico e permite discutir cada
-  # achado em linha. Uma issue por rodada, para que a semana seja unidade de
+  # achado em linha. Uma issue por rodada, para que a rodada seja unidade de
   # trabalho e o fechamento signifique "triado". Junta o que os robôs
   # produziram — e por isso roda mesmo se algum deles falhar.
   triagem:
-    name: Triagem — a issue da semana
+    name: Triagem — a issue do mês
     needs: [vigia, sentinela, auditor, arquivista, cotejador, relator, curador]
     if: always()
     runs-on: ubuntu-latest
@@ -442,7 +449,7 @@ jobs:
 
       # Quebra não é silêncio. Cada robô fala por dois códigos: 0 (nada) e 3
       # (achados). Qualquer outro — 1 de exceção, 2 de fonte ilegível, ou vazio
-      # de job que nem chegou ao passo — quer dizer que a pergunta da semana
+      # de job que nem chegou ao passo — quer dizer que a pergunta da rodada
       # ficou sem resposta. Até 25/10/2026 esta triagem só olhava o 3: o
       # Arquivista quebrou toda semana desde agosto, e as rodadas de 12 e
       # 19/10 terminaram verdes, sem issue, com robô caído.
@@ -560,12 +567,12 @@ jobs:
             echo "_(relatório truncado — veja o artifact para a lista completa)_" >> corpo-curto.md
             mv corpo-curto.md corpo.md
           fi
-          # A rodada de hoje SUBSTITUI a da semana passada -- mas so a que
+          # A rodada de hoje SUBSTITUI a anterior -- mas so a que
           # ninguem comentou. O conferidor e SEM ESTADO: ele re-deriva tudo a
           # cada rodada, entao achado que continua valendo REAPARECE aqui
           # sozinho. O que nao reaparece e o que uma pessoa escreveu: a
           # leitura do dispositivo, a duvida, a decisao a meio caminho. Issue
-          # com comentario deixou de ser foto da semana e virou conversa, e
+          # com comentario deixou de ser foto da rodada e virou conversa, e
           # conversa nao se fecha por automatismo -- ganha so um ponteiro
           # para a rodada nova e fica aberta ate alguem decidir.
           REPO="${{ github.repository }}"
@@ -641,7 +648,7 @@ jobs:
 
       # Um PR aberto por vez. Empilhar PRs do robô sobre o mesmo arquivo produz
       # conflito garantido e revisão apressada — o próximo diploma espera a
-      # semana seguinte.
+      # rodada seguinte.
       - name: Já existe PR do conferidor aberto?
         id: aberto
         if: steps.app.outputs.token != ''
@@ -686,7 +693,7 @@ jobs:
             git config user.name "${SLUG:-atlaspen-automacao}[bot]"
             git config user.email "${SLUG:-atlaspen-automacao}[bot]@users.noreply.github.com"
             git add data/conferencia.json static/data/crimes.json
-            git commit -m "chore(catalogo): carimbo da conferência semanal [skip ci]"
+            git commit -m "chore(catalogo): carimbo da conferência mensal [skip ci]"
             git push
           else
             echo "Trilha inalterada."
@@ -759,4 +766,4 @@ jobs:
 
       - name: Nada mecânico nesta rodada
         if: steps.propor.outputs.codigo == '1'
-        run: echo "Os achados desta semana exigem decisão humana — só a issue foi aberta."
+        run: echo "Os achados desta rodada exigem decisão humana — só a issue foi aberta."

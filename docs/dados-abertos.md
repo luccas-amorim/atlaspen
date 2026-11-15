@@ -62,7 +62,7 @@ Antes do dicionário, o que mais custa a quem lê os dados pela primeira vez:
 
 O registro de `id: 1`, tal como está publicado em `/data/crimes.json`. O primeiro bloco é a
 fonte redigida à mão; o segundo, os derivados que `scripts/transform_data.py` calcula a
-cada build; o terceiro, a trilha escrita pela rodada semanal de conferência.
+cada build; o terceiro, a trilha escrita pela rodada mensal de conferência.
 
 ```json
 {
@@ -133,7 +133,7 @@ reaproveitar os dados saber o que pode mudar sem quebrar uma conta.
 | Campo | O que é e onde é usado |
 | --- | --- |
 | `id` | Identificador estável; endereço público do tipo (`/tipos/N`; as URLs antigas, `/pesquisa/tipos?tipo=N`, levam a ele). **Nunca é reatribuído.** |
-| `lei`, `artigo` | Identificam o dispositivo (`CP`, `Art. 121, §2º, I`). Juntos formam a `chave_dispositivo`, que detecta registro repetido, e ligam a linha ao texto oficial conferido toda semana. A grafia de `artigo` segue uma forma canônica, validada na entrada. |
+| `lei`, `artigo` | Identificam o dispositivo (`CP`, `Art. 121, §2º, I`). Juntos formam a `chave_dispositivo`, que detecta registro repetido, e ligam a linha ao texto oficial conferido todo mês. A grafia de `artigo` segue uma forma canônica, validada na entrada. |
 | `crime` | Nome do tipo penal, exibido na busca. É dele — **e não do `obs`** — que se deduz o `resultado_morte`. |
 | `pena_min`, `pena_max` | **A moldura**, em meses. Alimentam toda a dosimetria e todos os atributos com limiar de pena. Zerados **de propósito** quando há `pena_por_remissao`. |
 | `tipo_pena` | `Reclusão`, `Detenção`, `Prisão simples`, `Multa`, `Morte` (só nos crimes militares de tempo de guerra, CPM, art. 56), `Outras penas` (sanção cominada que não é privativa nem pecuniária) ou `—`. Define o regime inicial e distingue o tipo sem pena privativa. |
@@ -173,7 +173,7 @@ reaproveitar os dados saber o que pode mudar sem quebrar uma conta.
 | `ultima_alteracao`, `alteracoes_legislativas` | Do histórico legislativo, pela mesma regra dos atributos: a lei que por último deu texto ao dispositivo (norma, ano, evento e link para o artigo da lei alteradora) e **quantas leis** mexeram nele. `0` é a redação original; `null` é "não se sabe": o compilado não anota quem deu o texto daquela unidade. |
 | `derivado_auto` | Marca o registro cujos campos passaram por preenchimento automático. |
 
-### Conferência — escrita pela rodada semanal
+### Conferência — escrita pela rodada mensal
 
 | Campo | Para que existe |
 | --- | --- |
@@ -226,7 +226,8 @@ vigor no corpo do artigo e, ao lado de cada dispositivo, a nota de quem o inclui
 ou revogou. Ler o compilado é o que permite responder "qual é a pena **hoje**" sem
 reconstruir a história da norma emenda por emenda.
 
-**Toda segunda-feira, de madrugada, o repositório repete sozinho a conferência.** Baixa a
+**No dia 1º de cada mês, de madrugada, o repositório repete sozinho a conferência.** (Até
+novembro de 2026 a rodada era semanal.) Baixa a
 página compilada de cada diploma, decompõe cada página em dispositivos, confronta a pena
 lida com a publicada no catálogo e reporta o que divergiu numa issue pública. Quando a
 divergência é de leitura direta — a moldura de um registro que já existe não corresponde
@@ -239,7 +240,7 @@ seus critérios e seus limites, está descrito em [Os robôs](./os-robos.md) —
 ler antes de citar um dado, porque é lá que está escrito o que a máquina não vê.
 
 Nada disso usa inteligência artificial. É comparação de texto: as mesmas regras, aplicadas
-do mesmo jeito, toda semana — e por isso qualquer pessoa pode repetir a rodada e obter o
+do mesmo jeito, a cada rodada — e por isso qualquer pessoa pode repetir a rodada e obter o
 mesmo resultado.
 
 **A máquina nunca publica sozinha.** O pull request é uma proposta e depende de aprovação

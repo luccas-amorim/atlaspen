@@ -134,3 +134,65 @@ def test_bloqueios_seguidos_encerram_a_rodada(tmp_path, monkeypatch, capfd):
     assert saida.index("BLOQUEIO:") < saida.index("Falhas:")
     assert "f9: não tentada: o Planalto bloqueou as anteriores" in saida
     assert "sentinela ausente" not in saida
+
+
+def _rodar_com(tmp_path, monkeypatch, capfd, n_fontes: int, responder) -> tuple[int, str, int]:
+    """Como `_rodar_main`, com a resposta de cada pedido dada por `responder(n)`."""
+    fontes = [{**FONTE, "id": f"f{i}", "url": f"https://exemplo.test/{i}"}
+              for i in range(n_fontes)]
+    arquivo = tmp_path / "fontes.json"
+    arquivo.write_text(json.dumps({"fontes": fontes}), encoding="utf-8")
+    pedidos = []
+
+    def buscar(url):
+        pedidos.append(url)
+        return responder(len(pedidos))
+    monkeypatch.setattr(baixar, "FONTES", arquivo)
+    monkeypatch.setattr(baixar, "CORTESIA_S", 0)
+    monkeypatch.setattr(baixar, "buscar", buscar)
+    monkeypatch.setattr(baixar, "hoje", lambda: date(2026, 11, 14))
+    monkeypatch.setattr(sys, "argv", ["baixar.py", "--todas", "--saida", str(tmp_path / "s")])
+    monkeypatch.setattr(sys, "stdout", sys.stdout)
+    codigo = baixar.main()
+    sys.stdout.flush()
+    return codigo, capfd.readouterr().out, len(pedidos)
+
+
+def _http_429(_n):
+    import urllib.error
+
+    from fontes.rede import FalhaDeRede
+    raise FalhaDeRede("https://exemplo.test", 3,
+                      urllib.error.HTTPError("https://exemplo.test", 429, "Too Many Requests", None, None))
+
+
+def test_http_429_seguido_encerra_a_rodada(tmp_path, monkeypatch, capfd):
+    """Em 14/11/2026 o Planalto respondeu 429 a 52 fontes, e o robô insistiu em
+    todas, três vezes em cada: 156 pedidos contra quem pedia para parar."""
+    codigo, saida, pedidos = _rodar_com(tmp_path, monkeypatch, capfd, 10, _http_429)
+    assert codigo == 2
+    assert pedidos == baixar.BLOQUEIOS_SEGUIDOS
+    assert "BLOQUEIO:" in saida and "3× HTTP 429" in saida
+    assert "f9: não tentada: o Planalto recusou as anteriores" in saida
+
+
+def test_resposta_curta_sem_a_lei_conta_como_recusa_e_diz_o_que_veio(tmp_path, monkeypatch, capfd):
+    """A página que não é a lei nem o bloqueio conhecido: a falha diz o tamanho e
+    o título, em vez de mandar conferir a sentinela de cada fonte."""
+    pagina = b"<html><head><title>Verificando o navegador</title></head><body>aguarde</body></html>"
+    codigo, saida, pedidos = _rodar_com(tmp_path, monkeypatch, capfd, 10, lambda n: pagina)
+    assert codigo == 2
+    assert pedidos == baixar.BLOQUEIOS_SEGUIDOS
+    assert "título 'Verificando o navegador'" in saida
+    assert "BLOQUEIO:" in saida and f"resposta de {len(pagina)} B sem a lei" in saida
+
+
+def test_sentinela_ausente_em_pagina_inteira_nao_encerra_a_rodada(tmp_path, monkeypatch, capfd):
+    """A lei que veio inteira e sem a emenda esperada é problema DAQUELA fonte:
+    as outras continuam sendo baixadas."""
+    pagina = ("<html><head><title>L1</title></head><body>" + "Art. 1º texto da lei. " * 200
+              + "</body></html>").encode("utf-8")
+    codigo, saida, pedidos = _rodar_com(tmp_path, monkeypatch, capfd, 6, lambda n: pagina)
+    assert codigo == 2
+    assert pedidos == 6
+    assert "BLOQUEIO:" not in saida and "não tentada" not in saida

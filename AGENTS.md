@@ -147,7 +147,7 @@ pessoa que assina.
   A issue leva o rótulo **`questão jurídica`** (desde 26/10/2026) e diz quatro coisas: a
   norma, o que já foi conferido e em que fonte, as hipóteses com a consequência de cada
   uma para o dado, e o que a fecha. A primeira foi a #71, sobre quando deixou de valer o
-  DL 4.828/1942, que fica fora do acervo até a resposta. A issue fecha com a resposta
+  DL 4.828/1942, que ficou fora do acervo até a resposta, em 14/11/2026. A issue fecha com a resposta
   fundamentada, e o registro que entra por ela cita a issue.
 - **O acervo data a parte penal, não o diploma** (decisões de 26/10/2026). Duas regras:
   - Lei especial cujo crime o Código Penal de 1940 tipificou — o reingresso do expulso
@@ -166,6 +166,51 @@ pessoa que assina.
   de decretos do Governo Provisório (o Decreto 11/1991 e os sem número): quando são a
   única revogadora achada, o registro segue a anotação e a nota diz que se discute se
   um decreto simples podia revogar um decreto com força de lei (decisão de 27/10/2026).
+
+## As questões jurídicas de outubro, respondidas em 14/11/2026
+
+As nove issues `questão jurídica` (#71, #76 a #80, #83, #84 e #92) foram respondidas e
+fechadas, cada uma com a fonte lida. O que elas deixaram como regra:
+
+- **Vigente no compilado e com moldura que se lê entra no catálogo, com a ressalva no
+  `obs`.** O tipo que ninguém revogou e cuja pena o Planalto publica é dado, mesmo
+  quando é norma penal em branco sem complemento há décadas (o DL 16/1966, depois da
+  extinção do IAA): dizer que ele se esgotou é juízo, e o desuso não revoga.
+- **Vigente, mas com preceito que não se lê como moldura, fica fora dos dois**, com o
+  motivo escrito no inventário (`excluidos`, ou o `ajuste_motivo` do diploma): a pena
+  de espécie que a lei penal não tem mais ("prisão com trabalho", DL 4.812/1942, art.
+  39), a remissão a código revogado (art. 41), a prisão que só alcança o reincidente
+  de infração administrativa e varia conforme o sexo (DL 4.098/1942). Fora do catálogo
+  porque publicar moldura seria afirmar o que a lei não diz; fora do acervo porque
+  nada os tirou de vigência.
+- **A lei excepcional termina pela condição que ela escreveu, provada por ato.** O DL
+  4.828/1942 valia "durante o estado de guerra", e o Decreto 19.955/1945 o suspendeu:
+  o diploma entra no acervo com `situacao: vigencia_encerrada` (valor novo do
+  inventário), e não como revogado. Sem o ato, continuaria fora.
+- **O anexo do decreto revogador vale lido.** Os decretos de 1990 e 1991 que revogam
+  em bloco trazem a lista num anexo que o Planalto publica em imagem; a lista foi
+  aberta e lida, e é ela, não a ficha do Senado, que sustenta o registro. Foi assim
+  que a #92 mudou de resposta: o Decreto 21.434/1932 está no Anexo IV do Decreto
+  99.678/1990 — e já tinha sido revogado expressamente pelo Decreto 56.759/1965.
+- **Procure o ato que pôs a lei em execução.** A Lei do Serviço Militar de 1933 só
+  valeria depois de regulamentada, e o regulamento não veio; mas o Decreto
+  24.710/1934 pôs seis artigos em execução, dois deles penais. "Nunca vigorou" e
+  "vigorou" eram os dois falsos.
+
+## A rodada é mensal, e o Planalto recusa o runner
+
+Decisão de 14/11/2026: o conferidor corre **no dia 1º de cada mês** (era toda
+segunda-feira), o ensaio das fontes no dia 27 e a faxina de branches no dia 1º, com a
+régua em 30 e 60 dias. As janelas de leitura do DOU, do CNJ e do ctresb são de 35 dias.
+Quem mexer na cadência mexe nas janelas junto: janela menor que o intervalo entre duas
+rodadas é lei que ninguém lê.
+
+Desde 31/10/2026 o firewall da Presidência recusa os runners do GitHub. `baixar.py`
+reconhece a página de bloqueio, o HTTP 403/429 e a resposta curta demais para ser lei,
+e para depois de três recusas seguidas: **não se contorna o bloqueio** — nada de
+proxy, de troca de agente para parecer outro cliente, de insistência. A conferência
+roda de uma máquina que o Planalto atende, com os comandos do `TRIAGEM.md`, e o
+desbloqueio se pede a quem bloqueou.
 
 ## Dependências: o Dependabot abre, a versão maior espera gente
 

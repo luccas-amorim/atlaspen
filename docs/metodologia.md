@@ -80,7 +80,7 @@ que ele vale e onde se corrige.
 | --- | --- | --- | --- |
 | **Fonte** | Os campos redigidos à mão, um registro por tipo penal, em `data/crimes.json` | Pessoas, conferindo contra o compilado | [Catálogo de tipos penais](./catalogo-tipos-penais.md) |
 | **Derivado** | Os campos calculados a partir da fonte — rótulos de pena, menor potencial ofensivo, contravenção, hediondez pela tabela curada, duplicatas | `scripts/transform_data.py`, a cada build | [Dados abertos](./dados-abertos.md#derivados--recalculados-a-cada-build-não-edite) |
-| **Conferência** | A trilha de auditoria de cada registro: contra qual página, quando, com que resultado | Os robôs, toda segunda-feira | [Os robôs](./os-robos.md) |
+| **Conferência** | A trilha de auditoria de cada registro: contra qual página, quando, com que resultado | Os robôs, no dia 1º de cada mês | [Os robôs](./os-robos.md) |
 | **Cálculo** | O veredito de cada atributo sobre cada tipo, num cenário dado | O motor de atributos, em tempo real na tela | [Atributos penais](./atributos-penais.md) |
 
 A separação entre fonte e derivado é a que mais importa para quem contribui: quem edita o

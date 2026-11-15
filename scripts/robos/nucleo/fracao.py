@@ -29,7 +29,9 @@ _TOKEN = re.compile(
 _UM_A_DOIS_TERCOS = re.compile(r"\bde\s+um\s+a\s+dois\s+t[eê]r[çc]os\b", re.I)
 _ATE = re.compile(r"\b(?:em\s+)?at[ée]\s+(?:a\s+|o\s+)?(?:metade|d[ôo]bro|triplo|um\b|dois\b|[12]/)", re.I)
 _DE_FRACAO = re.compile(r"\bde\s+(?:um|dois|[12]/|metade)", re.I)
-_SOBE = re.compile(r"aument|agravad|majorad|d[ôo]bro|duplic|triplo|triplic", re.I)
+# "acrescida de uma terça parte" (DL 16/1966, art. 3º): o particípio preso ao "de",
+# para não casar a anotação "acrescido pela Lei…".
+_SOBE = re.compile(r"aument|agravad|majorad|acrescid[ao]s?\s+de\b|d[ôo]bro|duplic|triplo|triplic", re.I)
 # Verbo de redução, ou "metade" como A pena ("Pena: metade da cominada",
 # "reduzida à metade" — o à com crase). "até a metade" é teto de AUMENTO e
 # não entra aqui: foi o que fazia o leitor ver descida em "aumentada de 1/3

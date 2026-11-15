@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""O Cotejador, frente 3: o que mudou no ctresb/leis na última semana.
+"""O Cotejador, frente 3: o que mudou no ctresb/leis desde a última rodada.
 
 Só observar (decisão 4 do plano de fontes abertas). Três perguntas:
 
@@ -21,8 +21,8 @@ Nunca abre issue sozinho, nunca derruba a rodada: sai 0 sempre, e o relatório
 entra no corpo da issue quando ela abre por outro motivo.
 
 Uso:
-    python scripts/robos/cotejador/ctresb.py              # janela de 8 dias
-    python scripts/robos/cotejador/ctresb.py --dias 30
+    python scripts/robos/cotejador/ctresb.py              # janela de 35 dias
+    python scripts/robos/cotejador/ctresb.py --dias 8
 """
 from __future__ import annotations
 
@@ -109,7 +109,7 @@ def montar_relatorio(r: dict, dia) -> str:
 def main() -> int:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     p = argparse.ArgumentParser(description="O que mudou no ctresb/leis na janela.")
-    p.add_argument("--dias", type=int, default=8)
+    p.add_argument("--dias", type=int, default=35)
     p.add_argument("--saida", default=str(RELATORIOS))
     args = p.parse_args()
     dia = hoje()

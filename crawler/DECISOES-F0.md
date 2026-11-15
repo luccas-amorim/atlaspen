@@ -98,3 +98,15 @@ O mapa `PLANALTO` que existia em `scripts/transform_data.py` apontava para
 relatório de qualidade, estavam quebrados em silêncio. O mapa foi substituído
 pela leitura de `data/fontes.json`, cujas URLs são verificadas a cada rodada
 do `baixar.py` — a duplicação sumiu e o link volta a ser confiável.
+
+## Adendo de 14/11/2026 — o que o fetcher faz quando é recusado
+
+O spike supôs um Planalto que responde a quem se apresenta como navegador. Desde
+31/10/2026 o firewall da Presidência recusa os runners do GitHub — primeiro com a
+página "Acesso Negado!" (814 bytes, HTTP 200), depois, em 14/11/2026, com outra página
+sem a marca do bloqueio e HTTP 429 nas demais. O `baixar.py` passou a reconhecer as
+três formas (a página de bloqueio, o 403/429 e a resposta com menos de 2.000 bytes sem
+a sentinela), a dizer na linha da falha o tamanho e o título do que veio, e a encerrar
+a rodada depois de três recusas seguidas. O intervalo de 1,2 s e o agente de navegador
+continuam os do spike: a recusa é por endereço de origem, e de uma máquina doméstica
+as 79 fontes baixaram íntegras no mesmo dia.
