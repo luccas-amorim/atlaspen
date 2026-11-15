@@ -1,7 +1,12 @@
 # O atualizador de dependências (decisão de 26/10/2026).
 #
-# Toda quarta de manhã, fora do dia da rodada do Conferidor (segunda), o
-# Dependabot abre PR com o que saiu de novo. As atualizações menores e de
+# No dia 3 de cada mês, de manhã, dois dias depois da rodada do Conferidor (dia
+# 1º), o Dependabot abre PR com o que saiu de novo. Até 15/11/2026 era toda
+# quarta-feira; passou a mensal com o resto da rotina, para que o mês tenha uma
+# semana de triagem (ensaio no dia 27, rodada e faxina no dia 1º, dependências no
+# dia 3) e não um assunto por semana. `interval: monthly` cairia no dia 1º, em
+# cima da rodada, e por isso a agenda é por cron. Isto regula só as atualizações
+# de VERSÃO: o alerta de segurança do Dependabot não espera o dia 3. As atualizações menores e de
 # correção vêm AGRUPADAS — um PR por família, para não virar enxurrada —, e
 # cada versão maior vem sozinha, porque é a que pode quebrar: a do
 # github-script v9, por exemplo, deixou de aceitar require('@actions/github').
@@ -17,9 +22,8 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: wednesday
-      time: "06:00"
+      interval: cron
+      cronjob: "0 6 3 * *"
       timezone: America/Sao_Paulo
     commit-message:
       prefix: ci
@@ -32,9 +36,8 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
-      day: wednesday
-      time: "06:00"
+      interval: cron
+      cronjob: "0 6 3 * *"
       timezone: America/Sao_Paulo
     open-pull-requests-limit: 5
     commit-message:

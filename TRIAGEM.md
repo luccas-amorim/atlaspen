@@ -7,7 +7,9 @@ A rodada é **mensal desde 14/11/2026**. Antes era semanal — o ensaio na sexta
 rodada e a faxina na segunda —, e a triagem de três entregas por semana passou a
 pesar mais do que rendia. O que mudou junto, para que nada fique entre uma rodada
 e outra: as janelas de leitura do DOU, dos tribunais e do ctresb foram de 8 para 35
-dias, e a régua da faxina de branches, de 7 e 14 para 30 e 60 dias.
+dias, e a régua da faxina de branches, de 7 e 14 para 30 e 60 dias. O Dependabot foi
+junto em 15/11/2026: abre os PRs de dependência no dia 3 de cada mês, e não mais toda
+quarta — as atualizações menores continuam entrando sozinhas com a CI verde.
 
 No **dia 27, 23:00**, um ensaio (`fontes.yml`) baixa os ~80 compilados
 exatamente como a rodada os baixará, e joga fora o que deu certo. Não é para deixar texto
