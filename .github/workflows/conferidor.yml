@@ -70,12 +70,22 @@ concurrency:
 #   triagem      — junta os relatórios e abre a issue do mês
 #
 # Documentado para quem lê o site em docs/os-robos.md.
+#
+# ONDE CADA JOB RODA. Três leem o Planalto — o vigia, a sentinela (pelo
+# Recenseador) e o curador —, e o firewall da Presidência recusa os runners do
+# GitHub desde 31/10/2026. Esses três rodam na máquina que a variável de
+# repositório RUNNER_PLANALTO nomear (o rótulo de um runner próprio, numa rede
+# que o Planalto atende); sem a variável, rodam em `ubuntu-latest`, como sempre.
+# Os demais ficam no GitHub: leem artifact, o Senado, o CNJ ou o próprio
+# repositório. Só `schedule` e `workflow_dispatch` disparam este workflow, e é
+# isso que impede um pull request de mandar código para o runner próprio — não
+# acrescente `pull_request` aqui. O passo a passo está no TRIAGEM.md.
 jobs:
   # ── vigia ────────────────────────────────────────────────────────────────
   # O único que baixa páginas, e por isso o único de que os outros dependem.
   vigia:
     name: Vigia — moldura contra o compilado
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_PLANALTO || 'ubuntu-latest' }}
     outputs:
       codigo: ${{ steps.conferir.outputs.codigo }}
     steps:
@@ -121,7 +131,8 @@ jobs:
   # relatório do catálogo.
   sentinela:
     name: Sentinela — lei penal nova no DOU
-    runs-on: ubuntu-latest
+    # O DOU não é o Planalto, mas o Recenseador, que roda neste job, é.
+    runs-on: ${{ vars.RUNNER_PLANALTO || 'ubuntu-latest' }}
     continue-on-error: true
     outputs:
       codigo: ${{ steps.dou.outputs.codigo }}
@@ -352,7 +363,7 @@ jobs:
   # rodada seguinte daria tudo como novo: por isso ele também vai no artifact.
   curador:
     name: Curador — a lei penal antiga que ninguém leu
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_PLANALTO || 'ubuntu-latest' }}
     continue-on-error: true
     environment: automacao
     permissions:
